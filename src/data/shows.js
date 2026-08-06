@@ -19,7 +19,7 @@ export const shows = [
     description:
       "A sports betting podcast where three friends nicknamed \"the Prop Dads\" try to grow their bankroll to $10K by betting moneylines, spreads, and player props across football season. They share their hits, misses, and lessons learned in a real, unfiltered way, for seasoned sharps and rookie bettors alike.",
     cadence: "Weekly episodes during NFL/college football season",
-    season: "Currently in Season 3",
+    season: "Season 4 coming soon!",
     colorTheme: {
       primary: "#DC2626", // red-600
       primaryDark: "#7F1D1D", // red-900
