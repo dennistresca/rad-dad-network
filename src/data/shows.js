@@ -34,6 +34,10 @@ export const shows = [
       spotify: "https://open.spotify.com/show/0L1J1ibh9WR7rYLYMgF7CK",
       youtube: "https://www.youtube.com/@DWTOPod",
     },
+    social: {
+      facebook: "https://www.facebook.com/profile.php?id=61550874134342",
+      tiktok: "https://www.tiktok.com/@dwto_podcast",
+    },
   },
   {
     id: "stateside-speed",
@@ -62,6 +66,9 @@ export const shows = [
       spotify: "https://open.spotify.com/show/0NTafHbcBXexka0eibCL9u",
       youtube: "https://www.youtube.com/@StatesideSpeedPodcast",
     },
+    social: {
+      facebook: "https://www.facebook.com/profile.php?id=61556608289152",
+    },
   },
   {
     id: "check-six-radio",
@@ -89,6 +96,10 @@ export const shows = [
       apple: "https://podcasts.apple.com/us/podcast/check-six-radio/id1884719923",
       spotify: "https://open.spotify.com/show/7geitK9NBdanPrkQZoLx4Q",
       youtube: "https://www.youtube.com/@Check-SixRadio",
+    },
+    social: {
+      facebook: "https://www.facebook.com/profile.php?id=61587228598076",
+      tiktok: "https://www.tiktok.com/@checksixradio",
     },
   },
 ];

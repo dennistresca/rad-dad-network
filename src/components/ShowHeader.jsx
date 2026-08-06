@@ -1,4 +1,5 @@
 import PlatformLinks from "./PlatformLinks";
+import SocialLinks from "./SocialLinks";
 
 export default function ShowHeader({ show }) {
   const { colorTheme } = show;
@@ -30,6 +31,15 @@ export default function ShowHeader({ show }) {
             {show.season ? ` · ${show.season}` : ""}
           </p>
           <PlatformLinks platforms={show.platforms} className="mt-6" />
+
+          {show.social && (
+            <div className="mt-6">
+              <p className="text-xs font-semibold uppercase tracking-widest text-white/70">
+                Follow {show.shortName}
+              </p>
+              <SocialLinks social={show.social} className="mt-3" />
+            </div>
+          )}
         </div>
       </div>
     </section>
