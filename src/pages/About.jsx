@@ -5,7 +5,7 @@ const founders = [
   {
     name: "Dennis Tresca",
     initials: "DT",
-    bio: "Dennis is one of the founders of Rad Dad Network and a recurring host across Dancing With the Odds, Stateside Speed, and Check-Six Radio. A retired Air Force veteran, he spends his days helping fellow veterans make sure they get the benefits they've earned, the same mission that drives Check-Six Radio. A Sun Devil through and through, Dennis also roots for the Arizona Cardinals, Phoenix Suns, and Arizona Diamondbacks.",
+    bio: "Dennis is one of the founders of the Rad Dad Network and a recurring host across Dancing With the Odds, Stateside Speed, and Check-Six Radio. An Air Force retiree, he now spends his days as a veteran coach, fighting through red tape to help fellow vets get the benefits they've earned (the same driving force behind Check-Six Radio). A Sun Devil through and through, Dennis remains stubbornly loyal to the Arizona Cardinals, Phoenix Suns, and Arizona Diamondbacks, proving he has an incredibly high tolerance for heartache and disappointment.",
   },
   {
     name: "Shaun Thompson",
