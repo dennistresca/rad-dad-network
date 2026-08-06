@@ -27,7 +27,7 @@ function LatestEpisodeHero() {
   if (error) {
     return (
       <p className="max-w-2xl text-neutral-300">
-        Couldn't load the latest episode right now — check out our shows below.
+        Couldn't load the latest episode right now. Check out our shows below.
       </p>
     );
   }
@@ -70,7 +70,7 @@ export default function Home() {
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-neutral-600">
           Rad Dad Network is home to a growing family of podcasts made by people who genuinely
-          like hanging out and talking about the stuff they're obsessed with — sports betting,
+          like hanging out and talking about the stuff they're obsessed with: sports betting,
           Formula 1, veteran life, and whatever comes next. Smart content that doesn't take
           itself too seriously.
         </p>

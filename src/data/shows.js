@@ -1,7 +1,7 @@
-// Shared show data. Add a new show by pushing another object into this array —
+// Shared show data. Add a new show by pushing another object into this array;
 // pages and components read from here, so no other file needs to change.
 //
-// Episode data is NOT stored here — it's fetched live in the browser from
+// Episode data is NOT stored here. It's fetched live in the browser from
 // each show's `feedUrl` (see src/hooks/useEpisodes.js), since Spotify for
 // Podcasters' RSS feeds send an Access-Control-Allow-Origin: * header. That
 // means episodes are always current with no build/rebuild step.
@@ -17,7 +17,7 @@ export const shows = [
     hostGroupName: "The Prop Dads",
     tagline: "Chasing $10K, one bad beat at a time.",
     description:
-      "A sports betting podcast where three friends nicknamed \"the Prop Dads\" try to grow their bankroll to $10K by betting moneylines, spreads, and player props across football season. They share their hits, misses, and lessons learned in a real, unfiltered way — for seasoned sharps and rookie bettors alike.",
+      "A sports betting podcast where three friends nicknamed \"the Prop Dads\" try to grow their bankroll to $10K by betting moneylines, spreads, and player props across football season. They share their hits, misses, and lessons learned in a real, unfiltered way, for seasoned sharps and rookie bettors alike.",
     cadence: "Weekly episodes during NFL/college football season",
     season: "Currently in Season 3",
     colorTheme: {
@@ -45,13 +45,13 @@ export const shows = [
     hostGroupName: "Team Stateside",
     tagline: "F1, translated for the American paddock.",
     description:
-      "The ultimate F1 podcast hosted by passionate American fans who live and breathe Formula 1. Race recaps, strategy breakdowns, paddock drama, and a uniquely American perspective on open-wheel racing — with witty banter throughout and occasional IndyCar coverage.",
+      "The ultimate F1 podcast hosted by passionate American fans who live and breathe Formula 1. Race recaps, strategy breakdowns, paddock drama, and a uniquely American perspective on open-wheel racing, with witty banter throughout and occasional IndyCar coverage.",
     cadence: "Race-week episodes throughout the F1 season",
     season: null,
     colorTheme: {
-      primary: "#2563EB", // blue-600 — STATESIDE
+      primary: "#2563EB", // blue-600: STATESIDE
       primaryDark: "#000000",
-      secondary: "#DC2626", // red — SPEED
+      secondary: "#DC2626", // red: SPEED
       accent: "#FFFFFF",
       gradient: "linear-gradient(135deg, #000000 0%, #111827 60%, #2563EB 100%)",
     },

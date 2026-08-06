@@ -1,6 +1,6 @@
 import { useId, useState } from "react";
 
-// Web3Forms access key for raddadnetwork@mail.com — this is a public token
+// Web3Forms access key for raddadnetwork@mail.com. This is a public token
 // meant to be used client-side (not a secret), per Web3Forms' own design.
 const WEB3FORMS_ACCESS_KEY = "40caf691-617c-46da-9d47-6d9ae6b51cb5";
 
@@ -47,7 +47,7 @@ export default function Contact() {
     <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
       <h1 className="text-3xl font-black text-neutral-900 sm:text-4xl">Get in Touch</h1>
       <p className="mt-4 text-lg text-neutral-600">
-        Have a question, a show idea, or just want to say hi? Send us a message — we'd love to
+        Have a question, a show idea, or just want to say hi? Send us a message, we'd love to
         hear from you. Interested in joining the network? Mention it below and we'll follow up.
       </p>
 
@@ -107,7 +107,7 @@ export default function Contact() {
         <p aria-live="polite" className="text-sm">
           {status === "success" && (
             <span className="text-green-600">
-              Thanks for reaching out — we'll get back to you soon.
+              Thanks for reaching out, we'll get back to you soon.
             </span>
           )}
           {status === "error" && (

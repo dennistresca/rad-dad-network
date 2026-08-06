@@ -55,13 +55,13 @@ export default function About() {
       <div className="mt-8 space-y-6 text-lg leading-relaxed text-neutral-700">
         <p>
           Rad Dad Network launched in 2023 with a simple idea: podcasts should feel like hanging
-          out with your smartest, most entertaining friends — not sitting through a lecture. No
+          out with your smartest, most entertaining friends, not sitting through a lecture. No
           pretentiousness, no gatekeeping, just real conversations about the things we're
           genuinely obsessed with.
         </p>
         <p>
           What started as one show has grown into a small family of podcasts covering sports
-          betting, Formula 1, and military veteran resources — each with its own personality, but
+          betting, Formula 1, and military veteran resources, each with its own personality, but
           all built on the same foundation: be funny, be informative, and never take yourself too
           seriously.
         </p>
