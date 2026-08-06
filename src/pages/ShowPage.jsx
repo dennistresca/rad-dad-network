@@ -1,8 +1,10 @@
 import { Navigate, useParams } from "react-router-dom";
 import { getShowBySlug } from "../data/shows";
+import { getBlogPosts } from "../data/blogPosts";
 import { useShowEpisodes } from "../hooks/useEpisodes";
 import ShowHeader from "../components/ShowHeader";
 import EpisodeCard from "../components/EpisodeCard";
+import BlogPostCard from "../components/BlogPostCard";
 
 function EpisodeCardSkeleton() {
   return (
@@ -23,6 +25,8 @@ export default function ShowPage() {
   if (!show) {
     return <Navigate to="/" replace />;
   }
+
+  const blogPosts = getBlogPosts(show.slug);
 
   return (
     <>
@@ -63,6 +67,19 @@ export default function ShowPage() {
           </div>
         )}
       </section>
+
+      {blogPosts.length > 0 && (
+        <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8" aria-labelledby="blog-heading">
+          <h2 id="blog-heading" className="text-2xl font-bold text-neutral-900 sm:text-3xl">
+            From the Blog
+          </h2>
+          <div className="mt-8 space-y-6">
+            {blogPosts.map((post) => (
+              <BlogPostCard key={post.title} post={post} accentColor={show.colorTheme.primary} />
+            ))}
+          </div>
+        </section>
+      )}
     </>
   );
 }
