@@ -2,12 +2,8 @@ import { Link } from "react-router-dom";
 import Logo from "./Logo";
 import { shows } from "../data/shows";
 
-// TODO: replace placeholder social URLs with real Rad Dad Network profiles.
 const socialLinks = [
-  { label: "Instagram", href: "#" },
-  { label: "YouTube", href: "#" },
-  { label: "TikTok", href: "#" },
-  { label: "X", href: "#" },
+  { label: "Facebook", href: "https://www.facebook.com/raddadnetwork" },
 ];
 
 export default function Footer() {
@@ -74,9 +70,10 @@ export default function Footer() {
             <ul className="mt-3 flex flex-wrap gap-3 text-sm">
               {socialLinks.map((social) => (
                 <li key={social.label}>
-                  {/* TODO: real social URL */}
                   <a
                     href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="rounded-md hover:text-white hover:underline"
                   >
                     {social.label}
