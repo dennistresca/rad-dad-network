@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import ShowPage from "./pages/ShowPage";
+import PickOfTheDay from "./pages/PickOfTheDay";
 import Store from "./pages/Store";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -17,6 +18,10 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/shows/:slug" element={<ShowPage />} />
+            <Route
+              path="/shows/dancing-with-the-odds/pick-of-the-day"
+              element={<PickOfTheDay />}
+            />
             <Route path="/store" element={<Store />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />

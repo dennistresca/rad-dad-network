@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import PlatformLinks from "./PlatformLinks";
 import SocialLinks from "./SocialLinks";
 
@@ -31,6 +32,19 @@ export default function ShowHeader({ show }) {
             {show.season ? ` · ${show.season}` : ""}
           </p>
           <PlatformLinks platforms={show.platforms} className="mt-6" />
+
+          {show.subPage && (
+            <Link
+              to={show.subPage.path}
+              className="mt-4 inline-flex w-fit items-center gap-1 rounded-full bg-white px-5 py-2 text-sm font-semibold transition-transform hover:scale-105"
+              style={{ color: colorTheme.primary }}
+            >
+              {show.subPage.label}
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </Link>
+          )}
 
           {show.social && (
             <div className="mt-6">
