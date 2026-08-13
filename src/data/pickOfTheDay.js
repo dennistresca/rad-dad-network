@@ -4,6 +4,10 @@
 //   { game: "Team A @ Team B", selection: "Team A -3.5", odds: "-110", note: "Optional extra context" }
 // `note` is optional. Leave a host's array as [] if they haven't submitted
 // a pick yet, the page will show a "no pick yet" placeholder for them.
+//
+// `records` tracks each host's overall POTD win-loss record. Update wins/
+// losses as picks are graded (a push doesn't need tracking unless you want
+// to add a `pushes` field and display it too).
 
 export const pickOfTheDay = {
   date: "2026-08-13",
@@ -11,5 +15,10 @@ export const pickOfTheDay = {
     Dennis: [{ selection: "Miami Marlins", odds: "+110" }],
     Shaun: [],
     Aaron: [],
+  },
+  records: {
+    Dennis: { wins: 0, losses: 0 },
+    Shaun: { wins: 0, losses: 0 },
+    Aaron: { wins: 0, losses: 0 },
   },
 };

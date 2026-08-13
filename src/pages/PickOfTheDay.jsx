@@ -9,10 +9,17 @@ const formatter = new Intl.DateTimeFormat("en-US", {
   timeZone: "UTC",
 });
 
-function HostPicks({ host, picks, accentColor }) {
+function HostPicks({ host, picks, record, accentColor }) {
   return (
     <div className="rounded-xl border border-neutral-200 bg-white p-6 shadow-sm">
-      <h3 className="text-lg font-bold text-neutral-900">{host}</h3>
+      <h3 className="text-lg font-bold text-neutral-900">
+        {host}
+        {record && (
+          <span className="ml-2 text-sm font-medium text-neutral-500">
+            (POTD Record {record.wins}-{record.losses})
+          </span>
+        )}
+      </h3>
 
       {picks.length === 0 ? (
         <p className="mt-3 text-sm text-neutral-500">No pick submitted yet.</p>
@@ -65,7 +72,13 @@ export default function PickOfTheDay() {
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-6 sm:grid-cols-3">
           {Object.entries(pickOfTheDay.picks).map(([host, picks]) => (
-            <HostPicks key={host} host={host} picks={picks} accentColor={show.colorTheme.primary} />
+            <HostPicks
+              key={host}
+              host={host}
+              picks={picks}
+              record={pickOfTheDay.records?.[host]}
+              accentColor={show.colorTheme.primary}
+            />
           ))}
         </div>
       </section>
