@@ -6,7 +6,9 @@ const founders = [
     name: "Dennis Tresca",
     initials: "DT",
     photo: "/dennis-tresca.png",
-    bio: "Dennis is one of the founders of the Rad Dad Network and a recurring host across Dancing With the Odds, Stateside Speed, and Check-Six Radio. An Air Force retiree, he now spends his days as a veteran coach, fighting through red tape to help fellow vets get the benefits they've earned (the same driving force behind Check-Six Radio). A Sun Devil through and through, Dennis remains stubbornly loyal to the Arizona Cardinals, Phoenix Suns, and Arizona Diamondbacks, proving he has an incredibly high tolerance for heartache and disappointment.",
+    bio: [
+      "Dennis is one of the founders of the Rad Dad Network and a recurring host across Dancing With the Odds, Stateside Speed, and Check-Six Radio. An Air Force retiree, he now spends his days as a veteran coach, fighting through red tape to help fellow vets get the benefits they've earned (the same driving force behind Check-Six Radio). A Sun Devil through and through, Dennis remains stubbornly loyal to the Arizona Cardinals, Phoenix Suns, and Arizona Diamondbacks, proving he has an incredibly high tolerance for heartache and disappointment.",
+    ],
   },
   {
     name: "Shaun Thompson",
@@ -16,7 +18,11 @@ const founders = [
   {
     name: "Aaron Patterson",
     initials: "AP",
-    bio: null, // TODO: add Aaron's bio
+    bio: [
+      "Former corrections officer turned mechanical sales professional, proving that dealing with complex HVAC/mechanical specs isn't all that different from keeping peace in a cell house, just with slightly better air conditioning.",
+      "Outside of work, he spends his free time voluntarily subjecting himself to the emotional rollercoasters of the Carolina Panthers, Atlanta Braves (World Series Champs 2021!!), and Nebraska Huskers. Yes, he chose all three (for no real particular reason either), and no, he will not be taking questions about his blood pressure.",
+      "Driven by process, powered by dry humor and wit, and constantly waiting for \"next year\" to finally be the year. Sigh.",
+    ],
   },
   {
     name: "Nicolas Bellenbaum",
@@ -45,9 +51,15 @@ function FounderCard({ founder }) {
       )}
       <div>
         <h3 className="text-xl font-bold text-neutral-900">{founder.name}</h3>
-        <p className="mt-2 text-neutral-600">
-          {founder.bio ?? "Bio coming soon."}
-        </p>
+        {founder.bio ? (
+          <div className="mt-2 space-y-3 text-neutral-600">
+            {founder.bio.map((paragraph, i) => (
+              <p key={i}>{paragraph}</p>
+            ))}
+          </div>
+        ) : (
+          <p className="mt-2 text-neutral-600">Bio coming soon.</p>
+        )}
       </div>
     </div>
   );
