@@ -38,6 +38,7 @@ export const shows = [
     social: {
       facebook: "https://www.facebook.com/profile.php?id=61550874134342",
       tiktok: "https://www.tiktok.com/@dwto_podcast",
+      x: "https://x.com/1RadDads",
     },
   },
   {

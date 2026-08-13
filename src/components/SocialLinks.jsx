@@ -1,6 +1,7 @@
 const PLATFORM_LABELS = {
   facebook: "Facebook",
   tiktok: "TikTok",
+  x: "X",
 };
 
 function FacebookIcon(props) {
@@ -19,14 +20,23 @@ function TikTokIcon(props) {
   );
 }
 
+function XIcon(props) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
+      <path d="M13.9 10.7 20.4 3h-1.6l-5.6 6.7L8.7 3H3.5l6.8 9.6L3.5 21h1.6l5.9-7.1L15.9 21h5.2l-7.2-10.3zm-2.1 2.5-.7-1L5.8 4.2h2.5l4.4 6.2.7 1 5.7 8h-2.5l-4.7-6.6z" />
+    </svg>
+  );
+}
+
 const ICONS = {
   facebook: FacebookIcon,
   tiktok: TikTokIcon,
+  x: XIcon,
 };
 
 // Renders circular icon buttons for whichever social platforms a show
 // defines. Distinct from PlatformLinks (which are "listen to the podcast"
-// buttons) — these are "follow us" social profiles.
+// buttons); these are "follow us" social profiles.
 export default function SocialLinks({ social, className = "" }) {
   if (!social) return null;
   const entries = Object.entries(social).filter(([, href]) => href);
