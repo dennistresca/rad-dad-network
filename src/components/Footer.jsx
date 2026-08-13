@@ -87,14 +87,12 @@ export default function Footer() {
         <div className="mt-10 flex flex-col gap-4 border-t border-neutral-800 pt-6 text-sm text-neutral-500 sm:flex-row sm:items-center sm:justify-between">
           <p>&copy; {year} Rad Dad Network. All rights reserved.</p>
           <div className="flex gap-4">
-            {/* TODO: real privacy policy page/URL */}
-            <a href="#" className="rounded-md hover:text-neutral-200 hover:underline">
+            <Link to="/privacy" className="rounded-md hover:text-neutral-200 hover:underline">
               Privacy Policy
-            </a>
-            {/* TODO: real terms of service page/URL */}
-            <a href="#" className="rounded-md hover:text-neutral-200 hover:underline">
+            </Link>
+            <Link to="/terms" className="rounded-md hover:text-neutral-200 hover:underline">
               Terms of Service
-            </a>
+            </Link>
           </div>
         </div>
       </div>
