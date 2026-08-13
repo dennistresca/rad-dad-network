@@ -40,12 +40,17 @@ export function parseFeedEpisodes(xmlText, maxCount = 4) {
   const items = Array.from(doc.querySelectorAll("item"));
 
   return items
-    .map((item) => ({
-      title: stripHtml(item.querySelector("title")?.textContent),
-      description: truncate(stripHtml(item.querySelector("description")?.textContent), 220),
-      date: toIsoDate(item.querySelector("pubDate")?.textContent),
-      link: item.querySelector("link")?.textContent?.trim() || "#",
-    }))
+    .map((item) => {
+      const enclosure = item.querySelector("enclosure");
+      return {
+        title: stripHtml(item.querySelector("title")?.textContent),
+        description: truncate(stripHtml(item.querySelector("description")?.textContent), 220),
+        date: toIsoDate(item.querySelector("pubDate")?.textContent),
+        link: item.querySelector("link")?.textContent?.trim() || "#",
+        audioUrl: enclosure?.getAttribute("url") || null,
+        audioType: enclosure?.getAttribute("type") || "audio/mpeg",
+      };
+    })
     .filter((episode) => episode.date)
     .sort((a, b) => new Date(b.date) - new Date(a.date))
     .slice(0, maxCount);
