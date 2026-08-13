@@ -16,7 +16,7 @@ function HostPicks({ host, picks, record, accentColor }) {
         {host}
         {record && (
           <span className="ml-2 text-sm font-medium text-neutral-500">
-            (POTD Record {record.wins}-{record.losses})
+            (Daily Picks Record {record.wins}-{record.losses})
           </span>
         )}
       </h3>

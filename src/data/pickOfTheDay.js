@@ -5,7 +5,7 @@
 // `note` is optional. Leave a host's array as [] if they haven't submitted
 // a pick yet, the page will show a "no pick yet" placeholder for them.
 //
-// `records` tracks each host's overall POTD win-loss record. Update wins/
+// `records` tracks each host's overall Daily Picks win-loss record. Update wins/
 // losses as picks are graded (a push doesn't need tracking unless you want
 // to add a `pushes` field and display it too).
 
