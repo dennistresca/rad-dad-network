@@ -8,7 +8,7 @@
 export const pickOfTheDay = {
   date: "2026-08-13",
   picks: {
-    Dennis: [],
+    Dennis: [{ selection: "Miami Marlins", odds: "+110" }],
     Shaun: [],
     Aaron: [],
   },

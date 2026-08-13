@@ -20,9 +20,11 @@ function HostPicks({ host, picks, accentColor }) {
         <ul className="mt-3 space-y-4">
           {picks.map((pick, i) => (
             <li key={i} className="border-t border-neutral-100 pt-4 first:border-t-0 first:pt-0">
-              <p className="text-sm font-semibold uppercase tracking-wide text-neutral-500">
-                {pick.game}
-              </p>
+              {pick.game && (
+                <p className="text-sm font-semibold uppercase tracking-wide text-neutral-500">
+                  {pick.game}
+                </p>
+              )}
               <p className="mt-1 text-lg font-bold" style={{ color: accentColor }}>
                 {pick.selection}
                 {pick.odds ? <span className="ml-2 text-neutral-500">({pick.odds})</span> : null}
