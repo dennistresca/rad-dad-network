@@ -62,7 +62,7 @@ export default function PickOfTheDay() {
           <p className="mt-4 text-sm font-semibold uppercase tracking-widest text-white/80">
             Dancing With the Odds
           </p>
-          <h1 className="mt-1 text-3xl font-black sm:text-4xl md:text-5xl">Pick of the Day</h1>
+          <h1 className="mt-1 text-3xl font-black sm:text-4xl md:text-5xl">Daily Picks</h1>
           <p className="mt-3 text-lg font-medium text-white/90">
             Updated <time dateTime={pickOfTheDay.date}>{formattedDate}</time>
           </p>

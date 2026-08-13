@@ -13,7 +13,11 @@ export const pickOfTheDay = {
   date: "2026-08-13",
   picks: {
     Dennis: [{ selection: "Miami Marlins", odds: "+110" }],
-    Shaun: [],
+    Shaun: [
+      { game: "Pittsburgh @ Miami", selection: "NRFI" },
+      { game: "NYY @ Seattle", selection: "NRFI" },
+      { game: "CWS @ Cincinnati", selection: "YRFI" },
+    ],
     Aaron: [],
   },
   records: {
