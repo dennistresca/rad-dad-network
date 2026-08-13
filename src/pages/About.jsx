@@ -18,6 +18,7 @@ const founders = [
   {
     name: "Aaron Patterson",
     initials: "AP",
+    photo: "/aaron-patterson.png",
     bio: [
       "Former corrections officer turned mechanical sales professional, proving that dealing with complex HVAC/mechanical specs isn't all that different from keeping peace in a cell house, just with slightly better air conditioning.",
       "Outside of work, he spends his free time voluntarily subjecting himself to the emotional rollercoasters of the Carolina Panthers, Atlanta Braves (World Series Champs 2021!!), and Nebraska Huskers. Yes, he chose all three (for no real particular reason either), and no, he will not be taking questions about his blood pressure.",
