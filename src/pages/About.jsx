@@ -1,4 +1,5 @@
 import Logo from "../components/Logo";
+import { usePageMeta } from "../hooks/usePageMeta";
 
 // TODO: replace placeholder bios with real ones once each co-founder sends theirs.
 const founders = [
@@ -67,6 +68,8 @@ function FounderCard({ founder }) {
 }
 
 export default function About() {
+  usePageMeta("About", "Our story and the co-founders behind Rad Dad Network.");
+
   return (
     <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
       <Logo className="mx-auto h-32 w-32" />

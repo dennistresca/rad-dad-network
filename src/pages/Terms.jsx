@@ -1,3 +1,5 @@
+import { usePageMeta } from "../hooks/usePageMeta";
+
 // TODO: have this reviewed by an attorney before relying on it, especially
 // the sports betting disclaimer. This is a standard-template terms page,
 // not customized legal advice.
@@ -13,6 +15,8 @@ const formatter = new Intl.DateTimeFormat("en-US", {
 });
 
 export default function Terms() {
+  usePageMeta("Terms of Service", "The terms for using the Rad Dad Network website.");
+
   return (
     <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
       <h1 className="text-3xl font-black text-neutral-900 sm:text-4xl">Terms of Service</h1>

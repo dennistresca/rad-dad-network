@@ -2,6 +2,7 @@ import { Navigate, useParams } from "react-router-dom";
 import { getShowBySlug } from "../data/shows";
 import { getBlogPosts } from "../data/blogPosts";
 import { useShowEpisodes } from "../hooks/useEpisodes";
+import { usePageMeta } from "../hooks/usePageMeta";
 import ShowHeader from "../components/ShowHeader";
 import EpisodeCard from "../components/EpisodeCard";
 import BlogPostCard from "../components/BlogPostCard";
@@ -21,6 +22,7 @@ export default function ShowPage() {
   const { slug } = useParams();
   const show = getShowBySlug(slug);
   const { episodes, error, loading } = useShowEpisodes(show?.feedUrl);
+  usePageMeta(show?.name, show?.description);
 
   if (!show) {
     return <Navigate to="/" replace />;

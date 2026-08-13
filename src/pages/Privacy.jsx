@@ -1,3 +1,5 @@
+import { usePageMeta } from "../hooks/usePageMeta";
+
 // TODO: have this reviewed by an attorney before relying on it. This is a
 // standard-template privacy policy, not customized legal advice.
 const LAST_UPDATED = "2026-08-13";
@@ -11,6 +13,8 @@ const formatter = new Intl.DateTimeFormat("en-US", {
 });
 
 export default function Privacy() {
+  usePageMeta("Privacy Policy", "How Rad Dad Network handles your information.");
+
   return (
     <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
       <h1 className="text-3xl font-black text-neutral-900 sm:text-4xl">Privacy Policy</h1>

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { shows } from "../data/shows";
 import { useLatestNetworkEpisode } from "../hooks/useEpisodes";
+import { usePageMeta } from "../hooks/usePageMeta";
 import ShowCard from "../components/ShowCard";
 
 const formatter = new Intl.DateTimeFormat("en-US", {
@@ -53,6 +54,11 @@ function LatestEpisodeHero() {
 }
 
 export default function Home() {
+  usePageMeta(
+    null,
+    "Great conversations. Zero pretentiousness. Home of Dancing With the Odds, Stateside Speed, and Check-Six Radio."
+  );
+
   return (
     <>
       <section className="bg-neutral-950 text-white">

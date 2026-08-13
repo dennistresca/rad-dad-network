@@ -1,10 +1,13 @@
 import { useId, useState } from "react";
+import { usePageMeta } from "../hooks/usePageMeta";
 
 // Web3Forms access key for raddadnetwork@mail.com. This is a public token
 // meant to be used client-side (not a secret), per Web3Forms' own design.
 const WEB3FORMS_ACCESS_KEY = "40caf691-617c-46da-9d47-6d9ae6b51cb5";
 
 export default function Contact() {
+  usePageMeta("Contact", "Get in touch with the Rad Dad Network.");
+
   const nameId = useId();
   const emailId = useId();
   const messageId = useId();

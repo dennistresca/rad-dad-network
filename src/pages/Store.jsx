@@ -1,6 +1,10 @@
+import { usePageMeta } from "../hooks/usePageMeta";
+
 const STORE_URL = import.meta.env.VITE_STORE_URL || "https://rad-dad-network.printify.me/";
 
 export default function Store() {
+  usePageMeta("Store", "Grab your Rad Dad Network merch.");
+
   return (
     <section className="mx-auto flex min-h-[60vh] max-w-3xl flex-col items-center justify-center px-4 py-24 text-center sm:px-6 lg:px-8">
       <h1 className="text-3xl font-black text-neutral-900 sm:text-4xl">

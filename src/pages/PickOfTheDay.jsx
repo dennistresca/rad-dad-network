@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { getShowBySlug } from "../data/shows";
 import { pickOfTheDay } from "../data/pickOfTheDay";
+import { usePageMeta } from "../hooks/usePageMeta";
 
 const formatter = new Intl.DateTimeFormat("en-US", {
   year: "numeric",
@@ -48,6 +49,10 @@ function HostPicks({ host, picks, record, accentColor }) {
 export default function PickOfTheDay() {
   const show = getShowBySlug("dancing-with-the-odds");
   const formattedDate = formatter.format(new Date(pickOfTheDay.date));
+  usePageMeta(
+    "Daily Picks",
+    `Dancing With the Odds' daily picks from Dennis, Shaun, and Aaron, updated ${formattedDate}.`
+  );
 
   return (
     <>
