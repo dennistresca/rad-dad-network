@@ -13,6 +13,7 @@ const founders = [
   {
     name: "Shaun Thompson",
     initials: "ST",
+    photo: "/shaun-thompson.jpg",
     bio: null, // TODO: add Shaun's bio
   },
   {
