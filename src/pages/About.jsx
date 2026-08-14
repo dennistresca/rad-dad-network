@@ -1,4 +1,3 @@
-import Logo from "../components/Logo";
 import { usePageMeta } from "../hooks/usePageMeta";
 
 // TODO: replace placeholder bios with real ones once each co-founder sends theirs.
@@ -72,7 +71,11 @@ export default function About() {
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
-      <Logo className="mx-auto h-32 w-32" />
+      <img
+        src="/logo-full.jpg"
+        alt="Rad Dad Network"
+        className="mx-auto h-32 w-32 rounded-lg object-contain"
+      />
       <h1 className="mt-8 text-center text-3xl font-black text-neutral-900 sm:text-4xl">
         Our Story
       </h1>

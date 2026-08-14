@@ -31,10 +31,11 @@ export default function Navbar() {
       >
         <NavLink
           to="/"
-          className="flex items-center rounded-md focus-visible:outline-offset-4"
+          className="flex items-center gap-3 rounded-md focus-visible:outline-offset-4"
           onClick={() => setIsOpen(false)}
         >
-          <Logo className="h-14 w-14 shrink-0" />
+          <Logo className="h-11 w-11 shrink-0" />
+          <span className="text-lg font-black tracking-tight text-white">Rad Dad Network</span>
         </NavLink>
 
         <button

@@ -14,8 +14,9 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <Link to="/" className="flex items-center rounded-md">
-              <Logo className="h-14 w-14" />
+            <Link to="/" className="flex items-center gap-3 rounded-md">
+              <Logo className="h-11 w-11" />
+              <span className="text-lg font-black tracking-tight text-white">Rad Dad Network</span>
             </Link>
             <p className="mt-3 text-sm text-neutral-400">
               Great conversations. Zero pretentiousness.
