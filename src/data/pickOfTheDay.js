@@ -22,7 +22,10 @@ export const pickOfTheDay = {
       { game: "Seattle @ Houston", selection: "NRFI" },
       { game: "Chicago @ St Louis", selection: "YRFI" },
     ],
-    Aaron: [{ selection: "Washington ML", odds: "+105" }],
+    Aaron: [
+      { selection: "Washington ML", odds: "+105" },
+      { selection: "Chicago White Sox ML", odds: "+125" },
+    ],
   },
   records: {
     Dennis: { wins: 0, losses: 1 },
