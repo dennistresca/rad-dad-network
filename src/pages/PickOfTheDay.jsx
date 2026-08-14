@@ -10,17 +10,33 @@ const formatter = new Intl.DateTimeFormat("en-US", {
   timeZone: "UTC",
 });
 
+// Reuses the same headshots from the About page.
+const HOST_PHOTOS = {
+  Dennis: "/dennis-tresca.png",
+  Shaun: "/shaun-thompson.jpg",
+  Aaron: "/aaron-patterson.png",
+};
+
 function HostPicks({ host, picks, record, accentColor }) {
   return (
     <div className="rounded-xl border border-neutral-200 bg-white p-6 shadow-sm">
-      <h3 className="text-lg font-bold text-neutral-900">
-        {host}
-        {record && (
-          <span className="ml-2 text-sm font-medium text-neutral-500">
-            (Daily Picks Record {record.wins}-{record.losses})
-          </span>
+      <div className="flex items-center gap-3">
+        {HOST_PHOTOS[host] && (
+          <img
+            src={HOST_PHOTOS[host]}
+            alt={host}
+            className="h-12 w-12 shrink-0 rounded-full object-cover"
+          />
         )}
-      </h3>
+        <h3 className="text-lg font-bold text-neutral-900">
+          {host}
+          {record && (
+            <span className="ml-2 text-sm font-medium text-neutral-500">
+              (Daily Picks Record {record.wins}-{record.losses})
+            </span>
+          )}
+        </h3>
+      </div>
 
       {picks.length === 0 ? (
         <p className="mt-3 text-sm text-neutral-500">No pick submitted yet.</p>
