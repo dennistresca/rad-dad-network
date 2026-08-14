@@ -12,7 +12,11 @@
 export const pickOfTheDay = {
   date: "2026-08-14",
   picks: {
-    Dennis: [],
+    Dennis: [
+      { selection: "Cleveland ML", odds: "-125" },
+      { selection: "Houston ML", odds: "-127" },
+      { selection: "San Francisco ML", odds: "-123" },
+    ],
     Shaun: [
       { game: "Colorado @ San Francisco", selection: "NRFI" },
       { game: "Seattle @ Houston", selection: "NRFI" },
