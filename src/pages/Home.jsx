@@ -19,8 +19,7 @@ function LatestEpisodeHero() {
       <div className="animate-pulse" aria-busy="true" aria-live="polite">
         <span className="sr-only">Loading latest episode…</span>
         <div className="h-4 w-32 rounded bg-white/10" />
-        <div className="mt-4 h-10 w-full max-w-2xl rounded bg-white/10" />
-        <div className="mt-4 h-5 w-full max-w-xl rounded bg-white/10" />
+        <div className="mt-3 h-7 w-full max-w-xl rounded bg-white/10" />
       </div>
     );
   }
@@ -34,22 +33,19 @@ function LatestEpisodeHero() {
   }
 
   return (
-    <>
-      <h1 className="mt-2 max-w-3xl text-3xl font-black leading-tight sm:text-4xl lg:text-5xl">
-        {latest.title}
-      </h1>
-      <p className="mt-4 max-w-2xl text-neutral-300">{latest.description}</p>
-      <p className="mt-2 text-sm text-neutral-400">
-        From <span className="font-semibold text-white">{latest.show.name}</span> ·{" "}
+    <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+      <h1 className="max-w-xl truncate text-xl font-black sm:text-2xl">{latest.title}</h1>
+      <p className="text-sm text-neutral-400">
+        <span className="font-semibold text-white">{latest.show.name}</span> ·{" "}
         <time dateTime={latest.date}>{formatter.format(new Date(latest.date))}</time>
       </p>
       <Link
         to={`/shows/${latest.show.slug}`}
-        className="mt-8 inline-flex w-fit rounded-full bg-orange-500 px-6 py-3 font-semibold text-white transition-colors hover:bg-orange-600"
+        className="inline-flex w-fit rounded-full bg-orange-500 px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-orange-600"
       >
         Listen Now
       </Link>
-    </>
+    </div>
   );
 }
 
@@ -62,11 +58,13 @@ export default function Home() {
   return (
     <>
       <section className="bg-neutral-950 text-white">
-        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-          <p className="text-sm font-semibold uppercase tracking-widest text-orange-400">
+        <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+          <p className="text-xs font-semibold uppercase tracking-widest text-orange-400">
             Latest Episode
           </p>
-          <LatestEpisodeHero />
+          <div className="mt-1">
+            <LatestEpisodeHero />
+          </div>
         </div>
       </section>
 
