@@ -17,6 +17,40 @@ const HOST_PHOTOS = {
   Aaron: "/aaron-patterson.png",
 };
 
+function ResultBadge({ result }) {
+  if (result === "win") {
+    return (
+      <svg
+        className="h-5 w-5 shrink-0 text-green-600"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        aria-label="Graded: win"
+      >
+        <title>Graded: win</title>
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+      </svg>
+    );
+  }
+
+  if (result === "loss") {
+    return (
+      <svg
+        className="h-5 w-5 shrink-0 text-red-600"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        aria-label="Graded: loss"
+      >
+        <title>Graded: loss</title>
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    );
+  }
+
+  return null;
+}
+
 function HostPicks({ host, picks, record, accentColor }) {
   return (
     <div className="rounded-xl border border-neutral-200 bg-white p-6 shadow-sm">
@@ -49,10 +83,13 @@ function HostPicks({ host, picks, record, accentColor }) {
                   {pick.game}
                 </p>
               )}
-              <p className="mt-1 text-lg font-bold" style={{ color: accentColor }}>
-                {pick.selection}
-                {pick.odds ? <span className="ml-2 text-neutral-500">({pick.odds})</span> : null}
-              </p>
+              <div className="mt-1 flex items-center gap-2">
+                <p className="text-lg font-bold" style={{ color: accentColor }}>
+                  {pick.selection}
+                  {pick.odds ? <span className="ml-2 text-neutral-500">({pick.odds})</span> : null}
+                </p>
+                <ResultBadge result={pick.result} />
+              </div>
               {pick.note && <p className="mt-1 text-sm text-neutral-600">{pick.note}</p>}
             </li>
           ))}
