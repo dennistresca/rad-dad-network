@@ -30,8 +30,8 @@ export const pickOfTheDay = {
     ],
   },
   records: {
-    Dennis: { wins: 1, losses: 3 },
-    Shaun: { wins: 7, losses: 2 },
-    Aaron: { wins: 2, losses: 1 },
+    Dennis: { wins: 3, losses: 4 },
+    Shaun: { wins: 8, losses: 4 },
+    Aaron: { wins: 2, losses: 3 },
   },
 };
