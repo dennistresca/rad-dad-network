@@ -12,21 +12,14 @@
 // to add a `pushes` field and display it too).
 
 export const pickOfTheDay = {
-  date: "2026-08-16",
+  date: "2026-08-17",
   picks: {
-    Dennis: [
-      { game: "Baltimore @ Tampa Bay", selection: "OVER 7.5 runs", result: "win" },
-      { selection: "Boston ML", odds: "-120", result: "loss" },
-      { selection: "San Diego ML", odds: "-105", result: "win" },
-    ],
-    Shaun: [
-      { game: "Atlanta @ Arizona", selection: "YRFI", result: "loss" },
-      { game: "Chicago @ St Louis", selection: "YRFI", result: "win" },
-      { game: "Texas @ Athletics", selection: "YRFI", result: "loss" },
-    ],
+    Dennis: [],
+    Shaun: [{ game: "Miami @ Philadelphia", selection: "NRFI" }],
     Aaron: [
-      { selection: "Cincinnati ML", odds: "+105", result: "loss" },
-      { selection: "Washington ML", odds: "+140", result: "loss" },
+      { selection: "Pirates ML", odds: "-110" },
+      { selection: "Padres ML", odds: "+100" },
+      { selection: "Tampa Bay ML", odds: "-167" },
     ],
   },
   records: {
