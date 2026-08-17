@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { getShowBySlug } from "../data/shows";
 import { pickOfTheDay } from "../data/pickOfTheDay";
 import { usePageMeta } from "../hooks/usePageMeta";
+import ResultBadge from "../components/ResultBadge";
 
 const formatter = new Intl.DateTimeFormat("en-US", {
   year: "numeric",
@@ -16,40 +17,6 @@ const HOST_PHOTOS = {
   Shaun: "/shaun-thompson.jpg",
   Aaron: "/aaron-patterson.png",
 };
-
-function ResultBadge({ result }) {
-  if (result === "win") {
-    return (
-      <svg
-        className="h-5 w-5 shrink-0 text-green-600"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        aria-label="Graded: win"
-      >
-        <title>Graded: win</title>
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-      </svg>
-    );
-  }
-
-  if (result === "loss") {
-    return (
-      <svg
-        className="h-5 w-5 shrink-0 text-red-600"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        aria-label="Graded: loss"
-      >
-        <title>Graded: loss</title>
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
-      </svg>
-    );
-  }
-
-  return null;
-}
 
 function HostPicks({ host, picks, record, accentColor }) {
   return (

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { getShowBySlug } from "../data/shows";
 import { bankrollTracker } from "../data/bankrollTracker";
 import { usePageMeta } from "../hooks/usePageMeta";
+import ResultBadge from "../components/ResultBadge";
 
 const formatter = new Intl.DateTimeFormat("en-US", {
   year: "numeric",
@@ -27,6 +28,51 @@ function RecordCard({ label, record, accentColor }) {
   );
 }
 
+function WeekCard({ week, accentColor }) {
+  return (
+    <div className="rounded-xl border border-neutral-200 bg-white p-6 shadow-sm">
+      <div className="flex flex-wrap items-baseline justify-between gap-2">
+        <h3 className="text-lg font-bold text-neutral-900">{week.episode}</h3>
+        {week.date && (
+          <time dateTime={week.date} className="text-sm text-neutral-500">
+            {new Intl.DateTimeFormat("en-US", {
+              month: "long",
+              day: "numeric",
+              year: "numeric",
+              timeZone: "UTC",
+            }).format(new Date(week.date))}
+          </time>
+        )}
+      </div>
+
+      <ul className="mt-3 space-y-4">
+        {week.bets.map((bet, i) => (
+          <li key={i} className="border-t border-neutral-100 pt-4 first:border-t-0 first:pt-0">
+            {bet.category && (
+              <p className="text-xs font-semibold uppercase tracking-wide text-neutral-400">
+                {bet.category}
+              </p>
+            )}
+            {bet.game && (
+              <p className="text-sm font-semibold uppercase tracking-wide text-neutral-500">
+                {bet.game}
+              </p>
+            )}
+            <div className="mt-1 flex items-center gap-2">
+              <p className="text-lg font-bold" style={{ color: accentColor }}>
+                {bet.selection}
+                {bet.odds ? <span className="ml-2 text-neutral-500">({bet.odds})</span> : null}
+              </p>
+              <ResultBadge result={bet.result} />
+            </div>
+            {bet.note && <p className="mt-1 text-sm text-neutral-600">{bet.note}</p>}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 export default function BankrollTracker() {
   const show = getShowBySlug("dancing-with-the-odds");
   const formattedDate = formatter.format(new Date(bankrollTracker.lastUpdated));
@@ -35,7 +81,7 @@ export default function BankrollTracker() {
     `Dancing With the Odds' bankroll tracker: current bankroll and season betting record, updated ${formattedDate}.`
   );
 
-  const { currentBankroll, goalBankroll, records } = bankrollTracker;
+  const { currentBankroll, goalBankroll, records, weeklyBets } = bankrollTracker;
   const progressPercent = Math.min(100, Math.max(0, (currentBankroll / goalBankroll) * 100));
 
   return (
@@ -101,6 +147,23 @@ export default function BankrollTracker() {
             record={records.bucketsOfCash}
             accentColor={show.colorTheme.primary}
           />
+        </div>
+
+        <div className="mt-14" aria-labelledby="weekly-bets-heading">
+          <h2 id="weekly-bets-heading" className="text-2xl font-bold text-neutral-900">
+            Official Bets by Week
+          </h2>
+          {weeklyBets.length === 0 ? (
+            <p className="mt-4 text-neutral-500">
+              No official bets logged yet, check back once the season kicks off!
+            </p>
+          ) : (
+            <div className="mt-6 space-y-6">
+              {weeklyBets.map((week) => (
+                <WeekCard key={week.episode} week={week} accentColor={show.colorTheme.primary} />
+              ))}
+            </div>
+          )}
         </div>
       </section>
     </>
