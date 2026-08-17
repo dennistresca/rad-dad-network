@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import ShowPage from "./pages/ShowPage";
 import PickOfTheDay from "./pages/PickOfTheDay";
+import BankrollTracker from "./pages/BankrollTracker";
 import Store from "./pages/Store";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -24,6 +25,10 @@ export default function App() {
             <Route
               path="/shows/dancing-with-the-odds/pick-of-the-day"
               element={<PickOfTheDay />}
+            />
+            <Route
+              path="/shows/dancing-with-the-odds/road-to-10k"
+              element={<BankrollTracker />}
             />
             <Route path="/store" element={<Store />} />
             <Route path="/about" element={<About />} />

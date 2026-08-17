@@ -29,7 +29,10 @@ export const shows = [
     },
     logo: "/logo-dancing-with-the-odds.png",
     feedUrl: "https://anchor.fm/s/11112b5f8/podcast/rss",
-    subPage: { label: "Daily Picks", path: "/shows/dancing-with-the-odds/pick-of-the-day" },
+    subPages: [
+      { label: "Daily Picks", path: "/shows/dancing-with-the-odds/pick-of-the-day" },
+      { label: "Road to $10K", path: "/shows/dancing-with-the-odds/road-to-10k" },
+    ],
     platforms: {
       apple: "https://podcasts.apple.com/us/podcast/dancing-with-the-odds/id1737245810",
       spotify: "https://open.spotify.com/show/0L1J1ibh9WR7rYLYMgF7CK",
