@@ -1,11 +1,14 @@
 // Dancing With the Odds' "Pick of the Day" page. Update `date` to today
 // whenever you refresh the picks below, then add each host's pick(s) to
 // their array. Each pick can be:
-//   { game: "Team A @ Team B", selection: "Team A -3.5", odds: "-110", note: "Optional extra context", result: "win" }
-// `note` and `result` are optional. `result` can be "win" or "loss" to show
-// a checkmark/X once a pick is graded; leave it off while still pending.
-// Leave a host's array as [] if they haven't submitted a pick yet, the
-// page will show a "no pick yet" placeholder for them.
+//   { league: "MLB", game: "Team A @ Team B", selection: "Team A -3.5", odds: "-110", note: "Optional extra context", result: "win" }
+// `league` should always be set (e.g. "MLB", "NFL", "NCAAF") so readers
+// can't mistake a matchup for the wrong sport, since some team city names
+// overlap across leagues (e.g. Baltimore/Tampa Bay could read as MLB or
+// NFL). `note` and `result` are optional. `result` can be "win" or "loss"
+// to show a checkmark/X once a pick is graded; leave it off while still
+// pending. Leave a host's array as [] if they haven't submitted a pick
+// yet, the page will show a "no pick yet" placeholder for them.
 //
 // `records` tracks each host's overall Daily Picks win-loss record. Update wins/
 // losses as picks are graded (a push doesn't need tracking unless you want
@@ -15,14 +18,14 @@ export const pickOfTheDay = {
   date: "2026-08-17",
   picks: {
     Dennis: [
-      { game: "Baltimore @ Tampa Bay", selection: "OVER 7.5 runs" },
-      { selection: "New York Mets ML", odds: "-115" },
+      { league: "MLB", game: "Baltimore @ Tampa Bay", selection: "OVER 7.5 runs" },
+      { league: "MLB", selection: "New York Mets ML", odds: "-115" },
     ],
-    Shaun: [{ game: "Miami @ Philadelphia", selection: "NRFI" }],
+    Shaun: [{ league: "MLB", game: "Miami @ Philadelphia", selection: "NRFI" }],
     Aaron: [
-      { selection: "Pirates ML", odds: "-110" },
-      { selection: "Padres ML", odds: "+100" },
-      { selection: "Tampa Bay ML", odds: "-167" },
+      { league: "MLB", selection: "Pirates ML", odds: "-110" },
+      { league: "MLB", selection: "Padres ML", odds: "+100" },
+      { league: "MLB", selection: "Tampa Bay ML", odds: "-167" },
     ],
   },
   records: {
