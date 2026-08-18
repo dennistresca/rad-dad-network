@@ -18,19 +18,19 @@ export const pickOfTheDay = {
   date: "2026-08-17",
   picks: {
     Dennis: [
-      { league: "MLB", game: "Baltimore @ Tampa Bay", selection: "OVER 7.5 runs" },
-      { league: "MLB", selection: "New York Mets ML", odds: "-115" },
+      { league: "MLB", game: "Baltimore @ Tampa Bay", selection: "OVER 7.5 runs", result: "win" },
+      { league: "MLB", selection: "New York Mets ML", odds: "-115", result: "win" },
     ],
     Shaun: [{ league: "MLB", game: "Miami @ Philadelphia", selection: "NRFI", result: "win" }],
     Aaron: [
       { league: "MLB", selection: "Pirates ML", odds: "-110" },
-      { league: "MLB", selection: "Padres ML", odds: "+100" },
-      { league: "MLB", selection: "Tampa Bay ML", odds: "-167" },
+      { league: "MLB", selection: "Padres ML", odds: "+100", result: "loss" },
+      { league: "MLB", selection: "Tampa Bay ML", odds: "-167", result: "win" },
     ],
   },
   records: {
-    Dennis: { wins: 3, losses: 4 },
+    Dennis: { wins: 5, losses: 4 },
     Shaun: { wins: 9, losses: 4 },
-    Aaron: { wins: 2, losses: 3 },
+    Aaron: { wins: 3, losses: 4 },
   },
 };
