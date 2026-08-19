@@ -10,9 +10,12 @@
 // pending. Leave a host's array as [] if they haven't submitted a pick
 // yet, the page will show a "no pick yet" placeholder for them.
 //
-// `records` tracks each host's overall Daily Picks win-loss record. Update wins/
-// losses as picks are graded (a push doesn't need tracking unless you want
-// to add a `pushes` field and display it too).
+// `records` tracks each host's Daily Picks win-loss record BROKEN OUT BY
+// LEAGUE, keyed the same way as each pick's `league` (e.g. "MLB", "NFL",
+// "NCAAF"). Update the matching league's wins/losses as picks are graded.
+// The page adds these up itself to show each host's overall record, so
+// there's only one number to update, not two. Leave a league out of a
+// host's record entirely until they have a graded pick in it.
 
 export const pickOfTheDay = {
   date: "2026-08-18",
@@ -34,8 +37,8 @@ export const pickOfTheDay = {
     ],
   },
   records: {
-    Dennis: { wins: 7, losses: 5 },
-    Shaun: { wins: 11, losses: 5 },
-    Aaron: { wins: 6, losses: 5 },
+    Dennis: { MLB: { wins: 7, losses: 5 } },
+    Shaun: { MLB: { wins: 11, losses: 5 } },
+    Aaron: { MLB: { wins: 6, losses: 5 } },
   },
 };

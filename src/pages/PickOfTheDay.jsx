@@ -18,7 +18,15 @@ const HOST_PHOTOS = {
   Aaron: "/aaron-patterson.png",
 };
 
-function HostPicks({ host, picks, record, accentColor }) {
+function HostPicks({ host, picks, leagueRecords, accentColor }) {
+  const leagueEntries = leagueRecords
+    ? Object.entries(leagueRecords).filter(([, r]) => r.wins + r.losses > 0)
+    : [];
+  const overall = leagueEntries.reduce(
+    (acc, [, r]) => ({ wins: acc.wins + r.wins, losses: acc.losses + r.losses }),
+    { wins: 0, losses: 0 }
+  );
+
   return (
     <div className="rounded-xl border border-neutral-200 bg-white p-6 shadow-sm">
       <div className="flex items-center gap-3">
@@ -31,13 +39,19 @@ function HostPicks({ host, picks, record, accentColor }) {
         )}
         <h3 className="text-lg font-bold text-neutral-900">
           {host}
-          {record && (
+          {leagueEntries.length > 0 && (
             <span className="ml-2 text-sm font-medium text-neutral-500">
-              (Daily Picks Record {record.wins}-{record.losses})
+              (Daily Picks Record {overall.wins}-{overall.losses})
             </span>
           )}
         </h3>
       </div>
+
+      {leagueEntries.length > 0 && (
+        <p className="mt-1 text-xs font-medium text-neutral-400">
+          {leagueEntries.map(([league, r]) => `${league} ${r.wins}-${r.losses}`).join(" · ")}
+        </p>
+      )}
 
       {picks.length === 0 ? (
         <p className="mt-3 text-sm text-neutral-500">No pick submitted yet.</p>
@@ -109,7 +123,7 @@ export default function PickOfTheDay() {
               key={host}
               host={host}
               picks={picks}
-              record={pickOfTheDay.records?.[host]}
+              leagueRecords={pickOfTheDay.records?.[host]}
               accentColor={show.colorTheme.primary}
             />
           ))}
