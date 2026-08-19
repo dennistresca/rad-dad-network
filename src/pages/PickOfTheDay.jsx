@@ -18,6 +18,21 @@ const HOST_PHOTOS = {
   Aaron: "/aaron-patterson.png",
 };
 
+// Groups picks by league, one badge per group instead of one per pick.
+// Preserves the order leagues first appear in.
+function groupByLeague(picks) {
+  const groups = [];
+  for (const pick of picks) {
+    const existing = groups.find(([league]) => league === pick.league);
+    if (existing) {
+      existing[1].push(pick);
+    } else {
+      groups.push([pick.league, [pick]]);
+    }
+  }
+  return groups;
+}
+
 function HostPicks({ host, picks, leagueRecords, accentColor }) {
   const leagueEntries = leagueRecords
     ? Object.entries(leagueRecords).filter(([, r]) => r.wins + r.losses > 0)
@@ -56,33 +71,39 @@ function HostPicks({ host, picks, leagueRecords, accentColor }) {
       {picks.length === 0 ? (
         <p className="mt-3 text-sm text-neutral-500">No pick submitted yet.</p>
       ) : (
-        <ul className="mt-3 space-y-4">
-          {picks.map((pick, i) => (
-            <li key={i} className="border-t border-neutral-100 pt-4 first:border-t-0 first:pt-0">
-              {pick.league && (
+        <div className="mt-3 space-y-5">
+          {groupByLeague(picks).map(([league, leaguePicks]) => (
+            <div key={league}>
+              {league && (
                 <span
                   className="inline-block rounded-full px-2 py-0.5 text-xs font-bold tracking-wide text-white"
                   style={{ backgroundColor: accentColor }}
                 >
-                  {pick.league}
+                  {league}
                 </span>
               )}
-              {pick.game && (
-                <p className="mt-1 text-sm font-semibold uppercase tracking-wide text-neutral-500">
-                  {pick.game}
-                </p>
-              )}
-              <div className="mt-1 flex items-center gap-2">
-                <p className="text-lg font-bold" style={{ color: accentColor }}>
-                  {pick.selection}
-                  {pick.odds ? <span className="ml-2 text-neutral-500">({pick.odds})</span> : null}
-                </p>
-                <ResultBadge result={pick.result} />
-              </div>
-              {pick.note && <p className="mt-1 text-sm text-neutral-600">{pick.note}</p>}
-            </li>
+              <ul className="mt-2 space-y-4">
+                {leaguePicks.map((pick, i) => (
+                  <li key={i} className="border-t border-neutral-100 pt-4 first:border-t-0 first:pt-0">
+                    {pick.game && (
+                      <p className="text-sm font-semibold uppercase tracking-wide text-neutral-500">
+                        {pick.game}
+                      </p>
+                    )}
+                    <div className="mt-1 flex items-center gap-2">
+                      <p className="text-lg font-bold" style={{ color: accentColor }}>
+                        {pick.selection}
+                        {pick.odds ? <span className="ml-2 text-neutral-500">({pick.odds})</span> : null}
+                      </p>
+                      <ResultBadge result={pick.result} />
+                    </div>
+                    {pick.note && <p className="mt-1 text-sm text-neutral-600">{pick.note}</p>}
+                  </li>
+                ))}
+              </ul>
+            </div>
           ))}
-        </ul>
+        </div>
       )}
     </div>
   );
