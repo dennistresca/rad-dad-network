@@ -20,7 +20,11 @@
 export const pickOfTheDay = {
   date: "2026-08-19",
   picks: {
-    Dennis: [],
+    Dennis: [
+      { league: "MLB", game: "Washington vs Texas", selection: "Washington ML", odds: "+120" },
+      { league: "MLB", game: "Kansas City vs Athletics", selection: "Kansas City ML", odds: "-158" },
+      { league: "MLB", game: "Miami vs Philadelphia", selection: "Miami ML", odds: "+121" },
+    ],
     Shaun: [
       { league: "MLB", game: "Toronto @ Tampa Bay", selection: "NRFI" },
       { league: "MLB", game: "New York Yankees @ Baltimore", selection: "YRFI" },
