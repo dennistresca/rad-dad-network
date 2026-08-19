@@ -18,9 +18,9 @@ export const pickOfTheDay = {
   date: "2026-08-18",
   picks: {
     Dennis: [
-      { league: "MLB", game: "St Louis vs Cincinnati", selection: "St Louis ML" },
-      { league: "MLB", game: "Detroit vs Pittsburgh", selection: "Detroit ML" },
-      { league: "MLB", game: "Kansas City vs Athletics", selection: "Kansas City ML" },
+      { league: "MLB", game: "St Louis vs Cincinnati", selection: "St Louis ML", result: "win" },
+      { league: "MLB", game: "Detroit vs Pittsburgh", selection: "Detroit ML", result: "loss" },
+      { league: "MLB", game: "Kansas City vs Athletics", selection: "Kansas City ML", result: "win" },
     ],
     Shaun: [
       { league: "MLB", game: "Seattle @ Milwaukee", selection: "NRFI", result: "loss" },
@@ -28,14 +28,14 @@ export const pickOfTheDay = {
       { league: "MLB", game: "Miami @ Philadelphia", selection: "YRFI", result: "win" },
     ],
     Aaron: [
-      { league: "MLB", game: "Cleveland vs San Francisco", selection: "Cleveland ML" },
-      { league: "MLB", game: "Kansas City vs Athletics", selection: "Kansas City ML" },
-      { league: "MLB", game: "Chicago Cubs vs Chicago White Sox", selection: "Chicago Cubs ML" },
+      { league: "MLB", game: "Cleveland vs San Francisco", selection: "Cleveland ML", result: "win" },
+      { league: "MLB", game: "Kansas City vs Athletics", selection: "Kansas City ML", result: "win" },
+      { league: "MLB", game: "Chicago Cubs vs Chicago White Sox", selection: "Chicago Cubs ML", result: "win" },
     ],
   },
   records: {
-    Dennis: { wins: 5, losses: 4 },
+    Dennis: { wins: 7, losses: 5 },
     Shaun: { wins: 11, losses: 5 },
-    Aaron: { wins: 3, losses: 5 },
+    Aaron: { wins: 6, losses: 5 },
   },
 };
