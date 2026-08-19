@@ -18,22 +18,17 @@
 // host's record entirely until they have a graded pick in it.
 
 export const pickOfTheDay = {
-  date: "2026-08-18",
+  date: "2026-08-19",
   picks: {
-    Dennis: [
-      { league: "MLB", game: "St Louis vs Cincinnati", selection: "St Louis ML", result: "win" },
-      { league: "MLB", game: "Detroit vs Pittsburgh", selection: "Detroit ML", result: "loss" },
-      { league: "MLB", game: "Kansas City vs Athletics", selection: "Kansas City ML", result: "win" },
-    ],
+    Dennis: [],
     Shaun: [
-      { league: "MLB", game: "Seattle @ Milwaukee", selection: "NRFI", result: "loss" },
-      { league: "MLB", game: "Arizona @ Boston", selection: "YRFI", result: "win" },
-      { league: "MLB", game: "Miami @ Philadelphia", selection: "YRFI", result: "win" },
+      { league: "MLB", game: "Toronto @ Tampa Bay", selection: "NRFI" },
+      { league: "MLB", game: "New York Yankees @ Baltimore", selection: "YRFI" },
     ],
     Aaron: [
-      { league: "MLB", game: "Cleveland vs San Francisco", selection: "Cleveland ML", result: "win" },
-      { league: "MLB", game: "Kansas City vs Athletics", selection: "Kansas City ML", result: "win" },
-      { league: "MLB", game: "Chicago Cubs vs Chicago White Sox", selection: "Chicago Cubs ML", result: "win" },
+      { league: "MLB", game: "Minnesota vs Atlanta", selection: "Minnesota ML" },
+      { league: "MLB", game: "Cleveland vs San Francisco", selection: "Cleveland ML" },
+      { league: "MLB", game: "Milwaukee vs Seattle", selection: "Milwaukee ML" },
     ],
   },
   records: {
