@@ -23,21 +23,21 @@ export const pickOfTheDay = {
     Dennis: [
       { league: "MLB", game: "Washington vs Texas", selection: "Washington ML", odds: "+120" },
       { league: "MLB", game: "Kansas City vs Athletics", selection: "Kansas City ML", odds: "-158" },
-      { league: "MLB", game: "Miami vs Philadelphia", selection: "Miami ML", odds: "+121" },
+      { league: "MLB", game: "Miami vs Philadelphia", selection: "Miami ML", odds: "+121", result: "loss" },
     ],
     Shaun: [
-      { league: "MLB", game: "Toronto @ Tampa Bay", selection: "NRFI" },
-      { league: "MLB", game: "New York Yankees @ Baltimore", selection: "YRFI" },
+      { league: "MLB", game: "Toronto @ Tampa Bay", selection: "NRFI", result: "loss" },
+      { league: "MLB", game: "New York Yankees @ Baltimore", selection: "YRFI", result: "win" },
     ],
     Aaron: [
-      { league: "MLB", game: "Minnesota vs Atlanta", selection: "Minnesota ML", odds: "-104" },
+      { league: "MLB", game: "Minnesota vs Atlanta", selection: "Minnesota ML", odds: "-104", result: "win" },
       { league: "MLB", game: "Cleveland vs San Francisco", selection: "Cleveland ML", odds: "-210" },
       { league: "MLB", game: "Milwaukee vs Seattle", selection: "Milwaukee ML", odds: "-118" },
     ],
   },
   records: {
-    Dennis: { MLB: { wins: 7, losses: 5 } },
-    Shaun: { MLB: { wins: 11, losses: 5 } },
-    Aaron: { MLB: { wins: 6, losses: 5 } },
+    Dennis: { MLB: { wins: 7, losses: 6 } },
+    Shaun: { MLB: { wins: 12, losses: 6 } },
+    Aaron: { MLB: { wins: 7, losses: 5 } },
   },
 };
