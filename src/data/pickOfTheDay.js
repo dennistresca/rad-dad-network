@@ -30,14 +30,14 @@ export const pickOfTheDay = {
       { league: "MLB", game: "Atlanta @ Chicago White Sox", selection: "YRFI", result: "loss" },
     ],
     Aaron: [
-      { league: "MLB", game: "Washington vs Texas", selection: "Nationals ML", odds: "+153" },
-      { league: "MLB", game: "Houston vs Los Angeles Angels", selection: "Astros ML", odds: "-176" },
+      { league: "MLB", game: "Washington vs Texas", selection: "Nationals ML", odds: "+153", result: "loss" },
+      { league: "MLB", game: "Houston vs Los Angeles Angels", selection: "Astros ML", odds: "-176", result: "loss" },
       { league: "MLB", game: "Chicago White Sox vs Atlanta", selection: "White Sox ML", odds: "-102", result: "loss" },
     ],
   },
   records: {
     Dennis: { MLB: { wins: 11, losses: 7 } },
     Shaun: { MLB: { wins: 13, losses: 7 } },
-    Aaron: { MLB: { wins: 7, losses: 8 } },
+    Aaron: { MLB: { wins: 7, losses: 10 } },
   },
 };
