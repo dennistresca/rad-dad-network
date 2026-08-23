@@ -27,7 +27,7 @@ export const pickOfTheDay = {
     ],
     Shaun: [
       { league: "MLB", game: "San Francisco @ Boston", selection: "YRFI" },
-      { league: "MLB", game: "Tampa Bay @ Baltimore", selection: "YRFI" },
+      { league: "MLB", game: "Tampa Bay @ Baltimore", selection: "YRFI", result: "loss" },
     ],
     Aaron: [
       { league: "MLB", game: "Kansas City vs Detroit", selection: "Royals ML", odds: "-102" },
@@ -37,7 +37,7 @@ export const pickOfTheDay = {
   },
   records: {
     Dennis: { MLB: { wins: 11, losses: 7 } },
-    Shaun: { MLB: { wins: 13, losses: 7 } },
+    Shaun: { MLB: { wins: 13, losses: 8 } },
     Aaron: { MLB: { wins: 7, losses: 10 } },
   },
 };
