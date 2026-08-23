@@ -21,7 +21,10 @@ export const pickOfTheDay = {
   date: "2026-08-21",
   picks: {
     Dennis: [],
-    Shaun: [],
+    Shaun: [
+      { league: "MLB", game: "San Francisco @ Boston", selection: "YRFI" },
+      { league: "MLB", game: "Tampa Bay @ Baltimore", selection: "YRFI" },
+    ],
     Aaron: [],
   },
   records: {
