@@ -29,7 +29,11 @@ export const pickOfTheDay = {
       { league: "MLB", game: "Chicago Cubs @ Arizona", selection: "YRFI" },
       { league: "MLB", game: "Minnesota @ Athletics", selection: "YRFI" },
     ],
-    Aaron: [],
+    Aaron: [
+      { league: "MLB", game: "San Diego vs Pittsburgh", selection: "Padres ML", odds: "-110" },
+      { league: "MLB", game: "Cincinnati @ San Francisco", selection: "Reds ML", odds: "-161" },
+      { league: "MLB", game: "Texas @ Chicago White Sox", selection: "Rangers ML", odds: "+115" },
+    ],
   },
   records: {
     Dennis: { MLB: { wins: 13, losses: 8 } },
