@@ -21,13 +21,13 @@ export const pickOfTheDay = {
   date: "2026-08-24",
   picks: {
     Dennis: [
-      { league: "MLB", game: "Tampa Bay vs Detroit", selection: "Tampa Bay ML", odds: "-130" },
-      { league: "MLB", game: "Washington vs Colorado", selection: "Washington ML", odds: "-185" },
+      { league: "MLB", game: "Tampa Bay vs Detroit", selection: "Tampa Bay ML", odds: "-130", result: "win" },
+      { league: "MLB", game: "Washington vs Colorado", selection: "Washington ML", odds: "-185", result: "win" },
       { league: "MLB", game: "Minnesota vs Athletics", selection: "OVER 10.5 runs", odds: "-117" },
     ],
     Shaun: [
-      { league: "MLB", game: "Chicago Cubs @ Arizona", selection: "YRFI" },
-      { league: "MLB", game: "Minnesota @ Athletics", selection: "YRFI" },
+      { league: "MLB", game: "Chicago Cubs @ Arizona", selection: "YRFI", result: "loss" },
+      { league: "MLB", game: "Minnesota @ Athletics", selection: "YRFI", result: "win" },
     ],
     Aaron: [
       { league: "MLB", game: "San Diego vs Pittsburgh", selection: "Padres ML", odds: "-110" },
@@ -36,8 +36,8 @@ export const pickOfTheDay = {
     ],
   },
   records: {
-    Dennis: { MLB: { wins: 13, losses: 8 } },
-    Shaun: { MLB: { wins: 14, losses: 8 } },
+    Dennis: { MLB: { wins: 15, losses: 8 } },
+    Shaun: { MLB: { wins: 15, losses: 9 } },
     Aaron: { MLB: { wins: 9, losses: 11 } },
   },
 };
