@@ -18,27 +18,14 @@
 // host's record entirely until they have a graded pick in it.
 
 export const pickOfTheDay = {
-  date: "2026-08-25",
+  date: "2026-08-26",
   picks: {
-    Dennis: [
-      { league: "MLB", game: "Cleveland vs Los Angeles Angels", selection: "Cleveland ML", odds: "-140" },
-      { league: "MLB", game: "Philadelphia vs Seattle", selection: "First 5 Innings UNDER 4.5", result: "win" },
-      { league: "MLB", game: "San Diego vs Pittsburgh", selection: "San Diego ML", odds: "-123" },
-    ],
-    Shaun: [
-      { league: "MLB", game: "Baltimore @ St Louis", selection: "NRFI", result: "win" },
-      { league: "MLB", game: "Chicago Cubs @ Arizona", selection: "NRFI", result: "win" },
-      { league: "MLB", game: "Houston @ New York Yankees", selection: "YRFI", result: "loss" },
-      { league: "MLB", game: "Los Angeles Dodgers @ Atlanta", selection: "YRFI", result: "win" },
-    ],
-    Aaron: [
-      { league: "MLB", game: "Tampa Bay @ Detroit", selection: "Rays ML", odds: "-126", result: "loss" },
-      { league: "MLB", game: "Milwaukee @ New York Mets", selection: "Brewers ML", odds: "-158", result: "loss" },
-      { league: "MLB", game: "Washington vs Colorado", selection: "Nationals ML", odds: "+130", result: "loss" },
-    ],
+    Dennis: [],
+    Shaun: [],
+    Aaron: [],
   },
   records: {
-    Dennis: { MLB: { wins: 17, losses: 8 } },
+    Dennis: { MLB: { wins: 18, losses: 9 } },
     Shaun: { MLB: { wins: 18, losses: 10 } },
     Aaron: { MLB: { wins: 10, losses: 16 } },
   },
