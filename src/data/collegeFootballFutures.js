@@ -34,7 +34,7 @@ export const collegeFootballFutures = {
       nationalChampion: { team: "Oregon", odds: "+614" },
     },
     Aaron: {
-      acc: { team: "Miami" },
+      acc: { team: "Miami", odds: "-130" },
       bigTen: { team: "Oregon", odds: "+257" },
       big12: { team: "Texas Tech", odds: "-117" },
       sec: { team: "Texas", odds: "+300" },
