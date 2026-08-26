@@ -1,6 +1,7 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { getShowBySlug } from "../data/shows";
-import { pickOfTheDay } from "../data/pickOfTheDay";
+import { pickOfTheDay, previousDayPicks } from "../data/pickOfTheDay";
 import { usePageMeta } from "../hooks/usePageMeta";
 import ResultBadge from "../components/ResultBadge";
 
@@ -111,7 +112,10 @@ function HostPicks({ host, picks, leagueRecords, accentColor }) {
 
 export default function PickOfTheDay() {
   const show = getShowBySlug("dancing-with-the-odds");
-  const formattedDate = formatter.format(new Date(pickOfTheDay.date));
+  const [view, setView] = useState("today");
+  const isToday = view === "today";
+  const activeData = isToday ? pickOfTheDay : previousDayPicks;
+  const formattedDate = formatter.format(new Date(activeData.date));
   usePageMeta(
     "Daily Picks",
     `Dancing With the Odds' daily picks from Dennis, Shaun, and Aaron, updated ${formattedDate}.`
@@ -132,19 +136,46 @@ export default function PickOfTheDay() {
           </p>
           <h1 className="mt-1 text-3xl font-black sm:text-4xl md:text-5xl">Daily Picks</h1>
           <p className="mt-3 text-lg font-medium text-white/90">
-            Updated <time dateTime={pickOfTheDay.date}>{formattedDate}</time>
+            {isToday ? "Updated" : "Showing"} <time dateTime={activeData.date}>{formattedDate}</time>
           </p>
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="grid gap-6 sm:grid-cols-3">
-          {Object.entries(pickOfTheDay.picks).map(([host, picks]) => (
+        <div className="flex justify-center gap-2">
+          <button
+            type="button"
+            onClick={() => setView("today")}
+            className="rounded-full px-4 py-2 text-sm font-semibold transition-colors"
+            style={
+              isToday
+                ? { backgroundColor: show.colorTheme.primary, color: "white" }
+                : { backgroundColor: "#f5f5f5", color: "#525252" }
+            }
+          >
+            Today's Picks
+          </button>
+          <button
+            type="button"
+            onClick={() => setView("yesterday")}
+            className="rounded-full px-4 py-2 text-sm font-semibold transition-colors"
+            style={
+              !isToday
+                ? { backgroundColor: show.colorTheme.primary, color: "white" }
+                : { backgroundColor: "#f5f5f5", color: "#525252" }
+            }
+          >
+            Yesterday's Picks
+          </button>
+        </div>
+
+        <div className="mt-10 grid gap-6 sm:grid-cols-3">
+          {Object.entries(activeData.picks).map(([host, picks]) => (
             <HostPicks
               key={host}
               host={host}
               picks={picks}
-              leagueRecords={pickOfTheDay.records?.[host]}
+              leagueRecords={isToday ? pickOfTheDay.records?.[host] : null}
               accentColor={show.colorTheme.primary}
             />
           ))}

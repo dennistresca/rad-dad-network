@@ -30,3 +30,30 @@ export const pickOfTheDay = {
     Aaron: { MLB: { wins: 10, losses: 16 } },
   },
 };
+
+// The "Yesterday's Picks" view on the Daily Picks page. Before resetting
+// `pickOfTheDay` for a new day, copy that day's fully-graded `date` and
+// `picks` here (not `records`, since records are cumulative and don't
+// belong to a single day). This only ever holds one day, not a full
+// history.
+export const previousDayPicks = {
+  date: "2026-08-25",
+  picks: {
+    Dennis: [
+      { league: "MLB", game: "Cleveland vs Los Angeles Angels", selection: "Cleveland ML", odds: "-140", result: "win" },
+      { league: "MLB", game: "Philadelphia vs Seattle", selection: "First 5 Innings UNDER 4.5", result: "win" },
+      { league: "MLB", game: "San Diego vs Pittsburgh", selection: "San Diego ML", odds: "-123", result: "loss" },
+    ],
+    Shaun: [
+      { league: "MLB", game: "Baltimore @ St Louis", selection: "NRFI", result: "win" },
+      { league: "MLB", game: "Chicago Cubs @ Arizona", selection: "NRFI", result: "win" },
+      { league: "MLB", game: "Houston @ New York Yankees", selection: "YRFI", result: "loss" },
+      { league: "MLB", game: "Los Angeles Dodgers @ Atlanta", selection: "YRFI", result: "win" },
+    ],
+    Aaron: [
+      { league: "MLB", game: "Tampa Bay @ Detroit", selection: "Rays ML", odds: "-126", result: "loss" },
+      { league: "MLB", game: "Milwaukee @ New York Mets", selection: "Brewers ML", odds: "-158", result: "loss" },
+      { league: "MLB", game: "Washington vs Colorado", selection: "Nationals ML", odds: "+130", result: "loss" },
+    ],
+  },
+};
