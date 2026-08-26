@@ -29,7 +29,7 @@ export const collegeFootballFutures = {
     Shaun: {
       acc: { team: "Louisville", odds: "+700" },
       bigTen: { team: "Indiana" },
-      big12: { team: "Texas Tech" },
+      big12: { team: "Texas Tech", odds: "-117" },
       sec: { team: "Texas" },
       nationalChampion: { team: "Oregon", odds: "+614" },
     },
