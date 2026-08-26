@@ -32,6 +32,7 @@ export const shows = [
     subPages: [
       { label: "Daily Picks", path: "/shows/dancing-with-the-odds/pick-of-the-day" },
       { label: "Road to $10K", path: "/shows/dancing-with-the-odds/road-to-10k" },
+      { label: "CFB Futures", path: "/shows/dancing-with-the-odds/cfb-futures" },
     ],
     platforms: {
       apple: "https://podcasts.apple.com/us/podcast/dancing-with-the-odds/id1737245810",
