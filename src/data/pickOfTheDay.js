@@ -21,8 +21,12 @@ export const pickOfTheDay = {
   date: "2026-08-26",
   picks: {
     Dennis: [],
-    Shaun: [],
-    Aaron: [],
+    Shaun: [{ league: "MLB", game: "Milwaukee @ New York Mets", selection: "YRFI" }],
+    Aaron: [
+      { league: "MLB", game: "Philadelphia @ Seattle", selection: "Phillies ML", odds: "-108" },
+      { league: "MLB", game: "Chicago Cubs vs Arizona", selection: "OVER 8.5 runs", odds: "-118" },
+      { league: "MLB", game: "Cleveland @ Los Angeles Angels", selection: "Guardians ML", odds: "-134" },
+    ],
   },
   records: {
     Dennis: { MLB: { wins: 18, losses: 9 } },
