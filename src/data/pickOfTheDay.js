@@ -65,4 +65,134 @@ export const pickHistory = [
       ],
     },
   },
+  {
+    date: "2026-08-24",
+    picks: {
+      Dennis: [
+        { league: "MLB", game: "Tampa Bay vs Detroit", selection: "Tampa Bay ML", odds: "-130", result: "win" },
+        { league: "MLB", game: "Washington vs Colorado", selection: "Washington ML", odds: "-185", result: "win" },
+        { league: "MLB", game: "Minnesota vs Athletics", selection: "OVER 10.5 runs", odds: "-117", result: "win" },
+      ],
+      Shaun: [
+        { league: "MLB", game: "Chicago Cubs @ Arizona", selection: "YRFI", result: "loss" },
+        { league: "MLB", game: "Minnesota @ Athletics", selection: "YRFI", result: "win" },
+      ],
+      Aaron: [
+        { league: "MLB", game: "San Diego vs Pittsburgh", selection: "Padres ML", odds: "-110", result: "loss" },
+        { league: "MLB", game: "Cincinnati @ San Francisco", selection: "Reds ML", odds: "-161", result: "loss" },
+        { league: "MLB", game: "Texas @ Chicago White Sox", selection: "Rangers ML", odds: "+115", result: "win" },
+      ],
+    },
+  },
+  {
+    date: "2026-08-23",
+    picks: {
+      Dennis: [
+        { league: "MLB", game: "Arizona vs Cincinnati", selection: "Arizona ML", odds: "-129", result: "win" },
+        { league: "MLB", game: "San Diego vs Minnesota", selection: "San Diego ML", odds: "-136", result: "win" },
+        { league: "MLB", game: "Seattle vs Chicago Cubs", selection: "Seattle ML", odds: "-101", result: "loss" },
+      ],
+      Shaun: [
+        { league: "MLB", game: "San Francisco @ Boston", selection: "YRFI", result: "win" },
+        { league: "MLB", game: "Tampa Bay @ Baltimore", selection: "YRFI", result: "loss" },
+      ],
+      Aaron: [
+        { league: "MLB", game: "Kansas City vs Detroit", selection: "Royals ML", odds: "-102", result: "win" },
+        { league: "MLB", game: "Minnesota @ San Diego", selection: "Twins ML", odds: "+118", result: "loss" },
+        { league: "MLB", game: "Arizona vs Cincinnati", selection: "Diamondbacks ML", odds: "-135", result: "win" },
+      ],
+    },
+  },
+  {
+    date: "2026-08-20",
+    picks: {
+      Dennis: [
+        { league: "MLB", game: "St Louis vs Cincinnati", selection: "St Louis ML", odds: "-106", result: "win" },
+        { league: "MLB", game: "Milwaukee vs Seattle", selection: "Milwaukee ML", odds: "-128", result: "win" },
+        { league: "MLB", game: "Chicago White Sox vs Atlanta", selection: "Chicago White Sox ML", odds: "-102", result: "loss" },
+      ],
+      Shaun: [
+        { league: "MLB", game: "St Louis @ Cincinnati", selection: "YRFI", result: "win" },
+        { league: "MLB", game: "Atlanta @ Chicago White Sox", selection: "YRFI", result: "loss" },
+      ],
+      Aaron: [
+        { league: "MLB", game: "Washington vs Texas", selection: "Nationals ML", odds: "+153", result: "loss" },
+        { league: "MLB", game: "Houston vs Los Angeles Angels", selection: "Astros ML", odds: "-176", result: "loss" },
+        { league: "MLB", game: "Chicago White Sox vs Atlanta", selection: "White Sox ML", odds: "-102", result: "loss" },
+      ],
+    },
+  },
+  {
+    date: "2026-08-19",
+    picks: {
+      Dennis: [
+        { league: "MLB", game: "Washington vs Texas", selection: "Washington ML", odds: "+120", result: "win" },
+        { league: "MLB", game: "Kansas City vs Athletics", selection: "Kansas City ML", odds: "-158", result: "win" },
+        { league: "MLB", game: "Miami vs Philadelphia", selection: "Miami ML", odds: "+121", result: "loss" },
+      ],
+      Shaun: [
+        { league: "MLB", game: "Toronto @ Tampa Bay", selection: "NRFI", result: "loss" },
+        { league: "MLB", game: "New York Yankees @ Baltimore", selection: "YRFI", result: "win" },
+      ],
+      Aaron: [
+        { league: "MLB", game: "Minnesota vs Atlanta", selection: "Minnesota ML", odds: "-104", result: "win" },
+        { league: "MLB", game: "Cleveland vs San Francisco", selection: "Cleveland ML", odds: "-210", result: "loss" },
+        { league: "MLB", game: "Milwaukee vs Seattle", selection: "Milwaukee ML", odds: "-118", result: "loss" },
+      ],
+    },
+  },
+  {
+    date: "2026-08-18",
+    picks: {
+      Dennis: [
+        { league: "MLB", game: "St Louis vs Cincinnati", selection: "St Louis ML", result: "win" },
+        { league: "MLB", game: "Detroit vs Pittsburgh", selection: "Detroit ML", result: "loss" },
+        { league: "MLB", game: "Kansas City vs Athletics", selection: "Kansas City ML", result: "win" },
+      ],
+      Shaun: [
+        { league: "MLB", game: "Seattle @ Milwaukee", selection: "NRFI", result: "loss" },
+        { league: "MLB", game: "Arizona @ Boston", selection: "YRFI", result: "win" },
+        { league: "MLB", game: "Miami @ Philadelphia", selection: "YRFI", result: "win" },
+      ],
+      Aaron: [
+        { league: "MLB", game: "Cleveland vs San Francisco", selection: "Cleveland ML", result: "win" },
+        { league: "MLB", game: "Kansas City vs Athletics", selection: "Kansas City ML", result: "win" },
+        { league: "MLB", game: "Chicago Cubs vs Chicago White Sox", selection: "Chicago Cubs ML", result: "win" },
+      ],
+    },
+  },
+  {
+    date: "2026-08-17",
+    picks: {
+      Dennis: [
+        { league: "MLB", game: "Baltimore @ Tampa Bay", selection: "OVER 7.5 runs", result: "win" },
+        { league: "MLB", selection: "New York Mets ML", odds: "-115", result: "win" },
+      ],
+      Shaun: [{ league: "MLB", game: "Miami @ Philadelphia", selection: "NRFI", result: "win" }],
+      Aaron: [
+        { league: "MLB", selection: "Pirates ML", odds: "-110", result: "loss" },
+        { league: "MLB", selection: "Padres ML", odds: "+100", result: "loss" },
+        { league: "MLB", selection: "Tampa Bay ML", odds: "-167", result: "win" },
+      ],
+    },
+  },
+  {
+    date: "2026-08-16",
+    picks: {
+      Dennis: [
+        { league: "MLB", game: "Baltimore @ Tampa Bay", selection: "OVER 7.5 runs", result: "win" },
+        { league: "MLB", selection: "Boston ML", odds: "-120", result: "loss" },
+        { league: "MLB", selection: "San Diego ML", odds: "-105", result: "win" },
+      ],
+      Shaun: [
+        { league: "MLB", game: "Atlanta @ Arizona", selection: "YRFI", result: "loss" },
+        { league: "MLB", game: "Chicago @ St Louis", selection: "YRFI", result: "win" },
+        { league: "MLB", game: "Texas @ Athletics", selection: "YRFI", result: "loss" },
+      ],
+      Aaron: [
+        { league: "MLB", selection: "Cincinnati ML", odds: "+105", result: "loss" },
+        { league: "MLB", selection: "Washington ML", odds: "+140", result: "loss" },
+      ],
+    },
+  },
 ];
