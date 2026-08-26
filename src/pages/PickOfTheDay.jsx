@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { getShowBySlug } from "../data/shows";
-import { pickOfTheDay, previousDayPicks } from "../data/pickOfTheDay";
+import { pickOfTheDay, pickHistory } from "../data/pickOfTheDay";
 import { usePageMeta } from "../hooks/usePageMeta";
 import ResultBadge from "../components/ResultBadge";
 
@@ -114,11 +114,10 @@ export default function PickOfTheDay() {
   const show = getShowBySlug("dancing-with-the-odds");
   const [view, setView] = useState("today");
   const isToday = view === "today";
-  const activeData = isToday ? pickOfTheDay : previousDayPicks;
-  const formattedDate = formatter.format(new Date(activeData.date));
+  const formattedTodayDate = formatter.format(new Date(pickOfTheDay.date));
   usePageMeta(
     "Daily Picks",
-    `Dancing With the Odds' daily picks from Dennis, Shaun, and Aaron, updated ${formattedDate}.`
+    `Dancing With the Odds' daily picks from Dennis, Shaun, and Aaron, updated ${formattedTodayDate}.`
   );
 
   return (
@@ -136,7 +135,13 @@ export default function PickOfTheDay() {
           </p>
           <h1 className="mt-1 text-3xl font-black sm:text-4xl md:text-5xl">Daily Picks</h1>
           <p className="mt-3 text-lg font-medium text-white/90">
-            {isToday ? "Updated" : "Showing"} <time dateTime={activeData.date}>{formattedDate}</time>
+            {isToday ? (
+              <>
+                Updated <time dateTime={pickOfTheDay.date}>{formattedTodayDate}</time>
+              </>
+            ) : (
+              "Browse every past day's picks below"
+            )}
           </p>
         </div>
       </section>
@@ -157,7 +162,7 @@ export default function PickOfTheDay() {
           </button>
           <button
             type="button"
-            onClick={() => setView("yesterday")}
+            onClick={() => setView("previous")}
             className="rounded-full px-4 py-2 text-sm font-semibold transition-colors"
             style={
               !isToday
@@ -165,21 +170,46 @@ export default function PickOfTheDay() {
                 : { backgroundColor: "#f5f5f5", color: "#525252" }
             }
           >
-            Yesterday's Picks
+            Previous Picks
           </button>
         </div>
 
-        <div className="mt-10 grid gap-6 sm:grid-cols-3">
-          {Object.entries(activeData.picks).map(([host, picks]) => (
-            <HostPicks
-              key={host}
-              host={host}
-              picks={picks}
-              leagueRecords={isToday ? pickOfTheDay.records?.[host] : null}
-              accentColor={show.colorTheme.primary}
-            />
-          ))}
-        </div>
+        {isToday ? (
+          <div className="mt-10 grid gap-6 sm:grid-cols-3">
+            {Object.entries(pickOfTheDay.picks).map(([host, picks]) => (
+              <HostPicks
+                key={host}
+                host={host}
+                picks={picks}
+                leagueRecords={pickOfTheDay.records?.[host]}
+                accentColor={show.colorTheme.primary}
+              />
+            ))}
+          </div>
+        ) : pickHistory.length === 0 ? (
+          <p className="mt-10 text-center text-neutral-500">No previous picks yet, check back soon.</p>
+        ) : (
+          <div className="mt-10 space-y-14">
+            {pickHistory.map((day) => (
+              <div key={day.date}>
+                <h2 className="text-xl font-bold text-neutral-900">
+                  {formatter.format(new Date(day.date))}
+                </h2>
+                <div className="mt-4 grid gap-6 sm:grid-cols-3">
+                  {Object.entries(day.picks).map(([host, picks]) => (
+                    <HostPicks
+                      key={host}
+                      host={host}
+                      picks={picks}
+                      leagueRecords={null}
+                      accentColor={show.colorTheme.primary}
+                    />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
       </section>
     </>
   );
