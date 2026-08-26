@@ -22,10 +22,10 @@ export const pickOfTheDay = {
   picks: {
     Dennis: [],
     Shaun: [
-      { league: "MLB", game: "Baltimore @ St Louis", selection: "NRFI" },
+      { league: "MLB", game: "Baltimore @ St Louis", selection: "NRFI", result: "win" },
       { league: "MLB", game: "Chicago Cubs @ Arizona", selection: "NRFI" },
-      { league: "MLB", game: "Houston @ New York Yankees", selection: "YRFI" },
-      { league: "MLB", game: "Los Angeles Dodgers @ Atlanta", selection: "YRFI" },
+      { league: "MLB", game: "Houston @ New York Yankees", selection: "YRFI", result: "loss" },
+      { league: "MLB", game: "Los Angeles Dodgers @ Atlanta", selection: "YRFI", result: "win" },
     ],
     Aaron: [
       { league: "MLB", game: "Tampa Bay @ Detroit", selection: "Rays ML", odds: "-126" },
@@ -35,7 +35,7 @@ export const pickOfTheDay = {
   },
   records: {
     Dennis: { MLB: { wins: 16, losses: 8 } },
-    Shaun: { MLB: { wins: 15, losses: 9 } },
+    Shaun: { MLB: { wins: 17, losses: 10 } },
     Aaron: { MLB: { wins: 10, losses: 13 } },
   },
 };
