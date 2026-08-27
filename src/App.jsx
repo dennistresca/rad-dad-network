@@ -7,6 +7,7 @@ import ShowPage from "./pages/ShowPage";
 import PickOfTheDay from "./pages/PickOfTheDay";
 import BankrollTracker from "./pages/BankrollTracker";
 import CollegeFootballFutures from "./pages/CollegeFootballFutures";
+import OurBossThinksWereWorking from "./pages/OurBossThinksWereWorking";
 import Store from "./pages/Store";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -34,6 +35,10 @@ export default function App() {
             <Route
               path="/shows/dancing-with-the-odds/cfb-futures"
               element={<CollegeFootballFutures />}
+            />
+            <Route
+              path="/our-boss-thinks-were-working"
+              element={<OurBossThinksWereWorking />}
             />
             <Route path="/store" element={<Store />} />
             <Route path="/about" element={<About />} />
