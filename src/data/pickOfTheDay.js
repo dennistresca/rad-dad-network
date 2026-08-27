@@ -21,21 +21,21 @@ export const pickOfTheDay = {
   date: "2026-08-26",
   picks: {
     Dennis: [
-      { league: "MLB", game: "Detroit vs Tampa Bay", selection: "Detroit ML", odds: "-116" },
-      { league: "MLB", game: "Cleveland vs Los Angeles Angels", selection: "Cleveland ML", odds: "-135" },
-      { league: "MLB", game: "San Diego vs Pittsburgh", selection: "San Diego ML", odds: "-129" },
+      { league: "MLB", game: "Detroit vs Tampa Bay", selection: "Detroit ML", odds: "-116", result: "loss" },
+      { league: "MLB", game: "Cleveland vs Los Angeles Angels", selection: "Cleveland ML", odds: "-135", result: "win" },
+      { league: "MLB", game: "San Diego vs Pittsburgh", selection: "San Diego ML", odds: "-129", result: "win" },
     ],
-    Shaun: [{ league: "MLB", game: "Milwaukee @ New York Mets", selection: "YRFI" }],
+    Shaun: [{ league: "MLB", game: "Milwaukee @ New York Mets", selection: "YRFI", result: "loss" }],
     Aaron: [
-      { league: "MLB", game: "Philadelphia @ Seattle", selection: "Phillies ML", odds: "-108" },
-      { league: "MLB", game: "Chicago Cubs vs Arizona", selection: "OVER 8.5 runs", odds: "-118" },
-      { league: "MLB", game: "Cleveland @ Los Angeles Angels", selection: "Guardians ML", odds: "-134" },
+      { league: "MLB", game: "Philadelphia @ Seattle", selection: "Phillies ML", odds: "-108", result: "win" },
+      { league: "MLB", game: "Chicago Cubs vs Arizona", selection: "OVER 8.5 runs", odds: "-118", result: "loss" },
+      { league: "MLB", game: "Cleveland @ Los Angeles Angels", selection: "Guardians ML", odds: "-134", result: "win" },
     ],
   },
   records: {
-    Dennis: { MLB: { wins: 18, losses: 9 } },
-    Shaun: { MLB: { wins: 18, losses: 10 } },
-    Aaron: { MLB: { wins: 10, losses: 16 } },
+    Dennis: { MLB: { wins: 20, losses: 10 } },
+    Shaun: { MLB: { wins: 18, losses: 11 } },
+    Aaron: { MLB: { wins: 12, losses: 17 } },
   },
 };
 
