@@ -31,7 +31,7 @@ export const pickOfTheDay = {
       { league: "MLB", game: "Los Angeles Dodgers @ Atlanta", selection: "NRFI", result: "loss" },
     ],
     Aaron: [
-      { league: "MLB", game: "Milwaukee @ New York Mets", selection: "Brewers ML", odds: "-210" },
+      { league: "MLB", game: "Milwaukee @ New York Mets", selection: "Brewers ML", odds: "-210", result: "win" },
       { league: "MLB", game: "Atlanta vs Los Angeles Dodgers", selection: "UNDER 6.5 runs", odds: "-102", result: "win" },
       { league: "MLB", game: "Washington vs Colorado", selection: "Nationals ML", odds: "-122", result: "win" },
     ],
@@ -39,7 +39,7 @@ export const pickOfTheDay = {
   records: {
     Dennis: { MLB: { wins: 20, losses: 12 }, NFL: { wins: 0, losses: 1 } },
     Shaun: { MLB: { wins: 18, losses: 14 } },
-    Aaron: { MLB: { wins: 14, losses: 17 } },
+    Aaron: { MLB: { wins: 15, losses: 17 } },
   },
 };
 
