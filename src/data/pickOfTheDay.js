@@ -21,25 +21,25 @@ export const pickOfTheDay = {
   date: "2026-08-27",
   picks: {
     Dennis: [
-      { league: "MLB", game: "Colorado vs Washington", selection: "OVER 9.5 runs", odds: "-102" },
-      { league: "MLB", game: "Baltimore vs St Louis", selection: "Baltimore ML", odds: "-119" },
+      { league: "MLB", game: "Colorado vs Washington", selection: "OVER 9.5 runs", odds: "-102", result: "loss" },
+      { league: "MLB", game: "Baltimore vs St Louis", selection: "Baltimore ML", odds: "-119", result: "loss" },
       { league: "NFL", game: "Buffalo vs Pittsburgh", selection: "Buffalo -3.5" },
     ],
     Shaun: [
-      { league: "MLB", game: "Kansas City @ Toronto", selection: "NRFI" },
-      { league: "MLB", game: "Milwaukee @ New York Mets", selection: "NRFI" },
-      { league: "MLB", game: "Los Angeles Dodgers @ Atlanta", selection: "NRFI" },
+      { league: "MLB", game: "Kansas City @ Toronto", selection: "NRFI", result: "loss" },
+      { league: "MLB", game: "Milwaukee @ New York Mets", selection: "NRFI", result: "loss" },
+      { league: "MLB", game: "Los Angeles Dodgers @ Atlanta", selection: "NRFI", result: "loss" },
     ],
     Aaron: [
       { league: "MLB", game: "Milwaukee @ New York Mets", selection: "Brewers ML", odds: "-210" },
       { league: "MLB", game: "Atlanta vs Los Angeles Dodgers", selection: "UNDER 6.5 runs", odds: "-102" },
-      { league: "MLB", game: "Washington vs Colorado", selection: "Nationals ML", odds: "-122" },
+      { league: "MLB", game: "Washington vs Colorado", selection: "Nationals ML", odds: "-122", result: "win" },
     ],
   },
   records: {
-    Dennis: { MLB: { wins: 20, losses: 10 } },
-    Shaun: { MLB: { wins: 18, losses: 11 } },
-    Aaron: { MLB: { wins: 12, losses: 17 } },
+    Dennis: { MLB: { wins: 20, losses: 12 } },
+    Shaun: { MLB: { wins: 18, losses: 14 } },
+    Aaron: { MLB: { wins: 13, losses: 17 } },
   },
 };
 
