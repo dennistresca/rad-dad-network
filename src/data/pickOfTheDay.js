@@ -25,7 +25,10 @@ export const pickOfTheDay = {
       { league: "MLB", game: "Tampa Bay vs San Diego", selection: "Tampa Bay ML", odds: "-128" },
       { league: "MLB", game: "Milwaukee vs Texas", selection: "Milwaukee ML", odds: "-174" },
     ],
-    Shaun: [],
+    Shaun: [
+      { league: "MLB", game: "Chicago Cubs @ Cincinnati", selection: "YRFI" },
+      { league: "MLB", game: "Miami @ Washington", selection: "YRFI" },
+    ],
     Aaron: [],
   },
   records: {
