@@ -18,23 +18,15 @@
 // host's record entirely until they have a graded pick in it.
 
 export const pickOfTheDay = {
-  date: "2026-08-27",
+  date: "2026-08-28",
   picks: {
     Dennis: [
-      { league: "MLB", game: "Colorado vs Washington", selection: "OVER 9.5 runs", odds: "-102", result: "loss" },
-      { league: "MLB", game: "Baltimore vs St Louis", selection: "Baltimore ML", odds: "-119", result: "loss" },
-      { league: "NFL", game: "Buffalo vs Pittsburgh", selection: "Buffalo -3.5", result: "loss" },
+      { league: "MLB", game: "Cincinnati vs Chicago Cubs", selection: "OVER 8.5 runs" },
+      { league: "MLB", game: "Tampa Bay vs San Diego", selection: "Tampa Bay ML", odds: "-128" },
+      { league: "MLB", game: "Milwaukee vs Texas", selection: "Milwaukee ML", odds: "-174" },
     ],
-    Shaun: [
-      { league: "MLB", game: "Kansas City @ Toronto", selection: "NRFI", result: "loss" },
-      { league: "MLB", game: "Milwaukee @ New York Mets", selection: "NRFI", result: "loss" },
-      { league: "MLB", game: "Los Angeles Dodgers @ Atlanta", selection: "NRFI", result: "loss" },
-    ],
-    Aaron: [
-      { league: "MLB", game: "Milwaukee @ New York Mets", selection: "Brewers ML", odds: "-210", result: "win" },
-      { league: "MLB", game: "Atlanta vs Los Angeles Dodgers", selection: "UNDER 6.5 runs", odds: "-102", result: "win" },
-      { league: "MLB", game: "Washington vs Colorado", selection: "Nationals ML", odds: "-122", result: "win" },
-    ],
+    Shaun: [],
+    Aaron: [],
   },
   records: {
     Dennis: { MLB: { wins: 20, losses: 12 }, NFL: { wins: 0, losses: 1 } },
@@ -43,11 +35,46 @@ export const pickOfTheDay = {
   },
 };
 
+// Held for Saturday, August 29 — do not move into `pickOfTheDay` or push
+// live until then (standing instruction from the user).
+export const scheduledPicks = {
+  date: "2026-08-29",
+  picks: {
+    Dennis: [
+      { league: "NCAAF", game: "North Carolina vs TCU", selection: "North Carolina +9.5" },
+      { league: "NCAAF", game: "UNLV vs Memphis", selection: "UNLV -4.5" },
+      { league: "NCAAF", game: "Hawaii @ Stanford", selection: "Hawaii +4" },
+    ],
+    Shaun: [],
+    Aaron: [],
+  },
+};
+
 // The "Previous Picks" view on the Daily Picks page. Before resetting
 // `pickOfTheDay` for a new day, add that day's fully-graded `date` and
 // `picks` as a new entry here (not `records`, since records are
 // cumulative and don't belong to a single day). Newest day first.
 export const pickHistory = [
+  {
+    date: "2026-08-27",
+    picks: {
+      Dennis: [
+        { league: "MLB", game: "Colorado vs Washington", selection: "OVER 9.5 runs", odds: "-102", result: "loss" },
+        { league: "MLB", game: "Baltimore vs St Louis", selection: "Baltimore ML", odds: "-119", result: "loss" },
+        { league: "NFL", game: "Buffalo vs Pittsburgh", selection: "Buffalo -3.5", result: "loss" },
+      ],
+      Shaun: [
+        { league: "MLB", game: "Kansas City @ Toronto", selection: "NRFI", result: "loss" },
+        { league: "MLB", game: "Milwaukee @ New York Mets", selection: "NRFI", result: "loss" },
+        { league: "MLB", game: "Los Angeles Dodgers @ Atlanta", selection: "NRFI", result: "loss" },
+      ],
+      Aaron: [
+        { league: "MLB", game: "Milwaukee @ New York Mets", selection: "Brewers ML", odds: "-210", result: "win" },
+        { league: "MLB", game: "Atlanta vs Los Angeles Dodgers", selection: "UNDER 6.5 runs", odds: "-102", result: "win" },
+        { league: "MLB", game: "Washington vs Colorado", selection: "Nationals ML", odds: "-122", result: "win" },
+      ],
+    },
+  },
   {
     date: "2026-08-26",
     picks: {
