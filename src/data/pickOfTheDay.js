@@ -25,7 +25,11 @@ export const pickOfTheDay = {
       { league: "NCAAF", game: "UNLV vs Memphis", selection: "UNLV -4.5" },
       { league: "NCAAF", game: "Hawaii @ Stanford", selection: "Hawaii +4" },
     ],
-    Shaun: [],
+    Shaun: [
+      { league: "MLB", game: "New York Yankees @ Boston", selection: "NRFI" },
+      { league: "MLB", game: "Pittsburgh @ St Louis", selection: "NRFI" },
+      { league: "NCAAF", game: "Hawaii @ Stanford", selection: "Hawaii ML" },
+    ],
     Aaron: [
       { league: "MLB", game: "Atlanta vs Colorado", selection: "OVER 9 runs" },
       { league: "MLB", game: "Minnesota vs Chicago White Sox", selection: "Twins ML", odds: "-125" },
