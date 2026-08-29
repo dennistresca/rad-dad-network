@@ -18,33 +18,6 @@
 // host's record entirely until they have a graded pick in it.
 
 export const pickOfTheDay = {
-  date: "2026-08-28",
-  picks: {
-    Dennis: [
-      { league: "MLB", game: "Cincinnati vs Chicago Cubs", selection: "OVER 8.5 runs", result: "win" },
-      { league: "MLB", game: "Tampa Bay vs San Diego", selection: "Tampa Bay ML", odds: "-128", result: "win" },
-      { league: "MLB", game: "Milwaukee vs Texas", selection: "Milwaukee ML", odds: "-174", result: "win" },
-    ],
-    Shaun: [
-      { league: "MLB", game: "Chicago Cubs @ Cincinnati", selection: "YRFI", result: "win" },
-      { league: "MLB", game: "Miami @ Washington", selection: "YRFI", result: "loss" },
-    ],
-    Aaron: [
-      { league: "MLB", game: "Miami @ Washington", selection: "Marlins ML", odds: "-154", result: "loss" },
-      { league: "MLB", game: "Cincinnati vs Chicago Cubs", selection: "OVER 8.5 runs", result: "win" },
-      { league: "MLB", game: "New York Yankees vs Boston", selection: "Yankees ML", odds: "-167", result: "win" },
-    ],
-  },
-  records: {
-    Dennis: { MLB: { wins: 23, losses: 12 }, NFL: { wins: 0, losses: 1 } },
-    Shaun: { MLB: { wins: 19, losses: 15 } },
-    Aaron: { MLB: { wins: 17, losses: 18 } },
-  },
-};
-
-// Held for Saturday, August 29 — do not move into `pickOfTheDay` or push
-// live until then (standing instruction from the user).
-export const scheduledPicks = {
   date: "2026-08-29",
   picks: {
     Dennis: [
@@ -55,6 +28,11 @@ export const scheduledPicks = {
     Shaun: [],
     Aaron: [],
   },
+  records: {
+    Dennis: { MLB: { wins: 23, losses: 12 }, NFL: { wins: 0, losses: 1 } },
+    Shaun: { MLB: { wins: 19, losses: 15 } },
+    Aaron: { MLB: { wins: 17, losses: 18 } },
+  },
 };
 
 // The "Previous Picks" view on the Daily Picks page. Before resetting
@@ -62,6 +40,25 @@ export const scheduledPicks = {
 // `picks` as a new entry here (not `records`, since records are
 // cumulative and don't belong to a single day). Newest day first.
 export const pickHistory = [
+  {
+    date: "2026-08-28",
+    picks: {
+      Dennis: [
+        { league: "MLB", game: "Cincinnati vs Chicago Cubs", selection: "OVER 8.5 runs", result: "win" },
+        { league: "MLB", game: "Tampa Bay vs San Diego", selection: "Tampa Bay ML", odds: "-128", result: "win" },
+        { league: "MLB", game: "Milwaukee vs Texas", selection: "Milwaukee ML", odds: "-174", result: "win" },
+      ],
+      Shaun: [
+        { league: "MLB", game: "Chicago Cubs @ Cincinnati", selection: "YRFI", result: "win" },
+        { league: "MLB", game: "Miami @ Washington", selection: "YRFI", result: "loss" },
+      ],
+      Aaron: [
+        { league: "MLB", game: "Miami @ Washington", selection: "Marlins ML", odds: "-154", result: "loss" },
+        { league: "MLB", game: "Cincinnati vs Chicago Cubs", selection: "OVER 8.5 runs", result: "win" },
+        { league: "MLB", game: "New York Yankees vs Boston", selection: "Yankees ML", odds: "-167", result: "win" },
+      ],
+    },
+  },
   {
     date: "2026-08-27",
     picks: {
