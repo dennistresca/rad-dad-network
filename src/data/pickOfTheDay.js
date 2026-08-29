@@ -21,24 +21,24 @@ export const pickOfTheDay = {
   date: "2026-08-28",
   picks: {
     Dennis: [
-      { league: "MLB", game: "Cincinnati vs Chicago Cubs", selection: "OVER 8.5 runs" },
-      { league: "MLB", game: "Tampa Bay vs San Diego", selection: "Tampa Bay ML", odds: "-128" },
-      { league: "MLB", game: "Milwaukee vs Texas", selection: "Milwaukee ML", odds: "-174" },
+      { league: "MLB", game: "Cincinnati vs Chicago Cubs", selection: "OVER 8.5 runs", result: "win" },
+      { league: "MLB", game: "Tampa Bay vs San Diego", selection: "Tampa Bay ML", odds: "-128", result: "win" },
+      { league: "MLB", game: "Milwaukee vs Texas", selection: "Milwaukee ML", odds: "-174", result: "win" },
     ],
     Shaun: [
-      { league: "MLB", game: "Chicago Cubs @ Cincinnati", selection: "YRFI" },
-      { league: "MLB", game: "Miami @ Washington", selection: "YRFI" },
+      { league: "MLB", game: "Chicago Cubs @ Cincinnati", selection: "YRFI", result: "win" },
+      { league: "MLB", game: "Miami @ Washington", selection: "YRFI", result: "loss" },
     ],
     Aaron: [
-      { league: "MLB", game: "Miami @ Washington", selection: "Marlins ML", odds: "-154" },
-      { league: "MLB", game: "Cincinnati vs Chicago Cubs", selection: "OVER 8.5 runs" },
-      { league: "MLB", game: "New York Yankees vs Boston", selection: "Yankees ML", odds: "-167" },
+      { league: "MLB", game: "Miami @ Washington", selection: "Marlins ML", odds: "-154", result: "loss" },
+      { league: "MLB", game: "Cincinnati vs Chicago Cubs", selection: "OVER 8.5 runs", result: "win" },
+      { league: "MLB", game: "New York Yankees vs Boston", selection: "Yankees ML", odds: "-167", result: "win" },
     ],
   },
   records: {
-    Dennis: { MLB: { wins: 20, losses: 12 }, NFL: { wins: 0, losses: 1 } },
-    Shaun: { MLB: { wins: 18, losses: 14 } },
-    Aaron: { MLB: { wins: 15, losses: 17 } },
+    Dennis: { MLB: { wins: 23, losses: 12 }, NFL: { wins: 0, losses: 1 } },
+    Shaun: { MLB: { wins: 19, losses: 15 } },
+    Aaron: { MLB: { wins: 17, losses: 18 } },
   },
 };
 
