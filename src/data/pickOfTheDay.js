@@ -22,20 +22,20 @@ export const pickOfTheDay = {
   picks: {
     Dennis: [
       { league: "MLB", game: "Washington vs Miami", selection: "Washington ML", odds: "+101", result: "loss" },
-      { league: "MLB", game: "New York Mets vs Houston", selection: "New York Mets ML", odds: "-119" },
+      { league: "MLB", game: "New York Mets vs Houston", selection: "New York Mets ML", odds: "-119", result: "loss" },
       { league: "MLB", game: "Cleveland vs Kansas City", selection: "Cleveland ML", odds: "-180", result: "win" },
     ],
     Shaun: [{ league: "MLB", game: "Houston @ New York Mets", selection: "YRFI", result: "win" }],
     Aaron: [
       { league: "MLB", game: "Atlanta vs Colorado", selection: "Braves ML", odds: "-250", result: "win" },
       { league: "MLB", game: "Washington vs Miami", selection: "Nationals ML", odds: "-115", result: "loss" },
-      { league: "MLB", game: "New York Mets vs Houston", selection: "Mets ML", odds: "-128" },
+      { league: "MLB", game: "New York Mets vs Houston", selection: "Mets ML", odds: "-128", result: "loss" },
     ],
   },
   records: {
-    Dennis: { MLB: { wins: 24, losses: 13 }, NFL: { wins: 0, losses: 1 }, NCAAF: { wins: 1, losses: 2 } },
+    Dennis: { MLB: { wins: 24, losses: 14 }, NFL: { wins: 0, losses: 1 }, NCAAF: { wins: 1, losses: 2 } },
     Shaun: { MLB: { wins: 20, losses: 17 }, NCAAF: { wins: 0, losses: 1 } },
-    Aaron: { MLB: { wins: 18, losses: 21 }, NCAAF: { wins: 1, losses: 0 } },
+    Aaron: { MLB: { wins: 18, losses: 22 }, NCAAF: { wins: 1, losses: 0 } },
   },
 };
 
