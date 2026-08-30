@@ -26,7 +26,11 @@ export const pickOfTheDay = {
       { league: "MLB", game: "Cleveland vs Kansas City", selection: "Cleveland ML", odds: "-180" },
     ],
     Shaun: [{ league: "MLB", game: "Houston @ New York Mets", selection: "YRFI" }],
-    Aaron: [],
+    Aaron: [
+      { league: "MLB", game: "Atlanta vs Colorado", selection: "Braves ML", odds: "-250" },
+      { league: "MLB", game: "Washington vs Miami", selection: "Nationals ML", odds: "-115" },
+      { league: "MLB", game: "New York Mets vs Houston", selection: "Mets ML", odds: "-128" },
+    ],
   },
   records: {
     Dennis: { MLB: { wins: 23, losses: 12 }, NFL: { wins: 0, losses: 1 }, NCAAF: { wins: 1, losses: 2 } },
