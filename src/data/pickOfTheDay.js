@@ -23,12 +23,12 @@ export const pickOfTheDay = {
     Dennis: [
       { league: "NCAAF", game: "North Carolina vs TCU", selection: "North Carolina +9.5", result: "win" },
       { league: "NCAAF", game: "UNLV vs Memphis", selection: "UNLV -4.5" },
-      { league: "NCAAF", game: "Hawaii @ Stanford", selection: "Hawaii +4" },
+      { league: "NCAAF", game: "Hawaii @ Stanford", selection: "Hawaii +4", result: "loss" },
     ],
     Shaun: [
       { league: "MLB", game: "New York Yankees @ Boston", selection: "NRFI", result: "loss" },
       { league: "MLB", game: "Pittsburgh @ St Louis", selection: "NRFI", result: "loss" },
-      { league: "NCAAF", game: "Hawaii @ Stanford", selection: "Hawaii ML" },
+      { league: "NCAAF", game: "Hawaii @ Stanford", selection: "Hawaii ML", result: "loss" },
     ],
     Aaron: [
       { league: "MLB", game: "Atlanta vs Colorado", selection: "OVER 9 runs", result: "loss" },
@@ -37,8 +37,8 @@ export const pickOfTheDay = {
     ],
   },
   records: {
-    Dennis: { MLB: { wins: 23, losses: 12 }, NFL: { wins: 0, losses: 1 }, NCAAF: { wins: 1, losses: 0 } },
-    Shaun: { MLB: { wins: 19, losses: 17 } },
+    Dennis: { MLB: { wins: 23, losses: 12 }, NFL: { wins: 0, losses: 1 }, NCAAF: { wins: 1, losses: 1 } },
+    Shaun: { MLB: { wins: 19, losses: 17 }, NCAAF: { wins: 0, losses: 1 } },
     Aaron: { MLB: { wins: 17, losses: 20 }, NCAAF: { wins: 1, losses: 0 } },
   },
 };
