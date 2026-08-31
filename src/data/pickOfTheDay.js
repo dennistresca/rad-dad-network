@@ -26,7 +26,11 @@ export const pickOfTheDay = {
       { league: "MLB", game: "Miami vs Washington", selection: "Miami ML", odds: "-116" },
     ],
     Shaun: [],
-    Aaron: [],
+    Aaron: [
+      { league: "MLB", game: "Chicago Cubs @ Milwaukee", selection: "NRFI" },
+      { league: "MLB", game: "Athletics @ Texas", selection: "YRFI" },
+      { league: "MLB", game: "Boston vs Seattle", selection: "Payton Tolle OVER 6.5 strikeouts" },
+    ],
   },
   records: {
     Dennis: { MLB: { wins: 24, losses: 14 }, NFL: { wins: 0, losses: 1 }, NCAAF: { wins: 1, losses: 2 } },
