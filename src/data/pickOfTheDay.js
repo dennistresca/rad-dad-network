@@ -18,19 +18,15 @@
 // host's record entirely until they have a graded pick in it.
 
 export const pickOfTheDay = {
-  date: "2026-08-30",
+  date: "2026-08-31",
   picks: {
     Dennis: [
-      { league: "MLB", game: "Washington vs Miami", selection: "Washington ML", odds: "+101", result: "loss" },
-      { league: "MLB", game: "New York Mets vs Houston", selection: "New York Mets ML", odds: "-119", result: "loss" },
-      { league: "MLB", game: "Cleveland vs Kansas City", selection: "Cleveland ML", odds: "-180", result: "win" },
+      { league: "MLB", game: "Atlanta vs San Francisco", selection: "Atlanta -1.5", odds: "+141" },
+      { league: "MLB", game: "Boston vs Seattle", selection: "Boston ML", odds: "-161" },
+      { league: "MLB", game: "Miami vs Washington", selection: "Miami ML", odds: "-116" },
     ],
-    Shaun: [{ league: "MLB", game: "Houston @ New York Mets", selection: "YRFI", result: "win" }],
-    Aaron: [
-      { league: "MLB", game: "Atlanta vs Colorado", selection: "Braves ML", odds: "-250", result: "win" },
-      { league: "MLB", game: "Washington vs Miami", selection: "Nationals ML", odds: "-115", result: "loss" },
-      { league: "MLB", game: "New York Mets vs Houston", selection: "Mets ML", odds: "-128", result: "loss" },
-    ],
+    Shaun: [],
+    Aaron: [],
   },
   records: {
     Dennis: { MLB: { wins: 24, losses: 14 }, NFL: { wins: 0, losses: 1 }, NCAAF: { wins: 1, losses: 2 } },
@@ -44,6 +40,22 @@ export const pickOfTheDay = {
 // `picks` as a new entry here (not `records`, since records are
 // cumulative and don't belong to a single day). Newest day first.
 export const pickHistory = [
+  {
+    date: "2026-08-30",
+    picks: {
+      Dennis: [
+        { league: "MLB", game: "Washington vs Miami", selection: "Washington ML", odds: "+101", result: "loss" },
+        { league: "MLB", game: "New York Mets vs Houston", selection: "New York Mets ML", odds: "-119", result: "loss" },
+        { league: "MLB", game: "Cleveland vs Kansas City", selection: "Cleveland ML", odds: "-180", result: "win" },
+      ],
+      Shaun: [{ league: "MLB", game: "Houston @ New York Mets", selection: "YRFI", result: "win" }],
+      Aaron: [
+        { league: "MLB", game: "Atlanta vs Colorado", selection: "Braves ML", odds: "-250", result: "win" },
+        { league: "MLB", game: "Washington vs Miami", selection: "Nationals ML", odds: "-115", result: "loss" },
+        { league: "MLB", game: "New York Mets vs Houston", selection: "Mets ML", odds: "-128", result: "loss" },
+      ],
+    },
+  },
   {
     date: "2026-08-29",
     picks: {
