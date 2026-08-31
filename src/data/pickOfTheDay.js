@@ -25,7 +25,10 @@ export const pickOfTheDay = {
       { league: "MLB", game: "Boston vs Seattle", selection: "Boston ML", odds: "-161" },
       { league: "MLB", game: "Miami vs Washington", selection: "Miami ML", odds: "-116" },
     ],
-    Shaun: [],
+    Shaun: [
+      { league: "MLB", game: "San Francisco @ Atlanta", selection: "YRFI" },
+      { league: "MLB", game: "Chicago Cubs @ Milwaukee", selection: "YRFI" },
+    ],
     Aaron: [
       { league: "MLB", game: "Chicago Cubs @ Milwaukee", selection: "NRFI" },
       { league: "MLB", game: "Athletics @ Texas", selection: "YRFI" },
