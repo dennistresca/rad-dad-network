@@ -21,9 +21,9 @@ export const pickOfTheDay = {
   date: "2026-08-31",
   picks: {
     Dennis: [
-      { league: "MLB", game: "Atlanta vs San Francisco", selection: "Atlanta -1.5", odds: "+141" },
-      { league: "MLB", game: "Boston vs Seattle", selection: "Boston ML", odds: "-161" },
-      { league: "MLB", game: "Miami vs Washington", selection: "Miami ML", odds: "-116" },
+      { league: "MLB", game: "Atlanta vs San Francisco", selection: "Atlanta -1.5", odds: "+141", result: "loss" },
+      { league: "MLB", game: "Boston vs Seattle", selection: "Boston ML", odds: "-161", result: "win" },
+      { league: "MLB", game: "Miami vs Washington", selection: "Miami ML", odds: "-116", result: "loss" },
     ],
     Shaun: [
       { league: "MLB", game: "San Francisco @ Atlanta", selection: "YRFI", result: "win" },
@@ -32,13 +32,13 @@ export const pickOfTheDay = {
     Aaron: [
       { league: "MLB", game: "Chicago Cubs @ Milwaukee", selection: "NRFI", result: "loss" },
       { league: "MLB", game: "Athletics @ Texas", selection: "YRFI" },
-      { league: "MLB", game: "Boston vs Seattle", selection: "Payton Tolle OVER 6.5 strikeouts" },
+      { league: "MLB", game: "Boston vs Seattle", selection: "Payton Tolle OVER 6.5 strikeouts", result: "loss" },
     ],
   },
   records: {
-    Dennis: { MLB: { wins: 24, losses: 14 }, NFL: { wins: 0, losses: 1 }, NCAAF: { wins: 1, losses: 2 } },
+    Dennis: { MLB: { wins: 25, losses: 16 }, NFL: { wins: 0, losses: 1 }, NCAAF: { wins: 1, losses: 2 } },
     Shaun: { MLB: { wins: 22, losses: 17 }, NCAAF: { wins: 0, losses: 1 } },
-    Aaron: { MLB: { wins: 18, losses: 23 }, NCAAF: { wins: 1, losses: 0 } },
+    Aaron: { MLB: { wins: 18, losses: 24 }, NCAAF: { wins: 1, losses: 0 } },
   },
 };
 
