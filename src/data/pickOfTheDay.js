@@ -26,19 +26,19 @@ export const pickOfTheDay = {
       { league: "MLB", game: "Miami vs Washington", selection: "Miami ML", odds: "-116" },
     ],
     Shaun: [
-      { league: "MLB", game: "San Francisco @ Atlanta", selection: "YRFI" },
-      { league: "MLB", game: "Chicago Cubs @ Milwaukee", selection: "YRFI" },
+      { league: "MLB", game: "San Francisco @ Atlanta", selection: "YRFI", result: "win" },
+      { league: "MLB", game: "Chicago Cubs @ Milwaukee", selection: "YRFI", result: "win" },
     ],
     Aaron: [
-      { league: "MLB", game: "Chicago Cubs @ Milwaukee", selection: "NRFI" },
+      { league: "MLB", game: "Chicago Cubs @ Milwaukee", selection: "NRFI", result: "loss" },
       { league: "MLB", game: "Athletics @ Texas", selection: "YRFI" },
       { league: "MLB", game: "Boston vs Seattle", selection: "Payton Tolle OVER 6.5 strikeouts" },
     ],
   },
   records: {
     Dennis: { MLB: { wins: 24, losses: 14 }, NFL: { wins: 0, losses: 1 }, NCAAF: { wins: 1, losses: 2 } },
-    Shaun: { MLB: { wins: 20, losses: 17 }, NCAAF: { wins: 0, losses: 1 } },
-    Aaron: { MLB: { wins: 18, losses: 22 }, NCAAF: { wins: 1, losses: 0 } },
+    Shaun: { MLB: { wins: 22, losses: 17 }, NCAAF: { wins: 0, losses: 1 } },
+    Aaron: { MLB: { wins: 18, losses: 23 }, NCAAF: { wins: 1, losses: 0 } },
   },
 };
 
