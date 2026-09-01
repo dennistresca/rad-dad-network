@@ -25,8 +25,15 @@ export const pickOfTheDay = {
       { league: "MLB", game: "Philadelphia vs Arizona", selection: "Philadelphia ML", odds: "-141" },
       { league: "MLB", game: "Tampa Bay vs New York Mets", selection: "Tampa Bay ML", odds: "-124" },
     ],
-    Shaun: [],
-    Aaron: [],
+    Shaun: [
+      { league: "MLB", game: "Chicago Cubs @ Milwaukee", selection: "YRFI" },
+      { league: "MLB", game: "Kansas City @ Miami", selection: "YRFI" },
+    ],
+    Aaron: [
+      { league: "MLB", game: "Los Angeles Dodgers vs St Louis", selection: "Dodgers ML", odds: "-178" },
+      { league: "MLB", game: "New York Yankees @ Los Angeles Angels", selection: "Gerrit Cole OVER 6.5 strikeouts" },
+      { league: "MLB", game: "Philadelphia vs Arizona", selection: "UNDER 7.5 runs", odds: "-102" },
+    ],
   },
   records: {
     Dennis: { MLB: { wins: 25, losses: 16 }, NFL: { wins: 0, losses: 1 }, NCAAF: { wins: 1, losses: 2 } },
