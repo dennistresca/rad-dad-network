@@ -33,16 +33,6 @@ function WeekCard({ week, accentColor }) {
     <div className="rounded-xl border border-neutral-200 bg-white p-6 shadow-sm">
       <div className="flex flex-wrap items-baseline justify-between gap-2">
         <h3 className="text-lg font-bold text-neutral-900">{week.episode}</h3>
-        {week.date && (
-          <time dateTime={week.date} className="text-sm text-neutral-500">
-            {new Intl.DateTimeFormat("en-US", {
-              month: "long",
-              day: "numeric",
-              year: "numeric",
-              timeZone: "UTC",
-            }).format(new Date(week.date))}
-          </time>
-        )}
       </div>
 
       <ul className="mt-3 space-y-4">
