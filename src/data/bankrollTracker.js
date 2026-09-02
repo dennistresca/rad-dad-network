@@ -16,7 +16,7 @@
 // which don't affect the bankroll.
 
 export const bankrollTracker = {
-  lastUpdated: "2026-08-17",
+  lastUpdated: "2026-09-02",
   currentBankroll: 150,
   goalBankroll: 10000,
   records: {
@@ -25,5 +25,15 @@ export const bankrollTracker = {
     nfl: { wins: 0, losses: 0 },
     bucketsOfCash: { wins: 0, losses: 0 },
   },
-  weeklyBets: [],
+  weeklyBets: [
+    {
+      episode: "College Football Week 1",
+      date: "2026-09-02",
+      bets: [
+        { category: "College Football", game: "Georgia Tech vs Colorado", selection: "OVER 50.5" },
+        { category: "College Football", game: "Arizona State vs Morgan State", selection: "OVER 52.5" },
+        { category: "College Football", game: "Ole Miss vs Louisville", selection: "OVER 55.5" },
+      ],
+    },
+  ],
 };
