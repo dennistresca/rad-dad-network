@@ -4,16 +4,17 @@
 // types (not just CFB + NFL added together, since it may include other
 // categories like Buckets of Ca$h).
 //
-// `weeklyBets` is the official show bet log, one entry per episode/week.
+// `weeklyBets` is the official show bet log, one entry per episode.
 // Each bet can be:
 //   { category: "College Football" | "NFL" | "Buckets of Ca$h",
-//     game: "Team A @ Team B", selection: "Team A -3.5", odds: "-110",
-//     note: "Optional extra context", result: "win" }
-// `game`, `note`, and `result` are optional; `result` can be "win" or
-// "loss" to show a checkmark/X once graded, leave it off while pending.
-// These are the OFFICIAL show bets that move the bankroll and records
-// above, distinct from the hosts' personal Daily Picks (pickOfTheDay.js),
-// which don't affect the bankroll.
+//     game: "Team A @ Team B", date: "2026-09-06", selection: "Team A -3.5",
+//     odds: "-110", note: "Optional extra context", result: "win" }
+// `game`, `date`, `note`, and `result` are optional; `date` is the actual
+// game date (not the episode's recording/publish date) and shows next to
+// the matchup; `result` can be "win" or "loss" to show a checkmark/X once
+// graded, leave it off while pending. These are the OFFICIAL show bets
+// that move the bankroll and records above, distinct from the hosts'
+// personal Daily Picks (pickOfTheDay.js), which don't affect the bankroll.
 
 export const bankrollTracker = {
   lastUpdated: "2026-09-02",
@@ -27,12 +28,12 @@ export const bankrollTracker = {
   },
   weeklyBets: [
     {
-      episode: "College Football Week 1",
+      episode: "Episode 2 Bets",
       date: "2026-09-02",
       bets: [
-        { category: "College Football", game: "Georgia Tech vs Colorado", selection: "OVER 50.5" },
-        { category: "College Football", game: "Arizona State vs Morgan State", selection: "OVER 52.5" },
-        { category: "College Football", game: "Ole Miss vs Louisville", selection: "OVER 55.5" },
+        { category: "College Football", game: "Georgia Tech vs Colorado", date: "2026-09-03", selection: "OVER 50.5" },
+        { category: "College Football", game: "Arizona State vs Morgan State", date: "2026-09-05", selection: "OVER 52.5" },
+        { category: "College Football", game: "Ole Miss vs Louisville", date: "2026-09-06", selection: "OVER 55.5" },
       ],
     },
   ],

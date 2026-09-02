@@ -56,6 +56,17 @@ function WeekCard({ week, accentColor }) {
             {bet.game && (
               <p className="text-sm font-semibold uppercase tracking-wide text-neutral-500">
                 {bet.game}
+                {bet.date && (
+                  <span className="ml-2 normal-case text-neutral-400">
+                    (
+                    {new Intl.DateTimeFormat("en-US", {
+                      month: "short",
+                      day: "numeric",
+                      timeZone: "UTC",
+                    }).format(new Date(bet.date))}
+                    )
+                  </span>
+                )}
               </p>
             )}
             <div className="mt-1 flex items-center gap-2">
@@ -151,7 +162,7 @@ export default function BankrollTracker() {
 
         <div className="mt-14" aria-labelledby="weekly-bets-heading">
           <h2 id="weekly-bets-heading" className="text-2xl font-bold text-neutral-900">
-            Official Bets by Week
+            Season 4 Official Bets
           </h2>
           {weeklyBets.length === 0 ? (
             <p className="mt-4 text-neutral-500">
