@@ -18,27 +18,16 @@
 // host's record entirely until they have a graded pick in it.
 
 export const pickOfTheDay = {
-  date: "2026-09-01",
+  date: "2026-09-02",
   picks: {
-    Dennis: [
-      { league: "MLB", game: "San Diego vs Cincinnati", selection: "OVER 9.5 runs", odds: "-107", result: "loss" },
-      { league: "MLB", game: "Philadelphia vs Arizona", selection: "Philadelphia ML", odds: "-141" },
-      { league: "MLB", game: "Tampa Bay vs New York Mets", selection: "Tampa Bay ML", odds: "-124", result: "win" },
-    ],
-    Shaun: [
-      { league: "MLB", game: "Chicago Cubs @ Milwaukee", selection: "YRFI", result: "loss" },
-      { league: "MLB", game: "Kansas City @ Miami", selection: "YRFI", result: "loss" },
-    ],
-    Aaron: [
-      { league: "MLB", game: "Los Angeles Dodgers vs St Louis", selection: "Dodgers ML", odds: "-178" },
-      { league: "MLB", game: "New York Yankees @ Los Angeles Angels", selection: "Gerrit Cole OVER 6.5 strikeouts" },
-      { league: "MLB", game: "Philadelphia vs Arizona", selection: "UNDER 7.5 runs", odds: "-102" },
-    ],
+    Dennis: [],
+    Shaun: [],
+    Aaron: [],
   },
   records: {
-    Dennis: { MLB: { wins: 26, losses: 17 }, NFL: { wins: 0, losses: 1 }, NCAAF: { wins: 1, losses: 2 } },
+    Dennis: { MLB: { wins: 27, losses: 17 }, NFL: { wins: 0, losses: 1 }, NCAAF: { wins: 1, losses: 2 } },
     Shaun: { MLB: { wins: 22, losses: 19 }, NCAAF: { wins: 0, losses: 1 } },
-    Aaron: { MLB: { wins: 18, losses: 25 }, NCAAF: { wins: 1, losses: 0 } },
+    Aaron: { MLB: { wins: 18, losses: 28 }, NCAAF: { wins: 1, losses: 0 } },
   },
 };
 
@@ -47,6 +36,25 @@ export const pickOfTheDay = {
 // `picks` as a new entry here (not `records`, since records are
 // cumulative and don't belong to a single day). Newest day first.
 export const pickHistory = [
+  {
+    date: "2026-09-01",
+    picks: {
+      Dennis: [
+        { league: "MLB", game: "San Diego vs Cincinnati", selection: "OVER 9.5 runs", odds: "-107", result: "loss" },
+        { league: "MLB", game: "Philadelphia vs Arizona", selection: "Philadelphia ML", odds: "-141", result: "win" },
+        { league: "MLB", game: "Tampa Bay vs New York Mets", selection: "Tampa Bay ML", odds: "-124", result: "win" },
+      ],
+      Shaun: [
+        { league: "MLB", game: "Chicago Cubs @ Milwaukee", selection: "YRFI", result: "loss" },
+        { league: "MLB", game: "Kansas City @ Miami", selection: "YRFI", result: "loss" },
+      ],
+      Aaron: [
+        { league: "MLB", game: "Los Angeles Dodgers vs St Louis", selection: "Dodgers ML", odds: "-178", result: "loss" },
+        { league: "MLB", game: "New York Yankees @ Los Angeles Angels", selection: "Gerrit Cole OVER 6.5 strikeouts", result: "loss" },
+        { league: "MLB", game: "Philadelphia vs Arizona", selection: "UNDER 7.5 runs", odds: "-102", result: "loss" },
+      ],
+    },
+  },
   {
     date: "2026-08-31",
     picks: {
