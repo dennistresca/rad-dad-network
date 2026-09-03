@@ -18,23 +18,16 @@
 // host's record entirely until they have a graded pick in it.
 
 export const pickOfTheDay = {
-  date: "2026-09-02",
+  date: "2026-09-03",
   picks: {
-    Dennis: [
-      { league: "MLB", game: "Milwaukee vs Chicago Cubs", selection: "UNDER 8.5 runs", odds: "-117" },
-      { league: "MLB", game: "San Diego vs Cincinnati", selection: "San Diego ML", odds: "-155" },
-    ],
-    Shaun: [{ league: "MLB", game: "Atlanta @ Washington", selection: "YRFI" }],
-    Aaron: [
-      { league: "MLB", game: "Miami @ Kansas City", selection: "NRFI" },
-      { league: "MLB", game: "Toronto @ Cleveland", selection: "Blue Jays ML", odds: "-134" },
-      { league: "MLB", game: "Los Angeles Dodgers vs St Louis", selection: "Los Angeles Dodgers -1.5" },
-    ],
+    Dennis: [],
+    Shaun: [],
+    Aaron: [],
   },
   records: {
-    Dennis: { MLB: { wins: 27, losses: 17 }, NFL: { wins: 0, losses: 1 }, NCAAF: { wins: 1, losses: 2 } },
-    Shaun: { MLB: { wins: 22, losses: 19 }, NCAAF: { wins: 0, losses: 1 } },
-    Aaron: { MLB: { wins: 18, losses: 28 }, NCAAF: { wins: 1, losses: 0 } },
+    Dennis: { MLB: { wins: 27, losses: 19 }, NFL: { wins: 0, losses: 1 }, NCAAF: { wins: 1, losses: 2 } },
+    Shaun: { MLB: { wins: 22, losses: 20 }, NCAAF: { wins: 0, losses: 1 } },
+    Aaron: { MLB: { wins: 19, losses: 30 }, NCAAF: { wins: 1, losses: 0 } },
   },
 };
 
@@ -43,6 +36,21 @@ export const pickOfTheDay = {
 // `picks` as a new entry here (not `records`, since records are
 // cumulative and don't belong to a single day). Newest day first.
 export const pickHistory = [
+  {
+    date: "2026-09-02",
+    picks: {
+      Dennis: [
+        { league: "MLB", game: "Milwaukee vs Chicago Cubs", selection: "UNDER 8.5 runs", odds: "-117", result: "loss" },
+        { league: "MLB", game: "San Diego vs Cincinnati", selection: "San Diego ML", odds: "-155", result: "loss" },
+      ],
+      Shaun: [{ league: "MLB", game: "Atlanta @ Washington", selection: "YRFI", result: "loss" }],
+      Aaron: [
+        { league: "MLB", game: "Miami @ Kansas City", selection: "NRFI", result: "loss" },
+        { league: "MLB", game: "Toronto @ Cleveland", selection: "Blue Jays ML", odds: "-134", result: "win" },
+        { league: "MLB", game: "Los Angeles Dodgers vs St Louis", selection: "Los Angeles Dodgers -1.5", result: "loss" },
+      ],
+    },
+  },
   {
     date: "2026-09-01",
     picks: {
