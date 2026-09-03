@@ -22,7 +22,6 @@ export const pickOfTheDay = {
   picks: {
     Dennis: [
       { league: "MLB", game: "Cleveland vs Toronto", selection: "Cleveland ML", odds: "-107" },
-      { league: "NCAAF", game: "LIU @ Kansas", selection: "OVER 54.5" },
       { league: "NCAAF", game: "Massachusetts @ Rutgers", selection: "Massachusetts +29.5" },
     ],
     Shaun: [],
@@ -32,6 +31,17 @@ export const pickOfTheDay = {
     Dennis: { MLB: { wins: 27, losses: 19 }, NFL: { wins: 0, losses: 1 }, NCAAF: { wins: 1, losses: 2 } },
     Shaun: { MLB: { wins: 22, losses: 20 }, NCAAF: { wins: 0, losses: 1 } },
     Aaron: { MLB: { wins: 19, losses: 30 }, NCAAF: { wins: 1, losses: 0 } },
+  },
+};
+
+// Held for tomorrow (Sep 4) — do not move into `pickOfTheDay` or push
+// live until then (standing instruction from the user).
+export const scheduledPicks = {
+  date: "2026-09-04",
+  picks: {
+    Dennis: [{ league: "NCAAF", game: "LIU @ Kansas", selection: "OVER 54.5" }],
+    Shaun: [],
+    Aaron: [],
   },
 };
 
