@@ -21,7 +21,7 @@ export const pickOfTheDay = {
   date: "2026-09-04",
   picks: {
     Dennis: [{ league: "NCAAF", game: "LIU @ Kansas", selection: "OVER 54.5" }],
-    Shaun: [],
+    Shaun: [{ league: "NCAAF", game: "UTEP @ Oklahoma", selection: "OVER 51.5" }],
     Aaron: [],
   },
   records: {
