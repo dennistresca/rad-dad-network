@@ -22,7 +22,11 @@ export const pickOfTheDay = {
   picks: {
     Dennis: [{ league: "NCAAF", game: "LIU @ Kansas", selection: "OVER 54.5" }],
     Shaun: [{ league: "NCAAF", game: "UTEP @ Oklahoma", selection: "OVER 51.5" }],
-    Aaron: [],
+    Aaron: [
+      { league: "NCAAF", game: "Toledo @ Michigan State", selection: "Michigan State -9.5" },
+      { league: "NCAAF", game: "Indiana State @ Purdue", selection: "UNDER 56.5" },
+      { league: "MLB", game: "Atlanta @ Philadelphia", selection: "UNDER 6.5 runs" },
+    ],
   },
   records: {
     Dennis: { MLB: { wins: 27, losses: 20 }, NFL: { wins: 0, losses: 1 }, NCAAF: { wins: 2, losses: 2 } },
