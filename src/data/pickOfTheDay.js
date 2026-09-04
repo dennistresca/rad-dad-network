@@ -18,30 +18,16 @@
 // host's record entirely until they have a graded pick in it.
 
 export const pickOfTheDay = {
-  date: "2026-09-03",
-  picks: {
-    Dennis: [
-      { league: "MLB", game: "Cleveland vs Toronto", selection: "Cleveland ML", odds: "-107" },
-      { league: "NCAAF", game: "Massachusetts @ Rutgers", selection: "Massachusetts +29.5" },
-    ],
-    Shaun: [],
-    Aaron: [],
-  },
-  records: {
-    Dennis: { MLB: { wins: 27, losses: 19 }, NFL: { wins: 0, losses: 1 }, NCAAF: { wins: 1, losses: 2 } },
-    Shaun: { MLB: { wins: 22, losses: 20 }, NCAAF: { wins: 0, losses: 1 } },
-    Aaron: { MLB: { wins: 19, losses: 30 }, NCAAF: { wins: 1, losses: 0 } },
-  },
-};
-
-// Held for tomorrow (Sep 4) — do not move into `pickOfTheDay` or push
-// live until then (standing instruction from the user).
-export const scheduledPicks = {
   date: "2026-09-04",
   picks: {
     Dennis: [{ league: "NCAAF", game: "LIU @ Kansas", selection: "OVER 54.5" }],
     Shaun: [],
     Aaron: [],
+  },
+  records: {
+    Dennis: { MLB: { wins: 27, losses: 20 }, NFL: { wins: 0, losses: 1 }, NCAAF: { wins: 2, losses: 2 } },
+    Shaun: { MLB: { wins: 22, losses: 20 }, NCAAF: { wins: 0, losses: 1 } },
+    Aaron: { MLB: { wins: 19, losses: 30 }, NCAAF: { wins: 1, losses: 0 } },
   },
 };
 
@@ -50,6 +36,17 @@ export const scheduledPicks = {
 // `picks` as a new entry here (not `records`, since records are
 // cumulative and don't belong to a single day). Newest day first.
 export const pickHistory = [
+  {
+    date: "2026-09-03",
+    picks: {
+      Dennis: [
+        { league: "MLB", game: "Cleveland vs Toronto", selection: "Cleveland ML", odds: "-107", result: "loss" },
+        { league: "NCAAF", game: "Massachusetts @ Rutgers", selection: "Massachusetts +29.5", result: "win" },
+      ],
+      Shaun: [],
+      Aaron: [],
+    },
+  },
   {
     date: "2026-09-02",
     picks: {
