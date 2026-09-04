@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { getShowBySlug } from "../data/shows";
 import { bankrollTracker } from "../data/bankrollTracker";
@@ -74,15 +75,52 @@ function WeekCard({ week, accentColor }) {
   );
 }
 
+function SideBetCard({ bet, accentColor }) {
+  return (
+    <div className="rounded-xl border border-neutral-200 bg-white p-6 shadow-sm">
+      {bet.category && (
+        <p className="text-xs font-semibold uppercase tracking-wide text-neutral-400">{bet.category}</p>
+      )}
+      {bet.game && (
+        <p className="mt-1 text-sm font-semibold uppercase tracking-wide text-neutral-500">
+          {bet.game}
+          {bet.date && (
+            <span className="ml-2 normal-case text-neutral-400">
+              (
+              {new Intl.DateTimeFormat("en-US", {
+                month: "short",
+                day: "numeric",
+                timeZone: "UTC",
+              }).format(new Date(bet.date))}
+              )
+            </span>
+          )}
+        </p>
+      )}
+      <div className="mt-1 flex items-center gap-2">
+        <p className="text-lg font-bold" style={{ color: accentColor }}>
+          {bet.selection}
+          {bet.odds ? <span className="ml-2 text-neutral-500">({bet.odds})</span> : null}
+        </p>
+        <ResultBadge result={bet.result} />
+      </div>
+      {bet.note && <p className="mt-1 text-sm text-neutral-600">{bet.note}</p>}
+    </div>
+  );
+}
+
 export default function BankrollTracker() {
   const show = getShowBySlug("dancing-with-the-odds");
+  const [sideBetsView, setSideBetsView] = useState("current");
   const formattedDate = formatter.format(new Date(bankrollTracker.lastUpdated));
   usePageMeta(
     "Road to $10K",
     `Dancing With the Odds' bankroll tracker: current bankroll and season betting record, updated ${formattedDate}.`
   );
 
-  const { currentBankroll, goalBankroll, records, weeklyBets } = bankrollTracker;
+  const { currentBankroll, goalBankroll, records, weeklyBets, sideBets } = bankrollTracker;
+  const currentSideBet = sideBets?.[0];
+  const previousSideBets = sideBets?.slice(1) ?? [];
   const progressPercent = Math.min(100, Math.max(0, (currentBankroll / goalBankroll) * 100));
 
   return (
@@ -162,6 +200,60 @@ export default function BankrollTracker() {
             <div className="mt-6 space-y-6">
               {weeklyBets.map((week) => (
                 <WeekCard key={week.episode} week={week} accentColor={show.colorTheme.primary} />
+              ))}
+            </div>
+          )}
+        </div>
+
+        <div className="mt-14" aria-labelledby="side-bets-heading">
+          <h2 id="side-bets-heading" className="text-2xl font-bold text-neutral-900">
+            Side Bets
+          </h2>
+          <p className="mt-1 text-sm text-neutral-500">
+            Extra one-off bets placed outside the weekly main bets, whenever the mood strikes.
+          </p>
+
+          <div className="mt-4 flex gap-2">
+            <button
+              type="button"
+              onClick={() => setSideBetsView("current")}
+              className="rounded-full px-4 py-2 text-sm font-semibold transition-colors"
+              style={
+                sideBetsView === "current"
+                  ? { backgroundColor: show.colorTheme.primary, color: "white" }
+                  : { backgroundColor: "#f5f5f5", color: "#525252" }
+              }
+            >
+              Current Side Bet
+            </button>
+            <button
+              type="button"
+              onClick={() => setSideBetsView("previous")}
+              className="rounded-full px-4 py-2 text-sm font-semibold transition-colors"
+              style={
+                sideBetsView === "previous"
+                  ? { backgroundColor: show.colorTheme.primary, color: "white" }
+                  : { backgroundColor: "#f5f5f5", color: "#525252" }
+              }
+            >
+              Previous Side Bets
+            </button>
+          </div>
+
+          {sideBetsView === "current" ? (
+            currentSideBet ? (
+              <div className="mt-6 max-w-md">
+                <SideBetCard bet={currentSideBet} accentColor={show.colorTheme.primary} />
+              </div>
+            ) : (
+              <p className="mt-4 text-neutral-500">No side bet placed right now, check back anytime.</p>
+            )
+          ) : previousSideBets.length === 0 ? (
+            <p className="mt-4 text-neutral-500">No previous side bets yet.</p>
+          ) : (
+            <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {previousSideBets.map((bet, i) => (
+                <SideBetCard key={i} bet={bet} accentColor={show.colorTheme.primary} />
               ))}
             </div>
           )}

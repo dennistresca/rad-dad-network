@@ -37,4 +37,13 @@ export const bankrollTracker = {
       ],
     },
   ],
+  // Extra one-off bets placed at random times, outside the weekly main
+  // bets above (e.g. a spontaneous bet made mid-episode or between
+  // episodes). Each entry has the same shape as a `weeklyBets` bet plus
+  // its own `date` (already required) — newest first. These DO count
+  // toward the bankroll and records above, same as weeklyBets; update
+  // both when a side bet is added or graded. The page shows only the
+  // newest entry (sideBets[0]) as the "current" side bet, with the rest
+  // available under "Previous Side Bets".
+  sideBets: [],
 };
