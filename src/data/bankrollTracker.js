@@ -21,8 +21,8 @@ export const bankrollTracker = {
   currentBankroll: 150,
   goalBankroll: 10000,
   records: {
-    overall: { wins: 0, losses: 0 },
-    collegeFootball: { wins: 0, losses: 0 },
+    overall: { wins: 0, losses: 1 },
+    collegeFootball: { wins: 0, losses: 1 },
     nfl: { wins: 0, losses: 0 },
     bucketsOfCash: { wins: 0, losses: 0 },
   },
@@ -31,7 +31,7 @@ export const bankrollTracker = {
       episode: "Episode 2 Bets",
       date: "2026-09-02",
       bets: [
-        { category: "College Football", game: "Georgia Tech vs Colorado", date: "2026-09-03", selection: "OVER 50.5" },
+        { category: "College Football", game: "Georgia Tech vs Colorado", date: "2026-09-03", selection: "OVER 50.5", result: "loss" },
         { category: "College Football", game: "Arizona State vs Morgan State", date: "2026-09-05", selection: "OVER 52.5" },
         { category: "College Football", game: "Ole Miss vs Louisville", date: "2026-09-06", selection: "OVER 55.5" },
       ],
@@ -40,10 +40,14 @@ export const bankrollTracker = {
   // Extra one-off bets placed at random times, outside the weekly main
   // bets above (e.g. a spontaneous bet made mid-episode or between
   // episodes). Each entry has the same shape as a `weeklyBets` bet plus
-  // its own `date` (already required) — newest first. These DO count
-  // toward the bankroll and records above, same as weeklyBets; update
-  // both when a side bet is added or graded. The page shows only the
-  // newest entry (sideBets[0]) as the "current" side bet, with the rest
-  // available under "Previous Side Bets".
-  sideBets: [],
+  // its own `date` (already required). These DO count toward the bankroll
+  // and records above, same as weeklyBets; update both when a side bet is
+  // added or graded. A bet with no `result` yet shows under "Current Side
+  // Bets" (there can be more than one active at once); once graded
+  // (`result: "win"` or `"loss"`), it automatically moves to "Previous
+  // Side Bets" on the page — no need to relocate entries by hand.
+  sideBets: [
+    { category: "College Football", game: "UTEP @ Oklahoma", date: "2026-09-04", selection: "OVER 51.5", odds: "-112" },
+    { category: "College Football", game: "LIU @ Kansas", date: "2026-09-04", selection: "OVER 54.5" },
+  ],
 };

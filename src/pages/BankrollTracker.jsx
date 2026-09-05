@@ -118,9 +118,9 @@ export default function BankrollTracker() {
     `Dancing With the Odds' bankroll tracker: current bankroll and season betting record, updated ${formattedDate}.`
   );
 
-  const { currentBankroll, goalBankroll, records, weeklyBets, sideBets } = bankrollTracker;
-  const currentSideBet = sideBets?.[0];
-  const previousSideBets = sideBets?.slice(1) ?? [];
+  const { currentBankroll, goalBankroll, records, weeklyBets, sideBets = [] } = bankrollTracker;
+  const currentSideBets = sideBets.filter((bet) => !bet.result);
+  const previousSideBets = sideBets.filter((bet) => bet.result);
   const progressPercent = Math.min(100, Math.max(0, (currentBankroll / goalBankroll) * 100));
 
   return (
@@ -224,7 +224,7 @@ export default function BankrollTracker() {
                   : { backgroundColor: "#f5f5f5", color: "#525252" }
               }
             >
-              Current Side Bet
+              Current Side Bets
             </button>
             <button
               type="button"
@@ -241,12 +241,14 @@ export default function BankrollTracker() {
           </div>
 
           {sideBetsView === "current" ? (
-            currentSideBet ? (
-              <div className="mt-6 max-w-md">
-                <SideBetCard bet={currentSideBet} accentColor={show.colorTheme.primary} />
-              </div>
+            currentSideBets.length === 0 ? (
+              <p className="mt-4 text-neutral-500">No side bets placed right now, check back anytime.</p>
             ) : (
-              <p className="mt-4 text-neutral-500">No side bet placed right now, check back anytime.</p>
+              <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {currentSideBets.map((bet, i) => (
+                  <SideBetCard key={i} bet={bet} accentColor={show.colorTheme.primary} />
+                ))}
+              </div>
             )
           ) : previousSideBets.length === 0 ? (
             <p className="mt-4 text-neutral-500">No previous side bets yet.</p>
