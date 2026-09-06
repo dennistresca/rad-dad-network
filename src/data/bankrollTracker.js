@@ -21,8 +21,8 @@ export const bankrollTracker = {
   currentBankroll: 150,
   goalBankroll: 10000,
   records: {
-    overall: { wins: 0, losses: 1 },
-    collegeFootball: { wins: 0, losses: 1 },
+    overall: { wins: 2, losses: 2 },
+    collegeFootball: { wins: 2, losses: 2 },
     nfl: { wins: 0, losses: 0 },
     bucketsOfCash: { wins: 0, losses: 0 },
   },
@@ -32,7 +32,7 @@ export const bankrollTracker = {
       date: "2026-09-02",
       bets: [
         { category: "College Football", game: "Georgia Tech vs Colorado", date: "2026-09-03", selection: "OVER 50.5", result: "loss" },
-        { category: "College Football", game: "Arizona State vs Morgan State", date: "2026-09-05", selection: "OVER 52.5" },
+        { category: "College Football", game: "Arizona State vs Morgan State", date: "2026-09-05", selection: "OVER 52.5", result: "win" },
         { category: "College Football", game: "Ole Miss vs Louisville", date: "2026-09-06", selection: "OVER 55.5" },
       ],
     },
@@ -47,7 +47,7 @@ export const bankrollTracker = {
   // (`result: "win"` or `"loss"`), it automatically moves to "Previous
   // Side Bets" on the page — no need to relocate entries by hand.
   sideBets: [
-    { category: "College Football", game: "UTEP @ Oklahoma", date: "2026-09-04", selection: "OVER 51.5", odds: "-112" },
-    { category: "College Football", game: "LIU @ Kansas", date: "2026-09-04", selection: "OVER 54.5" },
+    { category: "College Football", game: "UTEP @ Oklahoma", date: "2026-09-04", selection: "OVER 51.5", odds: "-112", result: "loss" },
+    { category: "College Football", game: "LIU @ Kansas", date: "2026-09-04", selection: "OVER 54.5", result: "win" },
   ],
 };
