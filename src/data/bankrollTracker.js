@@ -18,11 +18,11 @@
 
 export const bankrollTracker = {
   lastUpdated: "2026-09-02",
-  currentBankroll: 150,
+  currentBankroll: 203,
   goalBankroll: 10000,
   records: {
-    overall: { wins: 2, losses: 2 },
-    collegeFootball: { wins: 2, losses: 2 },
+    overall: { wins: 3, losses: 2 },
+    collegeFootball: { wins: 3, losses: 2 },
     nfl: { wins: 0, losses: 0 },
     bucketsOfCash: { wins: 0, losses: 0 },
   },
@@ -33,7 +33,7 @@ export const bankrollTracker = {
       bets: [
         { category: "College Football", game: "Georgia Tech vs Colorado", date: "2026-09-03", selection: "OVER 50.5", result: "loss" },
         { category: "College Football", game: "Arizona State vs Morgan State", date: "2026-09-05", selection: "OVER 52.5", result: "win" },
-        { category: "College Football", game: "Ole Miss vs Louisville", date: "2026-09-06", selection: "OVER 55.5" },
+        { category: "College Football", game: "Ole Miss vs Louisville", date: "2026-09-06", selection: "OVER 55.5", result: "win" },
       ],
     },
   ],
