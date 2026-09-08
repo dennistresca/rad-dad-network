@@ -18,20 +18,20 @@
 // host's record entirely until they have a graded pick in it.
 
 export const pickOfTheDay = {
-  date: "2026-09-04",
+  date: "2026-09-08",
   picks: {
-    Dennis: [{ league: "NCAAF", game: "LIU @ Kansas", selection: "OVER 54.5" }],
-    Shaun: [{ league: "NCAAF", game: "UTEP @ Oklahoma", selection: "OVER 51.5" }],
-    Aaron: [
-      { league: "NCAAF", game: "Toledo @ Michigan State", selection: "Michigan State -9.5" },
-      { league: "NCAAF", game: "Indiana State @ Purdue", selection: "UNDER 56.5" },
-      { league: "MLB", game: "Atlanta @ Philadelphia", selection: "UNDER 6.5 runs" },
+    Dennis: [
+      { league: "MLB", game: "New York Mets vs Miami", selection: "New York Mets ML", odds: "+109" },
+      { league: "MLB", game: "Arizona vs Kansas City", selection: "UNDER 9.5 runs", odds: "-115" },
+      { league: "MLB", game: "Washington vs San Diego", selection: "OVER 7.5 runs", odds: "-111" },
     ],
+    Shaun: [],
+    Aaron: [],
   },
   records: {
-    Dennis: { MLB: { wins: 27, losses: 20 }, NFL: { wins: 0, losses: 1 }, NCAAF: { wins: 2, losses: 2 } },
-    Shaun: { MLB: { wins: 22, losses: 20 }, NCAAF: { wins: 0, losses: 1 } },
-    Aaron: { MLB: { wins: 19, losses: 30 }, NCAAF: { wins: 1, losses: 0 } },
+    Dennis: { MLB: { wins: 27, losses: 20 }, NFL: { wins: 0, losses: 1 }, NCAAF: { wins: 3, losses: 2 } },
+    Shaun: { MLB: { wins: 22, losses: 20 }, NCAAF: { wins: 0, losses: 2 } },
+    Aaron: { MLB: { wins: 19, losses: 31 }, NCAAF: { wins: 2, losses: 1 } },
   },
 };
 
@@ -40,6 +40,18 @@ export const pickOfTheDay = {
 // `picks` as a new entry here (not `records`, since records are
 // cumulative and don't belong to a single day). Newest day first.
 export const pickHistory = [
+  {
+    date: "2026-09-04",
+    picks: {
+      Dennis: [{ league: "NCAAF", game: "LIU @ Kansas", selection: "OVER 54.5", result: "win" }],
+      Shaun: [{ league: "NCAAF", game: "UTEP @ Oklahoma", selection: "OVER 51.5", result: "loss" }],
+      Aaron: [
+        { league: "NCAAF", game: "Toledo @ Michigan State", selection: "Michigan State -9.5", result: "win" },
+        { league: "NCAAF", game: "Indiana State @ Purdue", selection: "UNDER 56.5", result: "loss" },
+        { league: "MLB", game: "Atlanta @ Philadelphia", selection: "UNDER 6.5 runs", result: "loss" },
+      ],
+    },
+  },
   {
     date: "2026-09-03",
     picks: {
