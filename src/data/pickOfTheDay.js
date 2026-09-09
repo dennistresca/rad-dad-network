@@ -20,8 +20,8 @@
 export const pickOfTheDay = {
   date: "2026-09-09",
   picks: {
-    Dennis: [],
-    Shaun: [],
+    Dennis: [{ league: "NFL", game: "New England @ Seattle", selection: "Seattle -3" }],
+    Shaun: [{ league: "NFL", game: "New England @ Seattle", selection: "UNDER 44.5", odds: "-112" }],
     Aaron: [],
   },
   records: {
