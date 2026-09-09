@@ -18,24 +18,16 @@
 // host's record entirely until they have a graded pick in it.
 
 export const pickOfTheDay = {
-  date: "2026-09-08",
+  date: "2026-09-09",
   picks: {
-    Dennis: [
-      { league: "MLB", game: "New York Mets vs Miami", selection: "New York Mets ML", odds: "+109" },
-      { league: "MLB", game: "Arizona vs Kansas City", selection: "UNDER 9.5 runs", odds: "-115" },
-      { league: "MLB", game: "Washington vs San Diego", selection: "OVER 7.5 runs", odds: "-111" },
-    ],
-    Shaun: [{ league: "MLB", game: "Colorado @ New York Yankees", selection: "NRFI" }],
-    Aaron: [
-      { league: "MLB", game: "Colorado @ New York Yankees", selection: "New York Yankees -1.5" },
-      { league: "MLB", game: "Los Angeles Angels @ Boston", selection: "NRFI" },
-      { league: "MLB", game: "Minnesota @ Detroit", selection: "Tigers ML", odds: "-137" },
-    ],
+    Dennis: [],
+    Shaun: [],
+    Aaron: [],
   },
   records: {
-    Dennis: { MLB: { wins: 27, losses: 20 }, NFL: { wins: 0, losses: 1 }, NCAAF: { wins: 3, losses: 2 } },
-    Shaun: { MLB: { wins: 22, losses: 20 }, NCAAF: { wins: 0, losses: 2 } },
-    Aaron: { MLB: { wins: 19, losses: 31 }, NCAAF: { wins: 2, losses: 1 } },
+    Dennis: { MLB: { wins: 30, losses: 20 }, NFL: { wins: 0, losses: 1 }, NCAAF: { wins: 3, losses: 2 } },
+    Shaun: { MLB: { wins: 22, losses: 21 }, NCAAF: { wins: 0, losses: 2 } },
+    Aaron: { MLB: { wins: 21, losses: 32 }, NCAAF: { wins: 2, losses: 1 } },
   },
 };
 
@@ -44,6 +36,22 @@ export const pickOfTheDay = {
 // `picks` as a new entry here (not `records`, since records are
 // cumulative and don't belong to a single day). Newest day first.
 export const pickHistory = [
+  {
+    date: "2026-09-08",
+    picks: {
+      Dennis: [
+        { league: "MLB", game: "New York Mets vs Miami", selection: "New York Mets ML", odds: "+109", result: "win" },
+        { league: "MLB", game: "Arizona vs Kansas City", selection: "UNDER 9.5 runs", odds: "-115", result: "win" },
+        { league: "MLB", game: "Washington vs San Diego", selection: "OVER 7.5 runs", odds: "-111", result: "win" },
+      ],
+      Shaun: [{ league: "MLB", game: "Colorado @ New York Yankees", selection: "NRFI", result: "loss" }],
+      Aaron: [
+        { league: "MLB", game: "Colorado @ New York Yankees", selection: "New York Yankees -1.5", result: "win" },
+        { league: "MLB", game: "Los Angeles Angels @ Boston", selection: "NRFI", result: "win" },
+        { league: "MLB", game: "Minnesota @ Detroit", selection: "Tigers ML", odds: "-137", result: "loss" },
+      ],
+    },
+  },
   {
     date: "2026-09-04",
     picks: {
