@@ -20,13 +20,13 @@
 export const pickOfTheDay = {
   date: "2026-09-09",
   picks: {
-    Dennis: [{ league: "NFL", game: "New England @ Seattle", selection: "Seattle -3", odds: "-120" }],
-    Shaun: [{ league: "NFL", game: "New England @ Seattle", selection: "UNDER 44.5", odds: "-112" }],
+    Dennis: [{ league: "NFL", game: "New England @ Seattle", selection: "Seattle -3", odds: "-120", note: "Push, Seattle won by exactly 3" }],
+    Shaun: [{ league: "NFL", game: "New England @ Seattle", selection: "UNDER 44.5", odds: "-112", result: "win" }],
     Aaron: [],
   },
   records: {
     Dennis: { MLB: { wins: 30, losses: 20 }, NFL: { wins: 0, losses: 1 }, NCAAF: { wins: 3, losses: 2 } },
-    Shaun: { MLB: { wins: 22, losses: 21 }, NCAAF: { wins: 0, losses: 2 } },
+    Shaun: { MLB: { wins: 22, losses: 21 }, NFL: { wins: 1, losses: 0 }, NCAAF: { wins: 0, losses: 2 } },
     Aaron: { MLB: { wins: 21, losses: 32 }, NCAAF: { wins: 2, losses: 1 } },
   },
 };
