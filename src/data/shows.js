@@ -14,10 +14,10 @@ export const shows = [
     shortName: "Dancing With the Odds",
     category: "Sports Betting",
     hosts: ["Dennis", "Shaun", "Aaron"],
-    hostGroupName: "The Prop Dads",
+    hostGroupName: "The Dance Dads",
     tagline: "Chasing $10K, one bad beat at a time.",
     description:
-      "A sports betting podcast where three friends nicknamed \"the Prop Dads\" try to grow their bankroll to $10K by betting moneylines, spreads, and player props across football season. They share their hits, misses, and lessons learned in a real, unfiltered way, for seasoned sharps and rookie bettors alike.",
+      "A sports betting podcast where three friends nicknamed \"the Dance Dads\" try to grow their bankroll to $10K by betting moneylines, spreads, and player props across football season. They share their hits, misses, and lessons learned in a real, unfiltered way, for seasoned sharps and rookie bettors alike.",
     cadence: "Weekly episodes during NFL/college football season",
     season: "Season 4 coming soon!",
     colorTheme: {

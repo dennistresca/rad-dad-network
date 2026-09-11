@@ -44,7 +44,7 @@ export const blogPosts = {
     {
       title: "Dancing With the Odds: Thursday Night Football Breakdown",
       date: "2025-10-09",
-      author: "The Prop Dads",
+      author: "The Dance Dads",
       excerpt:
         "A full breakdown of the Eagles-Giants Thursday Night Football matchup, including picks for total points, Saquon Barkley's rushing attempts, and a longshot touchdown prop.",
       paragraphs: [
@@ -68,7 +68,7 @@ export const blogPosts = {
     {
       title: "New Episode Alert! Dancing with the Odds, S3: E4",
       date: "2025-09-13",
-      author: "The Prop Dads",
+      author: "The Dance Dads",
       excerpt:
         "Shaun and Aaron carry the show (and banish Dennis) with their picks for a big slate of NFL and college football games.",
       paragraphs: [
