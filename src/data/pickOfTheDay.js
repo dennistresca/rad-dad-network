@@ -21,14 +21,14 @@ export const pickOfTheDay = {
   date: "2026-09-10",
   picks: {
     Dennis: [
-      { league: "NFL", game: "San Francisco @ Los Angeles Rams", selection: "San Francisco +4" },
-      { league: "MLB", game: "Tampa Bay @ Atlanta", selection: "Tampa Bay ML", odds: "-101" },
+      { league: "NFL", game: "San Francisco @ Los Angeles Rams", selection: "San Francisco +4", result: "win" },
+      { league: "MLB", game: "Tampa Bay @ Atlanta", selection: "Tampa Bay ML", odds: "-101", result: "loss" },
     ],
     Shaun: [],
     Aaron: [],
   },
   records: {
-    Dennis: { MLB: { wins: 30, losses: 20 }, NFL: { wins: 0, losses: 1 }, NCAAF: { wins: 3, losses: 2 } },
+    Dennis: { MLB: { wins: 30, losses: 21 }, NFL: { wins: 1, losses: 1 }, NCAAF: { wins: 3, losses: 2 } },
     Shaun: { MLB: { wins: 22, losses: 21 }, NFL: { wins: 1, losses: 0 }, NCAAF: { wins: 0, losses: 2 } },
     Aaron: { MLB: { wins: 21, losses: 32 }, NCAAF: { wins: 2, losses: 1 } },
   },
