@@ -21,8 +21,8 @@ export const bankrollTracker = {
   currentBankroll: 203,
   goalBankroll: 10000,
   records: {
-    overall: { wins: 4, losses: 2 },
-    collegeFootball: { wins: 3, losses: 2 },
+    overall: { wins: 5, losses: 2 },
+    collegeFootball: { wins: 4, losses: 2 },
     nfl: { wins: 1, losses: 0 },
     bucketsOfCash: { wins: 0, losses: 0 },
   },
@@ -60,6 +60,6 @@ export const bankrollTracker = {
   sideBets: [
     { category: "College Football", game: "UTEP @ Oklahoma", date: "2026-09-04", selection: "OVER 51.5", odds: "-112", result: "loss" },
     { category: "College Football", game: "LIU @ Kansas", date: "2026-09-04", selection: "OVER 54.5", result: "win" },
-    { category: "College Football", game: "Western Kentucky @ Georgia", date: "2026-09-12", selection: "OVER 54.5" },
+    { category: "College Football", game: "Western Kentucky @ Georgia", date: "2026-09-12", selection: "OVER 54.5", result: "win" },
   ],
 };
