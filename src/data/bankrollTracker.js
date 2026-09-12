@@ -60,5 +60,6 @@ export const bankrollTracker = {
   sideBets: [
     { category: "College Football", game: "UTEP @ Oklahoma", date: "2026-09-04", selection: "OVER 51.5", odds: "-112", result: "loss" },
     { category: "College Football", game: "LIU @ Kansas", date: "2026-09-04", selection: "OVER 54.5", result: "win" },
+    { category: "College Football", game: "Western Kentucky @ Georgia", date: "2026-09-12", selection: "OVER 54.5" },
   ],
 };
