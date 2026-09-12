@@ -111,6 +111,7 @@ function SideBetCard({ bet, accentColor }) {
 
 export default function BankrollTracker() {
   const show = getShowBySlug("dancing-with-the-odds");
+  const [weeklyBetsView, setWeeklyBetsView] = useState("current");
   const [sideBetsView, setSideBetsView] = useState("current");
   const formattedDate = formatter.format(new Date(bankrollTracker.lastUpdated));
   usePageMeta(
@@ -119,6 +120,7 @@ export default function BankrollTracker() {
   );
 
   const { currentBankroll, goalBankroll, records, weeklyBets, sideBets = [] } = bankrollTracker;
+  const [currentWeek, ...previousWeeks] = weeklyBets;
   const currentSideBets = sideBets.filter((bet) => !bet.result);
   const previousSideBets = sideBets.filter((bet) => bet.result);
   const progressPercent = Math.min(100, Math.max(0, (currentBankroll / goalBankroll) * 100));
@@ -192,16 +194,54 @@ export default function BankrollTracker() {
           <h2 id="weekly-bets-heading" className="text-2xl font-bold text-neutral-900">
             Season 4 Official Bets
           </h2>
+
           {weeklyBets.length === 0 ? (
             <p className="mt-4 text-neutral-500">
               No official bets logged yet, check back once the season kicks off!
             </p>
           ) : (
-            <div className="mt-6 space-y-6">
-              {weeklyBets.map((week) => (
-                <WeekCard key={week.episode} week={week} accentColor={show.colorTheme.primary} />
-              ))}
-            </div>
+            <>
+              <div className="mt-4 flex gap-2">
+                <button
+                  type="button"
+                  onClick={() => setWeeklyBetsView("current")}
+                  className="rounded-full px-4 py-2 text-sm font-semibold transition-colors"
+                  style={
+                    weeklyBetsView === "current"
+                      ? { backgroundColor: show.colorTheme.primary, color: "white" }
+                      : { backgroundColor: "#f5f5f5", color: "#525252" }
+                  }
+                >
+                  Current Episode
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setWeeklyBetsView("previous")}
+                  className="rounded-full px-4 py-2 text-sm font-semibold transition-colors"
+                  style={
+                    weeklyBetsView === "previous"
+                      ? { backgroundColor: show.colorTheme.primary, color: "white" }
+                      : { backgroundColor: "#f5f5f5", color: "#525252" }
+                  }
+                >
+                  Previous Official Bets
+                </button>
+              </div>
+
+              {weeklyBetsView === "current" ? (
+                <div className="mt-6">
+                  <WeekCard week={currentWeek} accentColor={show.colorTheme.primary} />
+                </div>
+              ) : previousWeeks.length === 0 ? (
+                <p className="mt-4 text-neutral-500">No previous official bets yet.</p>
+              ) : (
+                <div className="mt-6 space-y-6">
+                  {previousWeeks.map((week) => (
+                    <WeekCard key={week.episode} week={week} accentColor={show.colorTheme.primary} />
+                  ))}
+                </div>
+              )}
+            </>
           )}
         </div>
 
