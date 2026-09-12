@@ -32,13 +32,13 @@ export const pickOfTheDay = {
     Aaron: [
       { league: "NCAAF", game: "Tarleton State @ McNeese State", selection: "OVER 57.5" },
       { league: "NCAAF", game: "Towson @ South Carolina", selection: "OVER 57.5" },
-      { league: "MLB", game: "San Diego @ San Francisco", selection: "UNDER 8 runs", odds: "-110" },
+      { league: "MLB", game: "San Diego @ San Francisco", selection: "UNDER 8 runs", odds: "-110", result: "loss" },
     ],
   },
   records: {
     Dennis: { MLB: { wins: 30, losses: 21 }, NFL: { wins: 1, losses: 1 }, NCAAF: { wins: 3, losses: 3 } },
     Shaun: { MLB: { wins: 22, losses: 21 }, NFL: { wins: 1, losses: 0 }, NCAAF: { wins: 1, losses: 2 } },
-    Aaron: { MLB: { wins: 21, losses: 32 }, NCAAF: { wins: 2, losses: 1 } },
+    Aaron: { MLB: { wins: 21, losses: 33 }, NCAAF: { wins: 2, losses: 1 } },
   },
 };
 
