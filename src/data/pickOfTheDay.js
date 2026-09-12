@@ -25,7 +25,10 @@ export const pickOfTheDay = {
       { league: "NCAAF", game: "Southern Miss @ Auburn", selection: "OVER 54.5" },
       { league: "NCAAF", game: "Louisiana Tech @ LSU", selection: "OVER 55.5", odds: "-112" },
     ],
-    Shaun: [],
+    Shaun: [
+      { league: "NCAAF", game: "Western Kentucky @ Georgia", selection: "OVER 55.5", odds: "-112" },
+      { league: "NCAAF", game: "Duke @ Illinois", selection: "UNDER 51.5", odds: "-108" },
+    ],
     Aaron: [
       { league: "NCAAF", game: "Tarleton State @ McNeese State", selection: "OVER 57.5" },
       { league: "NCAAF", game: "Towson @ South Carolina", selection: "OVER 57.5" },
