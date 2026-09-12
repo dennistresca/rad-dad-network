@@ -21,12 +21,12 @@ export const pickOfTheDay = {
   date: "2026-09-12",
   picks: {
     Dennis: [
-      { league: "NCAAF", game: "Arizona State @ Texas A&M", selection: "Arizona State +14.5", odds: "-112" },
+      { league: "NCAAF", game: "Arizona State @ Texas A&M", selection: "Arizona State +14.5", odds: "-112", result: "loss" },
       { league: "NCAAF", game: "Southern Miss @ Auburn", selection: "OVER 54.5" },
       { league: "NCAAF", game: "Louisiana Tech @ LSU", selection: "OVER 55.5", odds: "-112" },
     ],
     Shaun: [
-      { league: "NCAAF", game: "Western Kentucky @ Georgia", selection: "OVER 55.5", odds: "-112" },
+      { league: "NCAAF", game: "Western Kentucky @ Georgia", selection: "OVER 55.5", odds: "-112", result: "win" },
       { league: "NCAAF", game: "Duke @ Illinois", selection: "UNDER 51.5", odds: "-108" },
     ],
     Aaron: [
@@ -36,8 +36,8 @@ export const pickOfTheDay = {
     ],
   },
   records: {
-    Dennis: { MLB: { wins: 30, losses: 21 }, NFL: { wins: 1, losses: 1 }, NCAAF: { wins: 3, losses: 2 } },
-    Shaun: { MLB: { wins: 22, losses: 21 }, NFL: { wins: 1, losses: 0 }, NCAAF: { wins: 0, losses: 2 } },
+    Dennis: { MLB: { wins: 30, losses: 21 }, NFL: { wins: 1, losses: 1 }, NCAAF: { wins: 3, losses: 3 } },
+    Shaun: { MLB: { wins: 22, losses: 21 }, NFL: { wins: 1, losses: 0 }, NCAAF: { wins: 1, losses: 2 } },
     Aaron: { MLB: { wins: 21, losses: 32 }, NCAAF: { wins: 2, losses: 1 } },
   },
 };

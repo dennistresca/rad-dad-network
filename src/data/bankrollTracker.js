@@ -21,8 +21,8 @@ export const bankrollTracker = {
   currentBankroll: 203,
   goalBankroll: 10000,
   records: {
-    overall: { wins: 5, losses: 2 },
-    collegeFootball: { wins: 4, losses: 2 },
+    overall: { wins: 5, losses: 3 },
+    collegeFootball: { wins: 4, losses: 3 },
     nfl: { wins: 1, losses: 0 },
     bucketsOfCash: { wins: 0, losses: 0 },
   },
@@ -35,7 +35,7 @@ export const bankrollTracker = {
         { category: "NFL", game: "Tampa Bay Buccaneers vs Cincinnati Bengals", date: "2026-09-13", selection: "Tampa Bay Buccaneers +3.5" },
         { category: "College Football", game: "Bowling Green vs Nebraska", date: "2026-09-12", selection: "OVER 51.5" },
         { category: "College Football", game: "Rice vs Notre Dame", date: "2026-09-12", selection: "OVER 54.5" },
-        { category: "College Football", game: "Oklahoma vs Michigan", date: "2026-09-12", selection: "Oklahoma -5.5" },
+        { category: "College Football", game: "Oklahoma vs Michigan", date: "2026-09-12", selection: "Oklahoma -5.5", result: "loss" },
       ],
     },
     {
