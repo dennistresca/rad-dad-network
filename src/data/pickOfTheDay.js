@@ -30,7 +30,11 @@ export const pickOfTheDay = {
       { league: "NFL", game: "Buffalo @ Houston", selection: "UNDER 44.5", odds: "-110" },
       { league: "NFL", game: "New Orleans @ Detroit", selection: "Amon-Ra St. Brown anytime TD" },
     ],
-    Aaron: [],
+    Aaron: [
+      { league: "NFL", game: "Washington @ Philadelphia", selection: "Saquon Barkley anytime TD" },
+      { league: "MLB", game: "Philadelphia @ Atlanta", selection: "Atlanta ML", odds: "-131" },
+      { league: "NFL", game: "Atlanta @ Pittsburgh", selection: "Aaron Rodgers UNDER 210.5 passing yards" },
+    ],
   },
   records: {
     Dennis: { MLB: { wins: 30, losses: 21 }, NFL: { wins: 1, losses: 1 }, NCAAF: { wins: 4, losses: 4 } },
