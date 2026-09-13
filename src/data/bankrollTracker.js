@@ -17,8 +17,8 @@
 // personal Daily Picks (pickOfTheDay.js), which don't affect the bankroll.
 
 export const bankrollTracker = {
-  lastUpdated: "2026-09-11",
-  currentBankroll: 203,
+  lastUpdated: "2026-09-13",
+  currentBankroll: 214,
   goalBankroll: 10000,
   records: {
     overall: { wins: 6, losses: 5 },
