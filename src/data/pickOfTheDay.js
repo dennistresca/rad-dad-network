@@ -25,7 +25,11 @@ export const pickOfTheDay = {
       { league: "MLB", game: "Colorado @ Detroit", selection: "Detroit ML", odds: "-186" },
       { league: "MLB", game: "Baltimore @ Toronto", selection: "Toronto ML", odds: "-156" },
     ],
-    Shaun: [],
+    Shaun: [
+      { league: "NFL", game: "Atlanta @ Pittsburgh", selection: "Pittsburgh -6.5", odds: "-112" },
+      { league: "NFL", game: "Buffalo @ Houston", selection: "UNDER 44.5", odds: "-110" },
+      { league: "NFL", game: "New Orleans @ Detroit", selection: "Amon-Ra St. Brown anytime TD" },
+    ],
     Aaron: [],
   },
   records: {
