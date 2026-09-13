@@ -29,6 +29,28 @@ function RecordCard({ label, record, accentColor }) {
   );
 }
 
+function BreakdownRecordCard({ label, breakdown, accentColor }) {
+  const leagueEntries = Object.entries(breakdown || {}).filter(([, r]) => r.wins + r.losses > 0);
+  const overall = leagueEntries.reduce(
+    (acc, [, r]) => ({ wins: acc.wins + r.wins, losses: acc.losses + r.losses }),
+    { wins: 0, losses: 0 }
+  );
+
+  return (
+    <div className="rounded-xl border border-neutral-200 bg-white p-6 text-center shadow-sm">
+      <p className="text-sm font-semibold uppercase tracking-wide text-neutral-500">{label}</p>
+      <p className="mt-2 text-3xl font-black" style={{ color: accentColor }}>
+        {overall.wins}-{overall.losses}
+      </p>
+      {leagueEntries.length > 0 && (
+        <p className="mt-1 text-xs font-medium text-neutral-400">
+          {leagueEntries.map(([league, r]) => `${league} ${r.wins}-${r.losses}`).join(" · ")}
+        </p>
+      )}
+    </div>
+  );
+}
+
 function WeekCard({ week, accentColor }) {
   return (
     <div className="rounded-xl border border-neutral-200 bg-white p-6 shadow-sm">
@@ -183,9 +205,9 @@ export default function BankrollTracker() {
             accentColor={show.colorTheme.primary}
           />
           <RecordCard label="NFL" record={records.nfl} accentColor={show.colorTheme.primary} />
-          <RecordCard
+          <BreakdownRecordCard
             label="Buckets of Ca$h"
-            record={records.bucketsOfCash}
+            breakdown={records.bucketsOfCash}
             accentColor={show.colorTheme.primary}
           />
         </div>

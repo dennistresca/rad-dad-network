@@ -1,8 +1,15 @@
 // Dancing With the Odds' "Road to $10K" bankroll tracker page. Update
 // `lastUpdated`, `currentBankroll`, and the records below as the season
-// progresses. `overall` should be the combined record across all bet
-// types (not just CFB + NFL added together, since it may include other
-// categories like Buckets of Ca$h).
+// progresses. `overall` is the combined College Football + NFL record
+// ONLY, since Buckets of Ca$h is tracked separately (see below) and
+// doesn't count toward it.
+//
+// `bucketsOfCash` is broken out by league instead of a single
+// win/loss tally, keyed the same way as a bet's `category` (e.g. "NFL",
+// "College Football"). The page adds these up itself to show the
+// overall Buckets of Ca$h record, so there's only one number to
+// update per league, not two. Leave a league out until it has a
+// graded Buckets of Ca$h bet.
 //
 // `weeklyBets` is the official show bet log, one entry per episode.
 // Each bet can be:
@@ -21,10 +28,13 @@ export const bankrollTracker = {
   currentBankroll: 214,
   goalBankroll: 10000,
   records: {
-    overall: { wins: 11, losses: 5 },
+    overall: { wins: 6, losses: 5 },
     collegeFootball: { wins: 5, losses: 4 },
     nfl: { wins: 1, losses: 1 },
-    bucketsOfCash: { wins: 5, losses: 0 },
+    bucketsOfCash: {
+      NFL: { wins: 2, losses: 0 },
+      "College Football": { wins: 2, losses: 1 },
+    },
   },
   weeklyBets: [
     {
