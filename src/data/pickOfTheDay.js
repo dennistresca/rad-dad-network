@@ -21,25 +21,25 @@ export const pickOfTheDay = {
   date: "2026-09-13",
   picks: {
     Dennis: [
-      { league: "NFL", game: "Cleveland @ Jacksonville", selection: "Jacksonville -8.5", odds: "-112" },
-      { league: "MLB", game: "Colorado @ Detroit", selection: "Detroit ML", odds: "-186" },
+      { league: "NFL", game: "Cleveland @ Jacksonville", selection: "Jacksonville -8.5", odds: "-112", result: "win" },
+      { league: "MLB", game: "Colorado @ Detroit", selection: "Detroit ML", odds: "-186", result: "win" },
       { league: "MLB", game: "Baltimore @ Toronto", selection: "Toronto ML", odds: "-156" },
     ],
     Shaun: [
-      { league: "NFL", game: "Atlanta @ Pittsburgh", selection: "Pittsburgh -6.5", odds: "-112" },
-      { league: "NFL", game: "Buffalo @ Houston", selection: "UNDER 44.5", odds: "-110" },
-      { league: "NFL", game: "New Orleans @ Detroit", selection: "Amon-Ra St. Brown anytime TD" },
+      { league: "NFL", game: "Atlanta @ Pittsburgh", selection: "Pittsburgh -6.5", odds: "-112", result: "win" },
+      { league: "NFL", game: "Buffalo @ Houston", selection: "UNDER 44.5", odds: "-110", result: "loss" },
+      { league: "NFL", game: "New Orleans @ Detroit", selection: "Amon-Ra St. Brown anytime TD", result: "win" },
     ],
     Aaron: [
       { league: "NFL", game: "Washington @ Philadelphia", selection: "Saquon Barkley anytime TD" },
       { league: "MLB", game: "Philadelphia @ Atlanta", selection: "Atlanta ML", odds: "-131" },
-      { league: "NFL", game: "Atlanta @ Pittsburgh", selection: "Aaron Rodgers UNDER 210.5 passing yards" },
+      { league: "NFL", game: "Atlanta @ Pittsburgh", selection: "Aaron Rodgers UNDER 210.5 passing yards", result: "loss" },
     ],
   },
   records: {
-    Dennis: { MLB: { wins: 30, losses: 21 }, NFL: { wins: 1, losses: 1 }, NCAAF: { wins: 4, losses: 4 } },
-    Shaun: { MLB: { wins: 22, losses: 21 }, NFL: { wins: 1, losses: 0 }, NCAAF: { wins: 1, losses: 3 } },
-    Aaron: { MLB: { wins: 21, losses: 33 }, NCAAF: { wins: 2, losses: 3 } },
+    Dennis: { MLB: { wins: 31, losses: 21 }, NFL: { wins: 2, losses: 1 }, NCAAF: { wins: 4, losses: 4 } },
+    Shaun: { MLB: { wins: 22, losses: 21 }, NFL: { wins: 3, losses: 1 }, NCAAF: { wins: 1, losses: 3 } },
+    Aaron: { MLB: { wins: 21, losses: 33 }, NFL: { wins: 0, losses: 1 }, NCAAF: { wins: 2, losses: 3 } },
   },
 };
 
