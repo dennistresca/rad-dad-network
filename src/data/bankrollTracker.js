@@ -21,10 +21,10 @@ export const bankrollTracker = {
   currentBankroll: 214,
   goalBankroll: 10000,
   records: {
-    overall: { wins: 6, losses: 5 },
+    overall: { wins: 11, losses: 5 },
     collegeFootball: { wins: 5, losses: 4 },
     nfl: { wins: 1, losses: 1 },
-    bucketsOfCash: { wins: 0, losses: 0 },
+    bucketsOfCash: { wins: 5, losses: 0 },
   },
   weeklyBets: [
     {
