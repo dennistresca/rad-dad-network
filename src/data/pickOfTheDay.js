@@ -18,23 +18,14 @@
 // host's record entirely until they have a graded pick in it.
 
 export const pickOfTheDay = {
-  date: "2026-09-13",
+  date: "2026-09-15",
   picks: {
     Dennis: [
-      { league: "NFL", game: "Cleveland @ Jacksonville", selection: "Jacksonville -8.5", odds: "-112", result: "win" },
-      { league: "MLB", game: "Colorado @ Detroit", selection: "Detroit ML", odds: "-186", result: "win" },
-      { league: "MLB", game: "Baltimore @ Toronto", selection: "Toronto ML", odds: "-156", result: "win" },
+      { league: "MLB", game: "San Francisco @ St. Louis", selection: "St. Louis ML", odds: "-168" },
+      { league: "MLB", game: "Los Angeles Dodgers @ Cincinnati", selection: "Los Angeles Dodgers -1.5", odds: "-137" },
     ],
-    Shaun: [
-      { league: "NFL", game: "Atlanta @ Pittsburgh", selection: "Pittsburgh -6.5", odds: "-112", result: "win" },
-      { league: "NFL", game: "Buffalo @ Houston", selection: "UNDER 44.5", odds: "-110", result: "loss" },
-      { league: "NFL", game: "New Orleans @ Detroit", selection: "Amon-Ra St. Brown anytime TD", result: "win" },
-    ],
-    Aaron: [
-      { league: "NFL", game: "Washington @ Philadelphia", selection: "Saquon Barkley anytime TD", result: "loss" },
-      { league: "MLB", game: "Philadelphia @ Atlanta", selection: "Atlanta ML", odds: "-131", result: "loss" },
-      { league: "NFL", game: "Atlanta @ Pittsburgh", selection: "Aaron Rodgers UNDER 210.5 passing yards", result: "loss" },
-    ],
+    Shaun: [],
+    Aaron: [],
   },
   records: {
     Dennis: { MLB: { wins: 32, losses: 21 }, NFL: { wins: 2, losses: 1 }, NCAAF: { wins: 4, losses: 4 } },
@@ -48,6 +39,26 @@ export const pickOfTheDay = {
 // `picks` as a new entry here (not `records`, since records are
 // cumulative and don't belong to a single day). Newest day first.
 export const pickHistory = [
+  {
+    date: "2026-09-13",
+    picks: {
+      Dennis: [
+        { league: "NFL", game: "Cleveland @ Jacksonville", selection: "Jacksonville -8.5", odds: "-112", result: "win" },
+        { league: "MLB", game: "Colorado @ Detroit", selection: "Detroit ML", odds: "-186", result: "win" },
+        { league: "MLB", game: "Baltimore @ Toronto", selection: "Toronto ML", odds: "-156", result: "win" },
+      ],
+      Shaun: [
+        { league: "NFL", game: "Atlanta @ Pittsburgh", selection: "Pittsburgh -6.5", odds: "-112", result: "win" },
+        { league: "NFL", game: "Buffalo @ Houston", selection: "UNDER 44.5", odds: "-110", result: "loss" },
+        { league: "NFL", game: "New Orleans @ Detroit", selection: "Amon-Ra St. Brown anytime TD", result: "win" },
+      ],
+      Aaron: [
+        { league: "NFL", game: "Washington @ Philadelphia", selection: "Saquon Barkley anytime TD", result: "loss" },
+        { league: "MLB", game: "Philadelphia @ Atlanta", selection: "Atlanta ML", odds: "-131", result: "loss" },
+        { league: "NFL", game: "Atlanta @ Pittsburgh", selection: "Aaron Rodgers UNDER 210.5 passing yards", result: "loss" },
+      ],
+    },
+  },
   {
     date: "2026-09-12",
     picks: {
