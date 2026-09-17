@@ -22,6 +22,7 @@ export const pickOfTheDay = {
   picks: {
     Dennis: [
       { league: "NFL", game: "Detroit @ Buffalo", selection: "Detroit +4.5", odds: "-102", note: "Thursday Night Football, Sep 17" },
+      { league: "NFL", game: "Detroit @ Buffalo", selection: "Jameson Williams OVER 59.5 receiving yards", odds: "-110", note: "Thursday Night Football, Sep 17" },
     ],
     Shaun: [
       { league: "MLB", game: "San Francisco @ St. Louis", selection: "UNDER 7.5 runs", result: "loss" },
