@@ -27,7 +27,11 @@ export const pickOfTheDay = {
     Shaun: [
       { league: "NFL", game: "Detroit @ Buffalo", selection: "OVER 54.5", odds: "-118" },
     ],
-    Aaron: [],
+    Aaron: [
+      { league: "NFL", game: "Detroit @ Buffalo", selection: "UNDER 55.5" },
+      { league: "MLB", game: "Philadelphia @ New York Mets", selection: "Philadelphia ML", odds: "+109" },
+      { league: "MLB", game: "Detroit @ Chicago White Sox", selection: "Detroit ML", odds: "-103" },
+    ],
   },
   records: {
     Dennis: { MLB: { wins: 33, losses: 22 }, NFL: { wins: 2, losses: 1 }, NCAAF: { wins: 4, losses: 4 } },
