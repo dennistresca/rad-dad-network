@@ -2,9 +2,9 @@
 // pages and components read from here, so no other file needs to change.
 //
 // Episode data is NOT stored here. It's fetched live in the browser from
-// each show's `feedUrl` (see src/hooks/useEpisodes.js), since Spotify for
-// Podcasters' RSS feeds send an Access-Control-Allow-Origin: * header. That
-// means episodes are always current with no build/rebuild step.
+// each show's `feedUrl` (see src/hooks/useEpisodes.js), since Captivate's
+// RSS feeds send an Access-Control-Allow-Origin: * header. That means
+// episodes are always current with no build/rebuild step.
 
 export const shows = [
   {
@@ -28,7 +28,7 @@ export const shows = [
       gradient: "linear-gradient(135deg, #DC2626 0%, #7F1D1D 100%)",
     },
     logo: "/logo-dancing-with-the-odds.png",
-    feedUrl: "https://anchor.fm/s/11112b5f8/podcast/rss",
+    feedUrl: "https://feeds.captivate.fm/dwto/",
     subPages: [
       { label: "Daily Picks", path: "/shows/dancing-with-the-odds/pick-of-the-day" },
       { label: "Road to $10K", path: "/shows/dancing-with-the-odds/road-to-10k" },
@@ -67,7 +67,7 @@ export const shows = [
       gradient: "linear-gradient(135deg, #000000 0%, #111827 60%, #2563EB 100%)",
     },
     logo: "/logo-stateside-speed.jpg",
-    feedUrl: "https://anchor.fm/s/f1c8df9c/podcast/rss",
+    feedUrl: "https://feeds.captivate.fm/stateside-speed/",
     platforms: {
       apple: "https://podcasts.apple.com/us/podcast/stateside-speed/id1733500660",
       spotify: "https://open.spotify.com/show/0NTafHbcBXexka0eibCL9u",
@@ -98,7 +98,7 @@ export const shows = [
       gradient: "linear-gradient(135deg, #1E3A8A 0%, #1E293B 50%, #B91C1C 100%)",
     },
     logo: "/logo-check-six-radio.jpg",
-    feedUrl: "https://anchor.fm/s/10e095754/podcast/rss",
+    feedUrl: "https://feeds.captivate.fm/check-six-radio/",
     platforms: {
       apple: "https://podcasts.apple.com/us/podcast/check-six-radio/id1884719923",
       spotify: "https://open.spotify.com/show/7geitK9NBdanPrkQZoLx4Q",
