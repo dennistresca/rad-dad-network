@@ -8,6 +8,7 @@ import PickOfTheDay from "./pages/PickOfTheDay";
 import BankrollTracker from "./pages/BankrollTracker";
 import CollegeFootballFutures from "./pages/CollegeFootballFutures";
 import NflFutures from "./pages/NflFutures";
+import ModelTracker from "./pages/ModelTracker";
 import OurBossThinksWereWorking from "./pages/OurBossThinksWereWorking";
 import Store from "./pages/Store";
 import About from "./pages/About";
@@ -40,6 +41,10 @@ export default function App() {
             <Route
               path="/shows/dancing-with-the-odds/nfl-futures"
               element={<NflFutures />}
+            />
+            <Route
+              path="/shows/dancing-with-the-odds/model-tracker"
+              element={<ModelTracker />}
             />
             <Route
               path="/our-boss-thinks-were-working"
