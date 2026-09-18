@@ -18,20 +18,11 @@
 // host's record entirely until they have a graded pick in it.
 
 export const pickOfTheDay = {
-  date: "2026-09-17",
+  date: "2026-09-18",
   picks: {
-    Dennis: [
-      { league: "NFL", game: "Detroit @ Buffalo", selection: "Detroit +4.5", odds: "-102", result: "loss" },
-      { league: "NFL", game: "Detroit @ Buffalo", selection: "Jameson Williams OVER 59.5 receiving yards", odds: "-110", result: "loss" },
-    ],
-    Shaun: [
-      { league: "NFL", game: "Detroit @ Buffalo", selection: "OVER 54.5", odds: "-118", result: "win" },
-    ],
-    Aaron: [
-      { league: "NFL", game: "Detroit @ Buffalo", selection: "UNDER 55.5", result: "loss" },
-      { league: "MLB", game: "Philadelphia @ New York Mets", selection: "Philadelphia ML", odds: "+109", result: "win" },
-      { league: "MLB", game: "Detroit @ Chicago White Sox", selection: "Detroit ML", odds: "-103", result: "loss" },
-    ],
+    Dennis: [],
+    Shaun: [],
+    Aaron: [],
   },
   records: {
     Dennis: { MLB: { wins: 33, losses: 22 }, NFL: { wins: 2, losses: 3 }, NCAAF: { wins: 4, losses: 4 } },
@@ -45,6 +36,23 @@ export const pickOfTheDay = {
 // `picks` as a new entry here (not `records`, since records are
 // cumulative and don't belong to a single day). Newest day first.
 export const pickHistory = [
+  {
+    date: "2026-09-17",
+    picks: {
+      Dennis: [
+        { league: "NFL", game: "Detroit @ Buffalo", selection: "Detroit +4.5", odds: "-102", result: "loss" },
+        { league: "NFL", game: "Detroit @ Buffalo", selection: "Jameson Williams OVER 59.5 receiving yards", odds: "-110", result: "loss" },
+      ],
+      Shaun: [
+        { league: "NFL", game: "Detroit @ Buffalo", selection: "OVER 54.5", odds: "-118", result: "win" },
+      ],
+      Aaron: [
+        { league: "NFL", game: "Detroit @ Buffalo", selection: "UNDER 55.5", result: "loss" },
+        { league: "MLB", game: "Philadelphia @ New York Mets", selection: "Philadelphia ML", odds: "+109", result: "win" },
+        { league: "MLB", game: "Detroit @ Chicago White Sox", selection: "Detroit ML", odds: "-103", result: "loss" },
+      ],
+    },
+  },
   {
     date: "2026-09-16",
     picks: {
