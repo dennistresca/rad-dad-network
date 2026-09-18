@@ -21,22 +21,22 @@ export const pickOfTheDay = {
   date: "2026-09-17",
   picks: {
     Dennis: [
-      { league: "NFL", game: "Detroit @ Buffalo", selection: "Detroit +4.5", odds: "-102" },
-      { league: "NFL", game: "Detroit @ Buffalo", selection: "Jameson Williams OVER 59.5 receiving yards", odds: "-110" },
+      { league: "NFL", game: "Detroit @ Buffalo", selection: "Detroit +4.5", odds: "-102", result: "loss" },
+      { league: "NFL", game: "Detroit @ Buffalo", selection: "Jameson Williams OVER 59.5 receiving yards", odds: "-110", result: "loss" },
     ],
     Shaun: [
-      { league: "NFL", game: "Detroit @ Buffalo", selection: "OVER 54.5", odds: "-118" },
+      { league: "NFL", game: "Detroit @ Buffalo", selection: "OVER 54.5", odds: "-118", result: "win" },
     ],
     Aaron: [
-      { league: "NFL", game: "Detroit @ Buffalo", selection: "UNDER 55.5" },
-      { league: "MLB", game: "Philadelphia @ New York Mets", selection: "Philadelphia ML", odds: "+109" },
-      { league: "MLB", game: "Detroit @ Chicago White Sox", selection: "Detroit ML", odds: "-103" },
+      { league: "NFL", game: "Detroit @ Buffalo", selection: "UNDER 55.5", result: "loss" },
+      { league: "MLB", game: "Philadelphia @ New York Mets", selection: "Philadelphia ML", odds: "+109", result: "win" },
+      { league: "MLB", game: "Detroit @ Chicago White Sox", selection: "Detroit ML", odds: "-103", result: "loss" },
     ],
   },
   records: {
-    Dennis: { MLB: { wins: 33, losses: 22 }, NFL: { wins: 2, losses: 1 }, NCAAF: { wins: 4, losses: 4 } },
-    Shaun: { MLB: { wins: 23, losses: 23 }, NFL: { wins: 3, losses: 1 }, NCAAF: { wins: 1, losses: 3 } },
-    Aaron: { MLB: { wins: 21, losses: 34 }, NFL: { wins: 0, losses: 2 }, NCAAF: { wins: 2, losses: 3 } },
+    Dennis: { MLB: { wins: 33, losses: 22 }, NFL: { wins: 2, losses: 3 }, NCAAF: { wins: 4, losses: 4 } },
+    Shaun: { MLB: { wins: 23, losses: 23 }, NFL: { wins: 4, losses: 1 }, NCAAF: { wins: 1, losses: 3 } },
+    Aaron: { MLB: { wins: 22, losses: 35 }, NFL: { wins: 0, losses: 3 }, NCAAF: { wins: 2, losses: 3 } },
   },
 };
 
