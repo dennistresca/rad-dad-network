@@ -38,6 +38,17 @@ export const bankrollTracker = {
   },
   weeklyBets: [
     {
+      episode: "Episode 4 Bets",
+      date: "2026-09-18",
+      bets: [
+        { category: "College Football", game: "UTEP @ Michigan", date: "2026-09-19", selection: "OVER 48.5" },
+        { category: "College Football", game: "Northern Illinois @ Arizona", date: "2026-09-19", selection: "OVER 48.5" },
+        { category: "College Football", game: "Troy @ Missouri", date: "2026-09-19", selection: "OVER 48.5" },
+        { category: "NFL", game: "Washington Commanders vs Dallas Cowboys", date: "2026-09-20", selection: "Washington Commanders +3.5" },
+        { category: "NFL", game: "Philadelphia Eagles vs Tennessee Titans", date: "2026-09-20", selection: "UNDER 39.5" },
+      ],
+    },
+    {
       episode: "Episode 3 Bets",
       date: "2026-09-10",
       bets: [
