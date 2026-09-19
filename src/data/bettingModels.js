@@ -1,5 +1,5 @@
 // Dancing With the Odds' Model Tracker page. Tracks the season-long
-// win/loss record of the two statistical betting models the hosts
+// win/loss record of the statistical betting models the hosts
 // introduced on the show, based on EVERY game that fits each model's
 // criteria this season, regardless of whether the guys actually bet on
 // it. This is separate from both the personal Daily Picks and the
@@ -12,6 +12,10 @@
 // below (spread + total from the closing line) whenever asked to
 // refresh the tracker; `lastUpdated` should move to the date of that
 // scan.
+//
+// Dennis's NFL model has three tiers (the "Playable" one plus two wider,
+// more diluted variants), so `nfl.tiers` is a list instead of one flat
+// record. Add/remove tiers there as the model gets refined.
 
 export const bettingModels = {
   collegeFootball: {
@@ -25,9 +29,26 @@ export const bettingModels = {
   nfl: {
     name: "Dennis's NFL Road Dog Model",
     introducedEpisode: "S4E4",
-    rule: "Take the road underdog against the spread when the game total is over 49. About a 57% hit rate over the last 12 NFL seasons (55% if the total cutoff drops to 48).",
-    record: { wins: 1, losses: 2 },
-    pending: 1,
     lastUpdated: "2026-09-19",
+    tiers: [
+      {
+        label: "Tier 1 — Playable",
+        rule: "Road underdog ATS when the total is 49 or higher. 57.1% hit rate, +9.9% ROI on 373 bets (~34/season) from 2015-2025, with both the 2015-20 and 2021-25 halves holding up on their own.",
+        record: { wins: 1, losses: 2 },
+        pending: 1,
+      },
+      {
+        label: "Tier 2a — Diluted",
+        rule: "Road underdog ATS when the total is 48 or higher. 55.6% hit rate, +6.8% ROI on 516 bets, about 40% more volume than Tier 1 for a 1.5-point weaker edge.",
+        record: { wins: 1, losses: 2 },
+        pending: 1,
+      },
+      {
+        label: "Tier 2b — Diluted",
+        rule: "Any road team ATS when the total is 48 or higher (adds road favorites, who hit only 53.0% on their own). 54.7% hit rate, +4.8% ROI on 812 bets.",
+        record: { wins: 2, losses: 2 },
+        pending: 1,
+      },
+    ],
   },
 };
