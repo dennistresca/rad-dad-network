@@ -18,9 +18,9 @@ export const bettingModels = {
     name: "Shaun's College Blowout Model",
     introducedEpisode: "S4E2",
     rule: "Take the OVER when a team is favored by 24.5+ points and the total is under 55.5, the closer to 50 the better. About a 60% historical hit rate over roughly the last 10 college football seasons.",
-    record: { wins: 22, losses: 13 },
-    pending: 14,
-    lastUpdated: "2026-09-18",
+    record: { wins: 23, losses: 13 },
+    pending: 10,
+    lastUpdated: "2026-09-19",
   },
   nfl: {
     name: "Dennis's NFL Road Dog Model",
@@ -28,6 +28,6 @@ export const bettingModels = {
     rule: "Take the road underdog against the spread when the game total is over 49. About a 57% hit rate over the last 12 NFL seasons (55% if the total cutoff drops to 48).",
     record: { wins: 1, losses: 2 },
     pending: 1,
-    lastUpdated: "2026-09-18",
+    lastUpdated: "2026-09-19",
   },
 };
