@@ -28,8 +28,8 @@ export const bankrollTracker = {
   currentBankroll: 209,
   goalBankroll: 10000,
   records: {
-    overall: { wins: 6, losses: 7 },
-    collegeFootball: { wins: 5, losses: 4 },
+    overall: { wins: 7, losses: 7 },
+    collegeFootball: { wins: 6, losses: 4 },
     nfl: { wins: 1, losses: 3 },
     bucketsOfCash: {
       NFL: { wins: 2, losses: 0 },
@@ -41,7 +41,7 @@ export const bankrollTracker = {
       episode: "Episode 4 Bets",
       date: "2026-09-18",
       bets: [
-        { category: "College Football", game: "UTEP @ Michigan", date: "2026-09-19", selection: "OVER 48.5" },
+        { category: "College Football", game: "UTEP @ Michigan", date: "2026-09-19", selection: "OVER 48.5", result: "win" },
         { category: "College Football", game: "Northern Illinois @ Arizona", date: "2026-09-19", selection: "OVER 48.5" },
         { category: "College Football", game: "Troy @ Missouri", date: "2026-09-19", selection: "OVER 48.5" },
         { category: "NFL", game: "Washington Commanders vs Dallas Cowboys", date: "2026-09-20", selection: "Washington Commanders +3.5" },
