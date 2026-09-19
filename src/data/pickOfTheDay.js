@@ -18,11 +18,14 @@
 // host's record entirely until they have a graded pick in it.
 
 export const pickOfTheDay = {
-  date: "2026-09-18",
+  date: "2026-09-19",
   picks: {
     Dennis: [],
     Shaun: [],
-    Aaron: [],
+    Aaron: [
+      { league: "NCAAF", game: "Brown @ New Haven", selection: "Brown ML", odds: "-425" },
+      { league: "NCAAF", game: "Cornell @ Colgate", selection: "Colgate ML", odds: "-551" },
+    ],
   },
   records: {
     Dennis: { MLB: { wins: 33, losses: 22 }, NFL: { wins: 2, losses: 3 }, NCAAF: { wins: 4, losses: 4 } },
