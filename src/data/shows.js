@@ -30,8 +30,8 @@ export const shows = [
     logo: "/logo-dancing-with-the-odds.png",
     feedUrl: "https://feeds.captivate.fm/dwto/",
     subPages: [
-      { label: "Daily Picks", path: "/shows/dancing-with-the-odds/pick-of-the-day" },
       { label: "Road to $10K", path: "/shows/dancing-with-the-odds/road-to-10k" },
+      { label: "Daily Picks", path: "/shows/dancing-with-the-odds/pick-of-the-day" },
       { label: "CFB Futures", path: "/shows/dancing-with-the-odds/cfb-futures" },
       { label: "NFL Futures", path: "/shows/dancing-with-the-odds/nfl-futures" },
       { label: "Model Tracker", path: "/shows/dancing-with-the-odds/model-tracker" },
