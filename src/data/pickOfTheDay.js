@@ -18,24 +18,19 @@
 // host's record entirely until they have a graded pick in it.
 
 export const pickOfTheDay = {
-  date: "2026-09-19",
+  date: "2026-09-20",
   picks: {
-    Dennis: [
-      { league: "NCAAF", game: "New Mexico @ Oklahoma", selection: "Oklahoma -21.5", odds: "-102" },
-      { league: "NCAAF", game: "Virginia Tech @ Maryland", selection: "Maryland +2.5", odds: "-102" },
-    ],
+    Dennis: [],
     Shaun: [
-      { league: "NCAAF", game: "Buffalo @ Penn State", selection: "OVER 49.5", odds: "-110" },
+      { league: "NFL", game: "Indianapolis @ Kansas City", selection: "Kansas City -5.5", odds: "-112" },
+      { league: "NFL", game: "New York Giants @ Los Angeles Rams", selection: "New York Giants +7", odds: "-112" },
     ],
-    Aaron: [
-      { league: "NCAAF", game: "Brown @ New Haven", selection: "Brown ML", odds: "-425" },
-      { league: "NCAAF", game: "Cornell @ Colgate", selection: "Colgate ML", odds: "-551" },
-    ],
+    Aaron: [],
   },
   records: {
-    Dennis: { MLB: { wins: 33, losses: 22 }, NFL: { wins: 2, losses: 3 }, NCAAF: { wins: 4, losses: 4 } },
-    Shaun: { MLB: { wins: 23, losses: 23 }, NFL: { wins: 4, losses: 1 }, NCAAF: { wins: 1, losses: 3 } },
-    Aaron: { MLB: { wins: 22, losses: 35 }, NFL: { wins: 0, losses: 3 }, NCAAF: { wins: 2, losses: 3 } },
+    Dennis: { MLB: { wins: 33, losses: 22 }, NFL: { wins: 2, losses: 3 }, NCAAF: { wins: 4, losses: 6 } },
+    Shaun: { MLB: { wins: 23, losses: 23 }, NFL: { wins: 4, losses: 1 }, NCAAF: { wins: 2, losses: 3 } },
+    Aaron: { MLB: { wins: 22, losses: 35 }, NFL: { wins: 0, losses: 3 }, NCAAF: { wins: 4, losses: 3 } },
   },
 };
 
@@ -44,6 +39,22 @@ export const pickOfTheDay = {
 // `picks` as a new entry here (not `records`, since records are
 // cumulative and don't belong to a single day). Newest day first.
 export const pickHistory = [
+  {
+    date: "2026-09-19",
+    picks: {
+      Dennis: [
+        { league: "NCAAF", game: "New Mexico @ Oklahoma", selection: "Oklahoma -21.5", odds: "-102", result: "loss" },
+        { league: "NCAAF", game: "Virginia Tech @ Maryland", selection: "Maryland +2.5", odds: "-102", result: "loss" },
+      ],
+      Shaun: [
+        { league: "NCAAF", game: "Buffalo @ Penn State", selection: "OVER 49.5", odds: "-110", result: "win" },
+      ],
+      Aaron: [
+        { league: "NCAAF", game: "Brown @ New Haven", selection: "Brown ML", odds: "-425", result: "win" },
+        { league: "NCAAF", game: "Cornell @ Colgate", selection: "Colgate ML", odds: "-551", result: "win" },
+      ],
+    },
+  },
   {
     date: "2026-09-17",
     picks: {
