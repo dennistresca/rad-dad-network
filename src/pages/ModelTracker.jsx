@@ -102,6 +102,7 @@ export default function ModelTracker() {
         <div className="space-y-10">
           <ModelCard model={bettingModels.collegeFootball} accentColor={show.colorTheme.primary} />
           <TieredModelCard model={bettingModels.nfl} accentColor={show.colorTheme.primary} />
+          <ModelCard model={bettingModels.aaronWind} accentColor={show.colorTheme.primary} />
         </div>
       </section>
     </>

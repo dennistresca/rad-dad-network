@@ -51,4 +51,12 @@ export const bettingModels = {
       },
     ],
   },
+  aaronWind: {
+    name: "Aaron's Wind Model",
+    introducedEpisode: "S4E5",
+    rule: "Take the UNDER when wind is 15+ mph at kickoff. 56.8% hit rate going back 10 seasons. Note: graded using ESPN's pregame wind-gust forecast (not sustained wind), the only wind data available, and only from games forward, since forecast data isn't retained after a game ends, so weeks 1-3 of this season aren't recoverable.",
+    record: { wins: 0, losses: 0 },
+    pending: 9,
+    lastUpdated: "2026-09-20",
+  },
 };
