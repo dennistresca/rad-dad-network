@@ -21,7 +21,7 @@ export const pickOfTheDay = {
   date: "2026-09-20",
   picks: {
     Dennis: [
-      { league: "NFL", game: "Philadelphia @ Tennessee", selection: "Philadelphia -7.5" },
+      { league: "NFL", game: "Philadelphia @ Tennessee", selection: "Philadelphia -7", odds: "-112" },
       { league: "NFL", game: "New York Giants @ Los Angeles Rams", selection: "OVER 47.5", odds: "-115" },
     ],
     Shaun: [
