@@ -22,9 +22,9 @@ export const bettingModels = {
     name: "Shaun's College Blowout Model",
     introducedEpisode: "S4E2",
     rule: "Take the OVER when a team is favored by 24.5+ points and the total is under 55.5, the closer to 50 the better. About a 60% historical hit rate over roughly the last 10 college football seasons.",
-    record: { wins: 24, losses: 14 },
-    pending: 8,
-    lastUpdated: "2026-09-19",
+    record: { wins: 28, losses: 18 },
+    pending: 0,
+    lastUpdated: "2026-09-20",
   },
   nfl: {
     name: "Dennis's NFL Road Dog Model",
