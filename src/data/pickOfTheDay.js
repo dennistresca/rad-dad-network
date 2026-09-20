@@ -21,8 +21,7 @@ export const pickOfTheDay = {
   date: "2026-09-20",
   picks: {
     Dennis: [
-      { league: "NFL", game: "Philadelphia @ Tennessee", selection: "Philadelphia -7", odds: "-112" },
-      { league: "NFL", game: "Washington @ Dallas", selection: "Dallas -4" },
+      { league: "NFL", game: "Philadelphia @ Tennessee", selection: "Philadelphia -7", odds: "-112", result: "loss" },
     ],
     Shaun: [
       { league: "NFL", game: "Indianapolis @ Kansas City", selection: "Kansas City -5.5", odds: "-112" },
@@ -30,7 +29,7 @@ export const pickOfTheDay = {
     Aaron: [],
   },
   records: {
-    Dennis: { MLB: { wins: 33, losses: 22 }, NFL: { wins: 2, losses: 3 }, NCAAF: { wins: 4, losses: 6 } },
+    Dennis: { MLB: { wins: 33, losses: 22 }, NFL: { wins: 2, losses: 4 }, NCAAF: { wins: 4, losses: 6 } },
     Shaun: { MLB: { wins: 23, losses: 23 }, NFL: { wins: 4, losses: 1 }, NCAAF: { wins: 2, losses: 3 } },
     Aaron: { MLB: { wins: 22, losses: 35 }, NFL: { wins: 0, losses: 3 }, NCAAF: { wins: 4, losses: 3 } },
   },

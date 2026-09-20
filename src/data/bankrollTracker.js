@@ -28,9 +28,9 @@ export const bankrollTracker = {
   currentBankroll: 213,
   goalBankroll: 10000,
   records: {
-    overall: { wins: 8, losses: 8 },
+    overall: { wins: 8, losses: 9 },
     collegeFootball: { wins: 7, losses: 5 },
-    nfl: { wins: 1, losses: 3 },
+    nfl: { wins: 1, losses: 4 },
     bucketsOfCash: {
       NFL: { wins: 2, losses: 0 },
       "College Football": { wins: 2, losses: 1 },
@@ -45,7 +45,7 @@ export const bankrollTracker = {
         { category: "College Football", game: "Northern Illinois @ Arizona", date: "2026-09-19", selection: "OVER 48.5", result: "win" },
         { category: "College Football", game: "Troy @ Missouri", date: "2026-09-19", selection: "OVER 48.5", result: "loss" },
         { category: "NFL", game: "Washington Commanders vs Dallas Cowboys", date: "2026-09-20", selection: "Washington Commanders +3.5" },
-        { category: "NFL", game: "Philadelphia Eagles vs Tennessee Titans", date: "2026-09-20", selection: "UNDER 39.5" },
+        { category: "NFL", game: "Philadelphia Eagles vs Tennessee Titans", date: "2026-09-20", selection: "UNDER 39.5", result: "loss" },
       ],
     },
     {
