@@ -24,13 +24,13 @@ export const pickOfTheDay = {
       { league: "NFL", game: "Philadelphia @ Tennessee", selection: "Philadelphia -7", odds: "-112", result: "loss" },
     ],
     Shaun: [
-      { league: "NFL", game: "Indianapolis @ Kansas City", selection: "Kansas City -5.5", odds: "-112" },
+      { league: "NFL", game: "Indianapolis @ Kansas City", selection: "Kansas City -5.5", odds: "-112", result: "loss" },
     ],
     Aaron: [],
   },
   records: {
     Dennis: { MLB: { wins: 33, losses: 22 }, NFL: { wins: 2, losses: 4 }, NCAAF: { wins: 4, losses: 6 } },
-    Shaun: { MLB: { wins: 23, losses: 23 }, NFL: { wins: 4, losses: 1 }, NCAAF: { wins: 2, losses: 3 } },
+    Shaun: { MLB: { wins: 23, losses: 23 }, NFL: { wins: 4, losses: 2 }, NCAAF: { wins: 2, losses: 3 } },
     Aaron: { MLB: { wins: 22, losses: 35 }, NFL: { wins: 0, losses: 3 }, NCAAF: { wins: 4, losses: 3 } },
   },
 };
