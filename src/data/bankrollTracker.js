@@ -24,8 +24,8 @@
 // personal Daily Picks (pickOfTheDay.js), which don't affect the bankroll.
 
 export const bankrollTracker = {
-  lastUpdated: "2026-09-20",
-  currentBankroll: 213,
+  lastUpdated: "2026-09-22",
+  currentBankroll: 208,
   goalBankroll: 10000,
   records: {
     overall: { wins: 8, losses: 10 },
@@ -83,6 +83,6 @@ export const bankrollTracker = {
     { category: "College Football", game: "LIU @ Kansas", date: "2026-09-04", selection: "OVER 54.5", result: "win" },
     { category: "College Football", game: "Western Kentucky @ Georgia", date: "2026-09-12", selection: "OVER 54.5", result: "win" },
     { category: "NFL", game: "Denver @ Kansas City", date: "2026-09-14", selection: "Denver +2.5", odds: "-112", result: "loss" },
-    { category: "NFL", game: "Detroit @ Buffalo", date: "2026-09-17", selection: "Detroit +3.5", result: "loss" },
+    { category: "NFL", game: "Detroit @ Buffalo", date: "2026-09-17", selection: "Detroit +5.5", result: "loss" },
   ],
 };
