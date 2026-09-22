@@ -21,16 +21,16 @@ export const pickOfTheDay = {
   date: "2026-09-21",
   picks: {
     Dennis: [
-      { league: "NFL", game: "New York Giants @ Los Angeles Rams", selection: "OVER 47.5", odds: "-110" },
+      { league: "NFL", game: "New York Giants @ Los Angeles Rams", selection: "OVER 47.5", odds: "-110", result: "loss" },
     ],
     Shaun: [
-      { league: "NFL", game: "New York Giants @ Los Angeles Rams", selection: "New York Giants +7" },
+      { league: "NFL", game: "New York Giants @ Los Angeles Rams", selection: "New York Giants +7", result: "loss" },
     ],
     Aaron: [],
   },
   records: {
-    Dennis: { MLB: { wins: 33, losses: 22 }, NFL: { wins: 2, losses: 4 }, NCAAF: { wins: 4, losses: 6 } },
-    Shaun: { MLB: { wins: 23, losses: 23 }, NFL: { wins: 4, losses: 2 }, NCAAF: { wins: 2, losses: 3 } },
+    Dennis: { MLB: { wins: 33, losses: 22 }, NFL: { wins: 2, losses: 5 }, NCAAF: { wins: 4, losses: 6 } },
+    Shaun: { MLB: { wins: 23, losses: 23 }, NFL: { wins: 4, losses: 3 }, NCAAF: { wins: 2, losses: 3 } },
     Aaron: { MLB: { wins: 22, losses: 35 }, NFL: { wins: 0, losses: 3 }, NCAAF: { wins: 4, losses: 3 } },
   },
 };
