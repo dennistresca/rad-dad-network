@@ -32,7 +32,7 @@ export const bankrollTracker = {
     collegeFootball: { wins: 7, losses: 5 },
     nfl: { wins: 1, losses: 5 },
     bucketsOfCash: {
-      NFL: { wins: 2, losses: 0 },
+      NFL: { wins: 2, losses: 3 },
       "College Football": { wins: 2, losses: 1 },
     },
   },
