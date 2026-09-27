@@ -28,9 +28,9 @@ export const bankrollTracker = {
   currentBankroll: 208,
   goalBankroll: 10000,
   records: {
-    overall: { wins: 10, losses: 11 },
-    collegeFootball: { wins: 9, losses: 6 },
-    nfl: { wins: 1, losses: 5 },
+    overall: { wins: 12, losses: 12 },
+    collegeFootball: { wins: 9, losses: 7 },
+    nfl: { wins: 3, losses: 5 },
     bucketsOfCash: {
       NFL: { wins: 2, losses: 3 },
       "College Football": { wins: 2, losses: 1 },
@@ -44,8 +44,9 @@ export const bankrollTracker = {
         { category: "College Football", game: "Illinois @ Ohio State", date: "2026-09-26", selection: "OVER 54.5", result: "win" },
         { category: "College Football", game: "Sam Houston @ Texas Tech", date: "2026-09-26", selection: "OVER 54.5", result: "win" },
         { category: "College Football", game: "Lindenwood @ Eastern Michigan", date: "2026-09-26", selection: "OVER 48.5", result: "loss" },
-        { category: "NFL", game: "Tennessee Titans @ New York Giants", date: "2026-09-27", selection: "UNDER 39.5" },
-        { category: "NFL", game: "Kansas City Chiefs @ Miami Dolphins", date: "2026-09-27", selection: "UNDER 45.5" },
+        { category: "College Football", game: "LIU @ Florida International", date: "2026-09-26", selection: "OVER 50.5", result: "loss" },
+        { category: "NFL", game: "Tennessee Titans @ New York Giants", date: "2026-09-27", selection: "UNDER 39.5", result: "win" },
+        { category: "NFL", game: "Kansas City Chiefs @ Miami Dolphins", date: "2026-09-27", selection: "UNDER 45.5", result: "win" },
       ],
     },
     {
