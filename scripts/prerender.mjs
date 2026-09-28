@@ -5,15 +5,17 @@
 // This is safe for this site specifically because every route is known
 // ahead of time (no user-generated/dynamic paths) — see shows.js and
 // App.jsx for the full route list. Run automatically after `vite build`
-// via the "postbuild" npm script. Requires Chrome at the path below
-// (same technique used elsewhere in this project for social graphics).
+// via the "postbuild" npm script, in this repo and on Vercel alike: it
+// uses puppeteer's own bundled Chromium (downloaded during `npm install`
+// via puppeteer's postinstall step) rather than a system browser, so it
+// works the same on any machine/CI without a hardcoded browser path.
 
+import puppeteer from "puppeteer";
 import { spawn } from "node:child_process";
 import { mkdir, writeFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
 
-const CHROME_PATH = "C:/Program Files/Google/Chrome/Application/chrome.exe";
 const PREVIEW_PORT = 4173;
 const DIST_DIR = fileURLToPath(new URL("../dist/", import.meta.url));
 
@@ -53,25 +55,6 @@ function waitForServer(url, timeoutMs = 15000) {
   });
 }
 
-function dumpDom(url) {
-  return new Promise((resolve, reject) => {
-    const chrome = spawn(CHROME_PATH, [
-      "--headless",
-      "--disable-gpu",
-      "--dump-dom",
-      "--virtual-time-budget=3000",
-      url,
-    ]);
-    let out = "";
-    chrome.stdout.on("data", (d) => (out += d));
-    chrome.on("close", (code) => {
-      if (code === 0 && out.trim()) resolve(out);
-      else reject(new Error(`chrome --dump-dom failed for ${url} (exit ${code})`));
-    });
-    chrome.on("error", reject);
-  });
-}
-
 async function outputPathFor(route) {
   const dir = route === "/" ? DIST_DIR : path.join(DIST_DIR, route);
   await mkdir(dir, { recursive: true });
@@ -85,14 +68,19 @@ async function main() {
     stdio: "ignore",
   });
 
+  let browser;
   try {
     const base = `http://localhost:${PREVIEW_PORT}`;
     await waitForServer(base);
 
+    browser = await puppeteer.launch({ headless: true, args: ["--no-sandbox", "--disable-gpu"] });
+    const page = await browser.newPage();
+
     for (const route of routes) {
       const url = `${base}${route}`;
       process.stdout.write(`Prerendering ${route} ... `);
-      const html = await dumpDom(url);
+      await page.goto(url, { waitUntil: "networkidle0", timeout: 15000 });
+      const html = await page.content();
       const outPath = await outputPathFor(route);
       await writeFile(outPath, html, "utf8");
       console.log("done");
@@ -100,6 +88,7 @@ async function main() {
 
     console.log(`Prerendered ${routes.length} routes.`);
   } finally {
+    if (browser) await browser.close();
     preview.kill();
   }
 }
