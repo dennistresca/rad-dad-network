@@ -5,12 +5,22 @@
 // This is safe for this site specifically because every route is known
 // ahead of time (no user-generated/dynamic paths) — see shows.js and
 // App.jsx for the full route list. Run automatically after `vite build`
-// via the "postbuild" npm script, in this repo and on Vercel alike: it
-// uses puppeteer's own bundled Chromium (downloaded during `npm install`
-// via puppeteer's postinstall step) rather than a system browser, so it
-// works the same on any machine/CI without a hardcoded browser path.
+// via the "postbuild" npm script, in this repo and on Vercel alike.
+//
+// Uses @sparticuz/chromium (a Chromium binary bundled directly in the npm
+// package, built for serverless Linux environments like Vercel's build
+// image) with puppeteer-core, instead of plain puppeteer. Plain puppeteer
+// downloads Chromium via a postinstall script, which both this sandbox and
+// Vercel's build environment block by default (npm's install-scripts
+// allowlisting) — confirmed via Vercel build logs: "Could not find Chrome".
+// @sparticuz/chromium has no postinstall step, so it sidesteps that
+// entirely. It only ships a Linux binary, so this script can't actually
+// prerender on a local Windows/Mac dev machine — that's fine, prerendering
+// is a production/Vercel-only enhancement and the fault-tolerant wrapper
+// below just skips it locally.
 
-import puppeteer from "puppeteer";
+import chromium from "@sparticuz/chromium";
+import puppeteer from "puppeteer-core";
 import { spawn } from "node:child_process";
 import { mkdir, writeFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
@@ -73,7 +83,11 @@ async function main() {
     const base = `http://localhost:${PREVIEW_PORT}`;
     await waitForServer(base);
 
-    browser = await puppeteer.launch({ headless: true, args: ["--no-sandbox", "--disable-gpu"] });
+    browser = await puppeteer.launch({
+      args: chromium.args,
+      executablePath: await chromium.executablePath(),
+      headless: chromium.headless,
+    });
     const page = await browser.newPage();
 
     for (const route of routes) {

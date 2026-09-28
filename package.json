@@ -17,12 +17,13 @@
     "react-router-dom": "^7.18.2"
   },
   "devDependencies": {
+    "@sparticuz/chromium": "^153.0.0",
     "@tailwindcss/vite": "^4.3.3",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.4",
     "oxlint": "^1.75.0",
-    "puppeteer": "^25.12.0",
+    "puppeteer-core": "^25.12.0",
     "tailwindcss": "^4.3.3",
     "vite": "^8.2.0"
   }
