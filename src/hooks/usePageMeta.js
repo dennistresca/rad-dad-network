@@ -22,21 +22,34 @@ function setMetaProperty(property, content) {
   tag.setAttribute("content", content);
 }
 
+function setCanonical(href) {
+  let tag = document.querySelector('link[rel="canonical"]');
+  if (!tag) {
+    tag = document.createElement("link");
+    tag.setAttribute("rel", "canonical");
+    document.head.appendChild(tag);
+  }
+  tag.setAttribute("href", href);
+}
+
 // Sets the document title and meta description for the current page.
 // Client-side only: this updates the DOM after the page mounts, so it
 // helps the browser tab, JS-executing crawlers (Google), and anyone
 // navigating within the app. It does NOT help link-preview scrapers that
 // don't run JavaScript (e.g. some social platforms), since Vercel serves
 // the same static index.html for every route.
-export function usePageMeta(title, description) {
+export function usePageMeta(title, description, { noindex = false } = {}) {
   useEffect(() => {
     const fullTitle = title ? `${title} | ${SITE_NAME}` : SITE_NAME;
     document.title = fullTitle;
+    setCanonical(`${window.location.origin}${window.location.pathname}`);
+    setMetaProperty("og:url", `${window.location.origin}${window.location.pathname}`);
+    setMetaTag("robots", noindex ? "noindex, nofollow" : "index, follow");
 
     if (description) {
       setMetaTag("description", description);
       setMetaProperty("og:title", fullTitle);
       setMetaProperty("og:description", description);
     }
-  }, [title, description]);
+  }, [title, description, noindex]);
 }

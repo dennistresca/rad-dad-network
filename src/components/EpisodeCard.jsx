@@ -27,7 +27,9 @@ export default function EpisodeCard({ episode, accentColor = "#F97316" }) {
         </audio>
       )}
 
-      {/* Links to the episode's page on Spotify for Podcasters, from the live RSS feed */}
+      {/* Links to the episode's page, from the live RSS feed. Label is
+          platform-neutral since the feed's <link> can point at Captivate,
+          Spotify, or wherever the host sets it, not always Spotify. */}
       <a
         href={episode.link ?? "#"}
         target="_blank"
@@ -35,7 +37,7 @@ export default function EpisodeCard({ episode, accentColor = "#F97316" }) {
         className="mt-3 inline-flex w-fit items-center gap-1 text-sm font-semibold"
         style={{ color: accentColor }}
       >
-        View on Spotify
+        Listen to this episode
         <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
         </svg>

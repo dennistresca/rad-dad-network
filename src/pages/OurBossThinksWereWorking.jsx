@@ -445,7 +445,8 @@ const ALMANAC_HTML = `
 export default function OurBossThinksWereWorking() {
   usePageMeta(
     "Our Boss Thinks We're Working",
-    "The League Almanac: a permanent record of every fantasy football season played."
+    "The League Almanac: a permanent record of every fantasy football season played.",
+    { noindex: true } // unlisted page, not meant to be discoverable via search
   );
   const rootRef = useRef(null);
 

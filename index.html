@@ -3,12 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#0a0a0a" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rad Dad Network</title>
     <meta
       name="description"
       content="Rad Dad Network: great conversations, zero pretentiousness. Home of Dancing With the Odds, Stateside Speed, and Check-Six Radio."
     />
+
+    <!-- Open Graph / social preview defaults. Per-page title and
+         description are overridden client-side by usePageMeta once React
+         mounts; og:image/site_name/type stay the same on every page since
+         there's no per-show image yet (see the site audit for the bigger
+         fix: prerendering, so crawlers and link-preview bots that don't
+         run JS see the real per-page values too, not just these defaults). -->
+    <meta property="og:site_name" content="Rad Dad Network" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://raddadnetwork.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://raddadnetwork.com/og-image.png" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Rad Dad Network",
+        "url": "https://raddadnetwork.com",
+        "logo": "https://raddadnetwork.com/logo-full.jpg",
+        "sameAs": ["https://www.facebook.com/raddadnetwork"]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
