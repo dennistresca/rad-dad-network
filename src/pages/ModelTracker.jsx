@@ -11,20 +11,21 @@ const formatter = new Intl.DateTimeFormat("en-US", {
 });
 
 function RecordBlock({ record, pending, accentColor, compact, to }) {
-  const { wins, losses } = record;
+  const { wins, losses, pushes = 0 } = record;
   const decided = wins + losses;
   const winPct = decided > 0 ? Math.round((wins / decided) * 100) : null;
   const sizeClass = compact ? "text-4xl font-black" : "mt-6 text-6xl font-black";
+  const label = pushes > 0 ? `${wins}-${losses}-${pushes}` : `${wins}-${losses}`;
 
   return (
     <>
       {to ? (
         <Link to={to} className={`${sizeClass} inline-block hover:underline`} style={{ color: accentColor }}>
-          {wins}-{losses}
+          {label}
         </Link>
       ) : (
         <p className={sizeClass} style={{ color: accentColor }}>
-          {wins}-{losses}
+          {label}
         </p>
       )}
       <p className="mt-1 text-sm font-semibold uppercase tracking-wide text-neutral-500">

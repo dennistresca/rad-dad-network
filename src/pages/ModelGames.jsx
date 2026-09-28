@@ -88,7 +88,8 @@ export default function ModelGames() {
   }
 
   const isNfl = model === "nfl";
-  const { wins, losses } = resolved.record;
+  const { wins, losses, pushes = 0 } = resolved.record;
+  const recordLabel = pushes > 0 ? `${wins}-${losses}-${pushes}` : `${wins}-${losses}`;
 
   return (
     <>
@@ -106,7 +107,7 @@ export default function ModelGames() {
           <h1 className="mt-1 text-3xl font-black sm:text-4xl">{resolved.name}</h1>
           <p className="mt-3 text-lg font-medium text-white/90">{resolved.rule}</p>
           <p className="mt-4 text-2xl font-black">
-            {wins}-{losses}
+            {recordLabel}
             {resolved.pending > 0 && (
               <span className="ml-2 text-base font-semibold text-white/80">
                 &middot; {resolved.pending} pending
