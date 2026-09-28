@@ -93,7 +93,15 @@ async function main() {
   }
 }
 
-main().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
+// Prerendering is an enhancement, not a requirement — the site already
+// works correctly as a plain client-rendered SPA without it (that's how
+// it ran before this script existed). So a failure here (no Chromium
+// available, a route timing out, etc.) must NEVER fail the overall
+// `npm run build`, or it takes the whole deploy down with it. Log the
+// failure clearly and exit successfully either way.
+main()
+  .then(() => process.exit(0))
+  .catch((err) => {
+    console.error("Prerendering failed, continuing without it:", err);
+    process.exit(0);
+  });
