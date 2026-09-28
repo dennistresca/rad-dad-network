@@ -10,20 +10,34 @@ const formatter = new Intl.DateTimeFormat("en-US", {
   timeZone: "UTC",
 });
 
-function RecordBlock({ record, pending, accentColor, compact }) {
+function RecordBlock({ record, pending, accentColor, compact, to }) {
   const { wins, losses } = record;
   const decided = wins + losses;
   const winPct = decided > 0 ? Math.round((wins / decided) * 100) : null;
+  const sizeClass = compact ? "text-4xl font-black" : "mt-6 text-6xl font-black";
 
   return (
     <>
-      <p className={compact ? "text-4xl font-black" : "mt-6 text-6xl font-black"} style={{ color: accentColor }}>
-        {wins}-{losses}
-      </p>
+      {to ? (
+        <Link to={to} className={`${sizeClass} inline-block hover:underline`} style={{ color: accentColor }}>
+          {wins}-{losses}
+        </Link>
+      ) : (
+        <p className={sizeClass} style={{ color: accentColor }}>
+          {wins}-{losses}
+        </p>
+      )}
       <p className="mt-1 text-sm font-semibold uppercase tracking-wide text-neutral-500">
         {winPct !== null ? `${winPct}% this season` : "No games decided yet"}
         {pending > 0 && ` · ${pending} pending`}
       </p>
+      {to && (
+        <p className="mt-1 text-xs font-semibold text-neutral-400">
+          <Link to={to} className="hover:underline">
+            See every game →
+          </Link>
+        </p>
+      )}
     </>
   );
 }
@@ -34,7 +48,7 @@ function ModelCard({ model, accentColor }) {
       <h2 className="text-2xl font-bold text-neutral-900">{model.name}</h2>
       <p className="mt-1 text-sm text-neutral-500">Introduced on {model.introducedEpisode}</p>
 
-      <RecordBlock record={model.record} pending={model.pending} accentColor={accentColor} />
+      <RecordBlock record={model.record} pending={model.pending} accentColor={accentColor} to={model.detailPath} />
 
       <p className="mt-6 text-left text-neutral-700">{model.rule}</p>
 
@@ -56,7 +70,13 @@ function TieredModelCard({ model, accentColor }) {
         {model.tiers.map((tier) => (
           <div key={tier.label} className="rounded-xl border border-neutral-100 bg-neutral-50 p-6 text-center">
             <p className="text-sm font-bold uppercase tracking-wide text-neutral-500">{tier.label}</p>
-            <RecordBlock record={tier.record} pending={tier.pending} accentColor={accentColor} compact />
+            <RecordBlock
+              record={tier.record}
+              pending={tier.pending}
+              accentColor={accentColor}
+              compact
+              to={`/shows/dancing-with-the-odds/model-tracker/nfl/${tier.key}`}
+            />
             <p className="mt-3 text-left text-sm text-neutral-700">{tier.rule}</p>
           </div>
         ))}
@@ -100,9 +120,15 @@ export default function ModelTracker() {
 
       <section className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="space-y-10">
-          <ModelCard model={bettingModels.collegeFootball} accentColor={show.colorTheme.primary} />
+          <ModelCard
+            model={{ ...bettingModels.collegeFootball, detailPath: "/shows/dancing-with-the-odds/model-tracker/college-football" }}
+            accentColor={show.colorTheme.primary}
+          />
           <TieredModelCard model={bettingModels.nfl} accentColor={show.colorTheme.primary} />
-          <ModelCard model={bettingModels.aaronWind} accentColor={show.colorTheme.primary} />
+          <ModelCard
+            model={{ ...bettingModels.aaronWind, detailPath: "/shows/dancing-with-the-odds/model-tracker/wind" }}
+            accentColor={show.colorTheme.primary}
+          />
         </div>
       </section>
     </>
