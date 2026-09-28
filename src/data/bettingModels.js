@@ -29,25 +29,25 @@ export const bettingModels = {
   nfl: {
     name: "Dennis's NFL Road Dog Model",
     introducedEpisode: "S4E4",
-    lastUpdated: "2026-09-27",
+    lastUpdated: "2026-09-28",
     tiers: [
       {
         label: "Tier 1 — Playable",
         rule: "Road underdog ATS when the total is 49 or higher. 57.1% hit rate, +9.9% ROI on 373 bets (~34/season) from 2015-2025, with both the 2015-20 and 2021-25 halves holding up on their own.",
-        record: { wins: 1, losses: 3 },
-        pending: 1,
+        record: { wins: 1, losses: 4 },
+        pending: 0,
       },
       {
         label: "Tier 2a — Diluted",
         rule: "Road underdog ATS when the total is 48 or higher. 55.6% hit rate, +6.8% ROI on 516 bets, about 40% more volume than Tier 1 for a 1.5-point weaker edge.",
-        record: { wins: 1, losses: 3 },
-        pending: 2,
+        record: { wins: 2, losses: 4 },
+        pending: 0,
       },
       {
         label: "Tier 2b — Diluted",
         rule: "Any road team ATS when the total is 48 or higher (adds road favorites, who hit only 53.0% on their own). 54.7% hit rate, +4.8% ROI on 812 bets.",
-        record: { wins: 2, losses: 3 },
-        pending: 3,
+        record: { wins: 3, losses: 4 },
+        pending: 0,
       },
     ],
   },
@@ -57,6 +57,6 @@ export const bettingModels = {
     rule: "Take the UNDER when wind is 15+ mph at kickoff. 56.8% hit rate going back 10 seasons. Graded using nflweather.com's sustained wind reading at each stadium.",
     record: { wins: 1, losses: 0 },
     pending: 0,
-    lastUpdated: "2026-09-27",
+    lastUpdated: "2026-09-28",
   },
 };
