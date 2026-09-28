@@ -53,3 +53,29 @@ export function usePageMeta(title, description, { noindex = false } = {}) {
     }
   }, [title, description, noindex]);
 }
+
+// Injects (or updates) a <script type="application/ld+json"> structured
+// data block, keyed by `id` so a page can safely call this more than once
+// without piling up duplicate tags, and it cleans itself up on unmount so
+// the wrong schema doesn't leak into whatever page loads next. Same
+// client-side-only caveat as usePageMeta above: helps JS-executing
+// crawlers (Google) today; only reaches non-JS bots once prerendering
+// actually works.
+export function useStructuredData(id, data) {
+  useEffect(() => {
+    if (!data) return undefined;
+
+    let tag = document.getElementById(id);
+    if (!tag) {
+      tag = document.createElement("script");
+      tag.type = "application/ld+json";
+      tag.id = id;
+      document.head.appendChild(tag);
+    }
+    tag.textContent = JSON.stringify(data);
+
+    return () => {
+      tag?.remove();
+    };
+  }, [id, data]);
+}

@@ -2,7 +2,7 @@ import { Navigate, useParams } from "react-router-dom";
 import { getShowBySlug } from "../data/shows";
 import { getBlogPosts } from "../data/blogPosts";
 import { useShowEpisodes } from "../hooks/useEpisodes";
-import { usePageMeta } from "../hooks/usePageMeta";
+import { usePageMeta, useStructuredData } from "../hooks/usePageMeta";
 import ShowHeader from "../components/ShowHeader";
 import EpisodeCard from "../components/EpisodeCard";
 import BlogPostCard from "../components/BlogPostCard";
@@ -23,6 +23,24 @@ export default function ShowPage() {
   const show = getShowBySlug(slug);
   const { episodes, error, loading } = useShowEpisodes(show?.feedUrl);
   usePageMeta(show?.name, show?.description);
+  useStructuredData(
+    "podcast-series-jsonld",
+    show && {
+      "@context": "https://schema.org",
+      "@type": "PodcastSeries",
+      name: show.name,
+      description: show.description,
+      url: `https://raddadnetwork.com/shows/${show.slug}`,
+      image: `https://raddadnetwork.com${show.logo}`,
+      inLanguage: "en",
+      webFeed: show.feedUrl,
+      publisher: {
+        "@type": "Organization",
+        name: "Rad Dad Network",
+        url: "https://raddadnetwork.com",
+      },
+    }
+  );
 
   if (!show) {
     return <Navigate to="/" replace />;

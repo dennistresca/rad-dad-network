@@ -13,9 +13,9 @@ const formatter = new Intl.DateTimeFormat("en-US", {
 
 // Reuses the same headshots from the About page.
 const HOST_PHOTOS = {
-  Dennis: "/dennis-tresca.png",
+  Dennis: "/dennis-tresca.webp",
   Shaun: "/shaun-thompson.jpg",
-  Aaron: "/aaron-patterson.png",
+  Aaron: "/aaron-patterson.webp",
 };
 
 function HostFutures({ host, picks, categories, accentColor }) {
