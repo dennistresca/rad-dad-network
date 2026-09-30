@@ -4,6 +4,7 @@ import { getShowBySlug } from "../data/shows";
 import { pickOfTheDay, pickHistory } from "../data/pickOfTheDay";
 import { usePageMeta } from "../hooks/usePageMeta";
 import ResultBadge from "../components/ResultBadge";
+import SubscribeForm from "../components/SubscribeForm";
 
 const formatter = new Intl.DateTimeFormat("en-US", {
   year: "numeric",
@@ -172,6 +173,10 @@ export default function PickOfTheDay() {
           >
             Previous Picks
           </button>
+        </div>
+
+        <div className="mt-8">
+          <SubscribeForm accentColor={show.colorTheme.primary} />
         </div>
 
         {isToday ? (
