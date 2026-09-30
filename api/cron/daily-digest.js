@@ -66,6 +66,13 @@ function hasAnyPicks() {
 
 export default async function handler(req, res) {
   const authHeader = req.headers.authorization;
+  if (req.query.debug === "1") {
+    return res.status(200).json({
+      hasSecret: Boolean(process.env.CRON_SECRET),
+      secretLength: process.env.CRON_SECRET ? process.env.CRON_SECRET.length : 0,
+      receivedHeader: authHeader || null,
+    });
+  }
   if (process.env.CRON_SECRET && authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
     return res.status(401).json({ error: "Unauthorized" });
   }
