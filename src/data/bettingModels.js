@@ -113,13 +113,13 @@ export const bettingModels = {
     rule: "Take the OVER when a team is favored by 24.5+ points and the total is under 55.5, the closer to 50 the better. About a 60% historical hit rate over roughly the last 10 college football seasons.",
     record: { wins: 31, losses: 21 },
     pending: 0,
-    lastUpdated: "2026-09-28",
+    lastUpdated: "2026-09-29",
     games: collegeFootballGames,
   },
   nfl: {
     name: "Dennis's NFL Road Dog Model",
     introducedEpisode: "S4E4",
-    lastUpdated: "2026-09-28",
+    lastUpdated: "2026-09-29",
     tiers: [
       {
         key: "tier-1",
@@ -153,7 +153,7 @@ export const bettingModels = {
     rule: "Take the UNDER when wind is 15+ mph at kickoff. 56.8% hit rate going back 10 seasons. Graded using nflweather.com's sustained wind reading at each stadium.",
     record: { wins: 1, losses: 0 },
     pending: 0,
-    lastUpdated: "2026-09-28",
+    lastUpdated: "2026-09-29",
     games: windGames,
   },
 };
