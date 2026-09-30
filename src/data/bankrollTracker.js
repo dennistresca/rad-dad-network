@@ -47,6 +47,8 @@ export const bankrollTracker = {
         { category: "College Football", game: "LIU @ Florida International", date: "2026-09-26", selection: "OVER 50.5", result: "loss" },
         { category: "NFL", game: "Tennessee Titans @ New York Giants", date: "2026-09-27", selection: "UNDER 39.5", result: "win" },
         { category: "NFL", game: "Kansas City Chiefs @ Miami Dolphins", date: "2026-09-27", selection: "UNDER 45.5", result: "win" },
+        { category: "Buckets of Ca$h", game: "Arizona Cardinals @ San Francisco 49ers", date: "2026-09-27", selection: "UNDER 48.5" },
+        { category: "Buckets of Ca$h", game: "Seattle Seahawks @ Washington Commanders", date: "2026-09-27", selection: "Seattle Seahawks -6.5" },
       ],
     },
     {
