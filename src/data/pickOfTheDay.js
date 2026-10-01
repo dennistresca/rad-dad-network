@@ -18,23 +18,15 @@
 // host's record entirely until they have a graded pick in it.
 
 export const pickOfTheDay = {
-  date: "2026-09-30",
+  date: "2026-10-01",
   picks: {
     Dennis: [
-      { league: "MLB", game: "San Diego @ Chicago", selection: "San Diego ML", result: "win" },
-      { league: "MLB", game: "Atlanta @ Philadelphia", selection: "Atlanta ML", result: "loss" },
-      { league: "NHL", game: "Philadelphia @ Pittsburgh", selection: "Philadelphia ML", result: "loss" },
+      { league: "NCAAF", game: "Western Kentucky @ New Mexico State", selection: "New Mexico State -2.5", odds: "-115" },
+      { league: "MLB", game: "Philadelphia @ Atlanta", selection: "Philadelphia ML", odds: "-114" },
+      { league: "NFL", game: "Cleveland @ Pittsburgh", selection: "Cleveland +3", odds: "+100" },
     ],
-    Shaun: [
-      { league: "MLB", game: "San Diego @ Chicago", selection: "Padres ML", result: "win" },
-      { league: "NHL", game: "Toronto @ New York Islanders", selection: "UNDER 6.5", result: "loss" },
-      { league: "NHL", game: "Los Angeles @ Colorado", selection: "Avalanche -1.5", result: "win" },
-    ],
-    Aaron: [
-      { league: "NHL", game: "Philadelphia @ Pittsburgh", selection: "Penguins ML", result: "win" },
-      { league: "NHL", game: "Los Angeles @ Colorado", selection: "UNDER 6.5", result: "loss" },
-      { league: "MLB", game: "Atlanta @ Philadelphia", selection: "Phillies ML", result: "win" },
-    ],
+    Shaun: [],
+    Aaron: [],
   },
   records: {
     Dennis: { MLB: { wins: 34, losses: 23 }, NFL: { wins: 4, losses: 5 }, NCAAF: { wins: 4, losses: 6 }, NHL: { wins: 0, losses: 1 } },
@@ -48,6 +40,26 @@ export const pickOfTheDay = {
 // `picks` as a new entry here (not `records`, since records are
 // cumulative and don't belong to a single day). Newest day first.
 export const pickHistory = [
+  {
+    date: "2026-09-30",
+    picks: {
+      Dennis: [
+        { league: "MLB", game: "San Diego @ Chicago", selection: "San Diego ML", result: "win" },
+        { league: "MLB", game: "Atlanta @ Philadelphia", selection: "Atlanta ML", result: "loss" },
+        { league: "NHL", game: "Philadelphia @ Pittsburgh", selection: "Philadelphia ML", result: "loss" },
+      ],
+      Shaun: [
+        { league: "MLB", game: "San Diego @ Chicago", selection: "Padres ML", result: "win" },
+        { league: "NHL", game: "Toronto @ New York Islanders", selection: "UNDER 6.5", result: "loss" },
+        { league: "NHL", game: "Los Angeles @ Colorado", selection: "Avalanche -1.5", result: "win" },
+      ],
+      Aaron: [
+        { league: "NHL", game: "Philadelphia @ Pittsburgh", selection: "Penguins ML", result: "win" },
+        { league: "NHL", game: "Los Angeles @ Colorado", selection: "UNDER 6.5", result: "loss" },
+        { league: "MLB", game: "Atlanta @ Philadelphia", selection: "Phillies ML", result: "win" },
+      ],
+    },
+  },
   {
     date: "2026-09-28",
     picks: {
