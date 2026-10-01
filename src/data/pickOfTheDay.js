@@ -21,25 +21,25 @@ export const pickOfTheDay = {
   date: "2026-09-30",
   picks: {
     Dennis: [
-      { league: "MLB", game: "San Diego @ Chicago", selection: "San Diego ML" },
-      { league: "MLB", game: "Atlanta @ Philadelphia", selection: "Atlanta ML" },
-      { league: "NHL", game: "Philadelphia @ Pittsburgh", selection: "Philadelphia ML" },
+      { league: "MLB", game: "San Diego @ Chicago", selection: "San Diego ML", result: "win" },
+      { league: "MLB", game: "Atlanta @ Philadelphia", selection: "Atlanta ML", result: "loss" },
+      { league: "NHL", game: "Philadelphia @ Pittsburgh", selection: "Philadelphia ML", result: "loss" },
     ],
     Shaun: [
-      { league: "MLB", game: "San Diego @ Chicago", selection: "Padres ML" },
-      { league: "NHL", game: "Toronto @ New York Islanders", selection: "UNDER 6.5" },
-      { league: "NHL", game: "Los Angeles @ Colorado", selection: "Avalanche -1.5" },
+      { league: "MLB", game: "San Diego @ Chicago", selection: "Padres ML", result: "win" },
+      { league: "NHL", game: "Toronto @ New York Islanders", selection: "UNDER 6.5", result: "loss" },
+      { league: "NHL", game: "Los Angeles @ Colorado", selection: "Avalanche -1.5", result: "win" },
     ],
     Aaron: [
-      { league: "NHL", game: "Philadelphia @ Pittsburgh", selection: "Penguins ML" },
-      { league: "NHL", game: "Los Angeles @ Colorado", selection: "UNDER 6.5" },
-      { league: "MLB", game: "Atlanta @ Philadelphia", selection: "Phillies ML" },
+      { league: "NHL", game: "Philadelphia @ Pittsburgh", selection: "Penguins ML", result: "win" },
+      { league: "NHL", game: "Los Angeles @ Colorado", selection: "UNDER 6.5", result: "loss" },
+      { league: "MLB", game: "Atlanta @ Philadelphia", selection: "Phillies ML", result: "win" },
     ],
   },
   records: {
-    Dennis: { MLB: { wins: 33, losses: 22 }, NFL: { wins: 4, losses: 5 }, NCAAF: { wins: 4, losses: 6 } },
-    Shaun: { MLB: { wins: 23, losses: 23 }, NFL: { wins: 4, losses: 3 }, NCAAF: { wins: 2, losses: 3 } },
-    Aaron: { MLB: { wins: 22, losses: 35 }, NFL: { wins: 0, losses: 3 }, NCAAF: { wins: 4, losses: 3 } },
+    Dennis: { MLB: { wins: 34, losses: 23 }, NFL: { wins: 4, losses: 5 }, NCAAF: { wins: 4, losses: 6 }, NHL: { wins: 0, losses: 1 } },
+    Shaun: { MLB: { wins: 24, losses: 23 }, NFL: { wins: 4, losses: 3 }, NCAAF: { wins: 2, losses: 3 }, NHL: { wins: 1, losses: 1 } },
+    Aaron: { MLB: { wins: 23, losses: 35 }, NFL: { wins: 0, losses: 3 }, NCAAF: { wins: 4, losses: 3 }, NHL: { wins: 1, losses: 1 } },
   },
 };
 
