@@ -8,10 +8,11 @@ import { bankrollTracker } from "../../src/data/bankrollTracker.js";
 const SITE_URL = "https://raddadnetwork.com";
 const FROM_ADDRESS = "Rad Dad Network <picks@raddadnetwork.com>";
 
-// If the newest weeklyBets entry is older than this, there's no new
-// episode this week yet — skip sending rather than re-mail last week's
-// bets every Friday.
-const MAX_ENTRY_AGE_DAYS = 8;
+// Only send if the newest weeklyBets entry is dated within this many
+// calendar days of today. The cron fires every 7 days, so anything 7+ days
+// old is last week's episode — skip rather than re-mail it. Upload the new
+// episode's bets before Friday morning or no email goes out.
+const MAX_ENTRY_AGE_DAYS = 6;
 
 const dateFormatter = new Intl.DateTimeFormat("en-US", {
   year: "numeric",
@@ -34,9 +35,11 @@ function escapeHtml(value) {
 }
 
 function isRecent(dateString) {
-  const entryDate = new Date(dateString);
-  const ageMs = Date.now() - entryDate.getTime();
-  return ageMs >= 0 && ageMs <= MAX_ENTRY_AGE_DAYS * 24 * 60 * 60 * 1000;
+  const entryDay = new Date(dateString).getTime();
+  const now = new Date();
+  const todayUtc = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate());
+  const ageDays = Math.round((todayUtc - entryDay) / (24 * 60 * 60 * 1000));
+  return ageDays >= 0 && ageDays <= MAX_ENTRY_AGE_DAYS;
 }
 
 function renderBetRow(bet) {
