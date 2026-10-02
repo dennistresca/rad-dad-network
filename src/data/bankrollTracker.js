@@ -24,7 +24,7 @@
 // personal Daily Picks (pickOfTheDay.js), which don't affect the bankroll.
 
 export const bankrollTracker = {
-  lastUpdated: "2026-09-30",
+  lastUpdated: "2026-10-02",
   currentBankroll: 219,
   goalBankroll: 10000,
   records: {
@@ -34,9 +34,25 @@ export const bankrollTracker = {
     bucketsOfCash: {
       NFL: { wins: 2, losses: 5 },
       "College Football": { wins: 2, losses: 1 },
+      MLB: { wins: 0, losses: 1 },
     },
   },
   weeklyBets: [
+    {
+      episode: "Episode 6 Bets",
+      date: "2026-10-02",
+      bets: [
+        { category: "College Football", game: "Notre Dame @ North Carolina", date: "2026-10-03", selection: "OVER 45.5" },
+        { category: "College Football", game: "Vanderbilt @ Georgia", date: "2026-10-03", selection: "OVER 51.5" },
+        { category: "College Football", game: "Wyoming @ North Dakota State", date: "2026-10-03", selection: "OVER 45.5" },
+        { category: "College Football", game: "Army @ Louisiana Tech", date: "2026-10-03", selection: "UNDER 48.5" },
+        { category: "NFL", game: "Indianapolis Colts @ Washington Commanders (London)", date: "2026-10-04", selection: "UNDER 48.5" },
+        { category: "Buckets of Ca$h", game: "Philadelphia Phillies @ Atlanta Braves", date: "2026-10-01", selection: "Philadelphia Phillies ML", result: "loss" },
+        { category: "Buckets of Ca$h", game: "Green Bay Packers @ Tampa Bay Buccaneers", date: "2026-10-04", selection: "UNDER 39.5" },
+        { category: "Buckets of Ca$h", game: "OH Leuven @ Union Saint-Gilloise", date: "2026-10-11", selection: "Union Saint-Gilloise -1.5" },
+        { category: "Buckets of Ca$h", game: "UTEP @ New Mexico", date: "2026-10-03", selection: "OVER 48.5" },
+      ],
+    },
     {
       episode: "Episode 5 Bets",
       date: "2026-09-25",
