@@ -21,21 +21,21 @@ export const pickOfTheDay = {
   date: "2026-10-01",
   picks: {
     Dennis: [
-      { league: "NCAAF", game: "Western Kentucky @ New Mexico State", selection: "New Mexico State -2.5", odds: "-115" },
-      { league: "MLB", game: "Philadelphia @ Atlanta", selection: "Philadelphia ML", odds: "-114" },
-      { league: "NFL", game: "Cleveland @ Pittsburgh", selection: "Cleveland +3", odds: "+100" },
+      { league: "NCAAF", game: "Western Kentucky @ New Mexico State", selection: "New Mexico State -2.5", odds: "-115", result: "win" },
+      { league: "MLB", game: "Philadelphia @ Atlanta", selection: "Philadelphia ML", odds: "-114", result: "loss" },
+      { league: "NFL", game: "Pittsburgh @ Cleveland", selection: "Cleveland +3", odds: "+100", result: "win" },
     ],
     Shaun: [],
     Aaron: [
-      { league: "MLB", game: "Philadelphia @ Atlanta", selection: "Philadelphia -1.5" },
-      { league: "NHL", game: "Buffalo @ Columbus", selection: "Sabres ML" },
-      { league: "NHL", game: "Seattle @ Calgary", selection: "Flames ML" },
+      { league: "MLB", game: "Philadelphia @ Atlanta", selection: "Philadelphia -1.5", result: "loss" },
+      { league: "NHL", game: "Buffalo @ Columbus", selection: "Sabres ML", result: "loss" },
+      { league: "NHL", game: "Seattle @ Calgary", selection: "Flames ML", result: "loss" },
     ],
   },
   records: {
-    Dennis: { MLB: { wins: 34, losses: 23 }, NFL: { wins: 4, losses: 5 }, NCAAF: { wins: 4, losses: 6 }, NHL: { wins: 0, losses: 1 } },
+    Dennis: { MLB: { wins: 34, losses: 24 }, NFL: { wins: 5, losses: 5 }, NCAAF: { wins: 5, losses: 6 }, NHL: { wins: 0, losses: 1 } },
     Shaun: { MLB: { wins: 24, losses: 23 }, NFL: { wins: 4, losses: 3 }, NCAAF: { wins: 2, losses: 3 }, NHL: { wins: 1, losses: 1 } },
-    Aaron: { MLB: { wins: 23, losses: 35 }, NFL: { wins: 0, losses: 3 }, NCAAF: { wins: 4, losses: 3 }, NHL: { wins: 1, losses: 1 } },
+    Aaron: { MLB: { wins: 23, losses: 36 }, NFL: { wins: 0, losses: 3 }, NCAAF: { wins: 4, losses: 3 }, NHL: { wins: 1, losses: 3 } },
   },
 };
 
