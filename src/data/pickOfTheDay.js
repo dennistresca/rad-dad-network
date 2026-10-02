@@ -24,8 +24,16 @@ export const pickOfTheDay = {
       { league: "NCAAF", game: "Penn State @ Northwestern", selection: "Northwestern +2.5", odds: "+106" },
       { league: "NHL", game: "Anaheim @ Vegas", selection: "OVER 6.5", odds: "-120" },
     ],
-    Shaun: [],
-    Aaron: [],
+    Shaun: [
+      { league: "NHL", game: "St. Louis @ Dallas", selection: "Dallas -1.5" },
+      { league: "NHL", game: "Boston @ Winnipeg", selection: "UNDER 5.5" },
+      { league: "NHL", game: "St. Louis @ Dallas", selection: "UNDER 5.5" },
+    ],
+    Aaron: [
+      { league: "NCAAF", game: "Pittsburgh @ Virginia Tech", selection: "Pittsburgh +3.5" },
+      { league: "NCAAF", game: "Liberty @ Delaware", selection: "Liberty -6.5" },
+      { league: "NCAAF", game: "Penn State @ Northwestern", selection: "UNDER 45.5" },
+    ],
   },
   records: {
     Dennis: { MLB: { wins: 34, losses: 24 }, NFL: { wins: 5, losses: 5 }, NCAAF: { wins: 5, losses: 6 }, NHL: { wins: 0, losses: 1 } },
