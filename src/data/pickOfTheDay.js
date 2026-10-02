@@ -18,19 +18,14 @@
 // host's record entirely until they have a graded pick in it.
 
 export const pickOfTheDay = {
-  date: "2026-10-01",
+  date: "2026-10-02",
   picks: {
     Dennis: [
-      { league: "NCAAF", game: "Western Kentucky @ New Mexico State", selection: "New Mexico State -2.5", odds: "-115", result: "win" },
-      { league: "MLB", game: "Philadelphia @ Atlanta", selection: "Philadelphia ML", odds: "-114", result: "loss" },
-      { league: "NFL", game: "Pittsburgh @ Cleveland", selection: "Cleveland +3", odds: "+100", result: "win" },
+      { league: "NCAAF", game: "Penn State @ Northwestern", selection: "Northwestern +2.5", odds: "+106" },
+      { league: "NHL", game: "Anaheim @ Vegas", selection: "OVER 6.5", odds: "-120" },
     ],
     Shaun: [],
-    Aaron: [
-      { league: "MLB", game: "Philadelphia @ Atlanta", selection: "Philadelphia -1.5", result: "loss" },
-      { league: "NHL", game: "Buffalo @ Columbus", selection: "Sabres ML", result: "loss" },
-      { league: "NHL", game: "Seattle @ Calgary", selection: "Flames ML", result: "loss" },
-    ],
+    Aaron: [],
   },
   records: {
     Dennis: { MLB: { wins: 34, losses: 24 }, NFL: { wins: 5, losses: 5 }, NCAAF: { wins: 5, losses: 6 }, NHL: { wins: 0, losses: 1 } },
@@ -44,6 +39,22 @@ export const pickOfTheDay = {
 // `picks` as a new entry here (not `records`, since records are
 // cumulative and don't belong to a single day). Newest day first.
 export const pickHistory = [
+  {
+    date: "2026-10-01",
+    picks: {
+      Dennis: [
+        { league: "NCAAF", game: "Western Kentucky @ New Mexico State", selection: "New Mexico State -2.5", odds: "-115", result: "win" },
+        { league: "MLB", game: "Philadelphia @ Atlanta", selection: "Philadelphia ML", odds: "-114", result: "loss" },
+        { league: "NFL", game: "Pittsburgh @ Cleveland", selection: "Cleveland +3", odds: "+100", result: "win" },
+      ],
+      Shaun: [],
+      Aaron: [
+        { league: "MLB", game: "Philadelphia @ Atlanta", selection: "Philadelphia -1.5", result: "loss" },
+        { league: "NHL", game: "Buffalo @ Columbus", selection: "Sabres ML", result: "loss" },
+        { league: "NHL", game: "Seattle @ Calgary", selection: "Flames ML", result: "loss" },
+      ],
+    },
+  },
   {
     date: "2026-09-30",
     picks: {
