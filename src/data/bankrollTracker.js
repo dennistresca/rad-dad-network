@@ -49,7 +49,6 @@ export const bankrollTracker = {
         { category: "NFL", game: "Indianapolis Colts @ Washington Commanders (London)", date: "2026-10-04", selection: "UNDER 48.5" },
         { category: "Buckets of Ca$h", game: "Philadelphia Phillies @ Atlanta Braves", date: "2026-10-01", selection: "Philadelphia Phillies ML", result: "loss" },
         { category: "Buckets of Ca$h", game: "Green Bay Packers @ Tampa Bay Buccaneers", date: "2026-10-04", selection: "UNDER 39.5" },
-        { category: "Buckets of Ca$h", game: "OH Leuven @ Union Saint-Gilloise", date: "2026-10-11", selection: "Union Saint-Gilloise -1.5" },
         { category: "Buckets of Ca$h", game: "UTEP @ New Mexico", date: "2026-10-03", selection: "OVER 48.5", result: "win" },
       ],
     },
