@@ -21,15 +21,15 @@ export const pickOfTheDay = {
   date: "2026-10-04",
   picks: {
     Dennis: [
-      { league: "NFL", game: "Jacksonville @ Cincinnati", selection: "Jacksonville +2.5", odds: "+100" },
+      { league: "NFL", game: "Jacksonville @ Cincinnati", selection: "Jacksonville +2.5", odds: "+100", result: "win" },
       { league: "NFL", game: "Detroit @ Carolina", selection: "Carolina +3.5", odds: "-105" },
-      { league: "NFL", game: "New England @ Buffalo", selection: "New England +6.5", odds: "+100" },
+      { league: "NFL", game: "New England @ Buffalo", selection: "New England +6.5", odds: "+100", result: "win" },
     ],
     Shaun: [],
     Aaron: [],
   },
   records: {
-    Dennis: { MLB: { wins: 34, losses: 25 }, NFL: { wins: 5, losses: 5 }, NCAAF: { wins: 8, losses: 6 }, NHL: { wins: 0, losses: 2 } },
+    Dennis: { MLB: { wins: 34, losses: 25 }, NFL: { wins: 7, losses: 5 }, NCAAF: { wins: 8, losses: 6 }, NHL: { wins: 0, losses: 2 } },
     Shaun: { MLB: { wins: 24, losses: 23 }, NFL: { wins: 4, losses: 3 }, NCAAF: { wins: 2, losses: 3 }, NHL: { wins: 1, losses: 4 } },
     Aaron: { MLB: { wins: 23, losses: 36 }, NFL: { wins: 0, losses: 3 }, NCAAF: { wins: 6, losses: 4 }, NHL: { wins: 1, losses: 3 } },
   },

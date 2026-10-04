@@ -32,7 +32,7 @@ export const bankrollTracker = {
     collegeFootball: { wins: 11, losses: 9 },
     nfl: { wins: 4, losses: 5 },
     bucketsOfCash: {
-      NFL: { wins: 2, losses: 5 },
+      NFL: { wins: 3, losses: 5 },
       "College Football": { wins: 3, losses: 1 },
       MLB: { wins: 0, losses: 1 },
     },
@@ -48,7 +48,7 @@ export const bankrollTracker = {
         { category: "College Football", game: "Army @ Louisiana Tech", date: "2026-10-03", selection: "UNDER 48.5", result: "loss" },
         { category: "NFL", game: "Indianapolis Colts @ Washington Commanders (London)", date: "2026-10-04", selection: "UNDER 48.5", result: "win" },
         { category: "Buckets of Ca$h", game: "Philadelphia Phillies @ Atlanta Braves", date: "2026-10-01", selection: "Philadelphia Phillies ML", result: "loss" },
-        { category: "Buckets of Ca$h", game: "Green Bay Packers @ Tampa Bay Buccaneers", date: "2026-10-04", selection: "UNDER 39.5" },
+        { category: "Buckets of Ca$h", game: "Green Bay Packers @ Tampa Bay Buccaneers", date: "2026-10-04", selection: "UNDER 39.5", result: "win" },
         { category: "Buckets of Ca$h", game: "UTEP @ New Mexico", date: "2026-10-03", selection: "OVER 48.5", result: "win" },
       ],
     },

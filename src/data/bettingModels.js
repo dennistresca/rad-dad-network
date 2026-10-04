@@ -85,11 +85,13 @@ const nflTier1Games = [
   { date: "2026-09-20", matchup: "Washington Commanders @ Dallas Cowboys", roadTeam: "Washington Commanders", spread: "+4.5", total: 51.5, finalScore: "WSH 20 - DAL 37", result: "loss" },
   { date: "2026-09-27", matchup: "Los Angeles Chargers @ Buffalo Bills", roadTeam: "Los Angeles Chargers", spread: "+7", total: 50.5, finalScore: "LAC 16 - BUF 24", result: "loss" },
   { date: "2026-09-27", matchup: "New York Jets @ Detroit Lions", roadTeam: "New York Jets", spread: "+7", total: 49.5, finalScore: "NYJ 24 - DET 31", result: "push" },
+  { date: "2026-10-04", matchup: "Jacksonville Jaguars @ Cincinnati Bengals", roadTeam: "Jacksonville Jaguars", spread: "+2.5", total: 51.5, finalScore: "JAX 22 - CIN 17", result: "win" },
 ];
 
 const nflTier2aGames = [
   ...nflTier1Games,
   { date: "2026-09-27", matchup: "Arizona Cardinals @ San Francisco 49ers", roadTeam: "Arizona Cardinals", spread: "+7.5", total: 48.5, finalScore: "ARI 30 - SF 36", result: "win" },
+  { date: "2026-10-04", matchup: "New England Patriots @ Buffalo Bills", roadTeam: "New England Patriots", spread: "+6.5", total: 48.5, finalScore: "NE 29 - BUF 26", result: "win" },
 ];
 
 const nflTier2bGames = [
@@ -102,6 +104,8 @@ const nflTier2bGames = [
   { date: "2026-09-27", matchup: "New York Jets @ Detroit Lions", roadTeam: "New York Jets", spread: "+7", total: 49.5, finalScore: "NYJ 24 - DET 31", result: "push" },
   { date: "2026-09-27", matchup: "Arizona Cardinals @ San Francisco 49ers", roadTeam: "Arizona Cardinals", spread: "+7.5", total: 48.5, finalScore: "ARI 30 - SF 36", result: "win" },
   { date: "2026-09-27", matchup: "Baltimore Ravens @ Dallas Cowboys", roadTeam: "Baltimore Ravens (favorite)", spread: "-3", total: 54.5, finalScore: "BAL 34 - DAL 31", result: "push" },
+  { date: "2026-10-04", matchup: "Jacksonville Jaguars @ Cincinnati Bengals", roadTeam: "Jacksonville Jaguars", spread: "+2.5", total: 51.5, finalScore: "JAX 22 - CIN 17", result: "win" },
+  { date: "2026-10-04", matchup: "New England Patriots @ Buffalo Bills", roadTeam: "New England Patriots", spread: "+6.5", total: 48.5, finalScore: "NE 29 - BUF 26", result: "win" },
 ];
 
 const windGames = [
@@ -121,13 +125,13 @@ export const bettingModels = {
   nfl: {
     name: "Dennis's NFL Road Dog Model",
     introducedEpisode: "S4E4",
-    lastUpdated: "2026-09-29",
+    lastUpdated: "2026-10-04",
     tiers: [
       {
         key: "tier-1",
         label: "Tier 1 — Playable",
         rule: "Road underdog ATS when the total is 49 or higher. 57.1% hit rate, +9.9% ROI on 373 bets (~34/season) from 2015-2025, with both the 2015-20 and 2021-25 halves holding up on their own.",
-        record: { wins: 1, losses: 4, pushes: 1 },
+        record: { wins: 2, losses: 4, pushes: 1 },
         pending: 0,
         games: nflTier1Games,
       },
@@ -135,7 +139,7 @@ export const bettingModels = {
         key: "tier-2a",
         label: "Tier 2a — Diluted",
         rule: "Road underdog ATS when the total is 48 or higher. 55.6% hit rate, +6.8% ROI on 516 bets, about 40% more volume than Tier 1 for a 1.5-point weaker edge.",
-        record: { wins: 2, losses: 4, pushes: 1 },
+        record: { wins: 4, losses: 4, pushes: 1 },
         pending: 0,
         games: nflTier2aGames,
       },
@@ -143,7 +147,7 @@ export const bettingModels = {
         key: "tier-2b",
         label: "Tier 2b — Diluted",
         rule: "Any road team ATS when the total is 48 or higher (adds road favorites, who hit only 53.0% on their own). 54.7% hit rate, +4.8% ROI on 812 bets.",
-        record: { wins: 3, losses: 4, pushes: 2 },
+        record: { wins: 5, losses: 4, pushes: 2 },
         pending: 0,
         games: nflTier2bGames,
       },
