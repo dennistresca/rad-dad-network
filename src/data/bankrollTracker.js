@@ -24,7 +24,7 @@
 // personal Daily Picks (pickOfTheDay.js), which don't affect the bankroll.
 
 export const bankrollTracker = {
-  lastUpdated: "2026-10-02",
+  lastUpdated: "2026-10-04",
   currentBankroll: 219,
   goalBankroll: 10000,
   records: {
@@ -33,7 +33,7 @@ export const bankrollTracker = {
     nfl: { wins: 3, losses: 5 },
     bucketsOfCash: {
       NFL: { wins: 2, losses: 5 },
-      "College Football": { wins: 2, losses: 1 },
+      "College Football": { wins: 3, losses: 1 },
       MLB: { wins: 0, losses: 1 },
     },
   },
@@ -50,7 +50,7 @@ export const bankrollTracker = {
         { category: "Buckets of Ca$h", game: "Philadelphia Phillies @ Atlanta Braves", date: "2026-10-01", selection: "Philadelphia Phillies ML", result: "loss" },
         { category: "Buckets of Ca$h", game: "Green Bay Packers @ Tampa Bay Buccaneers", date: "2026-10-04", selection: "UNDER 39.5" },
         { category: "Buckets of Ca$h", game: "OH Leuven @ Union Saint-Gilloise", date: "2026-10-11", selection: "Union Saint-Gilloise -1.5" },
-        { category: "Buckets of Ca$h", game: "UTEP @ New Mexico", date: "2026-10-03", selection: "OVER 48.5" },
+        { category: "Buckets of Ca$h", game: "UTEP @ New Mexico", date: "2026-10-03", selection: "OVER 48.5", result: "win" },
       ],
     },
     {
