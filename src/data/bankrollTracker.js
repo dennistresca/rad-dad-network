@@ -28,8 +28,8 @@ export const bankrollTracker = {
   currentBankroll: 219,
   goalBankroll: 10000,
   records: {
-    overall: { wins: 12, losses: 12 },
-    collegeFootball: { wins: 9, losses: 7 },
+    overall: { wins: 14, losses: 14 },
+    collegeFootball: { wins: 11, losses: 9 },
     nfl: { wins: 3, losses: 5 },
     bucketsOfCash: {
       NFL: { wins: 2, losses: 5 },
@@ -42,10 +42,10 @@ export const bankrollTracker = {
       episode: "Episode 6 Bets",
       date: "2026-10-02",
       bets: [
-        { category: "College Football", game: "Notre Dame @ North Carolina", date: "2026-10-03", selection: "OVER 45.5" },
-        { category: "College Football", game: "Vanderbilt @ Georgia", date: "2026-10-03", selection: "OVER 51.5" },
-        { category: "College Football", game: "Wyoming @ North Dakota State", date: "2026-10-03", selection: "OVER 45.5" },
-        { category: "College Football", game: "Army @ Louisiana Tech", date: "2026-10-03", selection: "UNDER 48.5" },
+        { category: "College Football", game: "Notre Dame @ North Carolina", date: "2026-10-03", selection: "OVER 45.5", result: "win" },
+        { category: "College Football", game: "Vanderbilt @ Georgia", date: "2026-10-03", selection: "OVER 51.5", result: "win" },
+        { category: "College Football", game: "Wyoming @ North Dakota State", date: "2026-10-03", selection: "OVER 45.5", result: "loss" },
+        { category: "College Football", game: "Army @ Louisiana Tech", date: "2026-10-03", selection: "UNDER 48.5", result: "loss" },
         { category: "NFL", game: "Indianapolis Colts @ Washington Commanders (London)", date: "2026-10-04", selection: "UNDER 48.5" },
         { category: "Buckets of Ca$h", game: "Philadelphia Phillies @ Atlanta Braves", date: "2026-10-01", selection: "Philadelphia Phillies ML", result: "loss" },
         { category: "Buckets of Ca$h", game: "Green Bay Packers @ Tampa Bay Buccaneers", date: "2026-10-04", selection: "UNDER 39.5" },
