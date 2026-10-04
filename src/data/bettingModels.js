@@ -74,6 +74,8 @@ const collegeFootballGames = [
   { date: "2026-09-26", matchup: "Robert Morris Colonials @ Buffalo Bulls", favorite: "Buffalo Bulls", spread: "-27.5", total: 46.5, finalScore: "RMU 28 - BUFF 31", result: "win" },
   { date: "2026-09-26", matchup: "Stonehill Skyhawks @ Ohio Bobcats", favorite: "Ohio Bobcats", spread: "-32.5", total: 53.5, finalScore: "STO 7 - OHIO 35", result: "loss" },
   { date: "2026-09-26", matchup: "Long Island University Sharks @ Florida International Panthers", favorite: "Florida International Panthers", spread: "-37.5", total: 54.5, finalScore: "LIU 3 - FIU 20", result: "loss" },
+  { date: "2026-10-03", matchup: "Vanderbilt Commodores @ Georgia Bulldogs", favorite: "Georgia Bulldogs", spread: "-25.5", total: 51.5, finalScore: "VAN 14 - UGA 38", result: "win" },
+  { date: "2026-10-03", matchup: "Samford Bulldogs @ UAB Blazers", favorite: "UAB Blazers", spread: "-30.5", total: 50.5, finalScore: "SAM 14 - UAB 33", result: "loss" },
 ];
 
 const nflTier1Games = [
@@ -111,9 +113,9 @@ export const bettingModels = {
     name: "Shaun's College Blowout Model",
     introducedEpisode: "S4E2",
     rule: "Take the OVER when a team is favored by 24.5+ points and the total is under 55.5, the closer to 50 the better. About a 60% historical hit rate over roughly the last 10 college football seasons.",
-    record: { wins: 31, losses: 21 },
+    record: { wins: 32, losses: 22 },
     pending: 0,
-    lastUpdated: "2026-09-29",
+    lastUpdated: "2026-10-04",
     games: collegeFootballGames,
   },
   nfl: {
