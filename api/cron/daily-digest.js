@@ -64,10 +64,31 @@ function hasAnyPicks() {
   return Object.values(pickOfTheDay.picks).some((picks) => picks.length > 0);
 }
 
+// Site dates are US local dates. The cron fires mid-morning Eastern, so
+// today's date in America/New_York matches the date the hosts would have
+// used for today's picks.
+function todayInNewYork() {
+  return new Intl.DateTimeFormat("en-CA", {
+    timeZone: "America/New_York",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).format(new Date());
+}
+
 export default async function handler(req, res) {
   const authHeader = req.headers.authorization;
   if (process.env.CRON_SECRET && authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
     return res.status(401).json({ error: "Unauthorized" });
+  }
+
+  // Never re-send a previous day's picks: if today's picks haven't been
+  // uploaded yet, the data file still holds yesterday's, so skip.
+  if (pickOfTheDay.date !== todayInNewYork()) {
+    return res.status(200).json({
+      skipped: true,
+      reason: `Picks are dated ${pickOfTheDay.date}, not today (${todayInNewYork()})`,
+    });
   }
 
   if (!hasAnyPicks()) {
