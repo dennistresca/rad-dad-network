@@ -25,7 +25,7 @@
 
 export const bankrollTracker = {
   lastUpdated: "2026-10-04",
-  currentBankroll: 219,
+  currentBankroll: 224,
   goalBankroll: 10000,
   records: {
     overall: { wins: 15, losses: 14 },
