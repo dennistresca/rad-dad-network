@@ -106,6 +106,7 @@ const nflTier2bGames = [
   { date: "2026-09-27", matchup: "Baltimore Ravens @ Dallas Cowboys", roadTeam: "Baltimore Ravens (favorite)", spread: "-3", total: 54.5, finalScore: "BAL 34 - DAL 31", result: "push" },
   { date: "2026-10-04", matchup: "Jacksonville Jaguars @ Cincinnati Bengals", roadTeam: "Jacksonville Jaguars", spread: "+2.5", total: 51.5, finalScore: "JAX 22 - CIN 17", result: "win" },
   { date: "2026-10-04", matchup: "New England Patriots @ Buffalo Bills", roadTeam: "New England Patriots", spread: "+6.5", total: 48.5, finalScore: "NE 29 - BUF 26", result: "win" },
+  { date: "2026-10-04", matchup: "Detroit Lions @ Carolina Panthers", roadTeam: "Detroit Lions (favorite)", spread: "-3.5", total: 50.5, finalScore: "DET 26 - CAR 32", result: "loss" },
 ];
 
 const windGames = [
@@ -147,7 +148,7 @@ export const bettingModels = {
         key: "tier-2b",
         label: "Tier 2b — Diluted",
         rule: "Any road team ATS when the total is 48 or higher (adds road favorites, who hit only 53.0% on their own). 54.7% hit rate, +4.8% ROI on 812 bets.",
-        record: { wins: 5, losses: 4, pushes: 2 },
+        record: { wins: 5, losses: 5, pushes: 2 },
         pending: 0,
         games: nflTier2bGames,
       },
