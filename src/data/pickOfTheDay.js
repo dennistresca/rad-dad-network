@@ -28,6 +28,9 @@ export const pickOfTheDay = {
       { league: "MLB", game: "Los Angeles Dodgers @ Atlanta", selection: "Braves ML" },
       { league: "MLB", game: "Milwaukee @ San Diego", selection: "Brewers ML" },
       { league: "NCAAF", game: "Southern Miss @ Troy", selection: "Southern Miss +10.5" },
+      { league: "NHL", game: "Vegas @ Seattle", selection: "Seattle ML" },
+      { league: "NHL", game: "Utah @ New Jersey", selection: "Utah ML" },
+      { league: "NHL", game: "New York Islanders @ New York Rangers", selection: "UNDER 5.5" },
     ],
     Aaron: [
       { league: "MLB", game: "Milwaukee @ San Diego", selection: "OVER 7.5" },
