@@ -142,11 +142,13 @@ export default function BankrollTracker() {
     `Dancing With the Odds' bankroll tracker: current bankroll and season betting record, updated ${formattedDate}.`
   );
 
-  const { currentBankroll, goalBankroll, records, weeklyBets, sideBets = [] } = bankrollTracker;
+  const { currentBankroll, goalBankroll, milestone, records, weeklyBets, sideBets = [] } = bankrollTracker;
   const [currentWeek, ...previousWeeks] = weeklyBets;
   const currentSideBets = sideBets.filter((bet) => !bet.result);
   const previousSideBets = sideBets.filter((bet) => bet.result);
   const progressPercent = Math.min(100, Math.max(0, (currentBankroll / goalBankroll) * 100));
+  const milestonePercent = milestone ? Math.min(100, (milestone.amount / goalBankroll) * 100) : null;
+  const milestoneProgress = milestone ? Math.min(100, (currentBankroll / milestone.amount) * 100) : null;
 
   return (
     <>
@@ -181,22 +183,46 @@ export default function BankrollTracker() {
             Goal: {currencyFormatter.format(goalBankroll)}
           </p>
 
-          <div
-            className="mx-auto mt-6 h-4 w-full max-w-xl overflow-hidden rounded-full bg-neutral-100"
-            role="progressbar"
-            aria-valuenow={Math.round(progressPercent)}
-            aria-valuemin={0}
-            aria-valuemax={100}
-            aria-label={`${Math.round(progressPercent)}% of the way to the $10K goal`}
-          >
+          <div className="relative mx-auto mt-10 w-full max-w-xl">
+            {milestone && (
+              <div
+                className="absolute bottom-full mb-1 whitespace-nowrap text-xs font-bold text-neutral-500"
+                style={{ left: `${milestonePercent}%` }}
+              >
+                {currencyFormatter.format(milestone.amount)} {milestone.label}
+              </div>
+            )}
             <div
-              className="h-full rounded-full transition-all"
-              style={{ width: `${progressPercent}%`, backgroundColor: show.colorTheme.primary }}
-            />
+              className="h-4 w-full overflow-hidden rounded-full bg-neutral-100"
+              role="progressbar"
+              aria-valuenow={Math.round(progressPercent)}
+              aria-valuemin={0}
+              aria-valuemax={100}
+              aria-label={`${Math.round(progressPercent)}% of the way to the $10K goal`}
+            >
+              <div
+                className="h-full rounded-full transition-all"
+                style={{ width: `${progressPercent}%`, backgroundColor: show.colorTheme.primary }}
+              />
+            </div>
+            {milestone && (
+              <div
+                className="absolute -top-1 h-6 w-0.5 -translate-x-1/2 rounded bg-neutral-800"
+                style={{ left: `${milestonePercent}%` }}
+                aria-hidden="true"
+              />
+            )}
           </div>
           <p className="mt-2 text-sm font-semibold text-neutral-500">
             {progressPercent.toFixed(1)}% of the way there
           </p>
+          {milestone && (
+            <p className="mt-1 text-sm font-semibold text-neutral-700">
+              {milestoneProgress >= 100
+                ? `${milestone.label} milestone reached!`
+                : `${milestone.label} milestone: ${currencyFormatter.format(currentBankroll)} of ${currencyFormatter.format(milestone.amount)} (${Math.round(milestoneProgress)}%)`}
+            </p>
+          )}
         </div>
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

@@ -27,6 +27,10 @@ export const bankrollTracker = {
   lastUpdated: "2026-10-04",
   currentBankroll: 224,
   goalBankroll: 10000,
+  // Next short-term target, shown as a tick on the progress bar and a
+  // progress line under it. Change `amount` and `label` when a milestone
+  // is reached; remove the whole `milestone` key to hide it.
+  milestone: { amount: 500, label: "Thanksgiving" },
   records: {
     overall: { wins: 15, losses: 14 },
     collegeFootball: { wins: 11, losses: 9 },
