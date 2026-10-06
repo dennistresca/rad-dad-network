@@ -3,6 +3,7 @@ import { getShowBySlug } from "../data/shows";
 import { bettingModels } from "../data/bettingModels";
 import { usePageMeta } from "../hooks/usePageMeta";
 import ResultBadge from "../components/ResultBadge";
+import ShowSubNav from "../components/ShowSubNav";
 
 const formatter = new Intl.DateTimeFormat("en-US", {
   month: "short",
@@ -114,6 +115,7 @@ export default function ModelGames() {
               </span>
             )}
           </p>
+          <ShowSubNav show={show} className="mt-6" />
         </div>
       </section>
 

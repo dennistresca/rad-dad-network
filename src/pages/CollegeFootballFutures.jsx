@@ -3,6 +3,7 @@ import { getShowBySlug } from "../data/shows";
 import { collegeFootballFutures } from "../data/collegeFootballFutures";
 import { usePageMeta } from "../hooks/usePageMeta";
 import ResultBadge from "../components/ResultBadge";
+import ShowSubNav from "../components/ShowSubNav";
 
 const formatter = new Intl.DateTimeFormat("en-US", {
   year: "numeric",
@@ -79,6 +80,7 @@ export default function CollegeFootballFutures() {
           <p className="mt-3 text-lg font-medium text-white/90">
             {collegeFootballFutures.season} season picks, made <time dateTime={collegeFootballFutures.recordedDate}>{formattedDate}</time>
           </p>
+          <ShowSubNav show={show} className="mt-6" />
         </div>
       </section>
 

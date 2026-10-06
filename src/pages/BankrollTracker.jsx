@@ -4,6 +4,7 @@ import { getShowBySlug } from "../data/shows";
 import { bankrollTracker } from "../data/bankrollTracker";
 import { usePageMeta } from "../hooks/usePageMeta";
 import ResultBadge from "../components/ResultBadge";
+import ShowSubNav from "../components/ShowSubNav";
 
 const formatter = new Intl.DateTimeFormat("en-US", {
   year: "numeric",
@@ -164,6 +165,7 @@ export default function BankrollTracker() {
           <p className="mt-3 text-lg font-medium text-white/90">
             Updated <time dateTime={bankrollTracker.lastUpdated}>{formattedDate}</time>
           </p>
+          <ShowSubNav show={show} className="mt-6" />
         </div>
       </section>
 

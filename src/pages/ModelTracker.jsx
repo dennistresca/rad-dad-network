@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { getShowBySlug } from "../data/shows";
 import { bettingModels } from "../data/bettingModels";
 import { usePageMeta } from "../hooks/usePageMeta";
+import ShowSubNav from "../components/ShowSubNav";
 
 const formatter = new Intl.DateTimeFormat("en-US", {
   year: "numeric",
@@ -116,6 +117,7 @@ export default function ModelTracker() {
             How the data-driven models the guys introduced this season are actually doing,
             across every qualifying game.
           </p>
+          <ShowSubNav show={show} className="mt-6" />
         </div>
       </section>
 

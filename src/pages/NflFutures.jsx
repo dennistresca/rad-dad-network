@@ -3,6 +3,7 @@ import { getShowBySlug } from "../data/shows";
 import { nflFutures } from "../data/nflFutures";
 import { usePageMeta } from "../hooks/usePageMeta";
 import ResultBadge from "../components/ResultBadge";
+import ShowSubNav from "../components/ShowSubNav";
 
 const formatter = new Intl.DateTimeFormat("en-US", {
   year: "numeric",
@@ -79,6 +80,7 @@ export default function NflFutures() {
           <p className="mt-3 text-lg font-medium text-white/90">
             {nflFutures.season} season picks, made <time dateTime={nflFutures.recordedDate}>{formattedDate}</time>
           </p>
+          <ShowSubNav show={show} className="mt-6" />
         </div>
       </section>
 

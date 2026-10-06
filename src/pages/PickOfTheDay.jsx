@@ -5,6 +5,7 @@ import { pickOfTheDay, pickHistory } from "../data/pickOfTheDay";
 import { usePageMeta } from "../hooks/usePageMeta";
 import ResultBadge from "../components/ResultBadge";
 import SubscribeForm from "../components/SubscribeForm";
+import ShowSubNav from "../components/ShowSubNav";
 
 const formatter = new Intl.DateTimeFormat("en-US", {
   year: "numeric",
@@ -144,6 +145,7 @@ export default function PickOfTheDay() {
               "Browse every past day's picks below"
             )}
           </p>
+          <ShowSubNav show={show} className="mt-6" />
         </div>
       </section>
 
