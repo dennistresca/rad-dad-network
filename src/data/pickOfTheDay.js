@@ -25,7 +25,11 @@ export const pickOfTheDay = {
       { league: "NCAAF", game: "Jacksonville State @ Kennesaw State", selection: "Jacksonville State -3" },
       { league: "NHL", game: "Edmonton @ Anaheim", selection: "OVER 6.5" },
     ],
-    Shaun: [],
+    Shaun: [
+      { league: "NHL", game: "Colorado @ Winnipeg", selection: "Colorado -1.5" },
+      { league: "NCAAF", game: "New Mexico State @ FIU", selection: "FIU -6.5" },
+      { league: "MLB", game: "Cleveland @ Chicago White Sox", selection: "White Sox ML" },
+    ],
     Aaron: [
       { league: "MLB", game: "Los Angeles Dodgers @ Atlanta", selection: "Dodgers ML" },
       { league: "NHL", game: "Edmonton @ Anaheim", selection: "Oilers ML" },
