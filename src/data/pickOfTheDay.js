@@ -21,27 +21,27 @@ export const pickOfTheDay = {
   date: "2026-10-06",
   picks: {
     Dennis: [
-      { league: "NHL", game: "Ottawa @ Detroit", selection: "Ottawa ML" },
-      { league: "NHL", game: "Vegas @ Seattle", selection: "UNDER 6.5" },
+      { league: "NHL", game: "Ottawa @ Detroit", selection: "Ottawa ML", result: "loss" },
+      { league: "NHL", game: "Vegas @ Seattle", selection: "UNDER 6.5", result: "loss" },
     ],
     Shaun: [
-      { league: "MLB", game: "Los Angeles Dodgers @ Atlanta", selection: "Braves ML" },
-      { league: "MLB", game: "Milwaukee @ San Diego", selection: "Brewers ML" },
-      { league: "NCAAF", game: "Southern Miss @ Troy", selection: "Southern Miss +10.5" },
-      { league: "NHL", game: "Vegas @ Seattle", selection: "Seattle ML" },
-      { league: "NHL", game: "Utah @ New Jersey", selection: "Utah ML" },
-      { league: "NHL", game: "New York Islanders @ New York Rangers", selection: "UNDER 5.5" },
+      { league: "MLB", game: "Los Angeles Dodgers @ Atlanta", selection: "Braves ML", result: "loss" },
+      { league: "MLB", game: "Milwaukee @ San Diego", selection: "Brewers ML", result: "loss" },
+      { league: "NCAAF", game: "Southern Miss @ Troy", selection: "Southern Miss +10.5", result: "loss" },
+      { league: "NHL", game: "Vegas @ Seattle", selection: "Seattle ML", result: "loss" },
+      { league: "NHL", game: "Utah @ New Jersey", selection: "Utah ML", result: "win" },
+      { league: "NHL", game: "New York Islanders @ New York Rangers", selection: "UNDER 5.5", result: "loss" },
     ],
     Aaron: [
-      { league: "MLB", game: "Milwaukee @ San Diego", selection: "OVER 7.5" },
-      { league: "NHL", game: "Nashville @ Toronto", selection: "Maple Leafs ML" },
-      { league: "NCAAF", game: "Southern Miss @ Troy", selection: "UNDER 51.5" },
+      { league: "MLB", game: "Milwaukee @ San Diego", selection: "OVER 7.5", result: "loss" },
+      { league: "NHL", game: "Nashville @ Toronto", selection: "Maple Leafs ML", result: "win" },
+      { league: "NCAAF", game: "Southern Miss @ Troy", selection: "UNDER 51.5", result: "loss" },
     ],
   },
   records: {
-    Dennis: { MLB: { wins: 34, losses: 26 }, NFL: { wins: 10, losses: 5 }, NCAAF: { wins: 8, losses: 6 }, NHL: { wins: 0, losses: 2 } },
-    Shaun: { MLB: { wins: 24, losses: 23 }, NFL: { wins: 4, losses: 3 }, NCAAF: { wins: 2, losses: 3 }, NHL: { wins: 1, losses: 4 } },
-    Aaron: { MLB: { wins: 23, losses: 36 }, NFL: { wins: 0, losses: 3 }, NCAAF: { wins: 6, losses: 4 }, NHL: { wins: 1, losses: 3 } },
+    Dennis: { MLB: { wins: 34, losses: 26 }, NFL: { wins: 10, losses: 5 }, NCAAF: { wins: 8, losses: 6 }, NHL: { wins: 0, losses: 4 } },
+    Shaun: { MLB: { wins: 24, losses: 25 }, NFL: { wins: 4, losses: 3 }, NCAAF: { wins: 2, losses: 4 }, NHL: { wins: 2, losses: 6 } },
+    Aaron: { MLB: { wins: 23, losses: 37 }, NFL: { wins: 0, losses: 3 }, NCAAF: { wins: 6, losses: 5 }, NHL: { wins: 2, losses: 3 } },
   },
 };
 
