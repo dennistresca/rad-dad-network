@@ -21,6 +21,7 @@ export const pickOfTheDay = {
   date: "2026-10-07",
   picks: {
     Dennis: [
+      { league: "MLB", game: "Cleveland @ Chicago White Sox", selection: "White Sox ML" },
       { league: "NCAAF", game: "Jacksonville State @ Kennesaw State", selection: "Jacksonville State -3" },
       { league: "NHL", game: "Edmonton @ Anaheim", selection: "OVER 6.5" },
     ],
