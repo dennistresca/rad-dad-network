@@ -25,8 +25,17 @@ export const pickOfTheDay = {
       { league: "NFL", game: "Tampa Bay @ Dallas", selection: "Chris Godwin OVER 27.5 receiving yards", odds: "-114" },
       { league: "NHL", game: "Philadelphia @ Ottawa", selection: "Ottawa ML" },
     ],
-    Shaun: [],
-    Aaron: [],
+    Shaun: [
+      { league: "NCAAF", game: "South Alabama @ Arkansas State", selection: "Arkansas State ML" },
+      { league: "NHL", game: "Dallas @ Buffalo", selection: "UNDER 6.5" },
+      { league: "MLB", game: "Cleveland @ Chicago White Sox", selection: "OVER 7" },
+      { league: "MLB", game: "Cleveland @ Chicago White Sox", selection: "YRFI", note: "Yes Run First Inning" },
+    ],
+    Aaron: [
+      { league: "NFL", game: "Tampa Bay @ Dallas", selection: "Cowboys -8.5" },
+      { league: "MLB", game: "Cleveland @ Chicago White Sox", selection: "Guardians ML" },
+      { league: "NHL", game: "Vancouver @ Carolina", selection: "Hurricanes -1.5" },
+    ],
   },
   records: {
     Dennis: { MLB: { wins: 34, losses: 27 }, NFL: { wins: 10, losses: 5 }, NCAAF: { wins: 8, losses: 7 }, NHL: { wins: 1, losses: 4 } },
