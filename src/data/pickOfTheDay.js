@@ -18,24 +18,15 @@
 // host's record entirely until they have a graded pick in it.
 
 export const pickOfTheDay = {
-  date: "2026-10-07",
+  date: "2026-10-08",
   picks: {
     Dennis: [
-      { league: "MLB", game: "Cleveland @ Chicago White Sox", selection: "White Sox ML", result: "loss" },
-      { league: "NCAAF", game: "Jacksonville State @ Kennesaw State", selection: "Jacksonville State -3", result: "loss" },
-      { league: "NHL", game: "Edmonton @ Anaheim", selection: "OVER 6.5", result: "win" },
+      { league: "NFL", game: "Tampa Bay @ Dallas", selection: "Buccaneers +8.5" },
+      { league: "NFL", game: "Tampa Bay @ Dallas", selection: "Chris Godwin OVER 27.5 receiving yards", odds: "-114" },
+      { league: "NHL", game: "Philadelphia @ Ottawa", selection: "Ottawa ML" },
     ],
-    Shaun: [
-      { league: "NHL", game: "Colorado @ Winnipeg", selection: "Colorado -1.5", result: "loss" },
-      { league: "NCAAF", game: "New Mexico State @ FIU", selection: "FIU -6.5", result: "win" },
-      { league: "MLB", game: "Cleveland @ Chicago White Sox", selection: "White Sox ML", result: "loss" },
-    ],
-    Aaron: [
-      { league: "MLB", game: "Los Angeles Dodgers @ Atlanta", selection: "Dodgers ML", result: "win" },
-      { league: "NHL", game: "Edmonton @ Anaheim", selection: "Oilers ML", result: "win" },
-      { league: "NCAAF", game: "Jacksonville State @ Kennesaw State", selection: "Jacksonville State -3", result: "loss" },
-      { league: "NBA", game: "Orlando @ Memphis", selection: "Magic -2.5", note: "Preseason", result: "win" },
-    ],
+    Shaun: [],
+    Aaron: [],
   },
   records: {
     Dennis: { MLB: { wins: 34, losses: 27 }, NFL: { wins: 10, losses: 5 }, NCAAF: { wins: 8, losses: 7 }, NHL: { wins: 1, losses: 4 } },
@@ -49,6 +40,27 @@ export const pickOfTheDay = {
 // `picks` as a new entry here (not `records`, since records are
 // cumulative and don't belong to a single day). Newest day first.
 export const pickHistory = [
+  {
+    date: "2026-10-07",
+    picks: {
+      Dennis: [
+        { league: "MLB", game: "Cleveland @ Chicago White Sox", selection: "White Sox ML", result: "loss" },
+        { league: "NCAAF", game: "Jacksonville State @ Kennesaw State", selection: "Jacksonville State -3", result: "loss" },
+        { league: "NHL", game: "Edmonton @ Anaheim", selection: "OVER 6.5", result: "win" },
+      ],
+      Shaun: [
+        { league: "NHL", game: "Colorado @ Winnipeg", selection: "Colorado -1.5", result: "loss" },
+        { league: "NCAAF", game: "New Mexico State @ FIU", selection: "FIU -6.5", result: "win" },
+        { league: "MLB", game: "Cleveland @ Chicago White Sox", selection: "White Sox ML", result: "loss" },
+      ],
+      Aaron: [
+        { league: "MLB", game: "Los Angeles Dodgers @ Atlanta", selection: "Dodgers ML", result: "win" },
+        { league: "NHL", game: "Edmonton @ Anaheim", selection: "Oilers ML", result: "win" },
+        { league: "NCAAF", game: "Jacksonville State @ Kennesaw State", selection: "Jacksonville State -3", result: "loss" },
+        { league: "NBA", game: "Orlando @ Memphis", selection: "Magic -2.5", note: "Preseason", result: "win" },
+      ],
+    },
+  },
   {
     date: "2026-10-06",
     picks: {
