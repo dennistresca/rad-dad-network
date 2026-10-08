@@ -1,4 +1,5 @@
-import { Navigate, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import { SITE_URL } from "../config/site";
 import { getShowBySlug } from "../data/shows";
 import { getBlogPosts } from "../data/blogPosts";
 import { useShowEpisodes } from "../hooks/useEpisodes";
@@ -6,6 +7,7 @@ import { usePageMeta, useStructuredData } from "../hooks/usePageMeta";
 import ShowHeader from "../components/ShowHeader";
 import EpisodeCard from "../components/EpisodeCard";
 import BlogPostCard from "../components/BlogPostCard";
+import NotFound from "./NotFound";
 
 function EpisodeCardSkeleton() {
   return (
@@ -22,7 +24,7 @@ export default function ShowPage() {
   const { slug } = useParams();
   const show = getShowBySlug(slug);
   const { episodes, error, loading } = useShowEpisodes(show?.feedUrl);
-  usePageMeta(show?.name, show?.description);
+  usePageMeta(show ? show.name : "Page Not Found", show?.description, { noindex: !show });
   useStructuredData(
     "podcast-series-jsonld",
     show && {
@@ -30,20 +32,20 @@ export default function ShowPage() {
       "@type": "PodcastSeries",
       name: show.name,
       description: show.description,
-      url: `https://raddadnetwork.com/shows/${show.slug}`,
-      image: `https://raddadnetwork.com${show.logo}`,
+      url: `${SITE_URL}/shows/${show.slug}`,
+      image: `${SITE_URL}${show.logo}`,
       inLanguage: "en",
       webFeed: show.feedUrl,
       publisher: {
         "@type": "Organization",
         name: "Rad Dad Network",
-        url: "https://raddadnetwork.com",
+        url: SITE_URL,
       },
     }
   );
 
   if (!show) {
-    return <Navigate to="/" replace />;
+    return <NotFound />;
   }
 
   const blogPosts = getBlogPosts(show.slug);
@@ -59,6 +61,15 @@ export default function ShowPage() {
           </h2>
           <p className="text-sm text-neutral-500">{show.cadence}</p>
         </div>
+
+        {show.onBreak && (
+          <p
+            role="status"
+            className="mt-6 rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm font-medium text-amber-900"
+          >
+            {show.breakMessage}
+          </p>
+        )}
 
         {loading && (
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" aria-busy="true" aria-live="polite">
@@ -82,10 +93,28 @@ export default function ShowPage() {
         {!loading && !error && (
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {episodes.map((episode) => (
-              <EpisodeCard key={episode.link} episode={episode} accentColor={show.colorTheme.primary} />
+              <EpisodeCard
+                key={episode.guid ?? episode.link}
+                episode={episode}
+                show={show}
+                accentColor={show.colorTheme.primary}
+              />
             ))}
           </div>
         )}
+
+        <div className="mt-8">
+          <Link
+            to={`/shows/${show.slug}/episodes`}
+            className="inline-flex items-center gap-1 text-sm font-semibold"
+            style={{ color: show.colorTheme.primary }}
+          >
+            View all episodes
+            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </Link>
+        </div>
       </section>
 
       {blogPosts.length > 0 && (

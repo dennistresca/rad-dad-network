@@ -60,6 +60,8 @@ function FounderCard({ founder }) {
             ))}
           </div>
         ) : (
+          // TODO(Dennis): Shaun Thompson's bio text is still needed. Add it as
+          // `bio` (an array of paragraphs) on his entry in the founders list.
           <p className="mt-2 text-neutral-600">Bio coming soon.</p>
         )}
       </div>

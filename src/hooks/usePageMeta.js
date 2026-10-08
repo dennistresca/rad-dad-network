@@ -1,12 +1,7 @@
 import { useEffect } from "react";
+import { SITE_URL } from "../config/site";
 
 const SITE_NAME = "Rad Dad Network";
-
-// Fixed rather than window.location.origin: the build prerenders every page
-// while serving it from localhost:4173, and that origin was getting baked
-// into the saved HTML's canonical and og:url. The apex domain redirects to
-// www, so www is the address pages are actually served from.
-const SITE_URL = "https://www.raddadnetwork.com";
 
 function setMetaTag(name, content) {
   let tag = document.querySelector(`meta[name="${name}"]`);

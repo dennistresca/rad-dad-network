@@ -60,6 +60,10 @@ export const shows = [
       "The ultimate F1 podcast hosted by passionate American fans who live and breathe Formula 1. Race recaps, strategy breakdowns, paddock drama, and a uniquely American perspective on open-wheel racing, with witty banter throughout and occasional IndyCar coverage.",
     cadence: "Race-week episodes throughout the F1 season",
     season: null,
+    // Shows a notice on the show page while the show is off the air. Set
+    // `onBreak` to false (or delete both lines) to turn it off.
+    onBreak: true,
+    breakMessage: "On break, back for the next season.",
     colorTheme: {
       primary: "#2563EB", // blue-600: STATESIDE
       primaryDark: "#000000",

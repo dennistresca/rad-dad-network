@@ -1,7 +1,42 @@
 {
-  "rewrites": [{ "source": "/((?!api/).*)", "destination": "/index.html" }],
+  "rewrites": [
+    {
+      "source": "/favicon.ico",
+      "destination": "/favicon.png"
+    },
+    {
+      "source": "/shows/:slug(dancing-with-the-odds|stateside-speed|check-six-radio)",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/shows/:slug(dancing-with-the-odds|stateside-speed|check-six-radio)/episodes",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/shows/dancing-with-the-odds/(road-to-10k|pick-of-the-day|cfb-futures|nfl-futures|model-tracker)",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/shows/dancing-with-the-odds/model-tracker/:model(college-football|wind|nfl)",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/shows/dancing-with-the-odds/model-tracker/:model(nfl)/:tier",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/(store|about|contact|privacy|terms|our-boss-thinks-were-working)",
+      "destination": "/index.html"
+    }
+  ],
   "crons": [
-    { "path": "/api/cron/daily-digest", "schedule": "0 15 * * *" },
-    { "path": "/api/cron/weekly-road-to-10k", "schedule": "0 12 * * 5" }
+    {
+      "path": "/api/cron/daily-digest",
+      "schedule": "0 15 * * *"
+    },
+    {
+      "path": "/api/cron/weekly-road-to-10k",
+      "schedule": "0 12 * * 5"
+    }
   ]
 }

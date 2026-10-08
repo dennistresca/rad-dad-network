@@ -1,3 +1,5 @@
+import { resolveEpisodeLink } from "../utils/episodeLinks";
+
 const formatter = new Intl.DateTimeFormat("en-US", {
   year: "numeric",
   month: "long",
@@ -5,7 +7,7 @@ const formatter = new Intl.DateTimeFormat("en-US", {
   timeZone: "UTC",
 });
 
-export default function EpisodeCard({ episode, accentColor = "#F97316" }) {
+export default function EpisodeCard({ episode, show, accentColor = "#F97316" }) {
   const formattedDate = formatter.format(new Date(episode.date));
 
   return (
@@ -27,11 +29,12 @@ export default function EpisodeCard({ episode, accentColor = "#F97316" }) {
         </audio>
       )}
 
-      {/* Links to the episode's page, from the live RSS feed. Label is
-          platform-neutral since the feed's <link> can point at Captivate,
-          Spotify, or wherever the host sets it, not always Spotify. */}
+      {/* Links to the episode's own page from the live RSS feed when that
+          link is useful; resolveEpisodeLink swaps in the show's Apple or
+          Spotify page when the feed link is missing, dead, or just the show
+          page itself. */}
       <a
-        href={episode.link ?? "#"}
+        href={resolveEpisodeLink(episode, show)}
         target="_blank"
         rel="noopener noreferrer"
         className="mt-3 inline-flex w-fit items-center gap-1 text-sm font-semibold"

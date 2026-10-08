@@ -30,7 +30,8 @@ const PREVIEW_PORT = 4173;
 const DIST_DIR = fileURLToPath(new URL("../dist/", import.meta.url));
 
 // Every real route on the site. Keep this in sync with App.jsx routes and
-// shows.js — also update public/sitemap.xml when this list changes.
+// shows.js — also update public/sitemap.xml and the rewrites in vercel.json
+// when this list changes.
 const routes = [
   "/",
   "/shows/dancing-with-the-odds",
@@ -39,14 +40,22 @@ const routes = [
   "/shows/dancing-with-the-odds/cfb-futures",
   "/shows/dancing-with-the-odds/nfl-futures",
   "/shows/dancing-with-the-odds/model-tracker",
+  "/shows/dancing-with-the-odds/episodes",
   "/shows/stateside-speed",
+  "/shows/stateside-speed/episodes",
   "/shows/check-six-radio",
+  "/shows/check-six-radio/episodes",
   "/store",
   "/about",
   "/contact",
   "/privacy",
   "/terms",
 ];
+
+// Any path that matches no route renders the NotFound page. Vercel serves
+// dist/404.html, with a real 404 status, for every URL that isn't a real
+// page (see vercel.json), so save a rendering of it under that name.
+const NOT_FOUND_ROUTE = "/page-not-found";
 
 function waitForServer(url, timeoutMs = 15000) {
   const start = Date.now();
@@ -99,6 +108,11 @@ async function main() {
       await writeFile(outPath, html, "utf8");
       console.log("done");
     }
+
+    process.stdout.write("Prerendering 404 page ... ");
+    await page.goto(`${base}${NOT_FOUND_ROUTE}`, { waitUntil: "networkidle0", timeout: 15000 });
+    await writeFile(path.join(DIST_DIR, "404.html"), await page.content(), "utf8");
+    console.log("done");
 
     console.log(`Prerendered ${routes.length} routes.`);
   } finally {

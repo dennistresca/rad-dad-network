@@ -34,7 +34,7 @@ function LatestEpisodeHero() {
 
   return (
     <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-      <h1 className="max-w-xl truncate text-xl font-black sm:text-2xl">{latest.title}</h1>
+      <h2 className="max-w-xl truncate text-xl font-black sm:text-2xl">{latest.title}</h2>
       <p className="text-sm text-neutral-400">
         <span className="font-semibold text-white">{latest.show.name}</span> ·{" "}
         <time dateTime={latest.date}>{formatter.format(new Date(latest.date))}</time>
@@ -69,9 +69,9 @@ export default function Home() {
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-16 text-center sm:px-6 lg:px-8">
-        <h2 className="text-2xl font-bold text-neutral-900 sm:text-3xl">
+        <h1 className="text-2xl font-bold text-neutral-900 sm:text-3xl">
           Great conversations. Zero pretentiousness.
-        </h2>
+        </h1>
         <p className="mx-auto mt-4 max-w-2xl text-neutral-600">
           Rad Dad Network is home to a growing family of podcasts made by people who genuinely
           like hanging out and talking about the stuff they're obsessed with: sports betting,

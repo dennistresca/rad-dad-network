@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import ShowPage from "./pages/ShowPage";
+import ShowEpisodes from "./pages/ShowEpisodes";
 import PickOfTheDay from "./pages/PickOfTheDay";
 import BankrollTracker from "./pages/BankrollTracker";
 import CollegeFootballFutures from "./pages/CollegeFootballFutures";
@@ -27,6 +28,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/shows/:slug" element={<ShowPage />} />
+            <Route path="/shows/:slug/episodes" element={<ShowEpisodes />} />
             <Route
               path="/shows/dancing-with-the-odds/pick-of-the-day"
               element={<PickOfTheDay />}

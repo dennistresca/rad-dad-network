@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { shows } from "../data/shows";
 import { usePageMeta } from "../hooks/usePageMeta";
 
 export default function NotFound() {
@@ -16,6 +17,22 @@ export default function NotFound() {
       >
         Back to Home
       </Link>
+
+      <nav aria-label="Our shows" className="mt-10">
+        <p className="text-sm font-semibold uppercase tracking-wide text-neutral-500">Or jump to a show</p>
+        <ul className="mt-4 flex flex-wrap justify-center gap-3">
+          {shows.map((show) => (
+            <li key={show.slug}>
+              <Link
+                to={`/shows/${show.slug}`}
+                className="inline-flex rounded-full border border-neutral-300 px-5 py-2 text-sm font-semibold text-neutral-800 transition-colors hover:border-neutral-900"
+              >
+                {show.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </div>
   );
 }

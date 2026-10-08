@@ -52,7 +52,7 @@ export function useLatestNetworkEpisode(shows) {
       )
     ).then((results) => {
       if (cancelled) return;
-      const found = results.filter(Boolean).sort((a, b) => new Date(b.date) - new Date(a.date));
+      const found = results.filter(Boolean).sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
       if (found.length === 0) {
         setError(new Error("No episodes could be loaded"));
         return;

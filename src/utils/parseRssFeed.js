@@ -24,10 +24,18 @@ function truncate(text, maxLength) {
   return `${text.slice(0, maxLength).trimEnd()}…`;
 }
 
-function toIsoDate(pubDate) {
-  const parsed = new Date(pubDate);
-  if (Number.isNaN(parsed.getTime())) return null;
-  return parsed.toISOString().slice(0, 10);
+// Episodes are released in Central time, so the calendar date shown to
+// listeners must be the Central date. Slicing the UTC timestamp instead
+// pushes an evening release (e.g. 10:47 PM CDT) onto the next day.
+const CENTRAL_DATE = new Intl.DateTimeFormat("en-CA", {
+  timeZone: "America/Chicago",
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit",
+});
+
+function toCentralDate(parsed) {
+  return CENTRAL_DATE.format(parsed);
 }
 
 export function parseFeedEpisodes(xmlText, maxCount = 4) {
@@ -42,17 +50,21 @@ export function parseFeedEpisodes(xmlText, maxCount = 4) {
   return items
     .map((item) => {
       const enclosure = item.querySelector("enclosure");
+      const published = new Date(item.querySelector("pubDate")?.textContent);
+      const validDate = !Number.isNaN(published.getTime());
       return {
+        guid: item.querySelector("guid")?.textContent?.trim() || null,
+        publishedAt: validDate ? published.toISOString() : null,
         title: stripHtml(item.querySelector("title")?.textContent),
         description: truncate(stripHtml(item.querySelector("description")?.textContent), 220),
-        date: toIsoDate(item.querySelector("pubDate")?.textContent),
+        date: validDate ? toCentralDate(published) : null,
         link: item.querySelector("link")?.textContent?.trim() || "#",
         audioUrl: enclosure?.getAttribute("url") || null,
         audioType: enclosure?.getAttribute("type") || "audio/mpeg",
       };
     })
     .filter((episode) => episode.date)
-    .sort((a, b) => new Date(b.date) - new Date(a.date))
+    .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt))
     .slice(0, maxCount);
 }
 
