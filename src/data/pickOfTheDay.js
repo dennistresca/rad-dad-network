@@ -18,24 +18,14 @@
 // host's record entirely until they have a graded pick in it.
 
 export const pickOfTheDay = {
-  date: "2026-10-08",
+  date: "2026-10-09",
   picks: {
     Dennis: [
-      { league: "NFL", game: "Tampa Bay @ Dallas", selection: "Buccaneers +8.5", result: "win" },
-      { league: "NFL", game: "Tampa Bay @ Dallas", selection: "Chris Godwin OVER 27.5 receiving yards", odds: "-114", result: "win" },
-      { league: "NHL", game: "Philadelphia @ Ottawa", selection: "Ottawa ML", result: "win" },
+      { league: "NCAAF", game: "Florida State @ Louisville", selection: "UNDER 59.5", odds: "-102" },
+      { league: "NCAAF", game: "Iowa @ Washington", selection: "Iowa +3.5", odds: "+106" },
     ],
-    Shaun: [
-      { league: "NCAAF", game: "South Alabama @ Arkansas State", selection: "Arkansas State ML", result: "loss" },
-      { league: "NHL", game: "Dallas @ Buffalo", selection: "UNDER 6.5", result: "win" },
-      { league: "MLB", game: "Cleveland @ Chicago White Sox", selection: "OVER 7", result: "win" },
-      { league: "MLB", game: "Cleveland @ Chicago White Sox", selection: "YRFI", note: "Yes Run First Inning", result: "loss" },
-    ],
-    Aaron: [
-      { league: "NFL", game: "Tampa Bay @ Dallas", selection: "Cowboys -8.5", result: "loss" },
-      { league: "MLB", game: "Cleveland @ Chicago White Sox", selection: "Guardians ML", result: "win" },
-      { league: "NHL", game: "Vancouver @ Carolina", selection: "Hurricanes -1.5", result: "win" },
-    ],
+    Shaun: [],
+    Aaron: [],
   },
   records: {
     Dennis: { MLB: { wins: 34, losses: 27 }, NFL: { wins: 12, losses: 5 }, NCAAF: { wins: 8, losses: 7 }, NHL: { wins: 2, losses: 4 } },
@@ -49,6 +39,27 @@ export const pickOfTheDay = {
 // `picks` as a new entry here (not `records`, since records are
 // cumulative and don't belong to a single day). Newest day first.
 export const pickHistory = [
+  {
+    date: "2026-10-08",
+    picks: {
+      Dennis: [
+        { league: "NFL", game: "Tampa Bay @ Dallas", selection: "Buccaneers +8.5", result: "win" },
+        { league: "NFL", game: "Tampa Bay @ Dallas", selection: "Chris Godwin OVER 27.5 receiving yards", odds: "-114", result: "win" },
+        { league: "NHL", game: "Philadelphia @ Ottawa", selection: "Ottawa ML", result: "win" },
+      ],
+      Shaun: [
+        { league: "NCAAF", game: "South Alabama @ Arkansas State", selection: "Arkansas State ML", result: "loss" },
+        { league: "NHL", game: "Dallas @ Buffalo", selection: "UNDER 6.5", result: "win" },
+        { league: "MLB", game: "Cleveland @ Chicago White Sox", selection: "OVER 7", result: "win" },
+        { league: "MLB", game: "Cleveland @ Chicago White Sox", selection: "YRFI", note: "Yes Run First Inning", result: "loss" },
+      ],
+      Aaron: [
+        { league: "NFL", game: "Tampa Bay @ Dallas", selection: "Cowboys -8.5", result: "loss" },
+        { league: "MLB", game: "Cleveland @ Chicago White Sox", selection: "Guardians ML", result: "win" },
+        { league: "NHL", game: "Vancouver @ Carolina", selection: "Hurricanes -1.5", result: "win" },
+      ],
+    },
+  },
   {
     date: "2026-10-07",
     picks: {
