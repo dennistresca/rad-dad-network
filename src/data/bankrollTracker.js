@@ -24,7 +24,7 @@
 // personal Daily Picks (pickOfTheDay.js), which don't affect the bankroll.
 
 export const bankrollTracker = {
-  lastUpdated: "2026-10-04",
+  lastUpdated: "2026-10-09",
   currentBankroll: 224,
   goalBankroll: 10000,
   // Next short-term target, shown as a tick on the progress bar and a
@@ -42,6 +42,21 @@ export const bankrollTracker = {
     },
   },
   weeklyBets: [
+    {
+      episode: "Episode 7 Bets",
+      date: "2026-10-09",
+      bets: [
+        { category: "College Football", game: "Indiana @ Nebraska", date: "2026-10-10", selection: "Indiana -7.5" },
+        { category: "College Football", game: "South Carolina @ Florida", date: "2026-10-10", selection: "UNDER 60.5" },
+        { category: "College Football", game: "Stanford @ Notre Dame", date: "2026-10-10", selection: "OVER 54.5" },
+        { category: "NFL", game: "Cincinnati Bengals @ Miami Dolphins", date: "2026-10-11", selection: "UNDER 42.5" },
+        { category: "NFL", game: "Baltimore Ravens @ Atlanta Falcons", date: "2026-10-11", selection: "Baltimore Ravens +3.5" },
+        { category: "Buckets of Ca$h", game: "Duke @ Georgia Tech", date: "2026-10-10", selection: "UNDER 43.5" },
+        { category: "Buckets of Ca$h", game: "Baltimore Ravens @ Atlanta Falcons", date: "2026-10-11", selection: "Baltimore Ravens +3.5", note: "Same game as the official NFL bet" },
+        { category: "Buckets of Ca$h", game: "Milwaukee Brewers vs Los Angeles Dodgers (NLCS)", date: "2026-10-11", selection: "Brewers to win the series in 6 games" },
+        { category: "Buckets of Ca$h", game: "OH Leuven @ Union Saint-Gilloise", date: "2026-10-11", selection: "Union Saint-Gilloise -1.5" },
+      ],
+    },
     {
       episode: "Episode 6 Bets",
       date: "2026-10-02",
