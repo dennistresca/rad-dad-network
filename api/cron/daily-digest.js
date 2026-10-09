@@ -22,7 +22,26 @@ function escapeHtml(value) {
     .replace(/>/g, "&gt;");
 }
 
-function renderHostSection(host, picks) {
+// Mirrors the Daily Picks page: a host's overall record is the sum of their
+// per-league records, and leagues with no graded picks yet are left out.
+function renderRecord(leagueRecords) {
+  const entries = Object.entries(leagueRecords ?? {}).filter(([, r]) => r.wins + r.losses > 0);
+  if (entries.length === 0) return "";
+
+  const overall = entries.reduce(
+    (acc, [, r]) => ({ wins: acc.wins + r.wins, losses: acc.losses + r.losses }),
+    { wins: 0, losses: 0 }
+  );
+  const byLeague = entries.map(([league, r]) => `${escapeHtml(league)} ${r.wins}-${r.losses}`).join(" · ");
+
+  return `
+      <p style="margin:0 0 14px 0;font-size:13px;color:#737373;">
+        <span style="font-weight:700;color:#404040;">Daily Picks Record ${overall.wins}-${overall.losses}</span>
+        <br />${byLeague}
+      </p>`;
+}
+
+function renderHostSection(host, picks, leagueRecords) {
   if (!picks || picks.length === 0) return "";
   const rows = picks
     .map((pick) => {
@@ -38,7 +57,8 @@ function renderHostSection(host, picks) {
 
   return `
     <div style="margin:0 0 24px 0;padding:20px;border:1px solid #e5e5e5;border-radius:12px;">
-      <h3 style="margin:0 0 12px 0;font-size:16px;font-weight:700;color:#111827;">${escapeHtml(host)}</h3>
+      <h3 style="margin:0 0 4px 0;font-size:16px;font-weight:700;color:#111827;">${escapeHtml(host)}</h3>
+      ${renderRecord(leagueRecords)}
       ${rows}
     </div>`;
 }
@@ -46,7 +66,7 @@ function renderHostSection(host, picks) {
 function buildDigestHtml() {
   const formattedDate = dateFormatter.format(new Date(pickOfTheDay.date));
   const sections = Object.entries(pickOfTheDay.picks)
-    .map(([host, picks]) => renderHostSection(host, picks))
+    .map(([host, picks]) => renderHostSection(host, picks, pickOfTheDay.records?.[host]))
     .join("");
 
   return `
