@@ -12,11 +12,19 @@ export default function ShowHeader({ show }) {
       aria-labelledby="show-title"
     >
       <div className="mx-auto flex max-w-7xl flex-col gap-8 px-4 py-16 sm:px-6 md:flex-row md:items-center lg:px-8">
-        <img
-          src={show.logo}
-          alt={`${show.name} logo`}
-          className="h-32 w-32 shrink-0 rounded-2xl object-cover shadow-lg"
-        />
+        {show.headerLogo ? (
+          <img
+            src={show.headerLogo}
+            alt={`${show.name} logo`}
+            className="h-auto w-56 shrink-0 sm:w-64"
+          />
+        ) : (
+          <img
+            src={show.logo}
+            alt={`${show.name} logo`}
+            className="h-32 w-32 shrink-0 rounded-2xl object-cover shadow-lg"
+          />
+        )}
 
         <div>
           <p className="text-sm font-semibold uppercase tracking-widest text-white/80">

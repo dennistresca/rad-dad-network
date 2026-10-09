@@ -21,13 +21,16 @@ export const shows = [
     cadence: "Weekly episodes during NFL/college football season",
     season: "Season 4 is live now!",
     colorTheme: {
-      primary: "#DC2626", // red-600
+      primary: "#BF1A2B", // DWTO brand red (Microphone Edition brand kit)
       primaryDark: "#7F1D1D", // red-900
       secondary: "#000000",
       accent: "#FFFFFF",
-      gradient: "linear-gradient(135deg, #DC2626 0%, #7F1D1D 100%)",
+      gradient: "linear-gradient(135deg, #BF1A2B 0%, #7F1D1D 100%)",
     },
     logo: "/logo-dancing-with-the-odds.png",
+    // Wide white ticket logo for the red show-page header (the red color
+    // logo would vanish on red). Shown in place of `logo` by ShowHeader.
+    headerLogo: "/brand/dwto-stacked-white.svg",
     feedUrl: "https://feeds.captivate.fm/dwto/",
     subPages: [
       { label: "Road to $10K", path: "/shows/dancing-with-the-odds/road-to-10k" },
