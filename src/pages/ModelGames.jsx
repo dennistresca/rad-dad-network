@@ -4,6 +4,7 @@ import { bettingModels } from "../data/bettingModels";
 import { usePageMeta } from "../hooks/usePageMeta";
 import ResultBadge from "../components/ResultBadge";
 import ShowSubNav from "../components/ShowSubNav";
+import DwtoHeaderLogo from "../components/DwtoHeaderLogo";
 
 const formatter = new Intl.DateTimeFormat("en-US", {
   month: "short",
@@ -102,9 +103,7 @@ export default function ModelGames() {
           >
             ← Back to Model Tracker
           </Link>
-          <p className="mt-4 text-sm font-semibold uppercase tracking-widest text-white/80">
-            Dancing With the Odds
-          </p>
+          <DwtoHeaderLogo />
           <h1 className="mt-1 text-3xl font-black sm:text-4xl">{resolved.name}</h1>
           <p className="mt-3 text-lg font-medium text-white/90">{resolved.rule}</p>
           <p className="mt-4 text-2xl font-black">

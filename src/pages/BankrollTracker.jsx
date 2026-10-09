@@ -5,6 +5,7 @@ import { bankrollTracker } from "../data/bankrollTracker";
 import { usePageMeta } from "../hooks/usePageMeta";
 import ResultBadge from "../components/ResultBadge";
 import ShowSubNav from "../components/ShowSubNav";
+import DwtoHeaderLogo from "../components/DwtoHeaderLogo";
 
 const formatter = new Intl.DateTimeFormat("en-US", {
   year: "numeric",
@@ -160,9 +161,7 @@ export default function BankrollTracker() {
           >
             ← Back to {show.name}
           </Link>
-          <p className="mt-4 text-sm font-semibold uppercase tracking-widest text-white/80">
-            Dancing With the Odds
-          </p>
+          <DwtoHeaderLogo />
           <h1 className="mt-1 text-3xl font-black sm:text-4xl md:text-5xl">Road to $10K</h1>
           <p className="mt-3 text-lg font-medium text-white/90">
             Updated <time dateTime={bankrollTracker.lastUpdated}>{formattedDate}</time>
