@@ -23,24 +23,24 @@ export const pickOfTheDay = {
     Dennis: [
       { league: "NFL", game: "Tampa Bay @ Dallas", selection: "Buccaneers +8.5" },
       { league: "NFL", game: "Tampa Bay @ Dallas", selection: "Chris Godwin OVER 27.5 receiving yards", odds: "-114" },
-      { league: "NHL", game: "Philadelphia @ Ottawa", selection: "Ottawa ML" },
+      { league: "NHL", game: "Philadelphia @ Ottawa", selection: "Ottawa ML", result: "win" },
     ],
     Shaun: [
       { league: "NCAAF", game: "South Alabama @ Arkansas State", selection: "Arkansas State ML" },
-      { league: "NHL", game: "Dallas @ Buffalo", selection: "UNDER 6.5" },
+      { league: "NHL", game: "Dallas @ Buffalo", selection: "UNDER 6.5", result: "win" },
       { league: "MLB", game: "Cleveland @ Chicago White Sox", selection: "OVER 7" },
       { league: "MLB", game: "Cleveland @ Chicago White Sox", selection: "YRFI", note: "Yes Run First Inning" },
     ],
     Aaron: [
       { league: "NFL", game: "Tampa Bay @ Dallas", selection: "Cowboys -8.5" },
       { league: "MLB", game: "Cleveland @ Chicago White Sox", selection: "Guardians ML" },
-      { league: "NHL", game: "Vancouver @ Carolina", selection: "Hurricanes -1.5" },
+      { league: "NHL", game: "Vancouver @ Carolina", selection: "Hurricanes -1.5", result: "win" },
     ],
   },
   records: {
-    Dennis: { MLB: { wins: 34, losses: 27 }, NFL: { wins: 10, losses: 5 }, NCAAF: { wins: 8, losses: 7 }, NHL: { wins: 1, losses: 4 } },
-    Shaun: { MLB: { wins: 24, losses: 26 }, NFL: { wins: 4, losses: 3 }, NCAAF: { wins: 3, losses: 4 }, NHL: { wins: 2, losses: 7 } },
-    Aaron: { MLB: { wins: 24, losses: 37 }, NFL: { wins: 0, losses: 3 }, NCAAF: { wins: 6, losses: 6 }, NHL: { wins: 3, losses: 3 }, NBA: { wins: 1, losses: 0 } },
+    Dennis: { MLB: { wins: 34, losses: 27 }, NFL: { wins: 10, losses: 5 }, NCAAF: { wins: 8, losses: 7 }, NHL: { wins: 2, losses: 4 } },
+    Shaun: { MLB: { wins: 24, losses: 26 }, NFL: { wins: 4, losses: 3 }, NCAAF: { wins: 3, losses: 4 }, NHL: { wins: 3, losses: 7 } },
+    Aaron: { MLB: { wins: 24, losses: 37 }, NFL: { wins: 0, losses: 3 }, NCAAF: { wins: 6, losses: 6 }, NHL: { wins: 4, losses: 3 }, NBA: { wins: 1, losses: 0 } },
   },
 };
 
