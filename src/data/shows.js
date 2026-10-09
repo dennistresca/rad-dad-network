@@ -31,6 +31,8 @@ export const shows = [
     // Wide white ticket logo for the red show-page header (the red color
     // logo would vanish on red). Shown in place of `logo` by ShowHeader.
     headerLogo: "/brand/dwto-stacked-white.svg",
+    // 1200x630 link-preview image for this show's pages (og:image).
+    ogImage: "/brand/dwto-og.png",
     feedUrl: "https://feeds.captivate.fm/dwto/",
     subPages: [
       { label: "Road to $10K", path: "/shows/dancing-with-the-odds/road-to-10k" },

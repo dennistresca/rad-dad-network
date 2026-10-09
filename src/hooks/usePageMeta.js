@@ -1,7 +1,18 @@
 import { useEffect } from "react";
 import { SITE_URL } from "../config/site";
+import { getShowBySlug } from "../data/shows";
 
 const SITE_NAME = "Rad Dad Network";
+const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
+
+// Link-preview image: a show's own `ogImage` (see shows.js) for its pages and
+// sub-pages, the network image everywhere else. Set on every page change so
+// moving from a show page back to a network page puts the default back.
+function ogImageForPath(pathname) {
+  const match = pathname.match(/^\/shows\/([^/]+)/);
+  const show = match ? getShowBySlug(match[1]) : null;
+  return show?.ogImage ? `${SITE_URL}${show.ogImage}` : DEFAULT_OG_IMAGE;
+}
 
 function setMetaTag(name, content) {
   let tag = document.querySelector(`meta[name="${name}"]`);
@@ -46,6 +57,9 @@ export function usePageMeta(title, description, { noindex = false } = {}) {
     setCanonical(`${SITE_URL}${window.location.pathname}`);
     setMetaProperty("og:url", `${SITE_URL}${window.location.pathname}`);
     setMetaTag("robots", noindex ? "noindex, nofollow" : "index, follow");
+    const image = ogImageForPath(window.location.pathname);
+    setMetaProperty("og:image", image);
+    setMetaTag("twitter:image", image);
 
     if (description) {
       setMetaTag("description", description);
