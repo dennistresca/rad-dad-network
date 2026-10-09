@@ -27,7 +27,7 @@ export const shows = [
       accent: "#FFFFFF",
       gradient: "linear-gradient(135deg, #BF1A2B 0%, #7F1D1D 100%)",
     },
-    logo: "/logo-dancing-with-the-odds.png",
+    logo: "/brand/dwto-cover.png", // square cover art for the homepage card and structured data
     // Wide white ticket logo for the red show-page header (the red color
     // logo would vanish on red). Shown in place of `logo` by ShowHeader.
     headerLogo: "/brand/dwto-stacked-white.svg",
