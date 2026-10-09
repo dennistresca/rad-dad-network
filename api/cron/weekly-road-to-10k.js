@@ -8,6 +8,11 @@ import { bankrollTracker } from "../../src/data/bankrollTracker.js";
 const SITE_URL = "https://raddadnetwork.com";
 const FROM_ADDRESS = "Rad Dad Network <picks@raddadnetwork.com>";
 
+// Absolute URL base for the brand footer image (email clients can't load
+// site-relative paths). www is used directly so image requests skip the
+// apex-to-www redirect.
+const IMAGE_BASE_URL = "https://www.raddadnetwork.com";
+
 // Only send if the newest weeklyBets entry is dated within this many
 // calendar days of today. The cron fires every 7 days, so anything 7+ days
 // old is last week's episode — skip rather than re-mail it. Upload the new
@@ -47,7 +52,7 @@ function renderBetRow(bet) {
     ? `<p style="margin:0;font-size:13px;color:#737373;text-transform:uppercase;letter-spacing:0.03em;">${escapeHtml(bet.game)}</p>`
     : "";
   const category = bet.category
-    ? `<p style="margin:0 0 2px 0;font-size:11px;font-weight:800;color:#DC2626;text-transform:uppercase;letter-spacing:0.04em;">${escapeHtml(bet.category)}</p>`
+    ? `<p style="margin:0 0 2px 0;font-size:11px;font-weight:800;color:#BF1A2B;text-transform:uppercase;letter-spacing:0.04em;">${escapeHtml(bet.category)}</p>`
     : "";
   const odds = bet.odds ? ` <span style="color:#737373;">(${escapeHtml(bet.odds)})</span>` : "";
 
@@ -77,6 +82,11 @@ function buildDigestHtml(currentWeek) {
       <p style="margin:32px 0 0 0;font-size:13px;color:#a3a3a3;">
         <a href="${SITE_URL}/shows/dancing-with-the-odds/road-to-10k" style="color:#a3a3a3;">See full bankroll and betting history →</a>
       </p>
+      <div style="margin:24px 0 0 0;padding:20px 0 0 0;border-top:1px solid #e5e5e5;">
+        <a href="${SITE_URL}/shows/dancing-with-the-odds">
+          <img src="${IMAGE_BASE_URL}/brand/dwto-email-footer.png" alt="Dancing With the Odds" width="450" height="110" style="display:block;width:100%;max-width:450px;height:auto;border:0;" />
+        </a>
+      </div>
     </div>`;
 }
 
