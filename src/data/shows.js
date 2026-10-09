@@ -33,6 +33,9 @@ export const shows = [
     headerLogo: "/brand/dwto-stacked-white.svg",
     // 1200x630 link-preview image for this show's pages (og:image).
     ogImage: "/brand/dwto-og.png",
+    // Browser-tab icon and iPhone home-screen icon for this show's pages.
+    icon: "/brand/dwto-icon-48.png",
+    appleIcon: "/brand/dwto-icon-180.png",
     feedUrl: "https://feeds.captivate.fm/dwto/",
     subPages: [
       { label: "Road to $10K", path: "/shows/dancing-with-the-odds/road-to-10k" },

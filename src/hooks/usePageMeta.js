@@ -14,6 +14,31 @@ function ogImageForPath(pathname) {
   return show?.ogImage ? `${SITE_URL}${show.ogImage}` : DEFAULT_OG_IMAGE;
 }
 
+// Browser-tab icons: a show's own `icon` / `appleIcon` (see shows.js) on its
+// pages and sub-pages, the network icons everywhere else. Like the link-
+// preview image, reset on every page change so the right icon comes back.
+const DEFAULT_ICON = "/favicon.png";
+const DEFAULT_APPLE_ICON = "/apple-touch-icon.png";
+
+function iconsForPath(pathname) {
+  const match = pathname.match(/^\/shows\/([^/]+)/);
+  const show = match ? getShowBySlug(match[1]) : null;
+  return {
+    icon: show?.icon ?? DEFAULT_ICON,
+    appleIcon: show?.appleIcon ?? DEFAULT_APPLE_ICON,
+  };
+}
+
+function setLinkHref(rel, href) {
+  let tag = document.querySelector(`link[rel="${rel}"]`);
+  if (!tag) {
+    tag = document.createElement("link");
+    tag.setAttribute("rel", rel);
+    document.head.appendChild(tag);
+  }
+  tag.setAttribute("href", href);
+}
+
 function setMetaTag(name, content) {
   let tag = document.querySelector(`meta[name="${name}"]`);
   if (!tag) {
@@ -60,6 +85,9 @@ export function usePageMeta(title, description, { noindex = false } = {}) {
     const image = ogImageForPath(window.location.pathname);
     setMetaProperty("og:image", image);
     setMetaTag("twitter:image", image);
+    const { icon, appleIcon } = iconsForPath(window.location.pathname);
+    setLinkHref("icon", icon);
+    setLinkHref("apple-touch-icon", appleIcon);
 
     if (description) {
       setMetaTag("description", description);
