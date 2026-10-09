@@ -4,14 +4,13 @@
 // subscriber list, no separate opt-in.
 import { Resend } from "resend";
 import { bankrollTracker } from "../../src/data/bankrollTracker.js";
+import { SITE_URL } from "../../src/config/site.js";
 
-const SITE_URL = "https://raddadnetwork.com";
 const FROM_ADDRESS = "Rad Dad Network <picks@raddadnetwork.com>";
 
 // Absolute URL base for the brand footer image (email clients can't load
-// site-relative paths). www is used directly so image requests skip the
-// apex-to-www redirect.
-const IMAGE_BASE_URL = "https://www.raddadnetwork.com";
+// site-relative paths).
+const IMAGE_BASE_URL = SITE_URL;
 
 // Only send if the newest weeklyBets entry is dated within this many
 // calendar days of today. The cron fires every 7 days, so anything 7+ days

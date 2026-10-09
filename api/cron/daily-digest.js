@@ -4,16 +4,15 @@
 // in sync.
 import { Resend } from "resend";
 import { pickOfTheDay } from "../../src/data/pickOfTheDay.js";
+import { SITE_URL } from "../../src/config/site.js";
 
-const SITE_URL = "https://raddadnetwork.com";
 const FROM_ADDRESS = "Rad Dad Network <picks@raddadnetwork.com>";
 
 // Host headshots, same people as the site's Daily Picks page. Email clients
 // need absolute URLs, and many (Outlook, some Apple Mail setups) can't show
 // .webp, so these are small PNG copies in public/email/ rather than the
-// site's own photos. www is used directly so the image requests skip the
-// apex-to-www redirect.
-const IMAGE_BASE_URL = "https://www.raddadnetwork.com";
+// site's own photos.
+const IMAGE_BASE_URL = SITE_URL;
 const HOST_PHOTOS = {
   Dennis: "/email/dennis.png",
   Shaun: "/email/shaun.png",
