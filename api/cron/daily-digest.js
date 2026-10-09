@@ -8,6 +8,18 @@ import { pickOfTheDay } from "../../src/data/pickOfTheDay.js";
 const SITE_URL = "https://raddadnetwork.com";
 const FROM_ADDRESS = "Rad Dad Network <picks@raddadnetwork.com>";
 
+// Host headshots, same people as the site's Daily Picks page. Email clients
+// need absolute URLs, and many (Outlook, some Apple Mail setups) can't show
+// .webp, so these are small PNG copies in public/email/ rather than the
+// site's own photos. www is used directly so the image requests skip the
+// apex-to-www redirect.
+const IMAGE_BASE_URL = "https://www.raddadnetwork.com";
+const HOST_PHOTOS = {
+  Dennis: "/email/dennis.png",
+  Shaun: "/email/shaun.png",
+  Aaron: "/email/aaron.png",
+};
+
 const dateFormatter = new Intl.DateTimeFormat("en-US", {
   year: "numeric",
   month: "long",
@@ -35,10 +47,31 @@ function renderRecord(leagueRecords) {
   const byLeague = entries.map(([league, r]) => `${escapeHtml(league)} ${r.wins}-${r.losses}`).join(" · ");
 
   return `
-      <p style="margin:0 0 14px 0;font-size:13px;color:#737373;">
+      <p style="margin:2px 0 0 0;font-size:13px;color:#737373;">
         <span style="font-weight:700;color:#404040;">Daily Picks Record ${overall.wins}-${overall.losses}</span>
         <br />${byLeague}
       </p>`;
+}
+
+// Headshot beside the host's name (and record), like the site's host cards.
+// A table keeps the photo and text side by side in every email client.
+function renderHostHeader(host, leagueRecords) {
+  const photo = HOST_PHOTOS[host]
+    ? `<td width="56" valign="middle" style="padding:0 12px 0 0;">
+            <img src="${IMAGE_BASE_URL}${HOST_PHOTOS[host]}" alt="${escapeHtml(host)}" width="48" height="48" style="display:block;width:48px;height:48px;border-radius:24px;border:0;" />
+          </td>`
+    : "";
+
+  return `
+      <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 14px 0;">
+        <tr>
+          ${photo}
+          <td valign="middle">
+            <h3 style="margin:0;font-size:16px;font-weight:700;color:#111827;">${escapeHtml(host)}</h3>
+            ${renderRecord(leagueRecords)}
+          </td>
+        </tr>
+      </table>`;
 }
 
 function renderHostSection(host, picks, leagueRecords) {
@@ -57,8 +90,7 @@ function renderHostSection(host, picks, leagueRecords) {
 
   return `
     <div style="margin:0 0 24px 0;padding:20px;border:1px solid #e5e5e5;border-radius:12px;">
-      <h3 style="margin:0 0 4px 0;font-size:16px;font-weight:700;color:#111827;">${escapeHtml(host)}</h3>
-      ${renderRecord(leagueRecords)}
+      ${renderHostHeader(host, leagueRecords)}
       ${rows}
     </div>`;
 }
