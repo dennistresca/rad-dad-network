@@ -24,8 +24,15 @@ export const pickOfTheDay = {
       { league: "NCAAF", game: "Florida State @ Louisville", selection: "UNDER 59.5", odds: "-102" },
       { league: "NCAAF", game: "Iowa @ Washington", selection: "Iowa +3.5", odds: "+106" },
     ],
-    Shaun: [],
-    Aaron: [],
+    Shaun: [
+      { league: "NCAAF", game: "Iowa State @ BYU", selection: "UNDER 45.5" },
+      { league: "NHL", game: "Seattle @ Detroit", selection: "UNDER 6.5" },
+    ],
+    Aaron: [
+      { league: "NHL", game: "New York Rangers @ Washington", selection: "Capitals ML" },
+      { league: "NCAAF", game: "Iowa @ Washington", selection: "Iowa +2.5" },
+      { league: "NCAAF", game: "Iowa State @ BYU", selection: "BYU -10.5" },
+    ],
   },
   records: {
     Dennis: { MLB: { wins: 34, losses: 27 }, NFL: { wins: 12, losses: 5 }, NCAAF: { wins: 8, losses: 7 }, NHL: { wins: 2, losses: 4 } },
