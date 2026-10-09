@@ -109,6 +109,11 @@ function buildDigestHtml() {
       <p style="margin:32px 0 0 0;font-size:13px;color:#a3a3a3;">
         <a href="${SITE_URL}/shows/dancing-with-the-odds/pick-of-the-day" style="color:#a3a3a3;">See full records and previous picks →</a>
       </p>
+      <div style="margin:24px 0 0 0;padding:20px 0 0 0;border-top:1px solid #e5e5e5;">
+        <a href="${SITE_URL}/shows/dancing-with-the-odds">
+          <img src="${IMAGE_BASE_URL}/brand/dwto-email-footer.png" alt="Dancing With the Odds" width="450" height="110" style="display:block;width:100%;max-width:450px;height:auto;border:0;" />
+        </a>
+      </div>
     </div>`;
 }
 
