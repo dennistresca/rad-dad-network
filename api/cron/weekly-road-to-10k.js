@@ -1,4 +1,4 @@
-// Runs on Vercel Cron (see vercel.json "crons"), Friday mornings. Emails
+// Runs on Vercel Cron (see vercel.json "crons"), Friday afternoons (18:00 UTC, 2 p.m. Eastern during daylight time, 1 p.m. in winter). Emails
 // that week's official Road to $10K bets (the most recent weeklyBets
 // entry) to the same Resend audience as the Daily Picks digest — same
 // subscriber list, no separate opt-in.
@@ -15,7 +15,7 @@ const IMAGE_BASE_URL = SITE_URL;
 // Only send if the newest weeklyBets entry is dated within this many
 // calendar days of today. The cron fires every 7 days, so anything 7+ days
 // old is last week's episode — skip rather than re-mail it. Upload the new
-// episode's bets before Friday morning or no email goes out.
+// episode's bets before Friday 2 p.m. Eastern or no email goes out.
 const MAX_ENTRY_AGE_DAYS = 6;
 
 const dateFormatter = new Intl.DateTimeFormat("en-US", {

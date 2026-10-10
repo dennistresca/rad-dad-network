@@ -36,7 +36,7 @@
     },
     {
       "path": "/api/cron/weekly-road-to-10k",
-      "schedule": "0 12 * * 5"
+      "schedule": "0 18 * * 5"
     }
   ]
 }
