@@ -18,21 +18,15 @@
 // host's record entirely until they have a graded pick in it.
 
 export const pickOfTheDay = {
-  date: "2026-10-09",
+  date: "2026-10-10",
   picks: {
     Dennis: [
-      { league: "NCAAF", game: "Florida State @ Louisville", selection: "UNDER 59.5", odds: "-102", result: "loss" },
-      { league: "NCAAF", game: "Iowa @ Washington", selection: "Iowa +3.5", odds: "+106", result: "win" },
+      { league: "NCAAF", game: "South Carolina @ Florida", selection: "Florida -10.5" },
+      { league: "NCAAF", game: "Central Michigan @ Ohio", selection: "Ohio -2.5" },
+      { league: "NCAAF", game: "Arizona @ West Virginia", selection: "OVER 60.5" },
     ],
-    Shaun: [
-      { league: "NCAAF", game: "Iowa State @ BYU", selection: "UNDER 45.5", result: "win" },
-      { league: "NHL", game: "Seattle @ Detroit", selection: "UNDER 6.5", result: "loss" },
-    ],
-    Aaron: [
-      { league: "NHL", game: "New York Rangers @ Washington", selection: "Capitals ML", result: "win" },
-      { league: "NCAAF", game: "Iowa @ Washington", selection: "Iowa +2.5", result: "win" },
-      { league: "NCAAF", game: "Iowa State @ BYU", selection: "BYU -10.5", result: "win" },
-    ],
+    Shaun: [],
+    Aaron: [],
   },
   records: {
     Dennis: { MLB: { wins: 34, losses: 27 }, NFL: { wins: 12, losses: 5 }, NCAAF: { wins: 9, losses: 8 }, NHL: { wins: 2, losses: 4 } },
@@ -46,6 +40,24 @@ export const pickOfTheDay = {
 // `picks` as a new entry here (not `records`, since records are
 // cumulative and don't belong to a single day). Newest day first.
 export const pickHistory = [
+  {
+    date: "2026-10-09",
+    picks: {
+      Dennis: [
+        { league: "NCAAF", game: "Florida State @ Louisville", selection: "UNDER 59.5", odds: "-102", result: "loss" },
+        { league: "NCAAF", game: "Iowa @ Washington", selection: "Iowa +3.5", odds: "+106", result: "win" },
+      ],
+      Shaun: [
+        { league: "NCAAF", game: "Iowa State @ BYU", selection: "UNDER 45.5", result: "win" },
+        { league: "NHL", game: "Seattle @ Detroit", selection: "UNDER 6.5", result: "loss" },
+      ],
+      Aaron: [
+        { league: "NHL", game: "New York Rangers @ Washington", selection: "Capitals ML", result: "win" },
+        { league: "NCAAF", game: "Iowa @ Washington", selection: "Iowa +2.5", result: "win" },
+        { league: "NCAAF", game: "Iowa State @ BYU", selection: "BYU -10.5", result: "win" },
+      ],
+    },
+  },
   {
     date: "2026-10-08",
     picks: {
