@@ -21,15 +21,15 @@ export const pickOfTheDay = {
   date: "2026-10-10",
   picks: {
     Dennis: [
-      { league: "NCAAF", game: "South Carolina @ Florida", selection: "Florida -10.5" },
+      { league: "NCAAF", game: "South Carolina @ Florida", selection: "Florida -10.5", result: "loss" },
       { league: "NCAAF", game: "Central Michigan @ Ohio", selection: "Ohio -2.5" },
-      { league: "NCAAF", game: "Arizona @ West Virginia", selection: "OVER 60.5" },
+      { league: "NCAAF", game: "Arizona @ West Virginia", selection: "OVER 60.5", result: "win" },
     ],
     Shaun: [],
     Aaron: [],
   },
   records: {
-    Dennis: { MLB: { wins: 34, losses: 27 }, NFL: { wins: 12, losses: 5 }, NCAAF: { wins: 9, losses: 8 }, NHL: { wins: 2, losses: 4 } },
+    Dennis: { MLB: { wins: 34, losses: 27 }, NFL: { wins: 12, losses: 5 }, NCAAF: { wins: 10, losses: 9 }, NHL: { wins: 2, losses: 4 } },
     Shaun: { MLB: { wins: 25, losses: 27 }, NFL: { wins: 4, losses: 3 }, NCAAF: { wins: 4, losses: 5 }, NHL: { wins: 3, losses: 8 } },
     Aaron: { MLB: { wins: 25, losses: 37 }, NFL: { wins: 0, losses: 4 }, NCAAF: { wins: 8, losses: 6 }, NHL: { wins: 5, losses: 3 }, NBA: { wins: 1, losses: 0 } },
   },
