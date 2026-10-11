@@ -21,15 +21,15 @@ export const pickOfTheDay = {
   date: "2026-10-11",
   picks: {
     Dennis: [
-      { league: "NFL", game: "Indianapolis @ Pittsburgh", selection: "Colts ML" },
-      { league: "NFL", game: "Chicago @ Green Bay", selection: "OVER 46.5" },
-      { league: "NFL", game: "Cincinnati @ Miami", selection: "Bengals -7" },
+      { league: "NFL", game: "Indianapolis @ Pittsburgh", selection: "Colts ML", result: "loss" },
+      { league: "NFL", game: "Chicago @ Green Bay", selection: "OVER 46.5", result: "loss" },
+      { league: "NFL", game: "Cincinnati @ Miami", selection: "Bengals -7", note: "Push, Cincinnati won by exactly 7" },
     ],
     Shaun: [],
     Aaron: [],
   },
   records: {
-    Dennis: { MLB: { wins: 34, losses: 27 }, NFL: { wins: 12, losses: 5 }, NCAAF: { wins: 11, losses: 9 }, NHL: { wins: 2, losses: 4 } },
+    Dennis: { MLB: { wins: 34, losses: 27 }, NFL: { wins: 12, losses: 7 }, NCAAF: { wins: 11, losses: 9 }, NHL: { wins: 2, losses: 4 } },
     Shaun: { MLB: { wins: 25, losses: 27 }, NFL: { wins: 4, losses: 3 }, NCAAF: { wins: 4, losses: 5 }, NHL: { wins: 3, losses: 8 } },
     Aaron: { MLB: { wins: 25, losses: 37 }, NFL: { wins: 0, losses: 4 }, NCAAF: { wins: 8, losses: 6 }, NHL: { wins: 5, losses: 3 }, NBA: { wins: 1, losses: 0 } },
   },
