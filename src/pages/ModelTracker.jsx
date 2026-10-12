@@ -57,7 +57,8 @@ function ModelCard({ model, accentColor }) {
 
       <p className="mt-6 text-xs text-neutral-400">
         Every qualifying game this season counts here, whether or not the guys actually bet on
-        it. Updated {formatter.format(new Date(model.lastUpdated))}.
+        it. {model.trackingNote ? `${model.trackingNote} ` : ""}Updated{" "}
+        {formatter.format(new Date(model.lastUpdated))}.
       </p>
     </div>
   );
@@ -97,7 +98,7 @@ export default function ModelTracker() {
   const show = getShowBySlug("dancing-with-the-odds");
   usePageMeta(
     "Model Tracker",
-    "Tracking the season-long results of Dancing With the Odds' statistical betting models: Shaun's college football blowout model and Dennis's tiered NFL road dog model."
+    "Tracking the season-long results of Dancing With the Odds' statistical betting models: Shaun's college football blowout and under models, Dennis's tiered NFL road dog model, and Aaron's wind model."
   );
 
   return (
@@ -124,6 +125,10 @@ export default function ModelTracker() {
         <div className="space-y-10">
           <ModelCard
             model={{ ...bettingModels.collegeFootball, detailPath: "/shows/dancing-with-the-odds/model-tracker/college-football" }}
+            accentColor={show.colorTheme.primary}
+          />
+          <ModelCard
+            model={{ ...bettingModels.collegeUnder, detailPath: "/shows/dancing-with-the-odds/model-tracker/college-under" }}
             accentColor={show.colorTheme.primary}
           />
           <TieredModelCard model={bettingModels.nfl} accentColor={show.colorTheme.primary} />

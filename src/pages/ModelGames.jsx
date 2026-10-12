@@ -18,6 +18,9 @@ function resolveModel(model, tierKey) {
   if (model === "college-football") {
     return { ...bettingModels.collegeFootball, isTier: false };
   }
+  if (model === "college-under") {
+    return { ...bettingModels.collegeUnder, isTier: false };
+  }
   if (model === "wind") {
     return { ...bettingModels.aaronWind, isTier: false };
   }
@@ -49,11 +52,17 @@ function GameRow({ game, accentColor, isNfl }) {
       <p className="mt-1 text-lg font-bold" style={{ color: accentColor }}>
         {game.wind
           ? "UNDER"
+          : game.str
+          ? `UNDER ${game.total}`
           : isNfl
           ? `${game.roadTeam} ${game.spread}`
           : `${game.favorite} ${game.spread}`}
         {game.wind ? (
           <span className="ml-2 text-neutral-500">(Wind {game.wind}, Total {game.total})</span>
+        ) : game.str ? (
+          <span className="ml-2 text-neutral-500">
+            ({game.favorite} {game.spread}, STR {game.str})
+          </span>
         ) : (
           <span className="ml-2 text-neutral-500">(Total {game.total})</span>
         )}

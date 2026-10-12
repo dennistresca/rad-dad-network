@@ -114,6 +114,16 @@ const nflTier2bGames = [
   { date: "2026-10-11", matchup: "Detroit Lions @ Arizona Cardinals", roadTeam: "Detroit Lions (favorite)", spread: "-5.5", total: 54.5, finalScore: "DET 45 - ARI 21", result: "win" },
 ];
 
+// Shaun's College Under Model. `str` is the spread-to-total ratio (spread
+// divided by total), shown to two decimals; the model wants 0.20 to 0.25.
+const collegeUnderGames = [
+  { date: "2026-10-08", matchup: "Sam Houston Bearkats @ Liberty Flames", favorite: "Liberty Flames", spread: "-13.5", total: 52.5, str: "0.25", finalScore: "SHSU 3 - LIB 35", result: "win" },
+  { date: "2026-10-09", matchup: "Iowa State Cyclones @ BYU Cougars", favorite: "BYU Cougars", spread: "-10.5", total: 46.5, str: "0.22", finalScore: "ISU 10 - BYU 24", result: "win" },
+  { date: "2026-10-10", matchup: "Rice Owls @ East Carolina Pirates", favorite: "East Carolina Pirates", spread: "-10", total: 47.5, str: "0.21", finalScore: "RICE 12 - ECU 28", result: "win" },
+  { date: "2026-10-10", matchup: "South Carolina Gamecocks @ Florida Gators", favorite: "Florida Gators", spread: "-12.5", total: 61.5, str: "0.20", finalScore: "SC 38 - FLA 19", result: "win" },
+  { date: "2026-10-10", matchup: "UAB Blazers @ Memphis Tigers", favorite: "Memphis Tigers", spread: "-14", total: 56.5, str: "0.24", finalScore: "UAB 13 - MEM 38", result: "win" },
+];
+
 const windGames = [
   { date: "2026-09-13", matchup: "Miami Dolphins @ Las Vegas Raiders", wind: "19 mph", total: 40.5, finalScore: "MIA 13 - LV 27", result: "win" },
   { date: "2026-10-11", matchup: "Indianapolis Colts @ Pittsburgh Steelers", wind: "19 mph", total: 43.5, finalScore: "IND 22 - PIT 34", result: "loss" },
@@ -128,6 +138,16 @@ export const bettingModels = {
     pending: 0,
     lastUpdated: "2026-10-12",
     games: collegeFootballGames,
+  },
+  collegeUnder: {
+    name: "Shaun's College Under Model",
+    introducedEpisode: "S4E7",
+    rule: "Take the UNDER when the favorite is laid between -7.5 and -14 and the spread-to-total ratio (spread divided by total) is between 0.20 and 0.25. Favorites in the -7.5 to -14 band have gone under about 61% of the time this season, and a ratio of 0.20-0.25 has been the sweet spot within it.",
+    trackingNote: "Tracking began the week the model was introduced (October 8, 2026).",
+    record: { wins: 5, losses: 0 },
+    pending: 0,
+    lastUpdated: "2026-10-12",
+    games: collegeUnderGames,
   },
   nfl: {
     name: "Dennis's NFL Road Dog Model",

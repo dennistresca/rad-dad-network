@@ -17,7 +17,7 @@
       "destination": "/index.html"
     },
     {
-      "source": "/shows/dancing-with-the-odds/model-tracker/:model(college-football|wind|nfl)",
+      "source": "/shows/dancing-with-the-odds/model-tracker/:model(college-football|college-under|wind|nfl)",
       "destination": "/index.html"
     },
     {
