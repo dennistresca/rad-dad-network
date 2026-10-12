@@ -25,7 +25,7 @@
 
 export const bankrollTracker = {
   lastUpdated: "2026-10-12",
-  currentBankroll: 224,
+  currentBankroll: 228,
   goalBankroll: 10000,
   // Next short-term target, shown as a tick on the progress bar and a
   // progress line under it. Change `amount` and `label` when a milestone
