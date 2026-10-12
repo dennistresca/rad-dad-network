@@ -24,7 +24,12 @@ export const pickOfTheDay = {
       { league: "NFL", game: "Buffalo @ Los Angeles Rams", selection: "OVER 54.5" },
       { league: "NFL", game: "Buffalo @ Los Angeles Rams", selection: "Puka Nacua OVER 94.5 receiving yards" },
     ],
-    Shaun: [],
+    Shaun: [
+      { league: "MLB", game: "Los Angeles Dodgers @ Milwaukee", selection: "NRFI", note: "No Run First Inning" },
+      { league: "MLB", game: "Cleveland @ Tampa Bay", selection: "YRFI", note: "Yes Run First Inning" },
+      { league: "NHL", game: "Ottawa @ New Jersey", selection: "Ottawa ML" },
+      { league: "NFL", game: "Buffalo @ Los Angeles Rams", selection: "UNDER 54.5" },
+    ],
     Aaron: [],
   },
   records: {
