@@ -30,7 +30,11 @@ export const pickOfTheDay = {
       { league: "NHL", game: "Ottawa @ New Jersey", selection: "Ottawa ML" },
       { league: "NFL", game: "Buffalo @ Los Angeles Rams", selection: "UNDER 54.5" },
     ],
-    Aaron: [],
+    Aaron: [
+      { league: "MLB", game: "Cleveland @ Tampa Bay", selection: "Rays ML" },
+      { league: "MLB", game: "Los Angeles Dodgers @ Milwaukee", selection: "UNDER 7" },
+      { league: "NFL", game: "Buffalo @ Los Angeles Rams", selection: "Puka Nacua anytime TD" },
+    ],
   },
   records: {
     Dennis: { MLB: { wins: 34, losses: 27 }, NFL: { wins: 12, losses: 7 }, NCAAF: { wins: 11, losses: 9 }, NHL: { wins: 2, losses: 4 } },
