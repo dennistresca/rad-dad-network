@@ -24,7 +24,7 @@
 // personal Daily Picks (pickOfTheDay.js), which don't affect the bankroll.
 
 export const bankrollTracker = {
-  lastUpdated: "2026-10-11",
+  lastUpdated: "2026-10-12",
   currentBankroll: 224,
   goalBankroll: 10000,
   // Next short-term target, shown as a tick on the progress bar and a
@@ -32,11 +32,11 @@ export const bankrollTracker = {
   // is reached; remove the whole `milestone` key to hide it.
   milestone: { amount: 500, label: "Thanksgiving" },
   records: {
-    overall: { wins: 17, losses: 16 },
+    overall: { wins: 18, losses: 16 },
     collegeFootball: { wins: 13, losses: 10 },
-    nfl: { wins: 4, losses: 6 },
+    nfl: { wins: 5, losses: 6 },
     bucketsOfCash: {
-      NFL: { wins: 3, losses: 5 },
+      NFL: { wins: 4, losses: 5 },
       "College Football": { wins: 3, losses: 2 },
       MLB: { wins: 0, losses: 1 },
       Soccer: { wins: 0, losses: 1 },
@@ -51,9 +51,9 @@ export const bankrollTracker = {
         { category: "College Football", game: "South Carolina @ Florida", date: "2026-10-10", selection: "UNDER 60.5", result: "win" },
         { category: "College Football", game: "Stanford @ Notre Dame", date: "2026-10-10", selection: "OVER 54.5", result: "win" },
         { category: "NFL", game: "Cincinnati Bengals @ Miami Dolphins", date: "2026-10-11", selection: "UNDER 42.5", result: "loss" },
-        { category: "NFL", game: "Baltimore Ravens @ Atlanta Falcons", date: "2026-10-11", selection: "Baltimore Ravens +3.5" },
+        { category: "NFL", game: "Baltimore Ravens @ Atlanta Falcons", date: "2026-10-11", selection: "Baltimore Ravens +3.5", result: "win" },
         { category: "Buckets of Ca$h", game: "Duke @ Georgia Tech", date: "2026-10-10", selection: "UNDER 43.5", result: "loss" },
-        { category: "Buckets of Ca$h", game: "Baltimore Ravens @ Atlanta Falcons", date: "2026-10-11", selection: "Baltimore Ravens +3.5", note: "Same game as the official NFL bet" },
+        { category: "Buckets of Ca$h", game: "Baltimore Ravens @ Atlanta Falcons", date: "2026-10-11", selection: "Baltimore Ravens +3.5", note: "Same game as the official NFL bet", result: "win" },
         { category: "Buckets of Ca$h", game: "Milwaukee Brewers vs Los Angeles Dodgers (NLCS)", date: "2026-10-11", selection: "Brewers to win the series in 6 games" },
         { category: "Buckets of Ca$h", game: "OH Leuven @ Union Saint-Gilloise", date: "2026-10-11", selection: "Union Saint-Gilloise -1.5", result: "loss" },
       ],
