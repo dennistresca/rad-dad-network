@@ -25,8 +25,16 @@ export const pickOfTheDay = {
       { league: "NHL", game: "Tampa Bay @ New York Rangers", selection: "Tampa Bay ML" },
       { league: "NCAAF", game: "FIU @ Jacksonville State", selection: "Jacksonville State ML" },
     ],
-    Shaun: [],
-    Aaron: [],
+    Shaun: [
+      { league: "NCAAF", game: "FIU @ Jacksonville State", selection: "UNDER 43.5" },
+      { league: "NHL", game: "New Jersey @ Detroit", selection: "Red Wings ML" },
+      { league: "MLB", game: "Cleveland @ Tampa Bay", selection: "YRFI", note: "Yes Run First Inning" },
+    ],
+    Aaron: [
+      { league: "MLB", game: "Cleveland @ Tampa Bay", selection: "UNDER 7" },
+      { league: "NHL", game: "St. Louis @ Ottawa", selection: "Senators ML" },
+      { league: "NHL", game: "Edmonton @ Los Angeles", selection: "Oilers ML" },
+    ],
   },
   records: {
     Dennis: { MLB: { wins: 34, losses: 27 }, NFL: { wins: 14, losses: 7 }, NCAAF: { wins: 11, losses: 9 }, NHL: { wins: 2, losses: 4 } },
