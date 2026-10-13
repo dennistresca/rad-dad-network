@@ -18,23 +18,15 @@
 // host's record entirely until they have a graded pick in it.
 
 export const pickOfTheDay = {
-  date: "2026-10-12",
+  date: "2026-10-13",
   picks: {
     Dennis: [
-      { league: "NFL", game: "Buffalo @ Los Angeles Rams", selection: "OVER 54.5", result: "win" },
-      { league: "NFL", game: "Buffalo @ Los Angeles Rams", selection: "Puka Nacua OVER 94.5 receiving yards", result: "win" },
+      { league: "NHL", game: "Seattle @ Philadelphia", selection: "Seattle ML" },
+      { league: "NHL", game: "Tampa Bay @ New York Rangers", selection: "Tampa Bay ML" },
+      { league: "NCAAF", game: "FIU @ Jacksonville State", selection: "Jacksonville State ML" },
     ],
-    Shaun: [
-      { league: "MLB", game: "Los Angeles Dodgers @ Milwaukee", selection: "NRFI", note: "No Run First Inning", result: "loss" },
-      { league: "MLB", game: "Cleveland @ Tampa Bay", selection: "YRFI", note: "Yes Run First Inning", result: "win" },
-      { league: "NHL", game: "Ottawa @ New Jersey", selection: "Ottawa ML", result: "win" },
-      { league: "NFL", game: "Buffalo @ Los Angeles Rams", selection: "UNDER 54.5", result: "loss" },
-    ],
-    Aaron: [
-      { league: "MLB", game: "Cleveland @ Tampa Bay", selection: "Rays ML", result: "loss" },
-      { league: "MLB", game: "Los Angeles Dodgers @ Milwaukee", selection: "UNDER 7", result: "loss" },
-      { league: "NFL", game: "Buffalo @ Los Angeles Rams", selection: "Puka Nacua anytime TD", result: "win" },
-    ],
+    Shaun: [],
+    Aaron: [],
   },
   records: {
     Dennis: { MLB: { wins: 34, losses: 27 }, NFL: { wins: 14, losses: 7 }, NCAAF: { wins: 11, losses: 9 }, NHL: { wins: 2, losses: 4 } },
@@ -48,6 +40,26 @@ export const pickOfTheDay = {
 // `picks` as a new entry here (not `records`, since records are
 // cumulative and don't belong to a single day). Newest day first.
 export const pickHistory = [
+  {
+    date: "2026-10-12",
+    picks: {
+      Dennis: [
+        { league: "NFL", game: "Buffalo @ Los Angeles Rams", selection: "OVER 54.5", result: "win" },
+        { league: "NFL", game: "Buffalo @ Los Angeles Rams", selection: "Puka Nacua OVER 94.5 receiving yards", result: "win" },
+      ],
+      Shaun: [
+        { league: "MLB", game: "Los Angeles Dodgers @ Milwaukee", selection: "NRFI", note: "No Run First Inning", result: "loss" },
+        { league: "MLB", game: "Cleveland @ Tampa Bay", selection: "YRFI", note: "Yes Run First Inning", result: "win" },
+        { league: "NHL", game: "Ottawa @ New Jersey", selection: "Ottawa ML", result: "win" },
+        { league: "NFL", game: "Buffalo @ Los Angeles Rams", selection: "UNDER 54.5", result: "loss" },
+      ],
+      Aaron: [
+        { league: "MLB", game: "Cleveland @ Tampa Bay", selection: "Rays ML", result: "loss" },
+        { league: "MLB", game: "Los Angeles Dodgers @ Milwaukee", selection: "UNDER 7", result: "loss" },
+        { league: "NFL", game: "Buffalo @ Los Angeles Rams", selection: "Puka Nacua anytime TD", result: "win" },
+      ],
+    },
+  },
   {
     date: "2026-10-11",
     picks: {
