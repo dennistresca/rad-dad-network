@@ -21,25 +21,25 @@ export const pickOfTheDay = {
   date: "2026-10-12",
   picks: {
     Dennis: [
-      { league: "NFL", game: "Buffalo @ Los Angeles Rams", selection: "OVER 54.5" },
-      { league: "NFL", game: "Buffalo @ Los Angeles Rams", selection: "Puka Nacua OVER 94.5 receiving yards" },
+      { league: "NFL", game: "Buffalo @ Los Angeles Rams", selection: "OVER 54.5", result: "win" },
+      { league: "NFL", game: "Buffalo @ Los Angeles Rams", selection: "Puka Nacua OVER 94.5 receiving yards", result: "win" },
     ],
     Shaun: [
-      { league: "MLB", game: "Los Angeles Dodgers @ Milwaukee", selection: "NRFI", note: "No Run First Inning" },
-      { league: "MLB", game: "Cleveland @ Tampa Bay", selection: "YRFI", note: "Yes Run First Inning" },
-      { league: "NHL", game: "Ottawa @ New Jersey", selection: "Ottawa ML" },
-      { league: "NFL", game: "Buffalo @ Los Angeles Rams", selection: "UNDER 54.5" },
+      { league: "MLB", game: "Los Angeles Dodgers @ Milwaukee", selection: "NRFI", note: "No Run First Inning", result: "loss" },
+      { league: "MLB", game: "Cleveland @ Tampa Bay", selection: "YRFI", note: "Yes Run First Inning", result: "win" },
+      { league: "NHL", game: "Ottawa @ New Jersey", selection: "Ottawa ML", result: "win" },
+      { league: "NFL", game: "Buffalo @ Los Angeles Rams", selection: "UNDER 54.5", result: "loss" },
     ],
     Aaron: [
-      { league: "MLB", game: "Cleveland @ Tampa Bay", selection: "Rays ML" },
-      { league: "MLB", game: "Los Angeles Dodgers @ Milwaukee", selection: "UNDER 7" },
-      { league: "NFL", game: "Buffalo @ Los Angeles Rams", selection: "Puka Nacua anytime TD" },
+      { league: "MLB", game: "Cleveland @ Tampa Bay", selection: "Rays ML", result: "loss" },
+      { league: "MLB", game: "Los Angeles Dodgers @ Milwaukee", selection: "UNDER 7", result: "loss" },
+      { league: "NFL", game: "Buffalo @ Los Angeles Rams", selection: "Puka Nacua anytime TD", result: "win" },
     ],
   },
   records: {
-    Dennis: { MLB: { wins: 34, losses: 27 }, NFL: { wins: 12, losses: 7 }, NCAAF: { wins: 11, losses: 9 }, NHL: { wins: 2, losses: 4 } },
-    Shaun: { MLB: { wins: 25, losses: 27 }, NFL: { wins: 4, losses: 3 }, NCAAF: { wins: 4, losses: 5 }, NHL: { wins: 3, losses: 8 } },
-    Aaron: { MLB: { wins: 25, losses: 37 }, NFL: { wins: 0, losses: 4 }, NCAAF: { wins: 8, losses: 6 }, NHL: { wins: 5, losses: 3 }, NBA: { wins: 1, losses: 0 } },
+    Dennis: { MLB: { wins: 34, losses: 27 }, NFL: { wins: 14, losses: 7 }, NCAAF: { wins: 11, losses: 9 }, NHL: { wins: 2, losses: 4 } },
+    Shaun: { MLB: { wins: 26, losses: 28 }, NFL: { wins: 4, losses: 4 }, NCAAF: { wins: 4, losses: 5 }, NHL: { wins: 4, losses: 8 } },
+    Aaron: { MLB: { wins: 25, losses: 39 }, NFL: { wins: 1, losses: 4 }, NCAAF: { wins: 8, losses: 6 }, NHL: { wins: 5, losses: 3 }, NBA: { wins: 1, losses: 0 } },
   },
 };
 
