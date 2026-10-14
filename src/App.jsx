@@ -12,6 +12,7 @@ import NflFutures from "./pages/NflFutures";
 import ModelTracker from "./pages/ModelTracker";
 import ModelGames from "./pages/ModelGames";
 import OurBossThinksWereWorking from "./pages/OurBossThinksWereWorking";
+import SubmitPicks from "./pages/SubmitPicks";
 import Store from "./pages/Store";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -61,6 +62,7 @@ export default function App() {
               path="/our-boss-thinks-were-working"
               element={<OurBossThinksWereWorking />}
             />
+            <Route path="/submit-picks" element={<SubmitPicks />} />
             <Route path="/store" element={<Store />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />

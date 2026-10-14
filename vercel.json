@@ -25,7 +25,7 @@
       "destination": "/index.html"
     },
     {
-      "source": "/(store|about|contact|privacy|terms|our-boss-thinks-were-working)",
+      "source": "/(store|about|contact|privacy|terms|our-boss-thinks-were-working|submit-picks)",
       "destination": "/index.html"
     }
   ],
