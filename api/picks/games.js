@@ -30,6 +30,7 @@ export default async function handler(req, res) {
           label: `${teamName(away.team, league)} @ ${teamName(home.team, league)}`,
           away: away.team.shortDisplayName || away.team.location,
           home: home.team.shortDisplayName || home.team.location,
+          odds: e.odds,
         };
       })
       .filter(Boolean)
