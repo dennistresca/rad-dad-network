@@ -18,22 +18,17 @@
 // host's record entirely until they have a graded pick in it.
 
 export const pickOfTheDay = {
-  date: "2026-10-13",
+  date: "2026-10-14",
   picks: {
     Dennis: [
-      { league: "NHL", game: "Seattle @ Philadelphia", selection: "Seattle ML", result: "win" },
-      { league: "NHL", game: "Tampa Bay @ New York Rangers", selection: "Tampa Bay ML", result: "loss" },
-      { league: "NCAAF", game: "FIU @ Jacksonville State", selection: "Jacksonville State ML", result: "win" },
+      { league: "MLB", game: "Milwaukee @ Los Angeles Dodgers", selection: "Brewers ML" },
+      { league: "NHL", game: "Montreal @ Washington", selection: "Montreal ML" },
     ],
-    Shaun: [
-      { league: "NCAAF", game: "FIU @ Jacksonville State", selection: "UNDER 43.5", result: "loss" },
-      { league: "NHL", game: "New Jersey @ Detroit", selection: "Red Wings ML", result: "loss" },
-      { league: "MLB", game: "Cleveland @ Tampa Bay", selection: "YRFI", note: "Yes Run First Inning", result: "loss" },
-    ],
+    Shaun: [],
     Aaron: [
-      { league: "MLB", game: "Cleveland @ Tampa Bay", selection: "UNDER 7", result: "win" },
-      { league: "NHL", game: "St. Louis @ Ottawa", selection: "Senators ML", result: "loss" },
-      { league: "NHL", game: "Edmonton @ Los Angeles", selection: "Oilers ML", result: "win" },
+      { league: "MLB", game: "Milwaukee @ Los Angeles Dodgers", selection: "Brewers +1.5" },
+      { league: "NBA", game: "Denver @ LA Clippers", selection: "UNDER 218.5", note: "Preseason" },
+      { league: "NBA", game: "Charlotte @ Boston", selection: "Celtics -5.5", note: "Preseason" },
     ],
   },
   records: {
@@ -48,6 +43,26 @@ export const pickOfTheDay = {
 // `picks` as a new entry here (not `records`, since records are
 // cumulative and don't belong to a single day). Newest day first.
 export const pickHistory = [
+  {
+    date: "2026-10-13",
+    picks: {
+      Dennis: [
+        { league: "NHL", game: "Seattle @ Philadelphia", selection: "Seattle ML", result: "win" },
+        { league: "NHL", game: "Tampa Bay @ New York Rangers", selection: "Tampa Bay ML", result: "loss" },
+        { league: "NCAAF", game: "FIU @ Jacksonville State", selection: "Jacksonville State ML", result: "win" },
+      ],
+      Shaun: [
+        { league: "NCAAF", game: "FIU @ Jacksonville State", selection: "UNDER 43.5", result: "loss" },
+        { league: "NHL", game: "New Jersey @ Detroit", selection: "Red Wings ML", result: "loss" },
+        { league: "MLB", game: "Cleveland @ Tampa Bay", selection: "YRFI", note: "Yes Run First Inning", result: "loss" },
+      ],
+      Aaron: [
+        { league: "MLB", game: "Cleveland @ Tampa Bay", selection: "UNDER 7", result: "win" },
+        { league: "NHL", game: "St. Louis @ Ottawa", selection: "Senators ML", result: "loss" },
+        { league: "NHL", game: "Edmonton @ Los Angeles", selection: "Oilers ML", result: "win" },
+      ],
+    },
+  },
   {
     date: "2026-10-12",
     picks: {
