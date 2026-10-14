@@ -1,0 +1,65 @@
+name: Grade daily picks
+
+# Grades the Daily Picks automatically from final scores (see
+# scripts/grade-picks.mjs) and commits the result, which redeploys the site.
+# Runs twice a day: once overnight after the late games, and once mid-morning
+# to catch anything that wasn't final yet. Safe to run more than once, it
+# only touches picks that don't have a result yet.
+#
+# Optional repository secrets for the review email (Settings > Secrets and
+# variables > Actions): RESEND_API_KEY and REVIEW_EMAIL_TO (comma-separated).
+# Without them the grader still works and writes its report to the run log.
+
+on:
+  schedule:
+    - cron: "0 8 * * *"   # 4:00 a.m. Eastern (3:00 a.m. in winter)
+    - cron: "0 13 * * *"  # 9:00 a.m. Eastern (8:00 a.m. in winter)
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run: show what would be graded without changing anything"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: grade-picks
+  cancel-in-progress: false
+
+jobs:
+  grade:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Grade picks
+        id: grade
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          REVIEW_EMAIL_TO: ${{ secrets.REVIEW_EMAIL_TO }}
+        run: |
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            node scripts/grade-picks.mjs --dry-run
+          else
+            node scripts/grade-picks.mjs
+          fi
+
+      - name: Commit results
+        if: ${{ inputs.dry_run != true }}
+        run: |
+          if git diff --quiet -- src/data/pickOfTheDay.js; then
+            echo "Nothing new to commit."
+            exit 0
+          fi
+          git config user.name "Rad Dad Network bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add src/data/pickOfTheDay.js
+          git commit -m "Auto-grade Daily Picks (${{ steps.grade.outputs.graded }} graded)"
+          git pull --rebase origin main
+          git push
