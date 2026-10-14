@@ -36,8 +36,8 @@ export const pickOfTheDay = {
     ],
   },
   records: {
-    Dennis: { MLB: { wins: 34, losses: 27 }, NFL: { wins: 14, losses: 7 }, NCAAF: { wins: 12, losses: 9 }, NHL: { wins: 3, losses: 5 } },
-    Shaun: { MLB: { wins: 26, losses: 29 }, NFL: { wins: 4, losses: 4 }, NCAAF: { wins: 4, losses: 6 }, NHL: { wins: 4, losses: 9 } },
+    Dennis: { MLB: { wins: 34, losses: 27 }, NFL: { wins: 14, losses: 7 }, NCAAF: { wins: 12, losses: 9 }, NHL: { wins: 4, losses: 4 } },
+    Shaun: { MLB: { wins: 26, losses: 29 }, NFL: { wins: 4, losses: 4 }, NCAAF: { wins: 4, losses: 6 }, NHL: { wins: 6, losses: 7 } },
     Aaron: { MLB: { wins: 26, losses: 39 }, NFL: { wins: 1, losses: 4 }, NCAAF: { wins: 8, losses: 6 }, NHL: { wins: 6, losses: 4 }, NBA: { wins: 1, losses: 0 } },
   },
 };
@@ -234,12 +234,12 @@ export const pickHistory = [
     picks: {
       Dennis: [
         { league: "NCAAF", game: "Penn State @ Northwestern", selection: "Northwestern +2.5", odds: "+106", result: "win" },
-        { league: "NHL", game: "Anaheim @ Vegas", selection: "OVER 6.5", odds: "-120", result: "loss" },
+        { league: "NHL", game: "Anaheim @ Vegas", selection: "OVER 6.5", odds: "-120", result: "win" },
       ],
       Shaun: [
         { league: "NHL", game: "St. Louis @ Dallas", selection: "Dallas -1.5", result: "loss" },
         { league: "NHL", game: "Boston @ Winnipeg", selection: "UNDER 5.5", result: "loss" },
-        { league: "NHL", game: "St. Louis @ Dallas", selection: "UNDER 5.5", result: "loss" },
+        { league: "NHL", game: "St. Louis @ Dallas", selection: "UNDER 5.5", result: "win" },
       ],
       Aaron: [
         { league: "NCAAF", game: "Pittsburgh @ Virginia Tech", selection: "Pittsburgh +3.5", result: "win" },
@@ -274,7 +274,7 @@ export const pickHistory = [
       ],
       Shaun: [
         { league: "MLB", game: "San Diego @ Chicago", selection: "Padres ML", result: "win" },
-        { league: "NHL", game: "Toronto @ New York Islanders", selection: "UNDER 6.5", result: "loss" },
+        { league: "NHL", game: "New York Islanders @ Toronto", selection: "UNDER 6.5", result: "win" },
         { league: "NHL", game: "Los Angeles @ Colorado", selection: "Avalanche -1.5", result: "win" },
       ],
       Aaron: [
