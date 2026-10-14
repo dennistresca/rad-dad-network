@@ -24,7 +24,11 @@ export const pickOfTheDay = {
       { league: "MLB", game: "Milwaukee @ Los Angeles Dodgers", selection: "Brewers ML" },
       { league: "NHL", game: "Montreal @ Washington", selection: "Montreal ML" },
     ],
-    Shaun: [],
+    Shaun: [
+      { league: "NCAAF", game: "Western Kentucky @ Sam Houston", selection: "Sam Houston +1.5" },
+      { league: "MLB", game: "Milwaukee @ Los Angeles Dodgers", selection: "Dodgers -1.5" },
+      { league: "NHL", game: "Dallas @ Colorado", selection: "OVER 5.5" },
+    ],
     Aaron: [
       { league: "MLB", game: "Milwaukee @ Los Angeles Dodgers", selection: "Brewers +1.5" },
       { league: "NBA", game: "Denver @ LA Clippers", selection: "UNDER 218.5", note: "Preseason" },
