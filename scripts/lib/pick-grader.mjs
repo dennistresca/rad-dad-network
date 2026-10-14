@@ -110,6 +110,21 @@ async function getJson(url) {
   throw new Error(`ESPN request failed (${url}): ${lastError?.message}`);
 }
 
+// Current DraftKings lines from the feed, when it has them: moneyline per side,
+// spread (line and price) per side, and the total (line and prices). Used to
+// prefill the pick-entry form; never used for grading.
+function simplifyOdds(comp) {
+  const o = comp.odds?.[0];
+  if (!o) return null;
+  const side = (x) => (x?.close ? { line: x.close.line, odds: x.close.odds } : null);
+  const total = (x) => (x?.close ? { line: String(x.close.line ?? "").replace(/^[ou]/i, ""), odds: x.close.odds } : null);
+  return {
+    ml: { home: o.moneyline?.home?.close?.odds ?? null, away: o.moneyline?.away?.close?.odds ?? null },
+    spread: { home: side(o.pointSpread?.home), away: side(o.pointSpread?.away) },
+    total: { over: total(o.total?.over), under: total(o.total?.under) },
+  };
+}
+
 function simplifyEvent(raw) {
   const comp = raw.competitions?.[0];
   if (!comp) return null;
@@ -121,6 +136,7 @@ function simplifyEvent(raw) {
     state: status.state,
     statusName: status.name,
     detail: status.detail ?? status.shortDetail ?? "",
+    odds: simplifyOdds(comp),
     competitors: comp.competitors.map((c) => ({
       homeAway: c.homeAway,
       score: c.score === undefined ? null : Number(c.score),

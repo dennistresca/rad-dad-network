@@ -243,6 +243,27 @@ function PickForm({ host, pin, setState }) {
     return `${t} ET`;
   }
 
+  // DraftKings numbers from ESPN for the chosen game and bet, used to prefill
+  // the line and odds. Hosts can overwrite either one.
+  const suggest = (() => {
+    const o = game?.odds;
+    if (!o) return null;
+    if (betType === "ml" && side) return o.ml[side] ? { odds: o.ml[side] } : null;
+    if (betType === "spread" && side) return o.spread[side] ? { line: o.spread[side].line, odds: o.spread[side].odds } : null;
+    if (betType === "total") {
+      const t = o.total[overUnder.toLowerCase()];
+      return t ? { line: t.line, odds: t.odds } : null;
+    }
+    return null;
+  })();
+
+  useEffect(() => {
+    if (!suggest) return;
+    if (suggest.line !== undefined) setLine(String(suggest.line));
+    setOdds(suggest.odds ?? "");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [gameId, betType, side, overUnder, games]);
+
   // The pick text exactly as it will appear on the site.
   const selection = (() => {
     if (betType === "total") return line !== "" && !Number.isNaN(Number(line)) ? `${overUnder} ${Number(line)}` : "";
@@ -436,6 +457,9 @@ function PickForm({ host, pin, setState }) {
             Odds <span className="font-normal text-neutral-500">(optional)</span>
           </label>
           <input id={ids.odds} value={odds} onChange={(e) => setOdds(e.target.value)} placeholder="-110" className={inputClass} />
+          {suggest?.odds && odds === suggest.odds && (
+            <p className="mt-1 text-xs text-neutral-500">DraftKings line. Change it if yours differs.</p>
+          )}
         </div>
         <div>
           <label htmlFor={ids.note} className={labelClass}>
