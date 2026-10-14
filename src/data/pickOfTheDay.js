@@ -21,7 +21,6 @@ export const pickOfTheDay = {
   date: "2026-10-14",
   picks: {
     Dennis: [
-      { league: "MLB", game: "Milwaukee @ Los Angeles Dodgers", selection: "Brewers ML" },
       { league: "NHL", game: "Montreal @ Washington", selection: "Montreal ML" },
     ],
     Shaun: [
