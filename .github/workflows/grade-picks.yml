@@ -2,8 +2,8 @@ name: Grade daily picks
 
 # Grades the Daily Picks automatically from final scores (see
 # scripts/grade-picks.mjs) and commits the result, which redeploys the site.
-# Runs twice a day: once overnight after the late games, and once mid-morning
-# to catch anything that wasn't final yet. Safe to run more than once, it
+# Runs three times a day: right after the late games, again before dawn, and
+# once mid-morning to catch anything that wasn't final yet. Safe to run more than once, it
 # only touches picks that don't have a result yet.
 #
 # Optional repository secrets for the review email (Settings > Secrets and
@@ -12,6 +12,7 @@ name: Grade daily picks
 
 on:
   schedule:
+    - cron: "30 5 * * *"  # 1:30 a.m. Eastern (12:30 a.m. in winter), right after the late games
     - cron: "0 8 * * *"   # 4:00 a.m. Eastern (3:00 a.m. in winter)
     - cron: "0 13 * * *"  # 9:00 a.m. Eastern (8:00 a.m. in winter)
   workflow_dispatch:
