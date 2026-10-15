@@ -25,7 +25,9 @@ export const pickOfTheDay = {
       { league: "NFL", game: "Seattle @ Denver", selection: "Seahawks -2.5", odds: "-112" },
       { league: "NHL", game: "New York Rangers @ New Jersey", selection: "OVER 6.5", odds: "+114" },
     ],
-    Shaun: [],
+    Shaun: [
+      { league: "NFL", game: "Seattle @ Denver", selection: "UNDER 40.5", odds: "-102" },
+    ],
     Aaron: [
       { league: "NFL", game: "Seattle @ Denver", selection: "Bo Nix u199.5 Passing Yards", odds: "-112" },
       { league: "NHL", game: "Philadelphia @ Detroit", selection: "Red Wings ML", odds: "-142" },
