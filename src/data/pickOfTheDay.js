@@ -28,6 +28,7 @@ export const pickOfTheDay = {
     Shaun: [],
     Aaron: [
       { league: "NFL", game: "Seattle @ Denver", selection: "Bo Nix u199.5 Passing Yards", odds: "-112" },
+      { league: "NHL", game: "Philadelphia @ Detroit", selection: "Red Wings ML", odds: "-142" },
     ],
   },
   records: {
