@@ -26,7 +26,9 @@ export const pickOfTheDay = {
       { league: "NHL", game: "New York Rangers @ New Jersey", selection: "OVER 6.5", odds: "+114" },
     ],
     Shaun: [],
-    Aaron: [],
+    Aaron: [
+      { league: "NFL", game: "Seattle @ Denver", selection: "Bo Nix u199.5 Passing Yards", odds: "-112" },
+    ],
   },
   records: {
     Dennis: { MLB: { wins: 35, losses: 27 }, NFL: { wins: 14, losses: 7 }, NCAAF: { wins: 12, losses: 9 }, NHL: { wins: 4, losses: 5 } },
