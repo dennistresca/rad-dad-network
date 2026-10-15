@@ -18,22 +18,13 @@
 // host's record entirely until they have a graded pick in it.
 
 export const pickOfTheDay = {
-  date: "2026-10-14",
+  date: "2026-10-15",
   picks: {
     Dennis: [
-      { league: "NHL", game: "Montreal @ Washington", selection: "Montreal ML", result: "loss" },
-      { league: "MLB", game: "Milwaukee @ Los Angeles Dodgers", selection: "Brewers ML", result: "win" },
+      { league: "MLB", game: "Tampa Bay @ Cleveland", selection: "Guardians -1.5", odds: "+165" },
     ],
-    Shaun: [
-      { league: "NCAAF", game: "Western Kentucky @ Sam Houston", selection: "Sam Houston +1.5", result: "loss" },
-      { league: "MLB", game: "Milwaukee @ Los Angeles Dodgers", selection: "Dodgers -1.5", result: "loss" },
-      { league: "NHL", game: "Dallas @ Colorado", selection: "OVER 5.5", result: "loss" },
-    ],
-    Aaron: [
-      { league: "MLB", game: "Milwaukee @ Los Angeles Dodgers", selection: "Brewers +1.5", result: "win" },
-      { league: "NBA", game: "Denver @ LA Clippers", selection: "UNDER 218.5", note: "Preseason", result: "loss" },
-      { league: "NBA", game: "Charlotte @ Boston", selection: "Celtics -5.5", note: "Preseason", result: "win" },
-    ],
+    Shaun: [],
+    Aaron: [],
   },
   records: {
     Dennis: { MLB: { wins: 35, losses: 27 }, NFL: { wins: 14, losses: 7 }, NCAAF: { wins: 12, losses: 9 }, NHL: { wins: 4, losses: 5 } },
@@ -47,6 +38,25 @@ export const pickOfTheDay = {
 // `picks` as a new entry here (not `records`, since records are
 // cumulative and don't belong to a single day). Newest day first.
 export const pickHistory = [
+  {
+    date: "2026-10-14",
+    picks: {
+      Dennis: [
+        { league: "NHL", game: "Montreal @ Washington", selection: "Montreal ML", result: "loss" },
+        { league: "MLB", game: "Milwaukee @ Los Angeles Dodgers", selection: "Brewers ML", result: "win" },
+      ],
+      Shaun: [
+        { league: "NCAAF", game: "Western Kentucky @ Sam Houston", selection: "Sam Houston +1.5", result: "loss" },
+        { league: "MLB", game: "Milwaukee @ Los Angeles Dodgers", selection: "Dodgers -1.5", result: "loss" },
+        { league: "NHL", game: "Dallas @ Colorado", selection: "OVER 5.5", result: "loss" },
+      ],
+      Aaron: [
+        { league: "MLB", game: "Milwaukee @ Los Angeles Dodgers", selection: "Brewers +1.5", result: "win" },
+        { league: "NBA", game: "Denver @ LA Clippers", selection: "UNDER 218.5", note: "Preseason", result: "loss" },
+        { league: "NBA", game: "Charlotte @ Boston", selection: "Celtics -5.5", note: "Preseason", result: "win" },
+      ],
+    },
+  },
   {
     date: "2026-10-13",
     picks: {
