@@ -30,7 +30,7 @@ export const pickOfTheDay = {
   records: {
     Dennis: { MLB: { wins: 35, losses: 28 }, NFL: { wins: 14, losses: 8 }, NCAAF: { wins: 12, losses: 9 }, NHL: { wins: 5, losses: 5 } },
     Shaun: { MLB: { wins: 26, losses: 30 }, NFL: { wins: 5, losses: 4 }, NCAAF: { wins: 4, losses: 7 }, NHL: { wins: 7, losses: 9 } },
-    Aaron: { MLB: { wins: 27, losses: 39 }, NFL: { wins: 1, losses: 4 }, NCAAF: { wins: 8, losses: 6 }, NHL: { wins: 8, losses: 4 }, NBA: { wins: 2, losses: 1 } },
+    Aaron: { MLB: { wins: 27, losses: 39 }, NFL: { wins: 2, losses: 4 }, NCAAF: { wins: 8, losses: 6 }, NHL: { wins: 8, losses: 4 }, NBA: { wins: 2, losses: 1 } },
   },
 };
 
@@ -53,7 +53,7 @@ export const pickHistory = [
         { league: "NHL", game: "Calgary @ Vegas", selection: "Golden Knights -1.5", odds: "-125", result: "win" },
       ],
       Aaron: [
-        { league: "NFL", game: "Seattle @ Denver", selection: "Bo Nix u199.5 Passing Yards", odds: "-112" },
+        { league: "NFL", game: "Seattle @ Denver", selection: "Bo Nix u199.5 Passing Yards", odds: "-112", result: "win" },
         { league: "NHL", game: "Philadelphia @ Detroit", selection: "Red Wings ML", odds: "-142", result: "win" },
         { league: "NHL", game: "St. Louis @ Minnesota", selection: "OVER 5.5", odds: "-135", result: "win" },
       ],
