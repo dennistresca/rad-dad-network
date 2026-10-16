@@ -21,25 +21,25 @@ export const pickOfTheDay = {
   date: "2026-10-15",
   picks: {
     Dennis: [
-      { league: "MLB", game: "Tampa Bay @ Cleveland", selection: "Guardians -1.5", odds: "+165" },
-      { league: "NFL", game: "Seattle @ Denver", selection: "Seahawks -2.5", odds: "-112" },
-      { league: "NHL", game: "New York Rangers @ New Jersey", selection: "OVER 6.5", odds: "+114" },
+      { league: "MLB", game: "Tampa Bay @ Cleveland", selection: "Guardians -1.5", odds: "+165", result: "loss" },
+      { league: "NFL", game: "Seattle @ Denver", selection: "Seahawks -2.5", odds: "-112", result: "loss" },
+      { league: "NHL", game: "New York Rangers @ New Jersey", selection: "OVER 6.5", odds: "+114", result: "win" },
     ],
     Shaun: [
-      { league: "NFL", game: "Seattle @ Denver", selection: "UNDER 40.5", odds: "-102" },
-      { league: "NHL", game: "Seattle @ Tampa Bay", selection: "UNDER 6.5", odds: "-130" },
-      { league: "NHL", game: "Calgary @ Vegas", selection: "Golden Knights -1.5", odds: "-125" },
+      { league: "NFL", game: "Seattle @ Denver", selection: "UNDER 40.5", odds: "-102", result: "win" },
+      { league: "NHL", game: "Seattle @ Tampa Bay", selection: "UNDER 6.5", odds: "-130", result: "loss" },
+      { league: "NHL", game: "Calgary @ Vegas", selection: "Golden Knights -1.5", odds: "-125", result: "win" },
     ],
     Aaron: [
       { league: "NFL", game: "Seattle @ Denver", selection: "Bo Nix u199.5 Passing Yards", odds: "-112" },
-      { league: "NHL", game: "Philadelphia @ Detroit", selection: "Red Wings ML", odds: "-142" },
-      { league: "NHL", game: "St. Louis @ Minnesota", selection: "OVER 5.5", odds: "-135" },
+      { league: "NHL", game: "Philadelphia @ Detroit", selection: "Red Wings ML", odds: "-142", result: "win" },
+      { league: "NHL", game: "St. Louis @ Minnesota", selection: "OVER 5.5", odds: "-135", result: "win" },
     ],
   },
   records: {
-    Dennis: { MLB: { wins: 35, losses: 27 }, NFL: { wins: 14, losses: 7 }, NCAAF: { wins: 12, losses: 9 }, NHL: { wins: 4, losses: 5 } },
-    Shaun: { MLB: { wins: 26, losses: 30 }, NFL: { wins: 4, losses: 4 }, NCAAF: { wins: 4, losses: 7 }, NHL: { wins: 6, losses: 8 } },
-    Aaron: { MLB: { wins: 27, losses: 39 }, NFL: { wins: 1, losses: 4 }, NCAAF: { wins: 8, losses: 6 }, NHL: { wins: 6, losses: 4 }, NBA: { wins: 2, losses: 1 } },
+    Dennis: { MLB: { wins: 35, losses: 28 }, NFL: { wins: 14, losses: 8 }, NCAAF: { wins: 12, losses: 9 }, NHL: { wins: 5, losses: 5 } },
+    Shaun: { MLB: { wins: 26, losses: 30 }, NFL: { wins: 5, losses: 4 }, NCAAF: { wins: 4, losses: 7 }, NHL: { wins: 7, losses: 9 } },
+    Aaron: { MLB: { wins: 27, losses: 39 }, NFL: { wins: 1, losses: 4 }, NCAAF: { wins: 8, losses: 6 }, NHL: { wins: 8, losses: 4 }, NBA: { wins: 2, losses: 1 } },
   },
 };
 
