@@ -29,7 +29,9 @@ export const pickOfTheDay = {
       { league: "NCAAF", game: "Memphis @ Tulane", selection: "OVER 55.5", odds: "-112" },
       { league: "NHL", game: "Pittsburgh @ Colorado", selection: "Penguins ML", odds: "+160" },
     ],
-    Aaron: [],
+    Aaron: [
+      { league: "NCAAF", game: "Washington @ Purdue", selection: "OVER 50.5", odds: "-112" },
+    ],
   },
   records: {
     Dennis: { MLB: { wins: 35, losses: 28 }, NFL: { wins: 14, losses: 8 }, NCAAF: { wins: 12, losses: 9 }, NHL: { wins: 5, losses: 5 } },
