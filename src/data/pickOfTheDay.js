@@ -32,6 +32,7 @@ export const pickOfTheDay = {
     Aaron: [
       { league: "NCAAF", game: "Washington @ Purdue", selection: "OVER 50.5", odds: "-112" },
       { league: "NBA", game: "Sacramento @ San Antonio", selection: "OVER 230.5", odds: "-105" },
+      { league: "NCAAF", game: "Memphis @ Tulane", selection: "Memphis ML", odds: "-270" },
     ],
   },
   records: {
