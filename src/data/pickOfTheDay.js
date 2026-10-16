@@ -18,23 +18,13 @@
 // host's record entirely until they have a graded pick in it.
 
 export const pickOfTheDay = {
-  date: "2026-10-15",
+  date: "2026-10-16",
   picks: {
     Dennis: [
-      { league: "MLB", game: "Tampa Bay @ Cleveland", selection: "Guardians -1.5", odds: "+165", result: "loss" },
-      { league: "NFL", game: "Seattle @ Denver", selection: "Seahawks -2.5", odds: "-112", result: "loss" },
-      { league: "NHL", game: "New York Rangers @ New Jersey", selection: "OVER 6.5", odds: "+114", result: "win" },
+      { league: "NCAAF", game: "Memphis @ Tulane", selection: "Memphis -7", odds: "-108" },
     ],
-    Shaun: [
-      { league: "NFL", game: "Seattle @ Denver", selection: "UNDER 40.5", odds: "-102", result: "win" },
-      { league: "NHL", game: "Seattle @ Tampa Bay", selection: "UNDER 6.5", odds: "-130", result: "loss" },
-      { league: "NHL", game: "Calgary @ Vegas", selection: "Golden Knights -1.5", odds: "-125", result: "win" },
-    ],
-    Aaron: [
-      { league: "NFL", game: "Seattle @ Denver", selection: "Bo Nix u199.5 Passing Yards", odds: "-112" },
-      { league: "NHL", game: "Philadelphia @ Detroit", selection: "Red Wings ML", odds: "-142", result: "win" },
-      { league: "NHL", game: "St. Louis @ Minnesota", selection: "OVER 5.5", odds: "-135", result: "win" },
-    ],
+    Shaun: [],
+    Aaron: [],
   },
   records: {
     Dennis: { MLB: { wins: 35, losses: 28 }, NFL: { wins: 14, losses: 8 }, NCAAF: { wins: 12, losses: 9 }, NHL: { wins: 5, losses: 5 } },
@@ -48,6 +38,26 @@ export const pickOfTheDay = {
 // `picks` as a new entry here (not `records`, since records are
 // cumulative and don't belong to a single day). Newest day first.
 export const pickHistory = [
+  {
+    date: "2026-10-15",
+    picks: {
+      Dennis: [
+        { league: "MLB", game: "Tampa Bay @ Cleveland", selection: "Guardians -1.5", odds: "+165", result: "loss" },
+        { league: "NFL", game: "Seattle @ Denver", selection: "Seahawks -2.5", odds: "-112", result: "loss" },
+        { league: "NHL", game: "New York Rangers @ New Jersey", selection: "OVER 6.5", odds: "+114", result: "win" },
+      ],
+      Shaun: [
+        { league: "NFL", game: "Seattle @ Denver", selection: "UNDER 40.5", odds: "-102", result: "win" },
+        { league: "NHL", game: "Seattle @ Tampa Bay", selection: "UNDER 6.5", odds: "-130", result: "loss" },
+        { league: "NHL", game: "Calgary @ Vegas", selection: "Golden Knights -1.5", odds: "-125", result: "win" },
+      ],
+      Aaron: [
+        { league: "NFL", game: "Seattle @ Denver", selection: "Bo Nix u199.5 Passing Yards", odds: "-112" },
+        { league: "NHL", game: "Philadelphia @ Detroit", selection: "Red Wings ML", odds: "-142", result: "win" },
+        { league: "NHL", game: "St. Louis @ Minnesota", selection: "OVER 5.5", odds: "-135", result: "win" },
+      ],
+    },
+  },
   {
     date: "2026-10-14",
     picks: {
