@@ -18,22 +18,13 @@
 // host's record entirely until they have a graded pick in it.
 
 export const pickOfTheDay = {
-  date: "2026-10-16",
+  date: "2026-10-17",
   picks: {
     Dennis: [
-      { league: "NCAAF", game: "Memphis @ Tulane", selection: "Memphis -7", odds: "-108", result: "loss" },
-      { league: "MLB", game: "Tampa Bay @ Cleveland", selection: "Rays ML", odds: "-112" },
+      { league: "NCAAF", game: "Ohio State @ Indiana", selection: "Indiana +3.5", odds: "-110" },
     ],
-    Shaun: [
-      { league: "MLB", game: "Tampa Bay @ Cleveland", selection: "OVER 6.5", odds: "-114" },
-      { league: "NCAAF", game: "Memphis @ Tulane", selection: "OVER 55.5", odds: "-112", result: "loss" },
-      { league: "NHL", game: "Pittsburgh @ Colorado", selection: "Penguins ML", odds: "+160", result: "loss" },
-    ],
-    Aaron: [
-      { league: "NCAAF", game: "Washington @ Purdue", selection: "OVER 50.5", odds: "-112", result: "win" },
-      { league: "NBA", game: "Sacramento @ San Antonio", selection: "OVER 230.5", odds: "-105", result: "loss" },
-      { league: "NCAAF", game: "Memphis @ Tulane", selection: "Memphis ML", odds: "-270", result: "loss" },
-    ],
+    Shaun: [],
+    Aaron: [],
   },
   records: {
     Dennis: { MLB: { wins: 35, losses: 28 }, NFL: { wins: 14, losses: 8 }, NCAAF: { wins: 12, losses: 10 }, NHL: { wins: 5, losses: 5 } },
@@ -47,6 +38,25 @@ export const pickOfTheDay = {
 // `picks` as a new entry here (not `records`, since records are
 // cumulative and don't belong to a single day). Newest day first.
 export const pickHistory = [
+  {
+    date: "2026-10-16",
+    picks: {
+      Dennis: [
+        { league: "NCAAF", game: "Memphis @ Tulane", selection: "Memphis -7", odds: "-108", result: "loss" },
+        { league: "MLB", game: "Tampa Bay @ Cleveland", selection: "Rays ML", odds: "-112" },
+      ],
+      Shaun: [
+        { league: "MLB", game: "Tampa Bay @ Cleveland", selection: "OVER 6.5", odds: "-114" },
+        { league: "NCAAF", game: "Memphis @ Tulane", selection: "OVER 55.5", odds: "-112", result: "loss" },
+        { league: "NHL", game: "Pittsburgh @ Colorado", selection: "Penguins ML", odds: "+160", result: "loss" },
+      ],
+      Aaron: [
+        { league: "NCAAF", game: "Washington @ Purdue", selection: "OVER 50.5", odds: "-112", result: "win" },
+        { league: "NBA", game: "Sacramento @ San Antonio", selection: "OVER 230.5", odds: "-105", result: "loss" },
+        { league: "NCAAF", game: "Memphis @ Tulane", selection: "Memphis ML", odds: "-270", result: "loss" },
+      ],
+    },
+  },
   {
     date: "2026-10-15",
     picks: {
