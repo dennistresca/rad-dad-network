@@ -27,18 +27,18 @@ export const pickOfTheDay = {
     Shaun: [
       { league: "MLB", game: "Tampa Bay @ Cleveland", selection: "OVER 6.5", odds: "-114" },
       { league: "NCAAF", game: "Memphis @ Tulane", selection: "OVER 55.5", odds: "-112", result: "loss" },
-      { league: "NHL", game: "Pittsburgh @ Colorado", selection: "Penguins ML", odds: "+160" },
+      { league: "NHL", game: "Pittsburgh @ Colorado", selection: "Penguins ML", odds: "+160", result: "loss" },
     ],
     Aaron: [
-      { league: "NCAAF", game: "Washington @ Purdue", selection: "OVER 50.5", odds: "-112" },
+      { league: "NCAAF", game: "Washington @ Purdue", selection: "OVER 50.5", odds: "-112", result: "win" },
       { league: "NBA", game: "Sacramento @ San Antonio", selection: "OVER 230.5", odds: "-105", result: "loss" },
       { league: "NCAAF", game: "Memphis @ Tulane", selection: "Memphis ML", odds: "-270", result: "loss" },
     ],
   },
   records: {
     Dennis: { MLB: { wins: 35, losses: 28 }, NFL: { wins: 14, losses: 8 }, NCAAF: { wins: 12, losses: 10 }, NHL: { wins: 5, losses: 5 } },
-    Shaun: { MLB: { wins: 26, losses: 30 }, NFL: { wins: 5, losses: 4 }, NCAAF: { wins: 4, losses: 8 }, NHL: { wins: 7, losses: 9 } },
-    Aaron: { MLB: { wins: 27, losses: 39 }, NFL: { wins: 2, losses: 4 }, NCAAF: { wins: 8, losses: 7 }, NHL: { wins: 8, losses: 4 }, NBA: { wins: 2, losses: 2 } },
+    Shaun: { MLB: { wins: 26, losses: 30 }, NFL: { wins: 5, losses: 4 }, NCAAF: { wins: 4, losses: 8 }, NHL: { wins: 7, losses: 10 } },
+    Aaron: { MLB: { wins: 27, losses: 39 }, NFL: { wins: 2, losses: 4 }, NCAAF: { wins: 9, losses: 7 }, NHL: { wins: 8, losses: 4 }, NBA: { wins: 2, losses: 2 } },
   },
 };
 
