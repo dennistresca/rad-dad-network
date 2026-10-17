@@ -24,7 +24,7 @@
 // personal Daily Picks (pickOfTheDay.js), which don't affect the bankroll.
 
 export const bankrollTracker = {
-  lastUpdated: "2026-10-16",
+  lastUpdated: "2026-10-17",
   currentBankroll: 229,
   goalBankroll: 10000,
   // Next short-term target, shown as a tick on the progress bar and a
@@ -43,6 +43,15 @@ export const bankrollTracker = {
     },
   },
   weeklyBets: [
+    {
+      episode: "Episode 8 Bets",
+      date: "2026-10-16",
+      bets: [
+        { category: "College Football", game: "Rutgers @ Maryland", date: "2026-10-17", selection: "UNDER 56.5" },
+        { category: "College Football", game: "Auburn @ Georgia", date: "2026-10-17", selection: "OVER 51.5" },
+        { category: "College Football", game: "Notre Dame @ BYU", date: "2026-10-17", selection: "UNDER 51.5" },
+      ],
+    },
     {
       episode: "Episode 7 Bets",
       date: "2026-10-09",
