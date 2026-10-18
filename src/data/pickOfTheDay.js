@@ -29,8 +29,8 @@ export const pickOfTheDay = {
     Aaron: [],
   },
   records: {
-    Dennis: { MLB: { wins: 35, losses: 28 }, NFL: { wins: 14, losses: 8 }, NCAAF: { wins: 13, losses: 12 }, NHL: { wins: 5, losses: 5 } },
-    Shaun: { MLB: { wins: 26, losses: 30 }, NFL: { wins: 5, losses: 4 }, NCAAF: { wins: 4, losses: 8 }, NHL: { wins: 7, losses: 10 } },
+    Dennis: { MLB: { wins: 36, losses: 28 }, NFL: { wins: 14, losses: 8 }, NCAAF: { wins: 13, losses: 12 }, NHL: { wins: 5, losses: 5 } },
+    Shaun: { MLB: { wins: 27, losses: 30 }, NFL: { wins: 5, losses: 4 }, NCAAF: { wins: 4, losses: 8 }, NHL: { wins: 7, losses: 10 } },
     Aaron: { MLB: { wins: 27, losses: 39 }, NFL: { wins: 2, losses: 4 }, NCAAF: { wins: 9, losses: 7 }, NHL: { wins: 8, losses: 4 }, NBA: { wins: 2, losses: 2 } },
   },
 };
@@ -45,10 +45,10 @@ export const pickHistory = [
     picks: {
       Dennis: [
         { league: "NCAAF", game: "Memphis @ Tulane", selection: "Memphis -7", odds: "-108", result: "loss" },
-        { league: "MLB", game: "Tampa Bay @ Cleveland", selection: "Rays ML", odds: "-112" },
+        { league: "MLB", game: "Tampa Bay @ Cleveland", selection: "Rays ML", odds: "-112", note: "Postponed Oct 16, played Oct 17", result: "win" },
       ],
       Shaun: [
-        { league: "MLB", game: "Tampa Bay @ Cleveland", selection: "OVER 6.5", odds: "-114" },
+        { league: "MLB", game: "Tampa Bay @ Cleveland", selection: "OVER 6.5", odds: "-114", note: "Postponed Oct 16, played Oct 17", result: "win" },
         { league: "NCAAF", game: "Memphis @ Tulane", selection: "OVER 55.5", odds: "-112", result: "loss" },
         { league: "NHL", game: "Pittsburgh @ Colorado", selection: "Penguins ML", odds: "+160", result: "loss" },
       ],
