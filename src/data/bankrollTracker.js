@@ -24,7 +24,7 @@
 // personal Daily Picks (pickOfTheDay.js), which don't affect the bankroll.
 
 export const bankrollTracker = {
-  lastUpdated: "2026-10-17",
+  lastUpdated: "2026-10-18",
   currentBankroll: 229,
   goalBankroll: 10000,
   // Next short-term target, shown as a tick on the progress bar and a
@@ -32,8 +32,8 @@ export const bankrollTracker = {
   // is reached; remove the whole `milestone` key to hide it.
   milestone: { amount: 500, label: "Thanksgiving" },
   records: {
-    overall: { wins: 18, losses: 16 },
-    collegeFootball: { wins: 13, losses: 10 },
+    overall: { wins: 18, losses: 19 },
+    collegeFootball: { wins: 13, losses: 13 },
     nfl: { wins: 5, losses: 6 },
     bucketsOfCash: {
       NFL: { wins: 4, losses: 5 },
@@ -47,9 +47,9 @@ export const bankrollTracker = {
       episode: "Episode 8 Bets",
       date: "2026-10-16",
       bets: [
-        { category: "College Football", game: "Rutgers @ Maryland", date: "2026-10-17", selection: "UNDER 56.5" },
-        { category: "College Football", game: "Auburn @ Georgia", date: "2026-10-17", selection: "OVER 51.5" },
-        { category: "College Football", game: "Notre Dame @ BYU", date: "2026-10-17", selection: "UNDER 51.5" },
+        { category: "College Football", game: "Rutgers @ Maryland", date: "2026-10-17", selection: "UNDER 56.5", result: "loss" },
+        { category: "College Football", game: "Auburn @ Georgia", date: "2026-10-17", selection: "OVER 51.5", result: "loss" },
+        { category: "College Football", game: "Notre Dame @ BYU", date: "2026-10-17", selection: "UNDER 51.5", result: "loss" },
       ],
     },
     {
