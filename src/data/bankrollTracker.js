@@ -32,9 +32,9 @@ export const bankrollTracker = {
   // is reached; remove the whole `milestone` key to hide it.
   milestone: { amount: 500, label: "Thanksgiving" },
   records: {
-    overall: { wins: 18, losses: 19 },
+    overall: { wins: 18, losses: 20 },
     collegeFootball: { wins: 13, losses: 13 },
-    nfl: { wins: 5, losses: 6 },
+    nfl: { wins: 5, losses: 7 },
     bucketsOfCash: {
       NFL: { wins: 4, losses: 5 },
       "College Football": { wins: 3, losses: 2 },
@@ -50,7 +50,7 @@ export const bankrollTracker = {
         { category: "College Football", game: "Rutgers @ Maryland", date: "2026-10-17", selection: "UNDER 56.5", result: "loss" },
         { category: "College Football", game: "Auburn @ Georgia", date: "2026-10-17", selection: "OVER 51.5", result: "loss" },
         { category: "College Football", game: "Notre Dame @ BYU", date: "2026-10-17", selection: "UNDER 51.5", result: "loss" },
-        { category: "NFL", game: "Houston Texans @ Jacksonville Jaguars (London)", date: "2026-10-18", selection: "UNDER 42.5" },
+        { category: "NFL", game: "Houston Texans @ Jacksonville Jaguars (London)", date: "2026-10-18", selection: "UNDER 42.5", result: "loss" },
       ],
     },
     {
