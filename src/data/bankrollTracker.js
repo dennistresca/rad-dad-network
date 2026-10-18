@@ -50,6 +50,7 @@ export const bankrollTracker = {
         { category: "College Football", game: "Rutgers @ Maryland", date: "2026-10-17", selection: "UNDER 56.5", result: "loss" },
         { category: "College Football", game: "Auburn @ Georgia", date: "2026-10-17", selection: "OVER 51.5", result: "loss" },
         { category: "College Football", game: "Notre Dame @ BYU", date: "2026-10-17", selection: "UNDER 51.5", result: "loss" },
+        { category: "NFL", game: "Houston Texans @ Jacksonville Jaguars (London)", date: "2026-10-18", selection: "UNDER 42.5" },
       ],
     },
     {
