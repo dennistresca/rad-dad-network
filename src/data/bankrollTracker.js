@@ -44,7 +44,7 @@ export const bankrollTracker = {
   },
   weeklyBets: [
     {
-      episode: "Episode 8 Bets",
+      episode: "Bye Week Bets",
       date: "2026-10-16",
       bets: [
         { category: "College Football", game: "Rutgers @ Maryland", date: "2026-10-17", selection: "UNDER 56.5", result: "loss" },
