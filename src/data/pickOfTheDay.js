@@ -21,15 +21,15 @@ export const pickOfTheDay = {
   date: "2026-10-18",
   picks: {
     Dennis: [
-      { league: "NFL", game: "Baltimore @ Cleveland", selection: "OVER 39.5", odds: "-112" },
-      { league: "NFL", game: "Pittsburgh @ Tampa Bay", selection: "OVER 38.5", odds: "-118" },
-      { league: "NFL", game: "Carolina @ Philadelphia", selection: "Panthers ML", odds: "-166" },
+      { league: "NFL", game: "Baltimore @ Cleveland", selection: "OVER 39.5", odds: "-112", result: "loss" },
+      { league: "NFL", game: "Pittsburgh @ Tampa Bay", selection: "OVER 38.5", odds: "-118", result: "win" },
+      { league: "NFL", game: "Carolina @ Philadelphia", selection: "Panthers ML", odds: "-166", result: "win" },
     ],
     Shaun: [],
     Aaron: [],
   },
   records: {
-    Dennis: { MLB: { wins: 36, losses: 28 }, NFL: { wins: 14, losses: 8 }, NCAAF: { wins: 13, losses: 12 }, NHL: { wins: 5, losses: 5 } },
+    Dennis: { MLB: { wins: 36, losses: 28 }, NFL: { wins: 16, losses: 9 }, NCAAF: { wins: 13, losses: 12 }, NHL: { wins: 5, losses: 5 } },
     Shaun: { MLB: { wins: 27, losses: 30 }, NFL: { wins: 5, losses: 4 }, NCAAF: { wins: 4, losses: 8 }, NHL: { wins: 7, losses: 10 } },
     Aaron: { MLB: { wins: 27, losses: 39 }, NFL: { wins: 2, losses: 4 }, NCAAF: { wins: 9, losses: 7 }, NHL: { wins: 8, losses: 4 }, NBA: { wins: 2, losses: 2 } },
   },
