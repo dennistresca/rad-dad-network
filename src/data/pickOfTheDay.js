@@ -23,7 +23,6 @@ export const pickOfTheDay = {
     Dennis: [
       { league: "NFL", game: "Washington @ San Francisco", selection: "Commanders +7.5", odds: "-112" },
       { league: "MLB", game: "Cleveland @ Tampa Bay", selection: "Rays ML", odds: "-157" },
-      { league: "NHL", game: "Colorado @ Philadelphia", selection: "Avalanche ML", odds: "-238" },
     ],
     Shaun: [],
     Aaron: [
