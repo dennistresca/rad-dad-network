@@ -25,6 +25,7 @@ export const pickOfTheDay = {
     Aaron: [
       { league: "MLB", game: "Cleveland @ Tampa Bay", selection: "Rays ML", odds: "-151" },
       { league: "NHL", game: "Colorado @ Philadelphia", selection: "Avalanche ML", odds: "-238" },
+      { league: "NFL", game: "Washington @ San Francisco", selection: "McCaffrey First TD Scorer", odds: "+350" },
     ],
   },
   records: {
