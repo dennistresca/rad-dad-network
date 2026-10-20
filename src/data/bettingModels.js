@@ -91,6 +91,7 @@ const nflTier1Games = [
   { date: "2026-10-04", matchup: "Jacksonville Jaguars @ Cincinnati Bengals", roadTeam: "Jacksonville Jaguars", spread: "+2.5", total: 51.5, finalScore: "JAX 22 - CIN 17", result: "win" },
   { date: "2026-10-12", matchup: "Buffalo Bills @ Los Angeles Rams", roadTeam: "Buffalo Bills", spread: "+3", total: 54.5, finalScore: "BUF 37 - LAR 34", result: "win" },
   { date: "2026-10-18", matchup: "Arizona Cardinals @ Los Angeles Rams", roadTeam: "Arizona Cardinals", spread: "+12.5", total: 51, finalScore: "ARI 18 - LAR 16", result: "win" },
+  { date: "2026-10-19", matchup: "Washington Commanders @ San Francisco 49ers", roadTeam: "Washington Commanders", spread: "+7.5", total: 51.5, finalScore: "WSH 17 - SF 23", result: "win" },
 ];
 
 const nflTier2aGames = [
@@ -120,6 +121,7 @@ const nflTier2bGames = [
   { date: "2026-10-18", matchup: "Arizona Cardinals @ Los Angeles Rams", roadTeam: "Arizona Cardinals", spread: "+12.5", total: 51, finalScore: "ARI 18 - LAR 16", result: "win" },
   { date: "2026-10-18", matchup: "Buffalo Bills @ Las Vegas Raiders", roadTeam: "Buffalo Bills (favorite)", spread: "-4.5", total: 54, finalScore: "BUF 33 - LV 30", result: "loss" },
   { date: "2026-10-18", matchup: "Dallas Cowboys @ Green Bay Packers", roadTeam: "Dallas Cowboys (favorite)", spread: "-1.5", total: 54, finalScore: "DAL 13 - GB 23", result: "loss" },
+  { date: "2026-10-19", matchup: "Washington Commanders @ San Francisco 49ers", roadTeam: "Washington Commanders", spread: "+7.5", total: 51.5, finalScore: "WSH 17 - SF 23", result: "win" },
 ];
 
 // Shaun's College Under Model. `str` is the spread-to-total ratio (spread
@@ -194,24 +196,24 @@ export const bettingModels = {
         key: "tier-1",
         label: "Tier 1 — Playable",
         rule: "Road underdog ATS when the total is 49 or higher. 57.1% hit rate, +9.9% ROI on 373 bets (~34/season) from 2015-2025, with both the 2015-20 and 2021-25 halves holding up on their own.",
-        record: { wins: 4, losses: 4, pushes: 1 },
-        pending: 1,
+        record: { wins: 5, losses: 4, pushes: 1 },
+        pending: 0,
         games: nflTier1Games,
       },
       {
         key: "tier-2a",
         label: "Tier 2a — Diluted",
         rule: "Road underdog ATS when the total is 48 or higher. 55.6% hit rate, +6.8% ROI on 516 bets, about 40% more volume than Tier 1 for a 1.5-point weaker edge.",
-        record: { wins: 7, losses: 4, pushes: 1 },
-        pending: 1,
+        record: { wins: 8, losses: 4, pushes: 1 },
+        pending: 0,
         games: nflTier2aGames,
       },
       {
         key: "tier-2b",
         label: "Tier 2b — Diluted",
         rule: "Any road team ATS when the total is 48 or higher (adds road favorites, who hit only 53.0% on their own). 54.7% hit rate, +4.8% ROI on 812 bets.",
-        record: { wins: 10, losses: 7, pushes: 2 },
-        pending: 1,
+        record: { wins: 11, losses: 7, pushes: 2 },
+        pending: 0,
         games: nflTier2bGames,
       },
     ],
