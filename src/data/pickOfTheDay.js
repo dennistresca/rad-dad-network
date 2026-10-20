@@ -28,6 +28,7 @@ export const pickOfTheDay = {
     Aaron: [
       { league: "NHL", game: "Colorado @ New Jersey", selection: "Devils ML", odds: "-120" },
       { league: "NHL", game: "Carolina @ Vancouver", selection: "Hurricanes ML", odds: "-298" },
+      { league: "NCAAF", game: "South Alabama @ Marshall", selection: "South Alabama ML", odds: "-142" },
     ],
   },
   records: {
