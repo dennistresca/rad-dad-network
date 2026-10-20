@@ -18,19 +18,13 @@
 // host's record entirely until they have a graded pick in it.
 
 export const pickOfTheDay = {
-  date: "2026-10-19",
+  date: "2026-10-20",
   picks: {
     Dennis: [
-      { league: "NFL", game: "Washington @ San Francisco", selection: "Commanders +7.5", odds: "-112", result: "win" },
-      { league: "MLB", game: "Cleveland @ Tampa Bay", selection: "Rays ML", odds: "-157", result: "win" },
-      { league: "NHL", game: "Colorado @ Philadelphia", selection: "Avalanche -1.5", odds: "+110", result: "loss" },
+      { league: "NHL", game: "Los Angeles Kings @ Washington", selection: "Capitals ML", odds: "-155" },
     ],
     Shaun: [],
-    Aaron: [
-      { league: "MLB", game: "Cleveland @ Tampa Bay", selection: "Rays ML", odds: "-151", result: "win" },
-      { league: "NHL", game: "Colorado @ Philadelphia", selection: "Avalanche ML", odds: "-238", result: "loss" },
-      { league: "NFL", game: "Washington @ San Francisco", selection: "McCaffrey First TD Scorer", note: "George Kittle scored the first TD", result: "loss", odds: "+350" },
-    ],
+    Aaron: [],
   },
   records: {
     Dennis: { MLB: { wins: 37, losses: 28 }, NFL: { wins: 17, losses: 9 }, NCAAF: { wins: 13, losses: 12 }, NHL: { wins: 5, losses: 6 } },
@@ -44,6 +38,22 @@ export const pickOfTheDay = {
 // `picks` as a new entry here (not `records`, since records are
 // cumulative and don't belong to a single day). Newest day first.
 export const pickHistory = [
+  {
+    date: "2026-10-19",
+    picks: {
+      Dennis: [
+        { league: "NFL", game: "Washington @ San Francisco", selection: "Commanders +7.5", odds: "-112", result: "win" },
+        { league: "MLB", game: "Cleveland @ Tampa Bay", selection: "Rays ML", odds: "-157", result: "win" },
+        { league: "NHL", game: "Colorado @ Philadelphia", selection: "Avalanche -1.5", odds: "+110", result: "loss" },
+      ],
+      Shaun: [],
+      Aaron: [
+        { league: "MLB", game: "Cleveland @ Tampa Bay", selection: "Rays ML", odds: "-151", result: "win" },
+        { league: "NHL", game: "Colorado @ Philadelphia", selection: "Avalanche ML", odds: "-238", result: "loss" },
+        { league: "NFL", game: "Washington @ San Francisco", selection: "McCaffrey First TD Scorer", note: "George Kittle scored the first TD", result: "loss", odds: "+350" },
+      ],
+    },
+  },
   {
     date: "2026-10-18",
     picks: {
