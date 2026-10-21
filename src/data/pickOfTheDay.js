@@ -18,18 +18,13 @@
 // host's record entirely until they have a graded pick in it.
 
 export const pickOfTheDay = {
-  date: "2026-10-20",
+  date: "2026-10-21",
   picks: {
     Dennis: [
-      { league: "NHL", game: "Los Angeles Kings @ Washington", selection: "Capitals ML", odds: "-155", result: "loss" },
-      { league: "NBA", game: "Boston @ Detroit", selection: "Pistons +1.5", odds: "-110", result: "win" },
+      { league: "NBA", game: "Charlotte @ Brooklyn", selection: "Nets -1.5", odds: "-112" },
     ],
     Shaun: [],
-    Aaron: [
-      { league: "NHL", game: "Colorado @ New Jersey", selection: "Devils ML", odds: "-120", result: "win" },
-      { league: "NHL", game: "Carolina @ Vancouver", selection: "Hurricanes ML", odds: "-298", result: "win" },
-      { league: "NCAAF", game: "South Alabama @ Marshall", selection: "South Alabama ML", odds: "-142", result: "loss" },
-    ],
+    Aaron: [],
   },
   records: {
     Dennis: { MLB: { wins: 37, losses: 28 }, NFL: { wins: 17, losses: 9 }, NCAAF: { wins: 13, losses: 12 }, NHL: { wins: 5, losses: 7 }, NBA: { wins: 1, losses: 0 } },
@@ -43,6 +38,21 @@ export const pickOfTheDay = {
 // `picks` as a new entry here (not `records`, since records are
 // cumulative and don't belong to a single day). Newest day first.
 export const pickHistory = [
+  {
+    date: "2026-10-20",
+    picks: {
+      Dennis: [
+        { league: "NHL", game: "Los Angeles Kings @ Washington", selection: "Capitals ML", odds: "-155", result: "loss" },
+        { league: "NBA", game: "Boston @ Detroit", selection: "Pistons +1.5", odds: "-110", result: "win" },
+      ],
+      Shaun: [],
+      Aaron: [
+        { league: "NHL", game: "Colorado @ New Jersey", selection: "Devils ML", odds: "-120", result: "win" },
+        { league: "NHL", game: "Carolina @ Vancouver", selection: "Hurricanes ML", odds: "-298", result: "win" },
+        { league: "NCAAF", game: "South Alabama @ Marshall", selection: "South Alabama ML", odds: "-142", result: "loss" },
+      ],
+    },
+  },
   {
     date: "2026-10-19",
     picks: {
