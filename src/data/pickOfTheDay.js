@@ -28,6 +28,7 @@ export const pickOfTheDay = {
     Shaun: [
       { league: "NCAAF", game: "Liberty @ Kennesaw St", selection: "UNDER 50.5", odds: "-112" },
       { league: "NFL", game: "New England @ Chicago Bears", selection: "Bears -3", odds: "-102" },
+      { league: "NHL", game: "Winnipeg @ Dallas", selection: "OVER 5.5", odds: "-122" },
     ],
     Aaron: [],
   },
