@@ -18,17 +18,11 @@
 // host's record entirely until they have a graded pick in it.
 
 export const pickOfTheDay = {
-  date: "2026-10-22",
+  date: "2026-10-23",
   picks: {
-    Dennis: [
-      { league: "NHL", game: "Anaheim @ New Jersey", selection: "OVER 6", odds: "-110", result: "loss" },
-      { league: "NCAAF", game: "East Carolina @ Memphis", selection: "UNDER 54.5", odds: "-112", result: "loss" },
-      { league: "NFL", game: "New England @ Chicago Bears", selection: "UNDER 50.5", odds: "-105", result: "loss" },
-    ],
+    Dennis: [],
     Shaun: [
-      { league: "NCAAF", game: "Liberty @ Kennesaw St", selection: "UNDER 50.5", odds: "-112", result: "win" },
-      { league: "NFL", game: "New England @ Chicago Bears", selection: "Bears -3", odds: "-102", result: "win" },
-      { league: "NHL", game: "Winnipeg @ Dallas", selection: "OVER 5.5", odds: "-122", result: "loss" },
+      { league: "MLB", game: "Tampa Bay @ Milwaukee", selection: "UNDER 6.5", odds: "-108" },
     ],
     Aaron: [],
   },
@@ -44,6 +38,22 @@ export const pickOfTheDay = {
 // `picks` as a new entry here (not `records`, since records are
 // cumulative and don't belong to a single day). Newest day first.
 export const pickHistory = [
+  {
+    date: "2026-10-22",
+    picks: {
+      Dennis: [
+        { league: "NHL", game: "Anaheim @ New Jersey", selection: "OVER 6", odds: "-110", result: "loss" },
+        { league: "NCAAF", game: "East Carolina @ Memphis", selection: "UNDER 54.5", odds: "-112", result: "loss" },
+        { league: "NFL", game: "New England @ Chicago Bears", selection: "UNDER 50.5", odds: "-105", result: "loss" },
+      ],
+      Shaun: [
+        { league: "NCAAF", game: "Liberty @ Kennesaw St", selection: "UNDER 50.5", odds: "-112", result: "win" },
+        { league: "NFL", game: "New England @ Chicago Bears", selection: "Bears -3", odds: "-102", result: "win" },
+        { league: "NHL", game: "Winnipeg @ Dallas", selection: "OVER 5.5", odds: "-122", result: "loss" },
+      ],
+      Aaron: [],
+    },
+  },
   {
     date: "2026-10-21",
     picks: {
