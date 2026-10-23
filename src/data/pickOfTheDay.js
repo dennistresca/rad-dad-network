@@ -21,20 +21,20 @@ export const pickOfTheDay = {
   date: "2026-10-22",
   picks: {
     Dennis: [
-      { league: "NHL", game: "Anaheim @ New Jersey", selection: "OVER 6", odds: "-110" },
-      { league: "NCAAF", game: "East Carolina @ Memphis", selection: "UNDER 54.5", odds: "-112" },
-      { league: "NFL", game: "New England @ Chicago Bears", selection: "UNDER 50.5", odds: "-105" },
+      { league: "NHL", game: "Anaheim @ New Jersey", selection: "OVER 6", odds: "-110", result: "loss" },
+      { league: "NCAAF", game: "East Carolina @ Memphis", selection: "UNDER 54.5", odds: "-112", result: "loss" },
+      { league: "NFL", game: "New England @ Chicago Bears", selection: "UNDER 50.5", odds: "-105", result: "loss" },
     ],
     Shaun: [
-      { league: "NCAAF", game: "Liberty @ Kennesaw St", selection: "UNDER 50.5", odds: "-112" },
-      { league: "NFL", game: "New England @ Chicago Bears", selection: "Bears -3", odds: "-102" },
-      { league: "NHL", game: "Winnipeg @ Dallas", selection: "OVER 5.5", odds: "-122" },
+      { league: "NCAAF", game: "Liberty @ Kennesaw St", selection: "UNDER 50.5", odds: "-112", result: "win" },
+      { league: "NFL", game: "New England @ Chicago Bears", selection: "Bears -3", odds: "-102", result: "win" },
+      { league: "NHL", game: "Winnipeg @ Dallas", selection: "OVER 5.5", odds: "-122", result: "loss" },
     ],
     Aaron: [],
   },
   records: {
-    Dennis: { MLB: { wins: 37, losses: 28 }, NFL: { wins: 17, losses: 9 }, NCAAF: { wins: 13, losses: 13 }, NHL: { wins: 5, losses: 7 }, NBA: { wins: 2, losses: 1 } },
-    Shaun: { MLB: { wins: 27, losses: 30 }, NFL: { wins: 5, losses: 4 }, NCAAF: { wins: 4, losses: 8 }, NHL: { wins: 7, losses: 10 } },
+    Dennis: { MLB: { wins: 37, losses: 28 }, NFL: { wins: 17, losses: 10 }, NCAAF: { wins: 13, losses: 14 }, NHL: { wins: 5, losses: 8 }, NBA: { wins: 2, losses: 1 } },
+    Shaun: { MLB: { wins: 27, losses: 30 }, NFL: { wins: 6, losses: 4 }, NCAAF: { wins: 5, losses: 8 }, NHL: { wins: 7, losses: 11 } },
     Aaron: { MLB: { wins: 28, losses: 39 }, NFL: { wins: 2, losses: 5 }, NCAAF: { wins: 9, losses: 8 }, NHL: { wins: 10, losses: 5 }, NBA: { wins: 2, losses: 2 } },
   },
 };
