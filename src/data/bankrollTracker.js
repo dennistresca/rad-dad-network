@@ -24,8 +24,8 @@
 // personal Daily Picks (pickOfTheDay.js), which don't affect the bankroll.
 
 export const bankrollTracker = {
-  lastUpdated: "2026-10-18",
-  currentBankroll: 229,
+  lastUpdated: "2026-10-24",
+  currentBankroll: 224,
   goalBankroll: 10000,
   // Next short-term target, shown as a tick on the progress bar and a
   // progress line under it. Change `amount` and `label` when a milestone
