@@ -44,6 +44,18 @@ export const bankrollTracker = {
   },
   weeklyBets: [
     {
+      episode: "Episode 8 Bets",
+      date: "2026-10-23",
+      bets: [
+        { category: "College Football", game: "Rice @ Florida Atlantic", date: "2026-10-24", selection: "UNDER 54.5" },
+        { category: "College Football", game: "Pittsburgh @ Miami (FL)", date: "2026-10-24", selection: "OVER 48.5" },
+        { category: "College Football", game: "Texas Tech @ Cincinnati", date: "2026-10-24", selection: "UNDER 57.5" },
+        { category: "NFL", game: "Pittsburgh Steelers @ New Orleans Saints (Paris)", date: "2026-10-25", selection: "UNDER 45.5" },
+        { category: "NFL", game: "San Francisco 49ers @ Atlanta Falcons", date: "2026-10-25", selection: "San Francisco 49ers -2.5" },
+        { category: "NFL", game: "Green Bay Packers @ Detroit Lions", date: "2026-10-25", selection: "OVER 54.5" },
+      ],
+    },
+    {
       episode: "Bye Week Bets",
       date: "2026-10-16",
       bets: [
