@@ -22,14 +22,14 @@ export const pickOfTheDay = {
   picks: {
     Dennis: [
       { league: "NFL", game: "Pittsburgh @ New Orleans", selection: "Saints +3", odds: "-115", result: "loss" },
-      { league: "NFL", game: "Miami @ New York Jets", selection: "Jets -4.5", odds: "-110" },
-      { league: "NFL", game: "Cleveland @ Tennessee", selection: "Browns ML", odds: "-130" },
+      { league: "NFL", game: "Miami @ New York Jets", selection: "Jets -4.5", odds: "-110", result: "loss" },
+      { league: "NFL", game: "Cleveland @ Tennessee", selection: "Browns ML", odds: "-130", result: "win" },
     ],
     Shaun: [],
     Aaron: [],
   },
   records: {
-    Dennis: { MLB: { wins: 37, losses: 28 }, NFL: { wins: 17, losses: 11 }, NCAAF: { wins: 15, losses: 14 }, NHL: { wins: 5, losses: 8 }, NBA: { wins: 2, losses: 1 } },
+    Dennis: { MLB: { wins: 37, losses: 28 }, NFL: { wins: 18, losses: 12 }, NCAAF: { wins: 15, losses: 14 }, NHL: { wins: 5, losses: 8 }, NBA: { wins: 2, losses: 1 } },
     Shaun: { MLB: { wins: 28, losses: 30 }, NFL: { wins: 6, losses: 4 }, NCAAF: { wins: 5, losses: 9 }, NHL: { wins: 8, losses: 11 } },
     Aaron: { MLB: { wins: 28, losses: 39 }, NFL: { wins: 2, losses: 5 }, NCAAF: { wins: 9, losses: 8 }, NHL: { wins: 10, losses: 5 }, NBA: { wins: 2, losses: 2 } },
   },
