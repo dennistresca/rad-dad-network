@@ -20,6 +20,9 @@ const currencyFormatter = new Intl.NumberFormat("en-US", {
   maximumFractionDigits: 0,
 });
 
+const BUCKETS = "Buckets of Ca$h";
+const isBuckets = (bet) => bet.category === BUCKETS;
+
 function RecordCard({ label, record, accentColor }) {
   return (
     <div className="rounded-xl border border-neutral-200 bg-white p-6 text-center shadow-sm">
@@ -54,6 +57,7 @@ function BreakdownRecordCard({ label, breakdown, accentColor }) {
 }
 
 function WeekCard({ week, accentColor }) {
+  const bets = week.bets.filter((bet) => !isBuckets(bet));
   return (
     <div className="rounded-xl border border-neutral-200 bg-white p-6 shadow-sm">
       <div className="flex flex-wrap items-baseline justify-between gap-2">
@@ -61,7 +65,7 @@ function WeekCard({ week, accentColor }) {
       </div>
 
       <ul className="mt-3 space-y-4">
-        {week.bets.map((bet, i) => (
+        {bets.map((bet, i) => (
           <li key={i} className="border-t border-neutral-100 pt-4 first:border-t-0 first:pt-0">
             {bet.category && (
               <p className="text-xs font-semibold uppercase tracking-wide text-neutral-400">
@@ -97,6 +101,10 @@ function WeekCard({ week, accentColor }) {
       </ul>
     </div>
   );
+}
+
+function BucketsWeekCard({ week, accentColor }) {
+  return <WeekCard week={{ ...week, bets: week.bets.filter(isBuckets).map((bet) => ({ ...bet, category: undefined })) }} accentColor={accentColor} />;
 }
 
 function SideBetCard({ bet, accentColor }) {
@@ -137,6 +145,7 @@ export default function BankrollTracker() {
   const show = getShowBySlug("dancing-with-the-odds");
   const [weeklyBetsView, setWeeklyBetsView] = useState("current");
   const [sideBetsView, setSideBetsView] = useState("current");
+  const [bucketsView, setBucketsView] = useState("latest");
   const formattedDate = formatter.format(new Date(bankrollTracker.lastUpdated));
   usePageMeta(
     "Road to $10K",
@@ -145,6 +154,8 @@ export default function BankrollTracker() {
 
   const { currentBankroll, goalBankroll, milestone, records, weeklyBets, sideBets = [] } = bankrollTracker;
   const [currentWeek, ...previousWeeks] = weeklyBets;
+  const bucketsWeeks = weeklyBets.filter((week) => week.bets.some(isBuckets));
+  const [latestBucketsWeek, ...earlierBucketsWeeks] = bucketsWeeks;
   const currentSideBets = sideBets.filter((bet) => !bet.result);
   const previousSideBets = sideBets.filter((bet) => bet.result);
   const progressPercent = Math.min(100, Math.max(0, (currentBankroll / goalBankroll) * 100));
@@ -224,7 +235,7 @@ export default function BankrollTracker() {
           )}
         </div>
 
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid gap-6 sm:grid-cols-3">
           <RecordCard label="Season Record" record={records.overall} accentColor={show.colorTheme.primary} />
           <RecordCard
             label="College Football"
@@ -232,11 +243,6 @@ export default function BankrollTracker() {
             accentColor={show.colorTheme.primary}
           />
           <RecordCard label="NFL" record={records.nfl} accentColor={show.colorTheme.primary} />
-          <BreakdownRecordCard
-            label="Buckets of Ca$h"
-            breakdown={records.bucketsOfCash}
-            accentColor={show.colorTheme.primary}
-          />
         </div>
 
         <div className="mt-14" aria-labelledby="weekly-bets-heading">
@@ -292,6 +298,73 @@ export default function BankrollTracker() {
               )}
             </>
           )}
+        </div>
+
+        <div className="mt-14" aria-labelledby="buckets-heading">
+          <h2 id="buckets-heading" className="text-2xl font-bold text-neutral-900">
+            Buckets of Ca$h
+          </h2>
+          <p className="mt-1 text-sm text-neutral-500">
+            Our extra bets each week, just for fun. They don&apos;t touch the bankroll or the season
+            record above.
+          </p>
+
+          <div className="mt-6 grid gap-6 lg:grid-cols-[18rem_1fr] lg:items-start">
+            <BreakdownRecordCard
+              label="Buckets Record"
+              breakdown={records.bucketsOfCash}
+              accentColor={show.colorTheme.primary}
+            />
+
+            <div>
+              {bucketsWeeks.length === 0 ? (
+                <p className="text-neutral-500">No Buckets of Ca$h bets logged yet.</p>
+              ) : (
+                <>
+                  <div className="flex gap-2">
+                    <button
+                      type="button"
+                      onClick={() => setBucketsView("latest")}
+                      className="rounded-full px-4 py-2 text-sm font-semibold transition-colors"
+                      style={
+                        bucketsView === "latest"
+                          ? { backgroundColor: show.colorTheme.primary, color: "white" }
+                          : { backgroundColor: "#f5f5f5", color: "#525252" }
+                      }
+                    >
+                      Latest Buckets Bets
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setBucketsView("earlier")}
+                      className="rounded-full px-4 py-2 text-sm font-semibold transition-colors"
+                      style={
+                        bucketsView === "earlier"
+                          ? { backgroundColor: show.colorTheme.primary, color: "white" }
+                          : { backgroundColor: "#f5f5f5", color: "#525252" }
+                      }
+                    >
+                      Earlier Buckets Bets
+                    </button>
+                  </div>
+
+                  {bucketsView === "latest" ? (
+                    <div className="mt-6">
+                      <BucketsWeekCard week={latestBucketsWeek} accentColor={show.colorTheme.primary} />
+                    </div>
+                  ) : earlierBucketsWeeks.length === 0 ? (
+                    <p className="mt-4 text-neutral-500">No earlier Buckets bets yet.</p>
+                  ) : (
+                    <div className="mt-6 space-y-6">
+                      {earlierBucketsWeeks.map((week) => (
+                        <BucketsWeekCard key={week.episode} week={week} accentColor={show.colorTheme.primary} />
+                      ))}
+                    </div>
+                  )}
+                </>
+              )}
+            </div>
+          </div>
         </div>
 
         <div className="mt-14" aria-labelledby="side-bets-heading">
