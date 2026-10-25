@@ -24,7 +24,7 @@
 // personal Daily Picks (pickOfTheDay.js), which don't affect the bankroll.
 
 export const bankrollTracker = {
-  lastUpdated: "2026-10-24",
+  lastUpdated: "2026-10-25",
   currentBankroll: 224,
   goalBankroll: 10000,
   // Next short-term target, shown as a tick on the progress bar and a
@@ -32,8 +32,8 @@ export const bankrollTracker = {
   // is reached; remove the whole `milestone` key to hide it.
   milestone: { amount: 500, label: "Thanksgiving" },
   records: {
-    overall: { wins: 18, losses: 20 },
-    collegeFootball: { wins: 13, losses: 13 },
+    overall: { wins: 19, losses: 22 },
+    collegeFootball: { wins: 14, losses: 15 },
     nfl: { wins: 5, losses: 7 },
     bucketsOfCash: {
       NFL: { wins: 4, losses: 5 },
@@ -47,9 +47,9 @@ export const bankrollTracker = {
       episode: "Episode 8 Bets",
       date: "2026-10-23",
       bets: [
-        { category: "College Football", game: "Rice @ Florida Atlantic", date: "2026-10-24", selection: "UNDER 54.5" },
-        { category: "College Football", game: "Pittsburgh @ Miami (FL)", date: "2026-10-24", selection: "OVER 48.5" },
-        { category: "College Football", game: "Texas Tech @ Cincinnati", date: "2026-10-24", selection: "UNDER 57.5" },
+        { category: "College Football", game: "Rice @ Florida Atlantic", date: "2026-10-24", selection: "UNDER 54.5", result: "loss" },
+        { category: "College Football", game: "Pittsburgh @ Miami (FL)", date: "2026-10-24", selection: "OVER 48.5", result: "win" },
+        { category: "College Football", game: "Texas Tech @ Cincinnati", date: "2026-10-24", selection: "UNDER 57.5", result: "loss" },
         { category: "NFL", game: "Pittsburgh Steelers @ New Orleans Saints (Paris)", date: "2026-10-25", selection: "UNDER 45.5" },
         { category: "NFL", game: "San Francisco 49ers @ Atlanta Falcons", date: "2026-10-25", selection: "San Francisco 49ers -2.5" },
         { category: "NFL", game: "Green Bay Packers @ Detroit Lions", date: "2026-10-25", selection: "OVER 54.5" },
