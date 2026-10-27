@@ -18,20 +18,12 @@
 // host's record entirely until they have a graded pick in it.
 
 export const pickOfTheDay = {
-  date: "2026-10-26",
+  date: "2026-10-27",
   picks: {
     Dennis: [
-      { league: "NBA", game: "Minnesota @ Cleveland", selection: "Cavaliers -4.5", odds: "-105", result: "loss" },
-      { league: "NFL", game: "Dallas @ Philadelphia", selection: "Cowboys -4.5", odds: "-108", result: "win" },
-      { league: "NHL", game: "Toronto @ Calgary", selection: "Maple Leafs ML", odds: "-155", result: "loss" },
-      { league: "MLB", game: "Milwaukee @ Tampa Bay", selection: "OVER 6.5", odds: "-113", result: "win" },
+      { league: "MLB", game: "Milwaukee @ Tampa Bay", selection: "Brewers ML", odds: "-142" },
     ],
-    Shaun: [
-      { league: "MLB", game: "Milwaukee @ Tampa Bay", selection: "OVER 6.5", odds: "-130", result: "win" },
-      { league: "NFL", game: "Dallas @ Philadelphia", selection: "Cowboys ML", odds: "-205", result: "win" },
-      { league: "NHL", game: "Detroit @ Edmonton", selection: "Oilers ML", odds: "-180", result: "loss" },
-      { league: "NBA", game: "Phoenix @ Oklahoma City", selection: "Thunder ML", odds: "-410", result: "win" },
-    ],
+    Shaun: [],
     Aaron: [],
   },
   records: {
@@ -46,6 +38,24 @@ export const pickOfTheDay = {
 // `picks` as a new entry here (not `records`, since records are
 // cumulative and don't belong to a single day). Newest day first.
 export const pickHistory = [
+  {
+    date: "2026-10-26",
+    picks: {
+      Dennis: [
+        { league: "NBA", game: "Minnesota @ Cleveland", selection: "Cavaliers -4.5", odds: "-105", result: "loss" },
+        { league: "NFL", game: "Dallas @ Philadelphia", selection: "Cowboys -4.5", odds: "-108", result: "win" },
+        { league: "NHL", game: "Toronto @ Calgary", selection: "Maple Leafs ML", odds: "-155", result: "loss" },
+        { league: "MLB", game: "Milwaukee @ Tampa Bay", selection: "OVER 6.5", odds: "-113", result: "win" },
+      ],
+      Shaun: [
+        { league: "MLB", game: "Milwaukee @ Tampa Bay", selection: "OVER 6.5", odds: "-130", result: "win" },
+        { league: "NFL", game: "Dallas @ Philadelphia", selection: "Cowboys ML", odds: "-205", result: "win" },
+        { league: "NHL", game: "Detroit @ Edmonton", selection: "Oilers ML", odds: "-180", result: "loss" },
+        { league: "NBA", game: "Phoenix @ Oklahoma City", selection: "Thunder ML", odds: "-410", result: "win" },
+      ],
+      Aaron: [],
+    },
+  },
   {
     date: "2026-10-25",
     picks: {
