@@ -18,11 +18,10 @@
 // host's record entirely until they have a graded pick in it.
 
 export const pickOfTheDay = {
-  date: "2026-10-27",
+  date: "2026-10-30",
   picks: {
     Dennis: [
-      { league: "MLB", game: "Milwaukee @ Tampa Bay", selection: "Brewers ML", odds: "-142", result: "loss" },
-      { league: "NBA", game: "Sacramento @ San Antonio", selection: "OVER 230.5", odds: "-105", result: "win" },
+      { league: "NBA", game: "LA Clippers @ Minnesota", selection: "Clippers +7.5", odds: "-102" },
     ],
     Shaun: [],
     Aaron: [],
@@ -39,6 +38,17 @@ export const pickOfTheDay = {
 // `picks` as a new entry here (not `records`, since records are
 // cumulative and don't belong to a single day). Newest day first.
 export const pickHistory = [
+  {
+    date: "2026-10-27",
+    picks: {
+      Dennis: [
+        { league: "MLB", game: "Milwaukee @ Tampa Bay", selection: "Brewers ML", odds: "-142", result: "loss" },
+        { league: "NBA", game: "Sacramento @ San Antonio", selection: "OVER 230.5", odds: "-105", result: "win" },
+      ],
+      Shaun: [],
+      Aaron: [],
+    },
+  },
   {
     date: "2026-10-26",
     picks: {
