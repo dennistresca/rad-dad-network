@@ -8,7 +8,7 @@ import { LEAGUES, pickDay } from "../_lib/pick-file.js";
 const SHARED_CITIES = new Set(["Los Angeles", "LA", "New York", "Chicago"]);
 
 function teamName(team, league) {
-  if (league === "NCAAF") return team.shortDisplayName || team.location || team.displayName;
+  if (league === "NCAAF" || league === "NCAAB") return team.shortDisplayName || team.location || team.displayName;
   return SHARED_CITIES.has(team.location) ? team.displayName : team.location || team.displayName;
 }
 

@@ -13,6 +13,8 @@ const SPORTS = {
   NFL: { path: "football/nfl", extra: "" },
   NHL: { path: "hockey/nhl", extra: "" },
   NBA: { path: "basketball/nba", extra: "" },
+  // groups=50 is all of Division I; without it the feed only returns featured games.
+  NCAAB: { path: "basketball/mens-college-basketball", extra: "&limit=400", groups: ["50"] },
   // groups=80 is FBS, 81 is FCS; both are tried.
   NCAAF: { path: "football/college-football", extra: "&limit=400", groups: ["80", "81"] },
 };
