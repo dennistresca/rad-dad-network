@@ -6,7 +6,7 @@ import { usePageMeta } from "../hooks/usePageMeta";
 // api/picks/submit.js). Not linked from any nav; noindex.
 
 const HOSTS = ["Dennis", "Shaun", "Aaron"];
-const LEAGUES = ["MLB", "NFL", "NHL", "NBA", "NCAAF", "Other"];
+const LEAGUES = ["MLB", "NFL", "NHL", "NBA", "NCAAF", "NCAAB", "Other"];
 const BET_TYPES = [
   { id: "ml", label: "Moneyline" },
   { id: "spread", label: "Spread" },

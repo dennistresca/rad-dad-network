@@ -5,7 +5,7 @@
 // Pure functions, no network, so they can be tested against a copy of the file.
 
 export const HOSTS = ["Dennis", "Shaun", "Aaron"];
-export const LEAGUES = ["MLB", "NFL", "NHL", "NBA", "NCAAF"];
+export const LEAGUES = ["MLB", "NFL", "NHL", "NBA", "NCAAF", "NCAAB"];
 export const MAX_PICKS_PER_HOST = 6;
 
 // A pick "day" runs from 6 a.m. Eastern to 6 a.m. Eastern, the same window
