@@ -28,6 +28,7 @@ export const pickOfTheDay = {
     Shaun: [
       { league: "NCAAB", game: "UTEP @ N Kentucky", selection: "UNDER 150.5", odds: "-110" },
       { league: "NCAAB", game: "Air Force @ Wright St", selection: "UNDER 163.5", odds: "-115" },
+      { league: "NCAAB", game: "Niagara @ West Virginia", selection: "UNDER 141.5", odds: "-108" },
     ],
     Aaron: [],
   },
