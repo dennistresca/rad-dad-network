@@ -24,7 +24,9 @@ export const pickOfTheDay = {
       { league: "NHL", game: "Anaheim @ Vancouver", selection: "OVER 6.5", odds: "-135" },
       { league: "NHL", game: "Utah @ Toronto", selection: "OVER 6.5", odds: "-130" },
     ],
-    Shaun: [],
+    Shaun: [
+      { league: "NCAAB", game: "Wofford @ Tennessee", selection: "Tennessee -25.5", odds: "-112" },
+    ],
     Aaron: [],
   },
   records: {
