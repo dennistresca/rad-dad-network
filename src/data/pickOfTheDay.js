@@ -28,8 +28,8 @@ export const pickOfTheDay = {
     Aaron: [],
   },
   records: {
-    Dennis: { MLB: { wins: 38, losses: 29 }, NFL: { wins: 19, losses: 12 }, NCAAF: { wins: 17, losses: 15 }, NHL: { wins: 5, losses: 9 }, NBA: { wins: 3, losses: 4 } },
-    Shaun: { MLB: { wins: 29, losses: 30 }, NFL: { wins: 7, losses: 4 }, NCAAF: { wins: 5, losses: 9 }, NHL: { wins: 8, losses: 12 }, NBA: { wins: 1, losses: 0 }, NCAAB: { wins: 0, losses: 1 } },
+    Dennis: { MLB: { wins: 38, losses: 29 }, NFL: { wins: 19, losses: 13 }, NCAAF: { wins: 17, losses: 15 }, NHL: { wins: 5, losses: 9 }, NBA: { wins: 4, losses: 4 }, NCAAB: { wins: 0, losses: 1 } },
+    Shaun: { MLB: { wins: 29, losses: 30 }, NFL: { wins: 7, losses: 4 }, NCAAF: { wins: 5, losses: 9 }, NHL: { wins: 8, losses: 12 }, NBA: { wins: 1, losses: 0 }, NCAAB: { wins: 1, losses: 2 } },
     Aaron: { MLB: { wins: 28, losses: 39 }, NFL: { wins: 2, losses: 5 }, NCAAF: { wins: 9, losses: 8 }, NHL: { wins: 10, losses: 5 }, NBA: { wins: 2, losses: 2 } },
   },
 };
@@ -43,14 +43,14 @@ export const pickHistory = [
     date: "2026-11-02",
     picks: {
       Dennis: [
-        { league: "NFL", game: "Chicago Bears @ Seattle", selection: "Seahawks -3", odds: "-118" },
-        { league: "NCAAB", game: "Memphis @ Iowa State", selection: "Iowa State -13.5", odds: "-112" },
-        { league: "NBA", game: "Detroit @ Charlotte", selection: "Pistons -4.5", odds: "-102" },
+        { league: "NFL", game: "Chicago Bears @ Seattle", selection: "Seahawks -3", odds: "-118", result: "loss" },
+        { league: "NCAAB", game: "Memphis @ Iowa State", selection: "Iowa State -13.5", odds: "-112", result: "loss" },
+        { league: "NBA", game: "Detroit @ Charlotte", selection: "Pistons -4.5", odds: "-102", result: "win" },
       ],
       Shaun: [
         { league: "NCAAB", game: "UTEP @ N Kentucky", selection: "UNDER 150.5", odds: "-110", result: "loss" },
-        { league: "NCAAB", game: "Air Force @ Wright St", selection: "UNDER 163.5", odds: "-115" },
-        { league: "NCAAB", game: "Niagara @ West Virginia", selection: "UNDER 141.5", odds: "-108" },
+        { league: "NCAAB", game: "Air Force @ Wright St", selection: "UNDER 163.5", odds: "-115", result: "loss" },
+        { league: "NCAAB", game: "Niagara @ West Virginia", selection: "UNDER 141.5", odds: "-108", result: "win" },
       ],
       Aaron: [],
     },
