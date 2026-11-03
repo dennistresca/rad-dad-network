@@ -26,7 +26,7 @@ const dataFile = fileArgIndex >= 0 ? path.resolve(args[fileArgIndex + 1]) : DEFA
 
 const source = (await readFile(dataFile, "utf8")).replace(/\r\n/g, "\n");
 const hadCrlf = (await readFile(dataFile, "utf8")).includes("\r\n");
-const { pickOfTheDay } = await import(`${pathToFileURL(dataFile).href}?t=${Date.now()}`);
+const { pickOfTheDay, pickHistory } = await import(`${pathToFileURL(dataFile).href}?t=${Date.now()}`);
 
 const pickDate = pickOfTheDay.date;
 const report = { date: pickDate, graded: [], pending: [], review: [], unsupported: [], skipped: 0 };
@@ -35,24 +35,35 @@ const report = { date: pickDate, graded: [], pending: [], review: [], unsupporte
 
 const decisions = []; // { host, index, result: "win"|"loss"|"push", detail }
 
-for (const [host, picks] of Object.entries(pickOfTheDay.picks)) {
-  for (let i = 0; i < picks.length; i++) {
-    const pick = picks[i];
-    if (pick.result || /push/i.test(pick.note ?? "")) {
-      report.skipped++;
-      continue;
-    }
-    const label = `${host}: ${pick.game ?? "?"} | ${pick.selection}`;
-    const out = await gradePick(pick, pickDate);
-    if (out.status === "graded") {
-      decisions.push({ host, index: i, result: out.result, detail: out.detail, pick });
-      report.graded.push({ label, result: out.result, detail: out.detail });
-    } else if (out.status === "pending") {
-      report.pending.push({ label, reason: out.reason });
-    } else if (out.status === "review") {
-      report.review.push({ label, reason: out.reason });
-    } else {
-      report.unsupported.push({ label, reason: out.reason });
+// Today plus the last few archived days: a day is archived by the first pick
+// of the next morning, which can land before its late games were graded.
+const HISTORY_DAYS = 3;
+const targets = [
+  { date: pickDate, picks: pickOfTheDay.picks },
+  ...(pickHistory ?? []).slice(0, HISTORY_DAYS).map((h) => ({ date: h.date, picks: h.picks })),
+];
+
+for (const target of targets) {
+  for (const [host, picks] of Object.entries(target.picks)) {
+    for (let i = 0; i < picks.length; i++) {
+      const pick = picks[i];
+      if (pick.result || /push/i.test(pick.note ?? "")) {
+        report.skipped++;
+        continue;
+      }
+      const suffix = target.date === pickDate ? "" : ` (${target.date})`;
+      const label = `${host}: ${pick.game ?? "?"} | ${pick.selection}${suffix}`;
+      const out = await gradePick(pick, target.date);
+      if (out.status === "graded") {
+        decisions.push({ date: target.date, host, index: i, result: out.result, detail: out.detail, pick });
+        report.graded.push({ label, result: out.result, detail: out.detail });
+      } else if (out.status === "pending") {
+        report.pending.push({ label, reason: out.reason });
+      } else if (out.status === "review") {
+        report.review.push({ label, reason: out.reason });
+      } else {
+        report.unsupported.push({ label, reason: out.reason });
+      }
     }
   }
 }
@@ -67,8 +78,17 @@ function patchPickLines(text, decisionsList) {
 
   let host = null;
   let index = -1;
-  for (let i = start; i < recordsStart; i++) {
-    const h = lines[i].match(/^ {4}(Dennis|Shaun|Aaron): \[/);
+  let blockDate = null;
+  for (let i = start; i < lines.length; i++) {
+    if (i === recordsStart) {
+      // Skip the cumulative records (patched separately) and continue in the history.
+      i = lines.findIndex((l) => l.startsWith("export const pickHistory"));
+      if (i < 0) break;
+      host = null;
+    }
+    const dm = lines[i].match(/^\s+date: "([^"]+)"/);
+    if (dm) blockDate = dm[1];
+    const h = lines[i].match(/^\s+(Dennis|Shaun|Aaron): \[/);
     if (h) {
       host = h[1];
       index = -1;
@@ -76,7 +96,7 @@ function patchPickLines(text, decisionsList) {
     }
     if (host && /^\s+\{ league:/.test(lines[i])) {
       index++;
-      const d = decisionsList.find((x) => x.host === host && x.index === index);
+      const d = decisionsList.find((x) => x.date === blockDate && x.host === host && x.index === index);
       if (!d) continue;
       if (d.result === "push") {
         const note = `Push, ${d.detail}`;
@@ -87,7 +107,7 @@ function patchPickLines(text, decisionsList) {
         lines[i] = lines[i].replace(/\s*\},\s*$/, `, result: "${d.result}" },`);
       }
     }
-    if (/^ {4}\],?\s*$/.test(lines[i])) host = null;
+    if (/^\s+\],?\s*$/.test(lines[i])) host = null;
   }
   return lines;
 }
