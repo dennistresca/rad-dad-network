@@ -29,6 +29,7 @@ export const pickOfTheDay = {
       { league: "NCAAB", game: "Purdue FW @ Duquesne", selection: "OVER 153.5", odds: "-110" },
       { league: "NCAAB", game: "LSU N Orleans @ LSU", selection: "LSU N Orleans +27.5", odds: "-110" },
       { league: "NCAAB", game: "Cleveland St @ Missouri", selection: "Missouri -26.5", odds: "-108" },
+      { league: "NCAAB", game: "S Dakota St @ Kansas St", selection: "OVER 159.5", odds: "-108" },
     ],
     Aaron: [],
   },
