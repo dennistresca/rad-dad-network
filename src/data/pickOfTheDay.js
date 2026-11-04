@@ -21,22 +21,22 @@ export const pickOfTheDay = {
   date: "2026-11-03",
   picks: {
     Dennis: [
-      { league: "NHL", game: "Anaheim @ Vancouver", selection: "OVER 6.5", odds: "-135" },
-      { league: "NHL", game: "Utah @ Toronto", selection: "OVER 6.5", odds: "-130" },
+      { league: "NHL", game: "Anaheim @ Vancouver", selection: "OVER 6.5", odds: "-135", result: "win" },
+      { league: "NHL", game: "Utah @ Toronto", selection: "OVER 6.5", odds: "-130", result: "loss" },
     ],
     Shaun: [
-      { league: "NCAAB", game: "Wofford @ Tennessee", selection: "Tennessee -25.5", odds: "-112" },
-      { league: "NCAAB", game: "Purdue FW @ Duquesne", selection: "OVER 153.5", odds: "-110" },
-      { league: "NCAAB", game: "LSU N Orleans @ LSU", selection: "LSU N Orleans +27.5", odds: "-110" },
-      { league: "NCAAB", game: "Cleveland St @ Missouri", selection: "Missouri -26.5", odds: "-108" },
-      { league: "NCAAB", game: "S Dakota St @ Kansas St", selection: "OVER 159.5", odds: "-108" },
-      { league: "NCAAB", game: "North Florida @ CA Baptist", selection: "CA Baptist -10.5", odds: "-125" },
+      { league: "NCAAB", game: "Wofford @ Tennessee", selection: "Tennessee -25.5", odds: "-112", result: "win" },
+      { league: "NCAAB", game: "Purdue FW @ Duquesne", selection: "OVER 153.5", odds: "-110", result: "loss" },
+      { league: "NCAAB", game: "LSU N Orleans @ LSU", selection: "LSU N Orleans +27.5", odds: "-110", result: "loss" },
+      { league: "NCAAB", game: "Cleveland St @ Missouri", selection: "Missouri -26.5", odds: "-108", result: "win" },
+      { league: "NCAAB", game: "S Dakota St @ Kansas St", selection: "OVER 159.5", odds: "-108", result: "loss" },
+      { league: "NCAAB", game: "North Florida @ CA Baptist", selection: "CA Baptist -10.5", odds: "-125", result: "loss" },
     ],
     Aaron: [],
   },
   records: {
-    Dennis: { MLB: { wins: 38, losses: 29 }, NFL: { wins: 19, losses: 13 }, NCAAF: { wins: 18, losses: 15 }, NHL: { wins: 5, losses: 9 }, NBA: { wins: 4, losses: 4 }, NCAAB: { wins: 0, losses: 1 } },
-    Shaun: { MLB: { wins: 29, losses: 30 }, NFL: { wins: 7, losses: 4 }, NCAAF: { wins: 5, losses: 9 }, NHL: { wins: 8, losses: 12 }, NBA: { wins: 1, losses: 0 }, NCAAB: { wins: 1, losses: 2 } },
+    Dennis: { MLB: { wins: 38, losses: 29 }, NFL: { wins: 19, losses: 13 }, NCAAF: { wins: 18, losses: 15 }, NHL: { wins: 6, losses: 10 }, NBA: { wins: 4, losses: 4 }, NCAAB: { wins: 0, losses: 1 } },
+    Shaun: { MLB: { wins: 29, losses: 30 }, NFL: { wins: 7, losses: 4 }, NCAAF: { wins: 5, losses: 9 }, NHL: { wins: 8, losses: 12 }, NBA: { wins: 1, losses: 0 }, NCAAB: { wins: 3, losses: 6 } },
     Aaron: { MLB: { wins: 28, losses: 39 }, NFL: { wins: 2, losses: 5 }, NCAAF: { wins: 9, losses: 8 }, NHL: { wins: 10, losses: 5 }, NBA: { wins: 2, losses: 2 } },
   },
 };
