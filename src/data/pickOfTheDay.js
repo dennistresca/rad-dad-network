@@ -18,20 +18,12 @@
 // host's record entirely until they have a graded pick in it.
 
 export const pickOfTheDay = {
-  date: "2026-11-03",
+  date: "2026-11-05",
   picks: {
     Dennis: [
-      { league: "NHL", game: "Anaheim @ Vancouver", selection: "OVER 6.5", odds: "-135", result: "win" },
-      { league: "NHL", game: "Utah @ Toronto", selection: "OVER 6.5", odds: "-130", result: "loss" },
+      { league: "NFL", game: "Jacksonville @ Baltimore", selection: "Jaguars -10", odds: "-108" },
     ],
-    Shaun: [
-      { league: "NCAAB", game: "Wofford @ Tennessee", selection: "Tennessee -25.5", odds: "-112", result: "win" },
-      { league: "NCAAB", game: "Purdue FW @ Duquesne", selection: "OVER 153.5", odds: "-110", result: "loss" },
-      { league: "NCAAB", game: "LSU N Orleans @ LSU", selection: "LSU N Orleans +27.5", odds: "-110", result: "loss" },
-      { league: "NCAAB", game: "Cleveland St @ Missouri", selection: "Missouri -26.5", odds: "-108", result: "win" },
-      { league: "NCAAB", game: "S Dakota St @ Kansas St", selection: "OVER 159.5", odds: "-108", result: "loss" },
-      { league: "NCAAB", game: "North Florida @ CA Baptist", selection: "CA Baptist -10.5", odds: "-125", result: "loss" },
-    ],
+    Shaun: [],
     Aaron: [],
   },
   records: {
@@ -46,6 +38,24 @@ export const pickOfTheDay = {
 // `picks` as a new entry here (not `records`, since records are
 // cumulative and don't belong to a single day). Newest day first.
 export const pickHistory = [
+  {
+    date: "2026-11-03",
+    picks: {
+      Dennis: [
+        { league: "NHL", game: "Anaheim @ Vancouver", selection: "OVER 6.5", odds: "-135", result: "win" },
+        { league: "NHL", game: "Utah @ Toronto", selection: "OVER 6.5", odds: "-130", result: "loss" },
+      ],
+      Shaun: [
+        { league: "NCAAB", game: "Wofford @ Tennessee", selection: "Tennessee -25.5", odds: "-112", result: "win" },
+        { league: "NCAAB", game: "Purdue FW @ Duquesne", selection: "OVER 153.5", odds: "-110", result: "loss" },
+        { league: "NCAAB", game: "LSU N Orleans @ LSU", selection: "LSU N Orleans +27.5", odds: "-110", result: "loss" },
+        { league: "NCAAB", game: "Cleveland St @ Missouri", selection: "Missouri -26.5", odds: "-108", result: "win" },
+        { league: "NCAAB", game: "S Dakota St @ Kansas St", selection: "OVER 159.5", odds: "-108", result: "loss" },
+        { league: "NCAAB", game: "North Florida @ CA Baptist", selection: "CA Baptist -10.5", odds: "-125", result: "loss" },
+      ],
+      Aaron: [],
+    },
+  },
   {
     date: "2026-11-02",
     picks: {
