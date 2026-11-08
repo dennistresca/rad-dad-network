@@ -22,6 +22,7 @@ export const pickOfTheDay = {
   picks: {
     Dennis: [
       { league: "NFL", game: "Tampa Bay @ Chicago Bears", selection: "Bears -6", odds: "-115" },
+      { league: "NFL", game: "Tampa Bay @ Chicago Bears", selection: "Caleb Williams Under 244.5 Passing Yards", odds: "-120" },
     ],
     Shaun: [],
     Aaron: [],
