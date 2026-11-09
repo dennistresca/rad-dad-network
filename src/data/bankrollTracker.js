@@ -24,17 +24,17 @@
 // personal Daily Picks (pickOfTheDay.js), which don't affect the bankroll.
 
 export const bankrollTracker = {
-  lastUpdated: "2026-11-02",
-  currentBankroll: 224,
+  lastUpdated: "2026-11-09",
+  currentBankroll: 225,
   goalBankroll: 10000,
   // Next short-term target, shown as a tick on the progress bar and a
   // progress line under it. Change `amount` and `label` when a milestone
   // is reached; remove the whole `milestone` key to hide it.
   milestone: { amount: 500, label: "Thanksgiving" },
   records: {
-    overall: { wins: 21, losses: 25 },
-    collegeFootball: { wins: 14, losses: 16 },
-    nfl: { wins: 7, losses: 9 },
+    overall: { wins: 24, losses: 26 },
+    collegeFootball: { wins: 15, losses: 17 },
+    nfl: { wins: 9, losses: 9 },
     bucketsOfCash: {
       NFL: { wins: 4, losses: 5 },
       "College Football": { wins: 3, losses: 2 },
@@ -43,6 +43,16 @@ export const bankrollTracker = {
     },
   },
   weeklyBets: [
+    {
+      episode: "Episode 9 Bets",
+      date: "2026-11-06",
+      bets: [
+        { category: "College Football", game: "Rice @ North Texas", date: "2026-11-07", selection: "OVER 63.5", note: "North Texas 52, Rice 23 (75 total)", result: "win" },
+        { category: "College Football", game: "UCLA @ Minnesota", date: "2026-11-07", selection: "UNDER 39.5", note: "UCLA 34, Minnesota 20 (54 total)", result: "loss" },
+        { category: "NFL", game: "Houston Texans @ Los Angeles Chargers", date: "2026-11-08", selection: "Houston Texans -6", note: "Won by 22, 44-22", result: "win" },
+        { category: "NFL", game: "Arizona Cardinals @ Seattle Seahawks", date: "2026-11-08", selection: "UNDER 39.5", note: "Seahawks 17, Cardinals 3 (20 total)", result: "win" },
+      ],
+    },
     {
       episode: "Bye Week 2 Bets",
       date: "2026-10-30",
