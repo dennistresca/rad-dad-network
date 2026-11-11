@@ -3,7 +3,7 @@
   "configurations": [
     {
       "name": "rad-dad-network-dev",
-      "runtimeExecutable": "C:\\Program Files\\nodejs\\node.exe",
+      "runtimeExecutable": "/Users/dennistresca/.local/node/bin/node",
       "runtimeArgs": ["node_modules/vite/bin/vite.js"],
       "port": 5173
     }
