@@ -18,15 +18,10 @@
 // host's record entirely until they have a graded pick in it.
 
 export const pickOfTheDay = {
-  date: "2026-11-08",
+  date: "2026-11-12",
   picks: {
     Dennis: [
-      { league: "NFL", game: "Tampa Bay @ Chicago Bears", selection: "Bears -6", odds: "-115", result: "loss" },
-      { league: "NFL", game: "Tampa Bay @ Chicago Bears", selection: "Caleb Williams Under 244.5 Passing Yards", odds: "-120" },
-      { league: "NFL", game: "Denver @ Carolina", selection: "Broncos -2.5", odds: "-120", result: "win" },
-      { league: "NFL", game: "Houston @ Los Angeles Chargers", selection: "Texans -5.5", odds: "-115", result: "win" },
-      { league: "NFL", game: "Detroit @ Miami", selection: "Lions -6.5", odds: "-112", result: "win" },
-      { league: "NFL", game: "Los Angeles Rams @ Washington", selection: "OVER 47.5", odds: "-112", result: "loss" },
+      { league: "NFL", game: "Washington @ New York Giants", selection: "Commanders ML", odds: "+114" },
     ],
     Shaun: [],
     Aaron: [],
@@ -43,6 +38,21 @@ export const pickOfTheDay = {
 // `picks` as a new entry here (not `records`, since records are
 // cumulative and don't belong to a single day). Newest day first.
 export const pickHistory = [
+  {
+    date: "2026-11-08",
+    picks: {
+      Dennis: [
+        { league: "NFL", game: "Tampa Bay @ Chicago Bears", selection: "Bears -6", odds: "-115", result: "loss" },
+        { league: "NFL", game: "Tampa Bay @ Chicago Bears", selection: "Caleb Williams Under 244.5 Passing Yards", odds: "-120" },
+        { league: "NFL", game: "Denver @ Carolina", selection: "Broncos -2.5", odds: "-120", result: "win" },
+        { league: "NFL", game: "Houston @ Los Angeles Chargers", selection: "Texans -5.5", odds: "-115", result: "win" },
+        { league: "NFL", game: "Detroit @ Miami", selection: "Lions -6.5", odds: "-112", result: "win" },
+        { league: "NFL", game: "Los Angeles Rams @ Washington", selection: "OVER 47.5", odds: "-112", result: "loss" },
+      ],
+      Shaun: [],
+      Aaron: [],
+    },
+  },
   {
     date: "2026-11-05",
     picks: {
