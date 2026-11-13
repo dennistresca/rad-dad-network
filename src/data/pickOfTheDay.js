@@ -21,14 +21,14 @@ export const pickOfTheDay = {
   date: "2026-11-12",
   picks: {
     Dennis: [
-      { league: "NFL", game: "Washington @ New York Giants", selection: "Commanders ML", odds: "+114" },
+      { league: "NFL", game: "Washington @ New York Giants", selection: "Commanders ML", odds: "+114", result: "win" },
       { league: "NFL", game: "Washington @ New York Giants", selection: "McCarthy Under 210.5 Passing Yards", odds: "-113" },
     ],
     Shaun: [],
     Aaron: [],
   },
   records: {
-    Dennis: { MLB: { wins: 38, losses: 29 }, NFL: { wins: 23, losses: 15 }, NCAAF: { wins: 18, losses: 15 }, NHL: { wins: 6, losses: 10 }, NBA: { wins: 5, losses: 4 }, NCAAB: { wins: 0, losses: 1 } },
+    Dennis: { MLB: { wins: 38, losses: 29 }, NFL: { wins: 24, losses: 15 }, NCAAF: { wins: 18, losses: 15 }, NHL: { wins: 6, losses: 10 }, NBA: { wins: 5, losses: 4 }, NCAAB: { wins: 0, losses: 1 } },
     Shaun: { MLB: { wins: 29, losses: 30 }, NFL: { wins: 7, losses: 4 }, NCAAF: { wins: 5, losses: 9 }, NHL: { wins: 8, losses: 12 }, NBA: { wins: 1, losses: 0 }, NCAAB: { wins: 3, losses: 6 } },
     Aaron: { MLB: { wins: 28, losses: 39 }, NFL: { wins: 2, losses: 5 }, NCAAF: { wins: 9, losses: 8 }, NHL: { wins: 10, losses: 5 }, NBA: { wins: 2, losses: 2 } },
   },
