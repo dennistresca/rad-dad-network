@@ -21,7 +21,6 @@ export const pickOfTheDay = {
   date: "2026-11-14",
   picks: {
     Dennis: [
-      { league: "NCAAF", game: "Utah State @ San Diego St", selection: "San Diego St ML", odds: "+124" },
       { league: "NCAAF", game: "FAU @ Tulsa", selection: "OVER 73.5", odds: "-112" },
       { league: "NCAAF", game: "Baylor @ BYU", selection: "Baylor +8.5", odds: "-105" },
       { league: "NCAAF", game: "Florida @ Kentucky", selection: "Kentucky -3", odds: "-105" },
