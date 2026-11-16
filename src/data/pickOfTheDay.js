@@ -22,6 +22,7 @@ export const pickOfTheDay = {
   picks: {
     Dennis: [
       { league: "NFL", game: "Los Angeles Chargers @ Baltimore", selection: "OVER 38.5", odds: "-115" },
+      { league: "NFL", game: "Los Angeles Chargers @ Baltimore", selection: "Zay Flowers Over 5.5 Receptions", odds: "-115" },
     ],
     Shaun: [],
     Aaron: [],
