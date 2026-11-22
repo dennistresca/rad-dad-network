@@ -21,16 +21,16 @@ export const pickOfTheDay = {
   date: "2026-11-21",
   picks: {
     Dennis: [
-      { league: "NCAAF", game: "Vanderbilt @ Florida", selection: "OVER 46.5", odds: "-112" },
-      { league: "NCAAF", game: "MTSU @ Sam Houston", selection: "MTSU -6.5", odds: "-110" },
-      { league: "NCAAF", game: "Ohio State @ Nebraska", selection: "Ohio State -3.5", odds: "-108" },
-      { league: "NCAAF", game: "SMU @ Notre Dame", selection: "OVER 56.5", odds: "-108" },
+      { league: "NCAAF", game: "Vanderbilt @ Florida", selection: "OVER 46.5", odds: "-112", result: "win" },
+      { league: "NCAAF", game: "MTSU @ Sam Houston", selection: "MTSU -6.5", odds: "-110", result: "loss" },
+      { league: "NCAAF", game: "Ohio State @ Nebraska", selection: "Ohio State -3.5", odds: "-108", result: "loss" },
+      { league: "NCAAF", game: "SMU @ Notre Dame", selection: "OVER 56.5", odds: "-108", result: "loss" },
     ],
     Shaun: [],
     Aaron: [],
   },
   records: {
-    Dennis: { MLB: { wins: 38, losses: 29 }, NFL: { wins: 25, losses: 15 }, NCAAF: { wins: 20, losses: 19 }, NHL: { wins: 7, losses: 11 }, NBA: { wins: 5, losses: 4 }, NCAAB: { wins: 0, losses: 1 } },
+    Dennis: { MLB: { wins: 38, losses: 29 }, NFL: { wins: 25, losses: 15 }, NCAAF: { wins: 21, losses: 22 }, NHL: { wins: 7, losses: 11 }, NBA: { wins: 5, losses: 4 }, NCAAB: { wins: 0, losses: 1 } },
     Shaun: { MLB: { wins: 29, losses: 30 }, NFL: { wins: 7, losses: 4 }, NCAAF: { wins: 5, losses: 9 }, NHL: { wins: 8, losses: 12 }, NBA: { wins: 1, losses: 0 }, NCAAB: { wins: 3, losses: 6 } },
     Aaron: { MLB: { wins: 28, losses: 39 }, NFL: { wins: 2, losses: 5 }, NCAAF: { wins: 9, losses: 8 }, NHL: { wins: 10, losses: 5 }, NBA: { wins: 2, losses: 2 } },
   },
