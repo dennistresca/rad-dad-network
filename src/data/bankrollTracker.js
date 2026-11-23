@@ -24,7 +24,7 @@
 // personal Daily Picks (pickOfTheDay.js), which don't affect the bankroll.
 
 export const bankrollTracker = {
-  lastUpdated: "2026-11-21",
+  lastUpdated: "2026-11-23",
   currentBankroll: 225,
   goalBankroll: 10000,
   // Next short-term target, shown as a tick on the progress bar and a
@@ -32,8 +32,8 @@ export const bankrollTracker = {
   // is reached; remove the whole `milestone` key to hide it.
   milestone: { amount: 500, label: "Thanksgiving" },
   records: {
-    overall: { wins: 25, losses: 26 },
-    collegeFootball: { wins: 16, losses: 17 },
+    overall: { wins: 25, losses: 27 },
+    collegeFootball: { wins: 16, losses: 18 },
     nfl: { wins: 9, losses: 9 },
     bucketsOfCash: {
       NFL: { wins: 4, losses: 5 },
@@ -48,7 +48,7 @@ export const bankrollTracker = {
       date: "2026-11-21",
       bets: [
         { category: "College Football", game: "Vanderbilt @ Florida", date: "2026-11-21", selection: "OVER 45.5", note: "Florida 34, Vanderbilt 27 (61 total)", result: "win" },
-        { category: "College Football", game: "SMU @ Notre Dame", date: "2026-11-21", selection: "OVER 57.5" },
+        { category: "College Football", game: "SMU @ Notre Dame", date: "2026-11-21", selection: "OVER 57.5", note: "Notre Dame 24, SMU 3 (27 total)", result: "loss" },
       ],
     },
     {
