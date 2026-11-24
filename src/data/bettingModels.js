@@ -81,6 +81,9 @@ const collegeFootballGames = [
   { date: "2026-10-17", matchup: "Charleston Southern Buccaneers @ Clemson Tigers", favorite: "Clemson Tigers", spread: "-42.5", total: 53.5, finalScore: "CHSO 0 - CLEM 37", result: "loss" },
   { date: "2026-10-31", matchup: "Notre Dame Fighting Irish @ Navy Midshipmen", favorite: "Notre Dame Fighting Irish", spread: "-31.5", total: 54.5, finalScore: "ND 35 - NAVY 13", result: "loss" },
   { date: "2026-11-04", matchup: "Toledo Rockets @ Sacramento State Hornets", favorite: "Toledo Rockets", spread: "-25.5", total: 52.5, finalScore: "TOL 20 - SAC 17", result: "loss" },
+  { date: "2026-11-14", matchup: "Boston College Eagles @ Notre Dame Fighting Irish", favorite: "Notre Dame Fighting Irish", spread: "-29.5", total: 51.5, finalScore: "BC 7 - ND 41", result: "loss" },
+  { date: "2026-11-21", matchup: "Rutgers Scarlet Knights @ Penn State Nittany Lions", favorite: "Penn State Nittany Lions", spread: "-24.5", total: 48.5, finalScore: "RUTG 25 - PSU 24", result: "win" },
+  { date: "2026-11-21", matchup: "Northern Illinois Huskies @ North Dakota State Bison", favorite: "North Dakota State Bison", spread: "-25.5", total: 46.5, finalScore: "NIU 25 - NDSU 31", result: "win" },
 ];
 
 const nflTier1Games = [
@@ -99,6 +102,9 @@ const nflTier1Games = [
   { date: "2026-11-01", matchup: "Baltimore Ravens @ Buffalo Bills", roadTeam: "Baltimore Ravens", spread: "+3.5", total: 54.5, finalScore: "BAL 10 - BUF 36", result: "loss" },
   { date: "2026-11-01", matchup: "Arizona Cardinals @ Dallas Cowboys", roadTeam: "Arizona Cardinals", spread: "+7", total: 54.5, finalScore: "ARI 33 - DAL 30", result: "win" },
   { date: "2026-11-08", matchup: "Las Vegas Raiders @ San Francisco 49ers", roadTeam: "Las Vegas Raiders", spread: "+9.5", total: 52.5, finalScore: "LV 17 - SF 38", result: "loss" },
+  { date: "2026-11-15", matchup: "New England Patriots @ Detroit Lions (Munich)", roadTeam: "New England Patriots", spread: "+2.5", total: 50.5, finalScore: "NE 10 - DET 35", result: "loss" },
+  { date: "2026-11-15", matchup: "Pittsburgh Steelers @ Cincinnati Bengals", roadTeam: "Pittsburgh Steelers", spread: "+4.5", total: 49.5, finalScore: "PIT 18 - CIN 38", result: "loss" },
+  { date: "2026-11-22", matchup: "Tennessee Titans @ Dallas Cowboys", roadTeam: "Tennessee Titans", spread: "+7.5", total: 54.5, finalScore: "TEN 30 - DAL 51", result: "loss" },
 ];
 
 const nflTier2aGames = [
@@ -106,6 +112,8 @@ const nflTier2aGames = [
   { date: "2026-09-27", matchup: "Arizona Cardinals @ San Francisco 49ers", roadTeam: "Arizona Cardinals", spread: "+7.5", total: 48.5, finalScore: "ARI 30 - SF 36", result: "win" },
   { date: "2026-10-04", matchup: "New England Patriots @ Buffalo Bills", roadTeam: "New England Patriots", spread: "+6.5", total: 48.5, finalScore: "NE 29 - BUF 26", result: "win" },
   { date: "2026-10-08", matchup: "Tampa Bay Buccaneers @ Dallas Cowboys", roadTeam: "Tampa Bay Buccaneers", spread: "+8.5", total: 48.5, finalScore: "TB 24 - DAL 16", result: "win" },
+  { date: "2026-11-22", matchup: "Tampa Bay Buccaneers @ Detroit Lions", roadTeam: "Tampa Bay Buccaneers", spread: "+4.5", total: 48.5, finalScore: "TB 21 - DET 31", result: "loss" },
+  { date: "2026-11-22", matchup: "New Orleans Saints @ Chicago Bears", roadTeam: "New Orleans Saints", spread: "+12.5", total: 48.5, finalScore: "NO 13 - CHI 21", result: "win" },
 ];
 
 const nflTier2bGames = [
@@ -139,6 +147,15 @@ const nflTier2bGames = [
   { date: "2026-11-08", matchup: "Dallas Cowboys @ Indianapolis Colts", roadTeam: "Dallas Cowboys (favorite)", spread: "-4.5", total: 51.5, finalScore: "DAL 27 - IND 23", result: "loss" },
   { date: "2026-11-08", matchup: "Detroit Lions @ Miami Dolphins", roadTeam: "Detroit Lions (favorite)", spread: "-6.5", total: 50.5, finalScore: "DET 19 - MIA 9", result: "win" },
   { date: "2026-11-08", matchup: "Las Vegas Raiders @ San Francisco 49ers", roadTeam: "Las Vegas Raiders", spread: "+9.5", total: 52.5, finalScore: "LV 17 - SF 38", result: "loss" },
+  { date: "2026-11-15", matchup: "New England Patriots @ Detroit Lions (Munich)", roadTeam: "New England Patriots", spread: "+2.5", total: 50.5, finalScore: "NE 10 - DET 35", result: "loss" },
+  { date: "2026-11-15", matchup: "Carolina Panthers @ New Orleans Saints", roadTeam: "Carolina Panthers (favorite)", spread: "-1.5", total: 48.5, finalScore: "CAR 20 - NO 17", result: "win" },
+  { date: "2026-11-15", matchup: "Buffalo Bills @ New York Jets", roadTeam: "Buffalo Bills (favorite)", spread: "-8.5", total: 50.5, finalScore: "BUF 31 - NYJ 12", result: "win" },
+  { date: "2026-11-15", matchup: "San Francisco 49ers @ Dallas Cowboys", roadTeam: "San Francisco 49ers (favorite)", spread: "-3.5", total: 55.5, finalScore: "SF 46 - DAL 40", result: "win" },
+  { date: "2026-11-15", matchup: "Pittsburgh Steelers @ Cincinnati Bengals", roadTeam: "Pittsburgh Steelers", spread: "+4.5", total: 49.5, finalScore: "PIT 18 - CIN 38", result: "loss" },
+  { date: "2026-11-22", matchup: "Tampa Bay Buccaneers @ Detroit Lions", roadTeam: "Tampa Bay Buccaneers", spread: "+4.5", total: 48.5, finalScore: "TB 21 - DET 31", result: "loss" },
+  { date: "2026-11-22", matchup: "New Orleans Saints @ Chicago Bears", roadTeam: "New Orleans Saints", spread: "+12.5", total: 48.5, finalScore: "NO 13 - CHI 21", result: "win" },
+  { date: "2026-11-22", matchup: "Tennessee Titans @ Dallas Cowboys", roadTeam: "Tennessee Titans", spread: "+7.5", total: 54.5, finalScore: "TEN 30 - DAL 51", result: "loss" },
+  { date: "2026-11-23", matchup: "Cincinnati Bengals @ Washington Commanders", roadTeam: "Cincinnati Bengals (favorite)", spread: "-6", total: 54.5, finalScore: "CIN 20 - WSH 22", result: "loss" },
 ];
 
 // Shaun's College Under Model. `str` is the spread-to-total ratio (spread
@@ -192,6 +209,21 @@ const collegeUnderGames = [
   { date: "2026-11-03", matchup: "Ohio Bobcats @ Akron Zips", favorite: "Ohio Bobcats", spread: "-12.5", total: 52.5, str: "0.23", finalScore: "OHIO 28 - AKR 20", result: "win" },
   { date: "2026-11-05", matchup: "James Madison Dukes @ Southern Miss Golden Eagles", favorite: "James Madison Dukes", spread: "-13.5", total: 58.5, str: "0.23", finalScore: "JMU 54 - USM 23", result: "loss" },
   { date: "2026-11-07", matchup: "Northern Illinois Huskies @ San José State Spartans", favorite: "San José State Spartans", spread: "-11.5", total: 52.5, str: "0.21", finalScore: "NIU 19 - SJSU 30", result: "win" },
+  { date: "2026-11-12", matchup: "Louisiana Ragin' Cajuns @ UL Monroe Warhawks", favorite: "Louisiana Ragin' Cajuns", spread: "-10", total: 47.5, str: "0.21", finalScore: "UL 42 - ULM 21", result: "loss" },
+  { date: "2026-11-13", matchup: "Illinois Fighting Illini @ UCLA Bruins", favorite: "UCLA Bruins", spread: "-10.5", total: 48.5, str: "0.21", finalScore: "ILL 14 - UCLA 22", result: "win" },
+  { date: "2026-11-14", matchup: "Duke Blue Devils @ Miami Hurricanes", favorite: "Miami Hurricanes", spread: "-14", total: 55.5, str: "0.25", finalScore: "DUKE 25 - MIA 36", result: "loss" },
+  { date: "2026-11-14", matchup: "Wisconsin Badgers @ Maryland Terrapins", favorite: "Wisconsin Badgers", spread: "-8.5", total: 40.5, str: "0.20", finalScore: "WIS 21 - MD 24", result: "loss" },
+  { date: "2026-11-14", matchup: "Kennesaw State Owls @ Sam Houston Bearkats", favorite: "Kennesaw State Owls", spread: "-9.5", total: 44.5, str: "0.21", finalScore: "KENN 26 - SHSU 7", result: "win" },
+  { date: "2026-11-14", matchup: "Michigan Wolverines @ Oregon Ducks", favorite: "Oregon Ducks", spread: "-10", total: 39.5, str: "0.25", finalScore: "MICH 7 - ORE 31", result: "win" },
+  { date: "2026-11-14", matchup: "California Golden Bears @ Virginia Cavaliers", favorite: "Virginia Cavaliers", spread: "-11.5", total: 46.5, str: "0.24", finalScore: "CAL 7 - UVA 36", result: "win" },
+  { date: "2026-11-14", matchup: "North Dakota State Bison @ Hawai'i Rainbow Warriors", favorite: "North Dakota State Bison", spread: "-8.5", total: 39.5, str: "0.21", finalScore: "NDSU 21 - HAW 13", result: "win" },
+  { date: "2026-11-17", matchup: "Miami (OH) RedHawks @ Kent State Golden Flashes", favorite: "Miami (OH) RedHawks", spread: "-9.5", total: 46.5, str: "0.20", finalScore: "M-OH 20 - KENT 3", result: "win" },
+  { date: "2026-11-17", matchup: "Ball State Cardinals @ Ohio Bobcats", favorite: "Ohio Bobcats", spread: "-10", total: 49.5, str: "0.20", finalScore: "BALL 28 - OHIO 35", result: "loss" },
+  { date: "2026-11-21", matchup: "Missouri State Bears @ Jacksonville State Gamecocks", favorite: "Jacksonville State Gamecocks", spread: "-12.5", total: 52.5, str: "0.23", finalScore: "MOST 20 - JXST 25", result: "win" },
+  { date: "2026-11-21", matchup: "Coastal Carolina Chanticleers @ Louisiana Ragin' Cajuns", favorite: "Louisiana Ragin' Cajuns", spread: "-10.5", total: 49.5, str: "0.21", finalScore: "CCU 24 - UL 38", result: "loss" },
+  { date: "2026-11-21", matchup: "Indiana Hoosiers @ Washington Huskies", favorite: "Indiana Hoosiers", spread: "-9.5", total: 44.5, str: "0.21", finalScore: "IU 24 - WASH 27", result: "loss" },
+  { date: "2026-11-21", matchup: "Washington State Cougars @ Texas State Bobcats", favorite: "Texas State Bobcats", spread: "-14", total: 60.5, str: "0.23", finalScore: "WSU 14 - TXST 42", result: "win" },
+  { date: "2026-11-21", matchup: "Utah Utes @ TCU Horned Frogs", favorite: "Utah Utes", spread: "-9.5", total: 46.5, str: "0.20", finalScore: "UTAH 38 - TCU 17", result: "loss" },
 ];
 
 const windGames = [
@@ -206,31 +238,31 @@ export const bettingModels = {
     name: "Shaun's College Blowout Model",
     introducedEpisode: "S4E2",
     rule: "Take the OVER when a team is favored by 24.5+ points and the total is under 55.5, the closer to 50 the better. About a 60% historical hit rate over roughly the last 10 college football seasons.",
-    record: { wins: 34, losses: 25 },
+    record: { wins: 36, losses: 26 },
     pending: 0,
-    lastUpdated: "2026-11-09",
+    lastUpdated: "2026-11-24",
     games: collegeFootballGames,
   },
   collegeUnder: {
     name: "Shaun's College Under Model",
     introducedEpisode: "S4E7",
     rule: "Take the UNDER when the favorite is laid between -7.5 and -14 and the spread-to-total ratio (spread divided by total) is between 0.20 and 0.25. Favorites in the -7.5 to -14 band have gone under about 61% of the time this season, and a ratio of 0.20-0.25 has been the sweet spot within it.",
-    trackingNote: "Applied back to the start of the season (through November 7). Spreads and totals come from sportsbook lines that vary by a point or two between books, so a game right on the edge of the 0.20-0.25 band can shift.",
-    record: { wins: 27, losses: 21 },
+    trackingNote: "Applied back to the start of the season (through November 21). Spreads and totals come from sportsbook lines that vary by a point or two between books, so a game right on the edge of the 0.20-0.25 band can shift.",
+    record: { wins: 35, losses: 28 },
     pending: 0,
-    lastUpdated: "2026-11-09",
+    lastUpdated: "2026-11-24",
     games: collegeUnderGames,
   },
   nfl: {
     name: "Dennis's NFL Road Dog Model",
     introducedEpisode: "S4E4",
-    lastUpdated: "2026-11-09",
+    lastUpdated: "2026-11-24",
     tiers: [
       {
         key: "tier-1",
         label: "Tier 1 — Playable",
         rule: "Road underdog ATS when the total is 49 or higher. 57.1% hit rate, +9.9% ROI on 373 bets (~34/season) from 2015-2025, with both the 2015-20 and 2021-25 halves holding up on their own.",
-        record: { wins: 7, losses: 7, pushes: 1 },
+        record: { wins: 7, losses: 10, pushes: 1 },
         pending: 0,
         games: nflTier1Games,
       },
@@ -238,7 +270,7 @@ export const bettingModels = {
         key: "tier-2a",
         label: "Tier 2a — Diluted",
         rule: "Road underdog ATS when the total is 48 or higher. 55.6% hit rate, +6.8% ROI on 516 bets, about 40% more volume than Tier 1 for a 1.5-point weaker edge.",
-        record: { wins: 10, losses: 7, pushes: 1 },
+        record: { wins: 11, losses: 11, pushes: 1 },
         pending: 0,
         games: nflTier2aGames,
       },
@@ -246,7 +278,7 @@ export const bettingModels = {
         key: "tier-2b",
         label: "Tier 2b — Diluted",
         rule: "Any road team ATS when the total is 48 or higher (adds road favorites, who hit only 53.0% on their own). 54.7% hit rate, +4.8% ROI on 812 bets.",
-        record: { wins: 16, losses: 12, pushes: 2 },
+        record: { wins: 20, losses: 17, pushes: 2 },
         pending: 0,
         games: nflTier2bGames,
       },
@@ -258,7 +290,7 @@ export const bettingModels = {
     rule: "Take the UNDER when wind is 15+ mph at kickoff. 56.8% hit rate going back 10 seasons. Graded using nflweather.com's sustained wind reading at each stadium.",
     record: { wins: 3, losses: 1 },
     pending: 0,
-    lastUpdated: "2026-11-09",
+    lastUpdated: "2026-11-24",
     games: windGames,
   },
 };
