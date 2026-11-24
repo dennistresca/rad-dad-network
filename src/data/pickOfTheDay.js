@@ -21,13 +21,13 @@ export const pickOfTheDay = {
   date: "2026-11-23",
   picks: {
     Dennis: [
-      { league: "NFL", game: "Cincinnati @ Washington", selection: "Bengals -6", odds: "-113", note: "Cincinnati is 20-2 SU and 19-3 ATS run as a road favorite of -3 to -7 points since 2015" },
+      { league: "NFL", game: "Cincinnati @ Washington", selection: "Bengals -6", odds: "-113", note: "Cincinnati is 20-2 SU and 19-3 ATS run as a road favorite of -3 to -7 points since 2015", result: "loss" },
     ],
     Shaun: [],
     Aaron: [],
   },
   records: {
-    Dennis: { MLB: { wins: 38, losses: 29 }, NFL: { wins: 25, losses: 15 }, NCAAF: { wins: 21, losses: 22 }, NHL: { wins: 7, losses: 11 }, NBA: { wins: 5, losses: 4 }, NCAAB: { wins: 0, losses: 1 } },
+    Dennis: { MLB: { wins: 38, losses: 29 }, NFL: { wins: 25, losses: 16 }, NCAAF: { wins: 21, losses: 22 }, NHL: { wins: 7, losses: 11 }, NBA: { wins: 5, losses: 4 }, NCAAB: { wins: 0, losses: 1 } },
     Shaun: { MLB: { wins: 29, losses: 30 }, NFL: { wins: 7, losses: 4 }, NCAAF: { wins: 5, losses: 9 }, NHL: { wins: 8, losses: 12 }, NBA: { wins: 1, losses: 0 }, NCAAB: { wins: 3, losses: 6 } },
     Aaron: { MLB: { wins: 28, losses: 39 }, NFL: { wins: 2, losses: 5 }, NCAAF: { wins: 9, losses: 8 }, NHL: { wins: 10, losses: 5 }, NBA: { wins: 2, losses: 2 } },
   },
